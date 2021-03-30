@@ -21,7 +21,9 @@
   "bugs": {
     "url": "https://github.com/pointnet/alrev-intl/issues"
   },
-  "scripts": {},
+  "scripts": {
+    "cldr-relative-time": "cd scripts && dotnet tool run dotnet-script .\\cldr-relative-time.csx ..\\packages -nm ..\\node_modules"
+  },
   "devDependencies": {
     "cldr-dates-full": "^38.1.0"
   }
