@@ -34,11 +34,21 @@ public abstract class BaseCommand
         Console.ResetColor();
     }
 
-    protected bool EnsureModule(string directory, string errorMessage)
+    protected bool EnsureNodeModules()
     {
-        if (!Directory.Exists(directory))
+        if (!Directory.Exists(this.NodeModulePath))
         {
-            this.LogError(errorMessage);
+            this.LogError($"The directory '{this.NodeModulePath}' does not exist.");
+            return false;
+        }
+        return true;
+    }
+
+    protected bool EnsureNodeModulesPackage(string package)
+    {
+        if (!Directory.Exists(Path.Combine(this.NodeModulePath, package)))
+        {
+            this.LogError($"The package '{package}' is not installed. Please execute 'npm i -D {package}'");
             return false;
         }
         return true;
