@@ -19,6 +19,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6E99FB7A-8DBD-4629-84F5-CDFF52315F7C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{2A7316AF-04F9-4F50-8777-7D20AF5DCB0B}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\cldr-relative-time.csx = scripts\cldr-relative-time.csx
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "handlebar", "handlebar", "{F4584F8C-CD5B-4E1C-B398-12AD345F5401}"
 EndProject
