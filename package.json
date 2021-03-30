@@ -1,0 +1,26 @@
+{
+  "name": "alrev-intl",
+  "version": "1.0.0",
+  "private": false,
+  "author": "pointnet",
+  "description": "This repository is the home of Alrev.Intl and related packages.",
+  "keywords": [
+    "cldr",
+    "icu",
+    "globalization",
+    "localization",
+    "resx",
+    "resources"
+  ],
+  "license": "MIT",
+  "homepage": "https://pointnet.github.io/alrev-intl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pointnet/alrev-intl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pointnet/alrev-intl/issues"
+  },
+  "scripts": {
+  }
+}
