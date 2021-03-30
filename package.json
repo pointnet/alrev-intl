@@ -21,6 +21,8 @@
   "bugs": {
     "url": "https://github.com/pointnet/alrev-intl/issues"
   },
-  "scripts": {
+  "scripts": {},
+  "devDependencies": {
+    "cldr-dates-full": "^38.1.0"
   }
 }
