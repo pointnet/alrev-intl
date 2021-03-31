@@ -1,6 +1,6 @@
 ﻿namespace Alrev.Intl.Abstractions.RelativeTime
 {
-    public interface IRelativeTimeResourceCount
+    public interface IRelativeTimeCountResource
     {
         string One { get; init; }
         string Other { get; init; }

@@ -7,7 +7,7 @@
         string Previous { get; init; }
         string Current { get; init; }
         string Next { get; init; }
-        IRelativeTimeResourceCount Past { get; init; }
-        IRelativeTimeResourceCount Future { get; init; }
+        IRelativeTimeCountResource Past { get; init; }
+        IRelativeTimeCountResource Future { get; init; }
     }
 }
