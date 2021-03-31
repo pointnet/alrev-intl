@@ -2,6 +2,7 @@
 
 using System;
 using System.IO;
+using System.Linq;
 
 [McMaster.Extensions.CommandLineUtils.HelpOption("--script-help")]
 public abstract class BaseCommand
@@ -52,5 +53,18 @@ public abstract class BaseCommand
             return false;
         }
         return true;
+    }
+
+    protected void EmptyDirectory(params string[] paths)
+    {
+        string path = Path.Combine(new string[] { this.OutputPath }.Concat(paths).ToArray());
+        if (Directory.Exists(path))
+        {
+            DirectoryInfo di = new DirectoryInfo(Path.Combine(new string[] { this.OutputPath }.Concat(paths).ToArray()));
+            foreach (FileInfo file in di.GetFiles())
+            {
+                file.Delete();
+            }
+        }
     }
 }
