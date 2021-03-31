@@ -1,4 +1,4 @@
-﻿namespace Alrev.Intl.Abstractions
+﻿namespace Alrev.Intl.Abstractions.RelativeTime
 {
     public enum RelativeTimeTypeValues
     {
