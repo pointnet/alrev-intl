@@ -16,6 +16,7 @@ using System.Globalization;
 
 namespace {{namespace}}
 {
+    // https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html
     public class PluralRules{{type}}Localizer : ReadOnlyDictionary<string, IPluralRulesResource>, IResourceSetLocalizer<IPluralRulesResource>
     {
         private PluralRules{{type}}Localizer(IDictionary<string, IPluralRulesResource> dictionary) : base(dictionary) { }
