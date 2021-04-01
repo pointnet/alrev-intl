@@ -30,6 +30,7 @@ namespace Alrev.Intl.PluralRules
         private PluralRulesContext(string input) => this.input = input;
 
         public static PluralRulesContext Create(double value) => Create(value.ToString(CultureInfo.InvariantCulture));
+
         public static PluralRulesContext Create(string value)
         {
             PluralRulesContext context = new(value);
