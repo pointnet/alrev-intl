@@ -2,8 +2,8 @@
 {
     public interface IRelativeTimeStylesResource
     {
-        IRelativeTimeResource LongStyle { get; }
-        IRelativeTimeResource NarrowStyle { get; }
-        IRelativeTimeResource ShortStyle { get; }
+        IRelativeTimeResource LongRelativeTimeResource { get; }
+        IRelativeTimeResource NarrowRelativeTimeResource { get; }
+        IRelativeTimeResource ShortRelativeTimeResource { get; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Alrev.Intl.Abstractions
 {
-    public interface IResourceSet
+    public interface IResource
     {
         string Locale { get; }
     }
