@@ -51,10 +51,6 @@ public class CldrRelativeTime : BaseCommand
 {
     private const string SCRIPT = "./scripts/cldr-relative-time.csx";
 
-    [McMaster.Extensions.CommandLineUtils.Option("-na | --namespace", "Namespace of the resources", McMaster.Extensions.CommandLineUtils.CommandOptionType.SingleValue)]
-    [System.ComponentModel.DataAnnotations.Required]
-    public string Namespace { get; } = @"";
-
     public static int Execute(string[] args) => McMaster.Extensions.CommandLineUtils.CommandLineApplication.Execute<CldrRelativeTime>(args);
 
     private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time-resource-set.hbs"));
