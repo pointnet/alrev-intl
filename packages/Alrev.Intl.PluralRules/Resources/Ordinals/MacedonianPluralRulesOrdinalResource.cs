@@ -28,7 +28,7 @@ namespace Alrev.Intl.PluralRules.Resources.Ordinals
         {
             IPluralRulesContext prc when prc.i % 10 == 1 && prc.i % 100 != 11 => PluralRulesValues.One,
             IPluralRulesContext prc when prc.i % 10 == 2 && prc.i % 100 != 12 => PluralRulesValues.Two,
-            IPluralRulesContext prc when (prc.i % 10).In(7, 8) && (prc.i % 100).In(17, 18) => PluralRulesValues.Many,
+            IPluralRulesContext prc when (prc.i % 10).In(7, 8) && (prc.i % 100).NotIn(17, 18) => PluralRulesValues.Many,
             _ => PluralRulesValues.Other
         };
     }

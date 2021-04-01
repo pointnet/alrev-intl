@@ -28,7 +28,7 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
         {
             IPluralRulesContext prc when prc.i == 1 && prc.v == 0 => PluralRulesValues.One,
             IPluralRulesContext prc when prc.i == 2 && prc.v == 0 => PluralRulesValues.Two,
-            IPluralRulesContext prc when prc.v == 0 && prc.n == prc.i && prc.n.Between(0, 10) && prc.n % 10 == 0 => PluralRulesValues.Many,
+            IPluralRulesContext prc when prc.v == 0 && prc.n == prc.i && prc.n.NotBetween(0, 10) && prc.n % 10 == 0 => PluralRulesValues.Many,
             _ => PluralRulesValues.Other
         };
     }

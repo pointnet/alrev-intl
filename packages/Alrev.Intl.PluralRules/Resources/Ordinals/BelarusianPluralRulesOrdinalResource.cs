@@ -24,7 +24,7 @@ namespace Alrev.Intl.PluralRules.Resources.Ordinals
         // other - 
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
-            IPluralRulesContext prc when (prc.n % 10).In(2, 3) && (prc.n % 100).In(12, 13) => PluralRulesValues.Few,
+            IPluralRulesContext prc when (prc.n % 10).In(2, 3) && (prc.n % 100).NotIn(12, 13) => PluralRulesValues.Few,
             _ => PluralRulesValues.Other
         };
     }
