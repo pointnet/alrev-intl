@@ -47,15 +47,13 @@ namespace Alrev.Intl.PluralRules
             if (Regex.IsMatch(value, @"[ce]"))
             {
                 string[] splitted = Regex.Split(value, @"[ce]");
-                if (double.TryParse(splitted[0], out double sourceNumber)
-                    && int.TryParse(splitted[1], out int exponent))
-                {
-                    context.n = Math.Abs(sourceNumber) * Math.Pow(10, exponent);
-                    context.c = context.e = exponent;
-                    context._initial = context.n.ToString(CultureInfo.InvariantCulture);
-                }
+                double sourceNumber = double.Parse(splitted[0], CultureInfo.InvariantCulture);
+                int exponent = int.Parse(splitted[1], CultureInfo.InvariantCulture);
+                context.n = Math.Abs(sourceNumber) * Math.Pow(10, exponent);
+                context.c = context.e = exponent;
+                context._initial = context.n.ToString(CultureInfo.InvariantCulture);
             }
-            else if (double.TryParse(value, out double sourceNumber))
+            else if (double.TryParse(value, NumberStyles.Any, CultureInfo.InvariantCulture, out double sourceNumber))
             {
                 context.n = Math.Abs(sourceNumber);
             }
@@ -63,10 +61,10 @@ namespace Alrev.Intl.PluralRules
             if (context._initial.Contains("."))
             {
                 string decimals = context._initial.Split('.')[1];
-                context.f = decimals.Length > 0 ? int.Parse(decimals) : 0;
+                context.f = int.Parse(decimals, CultureInfo.InvariantCulture);
                 context.v = decimals.Length;
                 string trimmed = decimals.TrimEnd('0');
-                context.t = trimmed.Length > 0 ? int.Parse(trimmed) : 0;
+                context.t = trimmed.Length > 0 ? int.Parse(trimmed, CultureInfo.InvariantCulture) : 0;
                 context.w = trimmed.Length;
             }
             return context;
