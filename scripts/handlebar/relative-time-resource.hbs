@@ -1,0 +1,9 @@
+            new RelativeTimeResource(
+                LOCALE,
+                {{Type}},
+                {{#if DisplayName}}"{{{DisplayName}}}"{{else}}null{{/if}},
+                {{#if Previous}}"{{{Previous}}}"{{else}}null{{/if}},
+                {{#if Current}}"{{{Current}}}"{{else}}null{{/if}},
+                {{#if Next}}"{{{Next}}}"{{else}}null{{/if}},
+                {{#if Past}}new RelativeTimeCountResource({{#with Past}}{{#if One}}"{{{One}}}"{{else}}null{{/if}}, {{#if Other}}"{{{Other}}}"{{else}}null{{/if}}{{/with}}){{else}}null{{/if}},
+                {{#if Future}}new RelativeTimeCountResource({{#with Future}}{{#if One}}"{{{One}}}"{{else}}null{{/if}}, {{#if Other}}"{{{Other}}}"{{else}}null{{/if}}{{/with}}){{else}}null{{/if}})

@@ -1,8 +1,12 @@
 #r "nuget: McMaster.Extensions.CommandLineUtils, 3.1.0"
 
 using System;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text;
+
+Console.OutputEncoding = Encoding.UTF8;
 
 [McMaster.Extensions.CommandLineUtils.HelpOption("--script-help")]
 public abstract class BaseCommand
@@ -16,30 +20,27 @@ public abstract class BaseCommand
     [McMaster.Extensions.CommandLineUtils.DirectoryExists]
     public string NodeModulePath { get; } = @".\node_modules";
 
-    protected void LogError(string message)
+    protected CultureInfo[] Cultures { get; } = CultureInfo.GetCultures(CultureTypes.AllCultures).Where(c => !string.IsNullOrWhiteSpace(c.Name)).ToArray();
+
+    protected void Log(string color, string message)
     {
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine(message);
-        Console.ResetColor();
+        Console.WriteLine($"\u001b[90m[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")}] - \u001b[0m\u001b[{color}m{message}\u001b[0m");
     }
-    protected void LogWarning(string message)
+    protected void LogError(string message) => this.Log("31", message);
+    protected void LogSuccess(string message) => this.Log("32", message);
+    protected void LogWarning(string message) => this.Log("33", message);
+    protected void LogInfo(string message) => this.Log("36", message);
+    protected void LogHeader(string script)
     {
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine(message);
-        Console.ResetColor();
-    }
-    protected void LogInfo(string message)
-    {
-        Console.ForegroundColor = ConsoleColor.Blue;
-        Console.WriteLine(message);
-        Console.ResetColor();
+        this.Log("37", "ALREV-INTL-GENERATORS");
+        this.Log("37", $"Starting script: {script}");
     }
 
     protected bool EnsureNodeModules()
     {
         if (!Directory.Exists(this.NodeModulePath))
         {
-            this.LogError($"The directory '{this.NodeModulePath}' does not exist.");
+            this.LogError($"The directory '{this.NodeModulePath}' does not exist");
             return false;
         }
         return true;
@@ -49,22 +50,39 @@ public abstract class BaseCommand
     {
         if (!Directory.Exists(Path.Combine(this.NodeModulePath, package)))
         {
-            this.LogError($"The package '{package}' is not installed. Please execute 'npm i -D {package}'");
+            this.LogError($"The package '{package}' is not installed");
+            this.LogError($"Please execute 'npm i -D {package}' in the package.json directory");
             return false;
         }
         return true;
     }
 
-    protected void EmptyDirectory(params string[] paths)
+    protected void CreateOrEmptyDirectory(params string[] paths)
     {
         string path = Path.Combine(new string[] { this.OutputPath }.Concat(paths).ToArray());
-        if (Directory.Exists(path))
+        if (!Directory.Exists(path))
         {
-            DirectoryInfo di = new DirectoryInfo(Path.Combine(new string[] { this.OutputPath }.Concat(paths).ToArray()));
-            foreach (FileInfo file in di.GetFiles())
+            this.LogInfo($"Creating directory '{path}'");
+            _ = Directory.CreateDirectory(path);
+            return;
+        }
+        DirectoryInfo di = new DirectoryInfo(path);
+        FileInfo[] files = di.GetFiles();
+        if (files.Length > 0)
+        {
+            this.LogInfo($"Deleting {files.Length} files from directory '{path}'");
+            foreach (FileInfo file in files)
             {
                 file.Delete();
             }
         }
+    }
+
+    protected System.Text.Json.JsonDocument LoadJsonResource(params string[] paths)
+    {
+        string path = Path.Combine(new string[] { this.NodeModulePath }.Concat(paths).ToArray());
+        string json = File.ReadAllText(path);
+        System.Text.Json.JsonDocument resource = System.Text.Json.JsonDocument.Parse(json);
+        return resource;
     }
 }
