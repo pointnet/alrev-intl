@@ -26,6 +26,7 @@ namespace Alrev.Intl.PluralRules.Resources.Ordinals
         // other - 
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
+            null => throw new ArgumentNullException(nameof(context)),
             IPluralRulesContext prc when prc.n == prc.i && prc.n.Between(1, 4) || (prc.n % 100).In(Array.Empty<int>().Concat(Enumerable.Range(1, 4)).Concat(Enumerable.Range(21, 4)).Concat(Enumerable.Range(41, 4)).Concat(Enumerable.Range(61, 4)).Concat(Enumerable.Range(81, 4)).Cast<double>().ToArray()) => PluralRulesValues.One,
             IPluralRulesContext prc when prc.n == 5 || prc.n % 100 == 5 => PluralRulesValues.Many,
             _ => PluralRulesValues.Other

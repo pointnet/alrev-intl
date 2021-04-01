@@ -21,6 +21,11 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
 
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.Cardinal;
 
-        public PluralRulesValues Evaluate(IPluralRulesContext context) => PluralRulesValues.Other;
+        // other - 
+        public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
+        {
+            null => throw new ArgumentNullException(nameof(context)),
+            _ => PluralRulesValues.Other
+        };
     }
 }

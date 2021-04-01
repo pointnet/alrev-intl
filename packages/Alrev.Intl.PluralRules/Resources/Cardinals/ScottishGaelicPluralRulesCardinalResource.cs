@@ -27,6 +27,7 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
         // other - 
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
+            null => throw new ArgumentNullException(nameof(context)),
             IPluralRulesContext prc when prc.n.In(1, 11) => PluralRulesValues.One,
             IPluralRulesContext prc when prc.n.In(2, 12) => PluralRulesValues.Two,
             IPluralRulesContext prc when prc.n == prc.i && prc.n.In(Array.Empty<int>().Concat(Enumerable.Range(3, 8)).Concat(Enumerable.Range(13, 7)).Cast<double>().ToArray()) => PluralRulesValues.Few,

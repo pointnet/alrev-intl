@@ -27,6 +27,7 @@ namespace Alrev.Intl.PluralRules.Resources.Ordinals
         // other - 
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
+            null => throw new ArgumentNullException(nameof(context)),
             IPluralRulesContext prc when prc.n.In(1, 3) => PluralRulesValues.One,
             IPluralRulesContext prc when prc.n == 2 => PluralRulesValues.Two,
             IPluralRulesContext prc when prc.n == 4 => PluralRulesValues.Few,

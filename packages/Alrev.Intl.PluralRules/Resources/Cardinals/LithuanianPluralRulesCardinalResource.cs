@@ -27,6 +27,7 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
         // other - 
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
+            null => throw new ArgumentNullException(nameof(context)),
             IPluralRulesContext prc when prc.n % 10 == 1 && (prc.n % 100).NotBetween(11, 19) => PluralRulesValues.One,
             IPluralRulesContext prc when (prc.n % 10).Between(2, 9) && (prc.n % 100).NotBetween(11, 19) => PluralRulesValues.Few,
             IPluralRulesContext prc when prc.f != 0 => PluralRulesValues.Many,

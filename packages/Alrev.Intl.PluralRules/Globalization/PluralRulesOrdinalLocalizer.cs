@@ -10,6 +10,7 @@
 using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.PluralRules;
 using Alrev.Intl.PluralRules.Resources.Ordinals;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
@@ -118,6 +119,10 @@ namespace Alrev.Intl.PluralRules.Globalization
 
         public IPluralRulesResource CurrentUILocalizer => this.GetLocalizer(CultureInfo.CurrentUICulture);
 
-        public IPluralRulesResource GetLocalizer(CultureInfo culture) => this.GetValueOrDefault(culture.Name, null) ?? this.GetValueOrDefault(culture.Parent?.Name, null);
+        public IPluralRulesResource GetLocalizer(CultureInfo culture) => culture switch 
+        {
+            null => throw new ArgumentNullException(nameof(culture)),
+            _ => this.GetValueOrDefault(culture.Name, null) ?? this.GetValueOrDefault(culture.Parent?.Name, null)
+        };
     }
 }

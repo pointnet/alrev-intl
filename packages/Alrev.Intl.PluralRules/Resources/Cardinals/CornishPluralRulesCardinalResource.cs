@@ -29,6 +29,7 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
         // other - 
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
+            null => throw new ArgumentNullException(nameof(context)),
             IPluralRulesContext prc when prc.n == 0 => PluralRulesValues.Zero,
             IPluralRulesContext prc when prc.n == 1 => PluralRulesValues.One,
             IPluralRulesContext prc when (prc.n % 100).In(2, 22, 42, 62, 82) || prc.n % 1000 == 0 && (prc.n % 100000).In(new int[] { 40000, 60000, 80000 }.Concat(Enumerable.Range(1000, 19001)).Cast<double>().ToArray()) || prc.n != 0 && prc.n % 1000000 == 100000 => PluralRulesValues.Two,

@@ -25,6 +25,7 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
         // other - 
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
+            null => throw new ArgumentNullException(nameof(context)),
             IPluralRulesContext prc when prc.v == 0 && prc.i % 10 == 1 && prc.i % 100 != 11 || prc.f % 10 == 1 && prc.f % 100 != 11 => PluralRulesValues.One,
             _ => PluralRulesValues.Other
         };
