@@ -30,7 +30,7 @@ public static string ReplaceRelations(this string input)
             }
             string trimmed = left.Trim();
             string original = $"{trimmed} {@operator} {right.Trim()}";
-            string replacement = $"{(trimmed.Length == 5 ? trimmed : $"({trimmed})")}.{(@operator == " != " ? "Not" : "")}In({right.Trim().Replace(",", ", ")})";
+            string replacement = $"{(trimmed.Length == 5 ? trimmed : $"({trimmed})")}.{(@operator.Trim() == "!=" ? "Not" : "")}In({right.Trim().Replace(",", ", ")})";
             return acc.Replace(original, replacement);
         });
 }
@@ -53,7 +53,7 @@ public static string ReplaceRelationsWithBetween(this string input, string left,
     string trimmedLeft = left.Trim();
     string trimmedRight = $"{start}{string.Join("", enumerables)}.Cast<double>().ToArray()";
     string original = $"{trimmedLeft} {@operator} {right.Trim()}";
-    string replacement = $"{(trimmedLeft.Length == 5 ? trimmedLeft : $"({ trimmedLeft})")}.{(@operator == " != " ? "Not" : "")}In({trimmedRight})";
+    string replacement = $"{(trimmedLeft.Length == 5 ? trimmedLeft : $"({ trimmedLeft})")}.{(@operator.Trim() == "!=" ? "Not" : "")}In({trimmedRight})";
     if (trimmedLeft == "prc.n")
     {
         return input.Replace(
@@ -86,7 +86,7 @@ public static string ReplaceRanges(this string input)
             if (!right.Contains("..")) return acc;
             string trimmed = left.Trim();
             string original = $"{trimmed} {@operator} {right.Trim()}";
-            string replacement = $"{(trimmed.Length == 5 ? trimmed : $"({trimmed})")}.{(@operator == " != " ? "Not" : "")}Between({right.Trim().Replace("..", ", ")})";
+            string replacement = $"{(trimmed.Length == 5 ? trimmed : $"({trimmed})")}.{(@operator.Trim() == "!=" ? "Not" : "")}Between({right.Trim().Replace("..", ", ")})";
             if (trimmed == "prc.n")
             {
                 return acc.Replace(
