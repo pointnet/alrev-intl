@@ -38,7 +38,7 @@ namespace Alrev.Intl.PluralRules
 
         public static PluralRulesContext Create(string value)
         {
-            if (!Regex.IsMatch(value, @"-?[0-9]+(\.[0-9]+)?([ce][0-9]+)?"))
+            if (!Regex.IsMatch(value, @"^-?[0-9]+(\.[0-9]+)?([ce][0-9]+)?$"))
             {
                 throw new ArgumentException($"PluralRulesContext invalid format: {value}");
             }
