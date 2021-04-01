@@ -14,6 +14,7 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Ordinals
 {
+    // https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#az
     public class AzerbaijaniPluralRulesOrdinalResource : IPluralRulesResource, IResource
     {
         public string Locale { get; } = "az";

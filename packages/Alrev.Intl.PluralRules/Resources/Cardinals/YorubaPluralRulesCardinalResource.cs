@@ -14,6 +14,7 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
+    // https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#yo
     public class YorubaPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         public string Locale { get; } = "yo";

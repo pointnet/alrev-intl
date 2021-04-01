@@ -14,6 +14,7 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
+    // https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#ar
     public class ArabicPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         public string Locale { get; } = "ar";

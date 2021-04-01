@@ -14,6 +14,7 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
+    // https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#nyn
     public class NyankolePluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         public string Locale { get; } = "nyn";
