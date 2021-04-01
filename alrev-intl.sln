@@ -20,11 +20,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6E99FB7A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{2A7316AF-04F9-4F50-8777-7D20AF5DCB0B}"
 	ProjectSection(SolutionItems) = preProject
+		scripts\cldr-plural-rules.csx = scripts\cldr-plural-rules.csx
 		scripts\cldr-relative-time.csx = scripts\cldr-relative-time.csx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "handlebar", "handlebar", "{F4584F8C-CD5B-4E1C-B398-12AD345F5401}"
 	ProjectSection(SolutionItems) = preProject
+		scripts\handlebar\plural-rules-localizer.hbs = scripts\handlebar\plural-rules-localizer.hbs
+		scripts\handlebar\plural-rules-resource.hbs = scripts\handlebar\plural-rules-resource.hbs
 		scripts\handlebar\relative-time-localizer.hbs = scripts\handlebar\relative-time-localizer.hbs
 		scripts\handlebar\relative-time-resource-set.hbs = scripts\handlebar\relative-time-resource-set.hbs
 		scripts\handlebar\relative-time-resource.hbs = scripts\handlebar\relative-time-resource.hbs
@@ -34,11 +37,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{9C7B30
 	ProjectSection(SolutionItems) = preProject
 		scripts\shared\base-command.csx = scripts\shared\base-command.csx
 		scripts\shared\extensions.csx = scripts\shared\extensions.csx
+		scripts\shared\plural-rules-extensions.csx = scripts\shared\plural-rules-extensions.csx
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alrev.Intl.RelativeTime", "packages\Alrev.Intl.RelativeTime\Alrev.Intl.RelativeTime.csproj", "{50DA999C-7830-4A5D-9DD0-0720FC21EBE2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alrev.Intl.Abstractions", "packages\Alrev.Intl.Abstractions\Alrev.Intl.Abstractions.csproj", "{C9502F7D-9DA1-413E-87CE-A6D7451C2519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alrev.Intl.PluralRules", "packages\Alrev.Intl.PluralRules\Alrev.Intl.PluralRules.csproj", "{059679AE-0843-4803-B0EB-85F14EF79749}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +80,18 @@ Global
 		{C9502F7D-9DA1-413E-87CE-A6D7451C2519}.Release|x64.Build.0 = Release|Any CPU
 		{C9502F7D-9DA1-413E-87CE-A6D7451C2519}.Release|x86.ActiveCfg = Release|Any CPU
 		{C9502F7D-9DA1-413E-87CE-A6D7451C2519}.Release|x86.Build.0 = Release|Any CPU
+		{059679AE-0843-4803-B0EB-85F14EF79749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{059679AE-0843-4803-B0EB-85F14EF79749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{059679AE-0843-4803-B0EB-85F14EF79749}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{059679AE-0843-4803-B0EB-85F14EF79749}.Debug|x64.Build.0 = Debug|Any CPU
+		{059679AE-0843-4803-B0EB-85F14EF79749}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{059679AE-0843-4803-B0EB-85F14EF79749}.Debug|x86.Build.0 = Debug|Any CPU
+		{059679AE-0843-4803-B0EB-85F14EF79749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{059679AE-0843-4803-B0EB-85F14EF79749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{059679AE-0843-4803-B0EB-85F14EF79749}.Release|x64.ActiveCfg = Release|Any CPU
+		{059679AE-0843-4803-B0EB-85F14EF79749}.Release|x64.Build.0 = Release|Any CPU
+		{059679AE-0843-4803-B0EB-85F14EF79749}.Release|x86.ActiveCfg = Release|Any CPU
+		{059679AE-0843-4803-B0EB-85F14EF79749}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +101,7 @@ Global
 		{9C7B3031-D493-4809-BB07-CCCD2BEF47E4} = {2A7316AF-04F9-4F50-8777-7D20AF5DCB0B}
 		{50DA999C-7830-4A5D-9DD0-0720FC21EBE2} = {D5D685EB-34AF-4675-B0ED-A648459CD0F0}
 		{C9502F7D-9DA1-413E-87CE-A6D7451C2519} = {D5D685EB-34AF-4675-B0ED-A648459CD0F0}
+		{059679AE-0843-4803-B0EB-85F14EF79749} = {D5D685EB-34AF-4675-B0ED-A648459CD0F0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF48C5D9-9116-4870-9836-9715330D7DD5}

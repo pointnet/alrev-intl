@@ -72,8 +72,7 @@ public class CldrRelativeTime : BaseCommand
         Dictionary<string, string> cultures = new Dictionary<string, string>();
         foreach (CultureInfo culture in this.Cultures)
         {
-            bool processed = this.ProcessCulture(culture);
-            if (processed)
+            if (this.ProcessCulture(culture))
             {
                 cultures.Add(culture.Name, culture.EnglishName.ToValidClassName());
             }

@@ -11,6 +11,7 @@ public static string ToValidClassName(this string input)
     string replaced = new string(normalized.Where(c => char.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark).ToArray());
     return replaced.FirstCharToUpper();
 }
+
 public static string FirstCharToUpper(this string input) => input switch
 {
     null => throw new ArgumentNullException(nameof(input)),
