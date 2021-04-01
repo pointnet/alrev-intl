@@ -11,15 +11,41 @@ using System.Linq;
 public record RelativeTime(
     string Type,
     string DisplayName,
-    string Previous,
-    string Current,
-    string Next,
-    RelativeTimeCount Past,
-    RelativeTimeCount Future);
-
-public record RelativeTimeCount(string One, string Other);
+    Dictionary<int, string> Current,
+    Dictionary<string, string> Past,
+    Dictionary<string, string> Future);
 
 HandlebarsDotNet.Handlebars.RegisterTemplate("resource", File.ReadAllText("./handlebar/relative-time-resource.hbs"));
+HandlebarsDotNet.Handlebars.RegisterHelper("formatDictionary", (writer, context, args) =>
+{
+    if (args[0] is null)
+    {
+        writer.Write("null");
+        return;
+    }
+    Dictionary<int, string> content = args[0] as Dictionary<int, string>;
+    if (content.Count == 0)
+    {
+        writer.Write("null");
+        return;
+    }
+    writer.Write($"new Dictionary<int, string> {{ {string.Join(", ", content.Select(kv => $"{{ {kv.Key}, \"{kv.Value}\" }}").ToArray())} }}");
+});
+HandlebarsDotNet.Handlebars.RegisterHelper("formatPlurals", (writer, context, args) =>
+{
+    if (args[0] is null)
+    {
+        writer.Write("null");
+        return;
+    }
+    Dictionary<string, string> pluralRules = args[0] as Dictionary<string, string>;
+    if (pluralRules.Count == 0)
+    {
+        writer.Write("null");
+        return;
+    }
+    writer.Write($"new Dictionary<PluralRulesValues, string> {{ {string.Join(", ", pluralRules.Select(kv => $"{{ PluralRulesValues.{kv.Key.FirstCharToUpper()}, \"{kv.Value}\" }}").ToArray())} }}");
+});
 
 public class CldrRelativeTime : BaseCommand
 {
@@ -122,32 +148,21 @@ public class CldrRelativeTime : BaseCommand
     {
         string[] keys = field.EnumerateObject().Select(p => p.Name).ToArray();
         string displayName = keys.Contains("displayName") ? field.GetProperty("displayName").GetString() : null;
-        string current = keys.Contains("relative-type-0") ? field.GetProperty("relative-type-0").GetString() : null;
-        string next = keys.Contains("relative-type-1") ? field.GetProperty("relative-type-1").GetString() : null;
-        string previous = keys.Contains("relative-type--1") ? field.GetProperty("relative-type--1").GetString() : null;
         System.Text.Json.JsonElement? past = keys.Contains("relativeTime-type-past") ? field.GetProperty("relativeTime-type-past") : null;
         System.Text.Json.JsonElement? future = keys.Contains("relativeTime-type-future") ? field.GetProperty("relativeTime-type-future") : null;
         return new RelativeTime(
             type,
             displayName,
-            previous,
-            current,
-            next,
-            this.ProcessRelativeTimeCount(past),
-            this.ProcessRelativeTimeCount(future));
+            keys.Where(key => key.StartsWith("relative-type-")).ToDictionary(key => int.Parse(key.Replace("relative-type-", "")), key => field.GetProperty(key).GetString()),
+            this.ProcessRelativeTimPlurals(past),
+            this.ProcessRelativeTimPlurals(future));
     }
 
-    protected RelativeTimeCount ProcessRelativeTimeCount(System.Text.Json.JsonElement? field)
+    protected Dictionary<string, string> ProcessRelativeTimPlurals(System.Text.Json.JsonElement? field)
     {
         if (!field.HasValue) return null;
         string[] keys = field.Value.EnumerateObject().Select(p => p.Name).ToArray();
-        string one = keys.Contains("relativeTimePattern-count-one")
-            ? field.Value.GetProperty("relativeTimePattern-count-one").GetString()
-            : null;
-        string other = keys.Contains("relativeTimePattern-count-other")
-            ? field.Value.GetProperty("relativeTimePattern-count-other").GetString()
-            : null;
-        return new RelativeTimeCount(one, other);
+        return keys.ToDictionary(key => key.Replace("relativeTimePattern-count-", ""), key => field.Value.GetProperty(key).GetString());
     }
 
     protected void GenerateCulture(CultureInfo culture, Dictionary<string, Dictionary<string, RelativeTime>> relativeTimes)

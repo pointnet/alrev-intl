@@ -1,13 +1,13 @@
-﻿namespace Alrev.Intl.Abstractions.RelativeTime
+﻿using Alrev.Intl.Abstractions.PluralRules;
+using System.Collections.Generic;
+
+namespace Alrev.Intl.Abstractions.RelativeTime
 {
-    public interface IRelativeTimeResource
+    public interface IRelativeTimeResource : IReadOnlyDictionary<int, string>
     {
-        RelativeTimeTypeValues RelativeTimeType { get; init; }
-        string DisplayName { get; init; }
-        string Previous { get; init; }
-        string Current { get; init; }
-        string Next { get; init; }
-        IRelativeTimeCountResource Past { get; init; }
-        IRelativeTimeCountResource Future { get; init; }
+        string DisplayName { get; }
+        RelativeTimeTypeValues RelativeTimeType { get; }
+        IReadOnlyDictionary<PluralRulesValues, string> Past { get; }
+        IReadOnlyDictionary<PluralRulesValues, string> Future { get; }
     }
 }
