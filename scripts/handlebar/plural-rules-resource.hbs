@@ -21,18 +21,19 @@ namespace {{namespace}}
 
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.{{type}};
 
-{{#lengthEquals resources 1}}
-        public PluralRulesValues Evaluate(IPluralRulesContext context) => {{formatOne resources}};
-{{else}}
 {{#each resources}}
         // {{@key}} - {{this}}
 {{/each}}
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
+            null => throw new ArgumentNullException(nameof(context)),
+{{#lengthEquals resources 1}}
+            _ => {{formatOne resources}}
+{{else}}
 {{#each resources}}
             {{{formatRule @key this}}}
 {{/each}}
-        };
 {{/lengthEquals}}
+        };
     }
 }
