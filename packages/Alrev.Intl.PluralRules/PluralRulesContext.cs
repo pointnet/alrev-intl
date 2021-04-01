@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace Alrev.Intl.PluralRules
 {
+    // http://unicode.org/reports/tr35/tr35-numbers.html#Operands
     public class PluralRulesContext : IPluralRulesContext
     {
         private string _initial = string.Empty;
@@ -29,10 +30,18 @@ namespace Alrev.Intl.PluralRules
 
         private PluralRulesContext(string input) => this.input = input;
 
+        public static PluralRulesContext Create(int value) => Create(value.ToString(CultureInfo.InvariantCulture));
+
+        public static PluralRulesContext Create(decimal value) => Create(value.ToString(CultureInfo.InvariantCulture));
+
         public static PluralRulesContext Create(double value) => Create(value.ToString(CultureInfo.InvariantCulture));
 
         public static PluralRulesContext Create(string value)
         {
+            if (!Regex.IsMatch(value, @"-?[0-9]+(\.[0-9]+)?([ce][0-9]+)?"))
+            {
+                throw new ArgumentException($"PluralRulesContext invalid format: {value}");
+            }
             PluralRulesContext context = new(value);
             context._initial = value;
             if (Regex.IsMatch(value, @"[ce]"))
@@ -53,10 +62,10 @@ namespace Alrev.Intl.PluralRules
             context.i = (int)Math.Truncate(context.n);
             if (context._initial.Contains("."))
             {
-                string number = context._initial.Split('.')[1];
-                context.f = number.Length > 0 ? int.Parse(number) : 0;
-                context.v = number.Length;
-                string trimmed = number.TrimEnd('0');
+                string decimals = context._initial.Split('.')[1];
+                context.f = decimals.Length > 0 ? int.Parse(decimals) : 0;
+                context.v = decimals.Length;
+                string trimmed = decimals.TrimEnd('0');
                 context.t = trimmed.Length > 0 ? int.Parse(trimmed) : 0;
                 context.w = trimmed.Length;
             }
