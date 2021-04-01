@@ -20,6 +20,10 @@ public abstract class BaseCommand
     [McMaster.Extensions.CommandLineUtils.DirectoryExists]
     public string NodeModulePath { get; } = @".\node_modules";
 
+    [McMaster.Extensions.CommandLineUtils.Option("-na | --namespace", "Namespace of the resources", McMaster.Extensions.CommandLineUtils.CommandOptionType.SingleValue)]
+    [System.ComponentModel.DataAnnotations.Required]
+    public string Namespace { get; } = @"";
+
     protected CultureInfo[] Cultures { get; } = CultureInfo.GetCultures(CultureTypes.AllCultures).Where(c => !string.IsNullOrWhiteSpace(c.Name)).ToArray();
 
     protected void Log(string color, string message)

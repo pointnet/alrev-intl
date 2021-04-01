@@ -20,11 +20,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6E99FB7A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{2A7316AF-04F9-4F50-8777-7D20AF5DCB0B}"
 	ProjectSection(SolutionItems) = preProject
+		scripts\cldr-plural-rules.csx = scripts\cldr-plural-rules.csx
 		scripts\cldr-relative-time.csx = scripts\cldr-relative-time.csx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "handlebar", "handlebar", "{F4584F8C-CD5B-4E1C-B398-12AD345F5401}"
 	ProjectSection(SolutionItems) = preProject
+		scripts\handlebar\plural-rules-localizer.hbs = scripts\handlebar\plural-rules-localizer.hbs
+		scripts\handlebar\plural-rules-resource.hbs = scripts\handlebar\plural-rules-resource.hbs
 		scripts\handlebar\relative-time-localizer.hbs = scripts\handlebar\relative-time-localizer.hbs
 		scripts\handlebar\relative-time-resource-set.hbs = scripts\handlebar\relative-time-resource-set.hbs
 		scripts\handlebar\relative-time-resource.hbs = scripts\handlebar\relative-time-resource.hbs
@@ -34,6 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{9C7B30
 	ProjectSection(SolutionItems) = preProject
 		scripts\shared\base-command.csx = scripts\shared\base-command.csx
 		scripts\shared\extensions.csx = scripts\shared\extensions.csx
+		scripts\shared\plural-rules-extensions.csx = scripts\shared\plural-rules-extensions.csx
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alrev.Intl.RelativeTime", "packages\Alrev.Intl.RelativeTime\Alrev.Intl.RelativeTime.csproj", "{50DA999C-7830-4A5D-9DD0-0720FC21EBE2}"
