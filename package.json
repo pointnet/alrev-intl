@@ -25,7 +25,7 @@
     "cldr-plural-rules": "cd scripts && dotnet tool run dotnet-script .\\cldr-plural-rules.csx ..\\packages\\Alrev.Intl.PluralRules\\ -nm ..\\node_modules\\ -na Alrev.Intl.PluralRules",
     "cldr-relative-time": "cd scripts && dotnet tool run dotnet-script .\\cldr-relative-time.csx ..\\packages\\Alrev.Intl.RelativeTime\\ -nm ..\\node_modules\\ -na Alrev.Intl.RelativeTime"
   },
-  "devDependencies": {
+  "dependencies": {
     "cldr-core": "^38.1.0",
     "cldr-dates-full": "^38.1.0"
   }

@@ -55,7 +55,7 @@ public abstract class BaseCommand
         if (!Directory.Exists(Path.Combine(this.NodeModulePath, package)))
         {
             this.LogError($"The package '{package}' is not installed");
-            this.LogError($"Please execute 'npm i -D {package}' in the package.json directory");
+            this.LogError($"Please execute 'npm i {package}' in the package.json directory");
             return false;
         }
         return true;
