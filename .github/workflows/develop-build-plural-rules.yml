@@ -30,27 +30,27 @@ jobs:
         run: | 
               if ${{ github.event_name == 'pull_request' }}
               then
-                echo "::set-env name=title::Test Run for PR #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})"
-                echo "::set-env name=file_name::TestReport.${{steps.PRNUMBER.outputs.pr}}.${{github.run_number}}.md"
+                echo "TITLE=Test Run for PR #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})" >> $GITHUB_ENV
+                echo "FILE_NAME=TestReport.${{steps.PRNUMBER.outputs.pr}}.${{github.run_number}}.md" >> $GITHUB_ENV
               else
-                echo "::set-env name=title::Test Run ${{github.run_number}}"
-                echo "::set-env name=file_name::TestReport.${{github.run_number}}.md"
+                echo "TITLE=Test Run ${{github.run_number}}" >> $GITHUB_ENV
+                echo "FILE_NAME=TestReport.${{github.run_number}}.md" >> $GITHUB_ENV
               fi
       - name: Test
-        run: dotnet test --no-restore --no-build --verbosity normal --configuration $config --logger:'liquid.md;LogFileName=${{github.workspace}}/${{env.file_name}};Title=${{env.title}};' /p:CollectCoverage=true /p:CoverletOutputFormat='json%2copencover' /p:CoverletOutput='../' /p:MergeWith='../coverage.json'
+        run: dotnet test --no-restore --no-build --verbosity normal --configuration $config --logger:'liquid.md;LogFileName=${{github.workspace}}/${{env.FILE_NAME}};Title=${{env.TITLE}};' /p:CollectCoverage=true /p:CoverletOutputFormat='json%2copencover' /p:CoverletOutput='../' /p:MergeWith='../coverage.json'
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2
         if: ${{always()}}
         with:
           name: 'Test Run'
-          path: ${{github.workspace}}/${{env.file_name}}
+          path: ${{github.workspace}}/${{env.FILE_NAME}}
       - name: comment PR
         uses: machine-learning-apps/pr-comment@master
         if: ${{ github.event_name == 'pull_request' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          path: ${{env.file_name}}
+          path: ${{env.FILE_NAME}}
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
