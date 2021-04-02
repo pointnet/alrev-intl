@@ -9,8 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      config: 'Release'
 
     steps:
       - uses: actions/checkout@v2
@@ -37,7 +35,7 @@ jobs:
                 echo "FILE_NAME=TestReport.${{github.run_number}}.md" >> $GITHUB_ENV
               fi
       - name: Test
-        run: dotnet test --no-restore --no-build --verbosity normal --configuration $config --logger:'liquid.md;LogFileName=${{github.workspace}}/${{env.FILE_NAME}};Title=${{env.TITLE}};' /p:CollectCoverage=true /p:CoverletOutputFormat='json%2copencover' /p:CoverletOutput='../' /p:MergeWith='../coverage.json'
+        run: dotnet test --no-restore --no-build --verbosity normal --logger:'liquid.md;LogFileName=${{github.workspace}}/${{env.FILE_NAME}};Title=${{env.TITLE}};' /p:CollectCoverage=true /p:CoverletOutputFormat='json%2copencover' /p:CoverletOutput='../' /p:MergeWith='../coverage.json'
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2
         if: ${{always()}}
