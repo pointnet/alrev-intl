@@ -15,7 +15,7 @@ public record RelativeTime(
     Dictionary<string, string> Past,
     Dictionary<string, string> Future);
 
-HandlebarsDotNet.Handlebars.RegisterTemplate("resource", File.ReadAllText("./handlebar/relative-time-resource.hbs"));
+HandlebarsDotNet.Handlebars.RegisterTemplate("resource", File.ReadAllText("./handlebar/relative-time/relative-time-resource.hbs"));
 HandlebarsDotNet.Handlebars.RegisterHelper("formatDictionary", (writer, context, args) =>
 {
     if (args[0] is null)
@@ -53,8 +53,8 @@ public class CldrRelativeTime : BaseCommand
 
     public static int Execute(string[] args) => McMaster.Extensions.CommandLineUtils.CommandLineApplication.Execute<CldrRelativeTime>(args);
 
-    private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time-resource-set.hbs"));
-    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time-localizer.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-resource-set.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-localizer.hbs"));
 
     public void OnExecute()
     {
@@ -85,7 +85,6 @@ public class CldrRelativeTime : BaseCommand
 
     protected bool ProcessCulture(CultureInfo culture)
     {
-        this.LogInfo($"Processing culture '{culture.Name}' - {culture.EnglishName}");
         if (!Directory.Exists(Path.Combine(this.NodeModulePath, "cldr-dates-full", "main", culture.Name)))
         {
             return false;

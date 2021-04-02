@@ -25,15 +25,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{2A73
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "handlebar", "handlebar", "{F4584F8C-CD5B-4E1C-B398-12AD345F5401}"
-	ProjectSection(SolutionItems) = preProject
-		scripts\handlebar\plural-rules-localizer-tests.hbs = scripts\handlebar\plural-rules-localizer-tests.hbs
-		scripts\handlebar\plural-rules-localizer.hbs = scripts\handlebar\plural-rules-localizer.hbs
-		scripts\handlebar\plural-rules-resource-tests.hbs = scripts\handlebar\plural-rules-resource-tests.hbs
-		scripts\handlebar\plural-rules-resource.hbs = scripts\handlebar\plural-rules-resource.hbs
-		scripts\handlebar\relative-time-localizer.hbs = scripts\handlebar\relative-time-localizer.hbs
-		scripts\handlebar\relative-time-resource-set.hbs = scripts\handlebar\relative-time-resource-set.hbs
-		scripts\handlebar\relative-time-resource.hbs = scripts\handlebar\relative-time-resource.hbs
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{9C7B3031-D493-4809-BB07-CCCD2BEF47E4}"
 	ProjectSection(SolutionItems) = preProject
@@ -49,6 +40,31 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alrev.Intl.PluralRules", "packages\Alrev.Intl.PluralRules\Alrev.Intl.PluralRules.csproj", "{059679AE-0843-4803-B0EB-85F14EF79749}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alrev.Intl.PluralRules.Tests", "tests\Alrev.Intl.PluralRules.Tests\Alrev.Intl.PluralRules.Tests.csproj", "{97992209-849C-44A8-B835-AA644A56A217}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{C705CF88-78B8-4261-961C-A58D605D0C24}"
+	ProjectSection(SolutionItems) = preProject
+		.github\dependabot.yml = .github\dependabot.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{4AB697CC-905C-4C67-9EB5-7CCBE7066A49}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build-develop.yml = .github\workflows\build-develop.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "plural-rules", "plural-rules", "{F15DAE28-D26B-4F57-8347-CB60C8ACB925}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\handlebar\plural-rules\plural-rules-localizer-tests.hbs = scripts\handlebar\plural-rules\plural-rules-localizer-tests.hbs
+		scripts\handlebar\plural-rules\plural-rules-localizer.hbs = scripts\handlebar\plural-rules\plural-rules-localizer.hbs
+		scripts\handlebar\plural-rules\plural-rules-resource-tests.hbs = scripts\handlebar\plural-rules\plural-rules-resource-tests.hbs
+		scripts\handlebar\plural-rules\plural-rules-resource.hbs = scripts\handlebar\plural-rules\plural-rules-resource.hbs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "relative-time", "relative-time", "{904C4DFA-0425-446F-9D40-3036DA979091}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\handlebar\relative-time\relative-time-localizer.hbs = scripts\handlebar\relative-time\relative-time-localizer.hbs
+		scripts\handlebar\relative-time\relative-time-resource-set.hbs = scripts\handlebar\relative-time\relative-time-resource-set.hbs
+		scripts\handlebar\relative-time\relative-time-resource.hbs = scripts\handlebar\relative-time\relative-time-resource.hbs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +135,9 @@ Global
 		{C9502F7D-9DA1-413E-87CE-A6D7451C2519} = {D5D685EB-34AF-4675-B0ED-A648459CD0F0}
 		{059679AE-0843-4803-B0EB-85F14EF79749} = {D5D685EB-34AF-4675-B0ED-A648459CD0F0}
 		{97992209-849C-44A8-B835-AA644A56A217} = {6E99FB7A-8DBD-4629-84F5-CDFF52315F7C}
+		{4AB697CC-905C-4C67-9EB5-7CCBE7066A49} = {C705CF88-78B8-4261-961C-A58D605D0C24}
+		{F15DAE28-D26B-4F57-8347-CB60C8ACB925} = {F4584F8C-CD5B-4E1C-B398-12AD345F5401}
+		{904C4DFA-0425-446F-9D40-3036DA979091} = {F4584F8C-CD5B-4E1C-B398-12AD345F5401}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF48C5D9-9116-4870-9836-9715330D7DD5}

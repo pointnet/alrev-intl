@@ -53,10 +53,10 @@ public class CldrPluralRules : BaseCommand
 
     public static int Execute(string[] args) => McMaster.Extensions.CommandLineUtils.CommandLineApplication.Execute<CldrPluralRules>(args);
 
-    private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules-resource.hbs"));
-    private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules-resource-tests.hbs"));
-    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules-localizer.hbs"));
-    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules-localizer-tests.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules/plural-rules-resource.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules/plural-rules-resource-tests.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules/plural-rules-localizer.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules/plural-rules-localizer-tests.hbs"));
 
     public void OnExecute()
     {
@@ -99,7 +99,6 @@ public class CldrPluralRules : BaseCommand
 
     protected bool ProcessPluralRules(CultureInfo culture, string type, string file)
     {
-        // this.LogInfo($"Processing culture {type} '{culture.Name}' - {culture.EnglishName}");
         using System.Text.Json.JsonDocument resource = this.LoadJsonResource("cldr-core", "supplemental", file);
         string[] keys = resource.RootElement.GetProperty("supplemental").GetProperty($"plurals-type-{type}").EnumerateObject().Select(p => p.Name).ToArray();
         if (!keys.Contains(culture.Name)) return false;
