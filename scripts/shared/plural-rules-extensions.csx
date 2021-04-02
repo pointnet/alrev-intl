@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -51,7 +52,7 @@ public static string ReplaceRelationsWithBetween(this string input, string left,
         ? $"new int[] {{ {string.Join(", ", initialization)} }}"
         : "Array.Empty<int>()";
     string trimmedLeft = left.Trim();
-    string trimmedRight = $"{start}{string.Join("", enumerables)}.Cast<double>().ToArray()";
+    string trimmedRight = $"{start}{string.Join("", enumerables)}.Select<int, double>(i => i).ToArray()";
     string original = $"{trimmedLeft} {@operator} {right.Trim()}";
     string replacement = $"{(trimmedLeft.Length == 5 ? trimmedLeft : $"({ trimmedLeft})")}.{(@operator.Trim() == "!=" ? "Not" : "")}In({trimmedRight})";
     if (trimmedLeft == "prc.n")
@@ -70,6 +71,14 @@ public static string ToEnumerableRange(this string input)
     int[] limits = input.Split("..").Select(x => int.Parse(x)).ToArray();
     int start = limits[0]; int end = limits[1];
     return $".Concat(Enumerable.Range({start}, {end - start + 1}))";
+}
+
+public static string[] ToTestableRange(this string[] input)
+{
+    if (input.Length != 2) return input;
+    if (input.Any(s => s.Contains("."))) return input;
+    int start = int.Parse(input[0]); int end = int.Parse(input[1]);
+    return Enumerable.Range(start, end - start + 1).Select<int, string>(i => i.ToString(CultureInfo.InvariantCulture)).ToArray();
 }
 
 public static string ReplaceRanges(this string input)

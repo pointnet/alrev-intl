@@ -26,7 +26,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{2A73
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "handlebar", "handlebar", "{F4584F8C-CD5B-4E1C-B398-12AD345F5401}"
 	ProjectSection(SolutionItems) = preProject
+		scripts\handlebar\plural-rules-localizer-tests.hbs = scripts\handlebar\plural-rules-localizer-tests.hbs
 		scripts\handlebar\plural-rules-localizer.hbs = scripts\handlebar\plural-rules-localizer.hbs
+		scripts\handlebar\plural-rules-resource-tests.hbs = scripts\handlebar\plural-rules-resource-tests.hbs
 		scripts\handlebar\plural-rules-resource.hbs = scripts\handlebar\plural-rules-resource.hbs
 		scripts\handlebar\relative-time-localizer.hbs = scripts\handlebar\relative-time-localizer.hbs
 		scripts\handlebar\relative-time-resource-set.hbs = scripts\handlebar\relative-time-resource-set.hbs

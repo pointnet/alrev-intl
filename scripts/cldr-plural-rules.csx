@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 HandlebarsDotNet.Handlebars.RegisterHelper("lengthEquals", (writer, options, context, args) =>
 {
@@ -40,6 +41,11 @@ HandlebarsDotNet.Handlebars.RegisterHelper("formatRule", (writer, context, args)
     }
     writer.Write($"IPluralRulesContext prc when {cldr.ToCsharp()} => PluralRulesValues.{result.FirstCharToUpper()},");
 });
+HandlebarsDotNet.Handlebars.RegisterHelper("formatPluralValues", (writer, context, args) =>
+{
+    string content = args[0] as string;
+    writer.Write($"PluralRulesValues.{content.FirstCharToUpper()}");
+});
 
 public class CldrPluralRules : BaseCommand
 {
@@ -48,7 +54,9 @@ public class CldrPluralRules : BaseCommand
     public static int Execute(string[] args) => McMaster.Extensions.CommandLineUtils.CommandLineApplication.Execute<CldrPluralRules>(args);
 
     private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules-resource.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules-resource-tests.hbs"));
     private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules-localizer.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules-localizer-tests.hbs"));
 
     public void OnExecute()
     {
@@ -58,6 +66,9 @@ public class CldrPluralRules : BaseCommand
         this.CreateOrEmptyDirectory("Resources", "Cardinals");
         this.CreateOrEmptyDirectory("Resources", "Ordinals");
         this.CreateOrEmptyDirectory("Globalization");
+        this.CreateOrEmptyDirectory("..", "..", "tests", $"{this.Namespace}.Tests", "Resources", "Cardinals");
+        this.CreateOrEmptyDirectory("..", "..", "tests", $"{this.Namespace}.Tests", "Resources", "Ordinals");
+        this.CreateOrEmptyDirectory("..", "..", "tests", $"{this.Namespace}.Tests", "Globalization");
         this.ProcessCultures();
     }
 
@@ -88,23 +99,53 @@ public class CldrPluralRules : BaseCommand
 
     protected bool ProcessPluralRules(CultureInfo culture, string type, string file)
     {
-        this.LogInfo($"Processing culture {type} '{culture.Name}' - {culture.EnglishName}");
+        // this.LogInfo($"Processing culture {type} '{culture.Name}' - {culture.EnglishName}");
         using System.Text.Json.JsonDocument resource = this.LoadJsonResource("cldr-core", "supplemental", file);
         string[] keys = resource.RootElement.GetProperty("supplemental").GetProperty($"plurals-type-{type}").EnumerateObject().Select(p => p.Name).ToArray();
         if (!keys.Contains(culture.Name)) return false;
-        System.Text.Json.JsonElement? element = resource.RootElement.GetProperty("supplemental").GetProperty($"plurals-type-{type}").GetProperty(culture.Name);
-        string[] children = element.Value.EnumerateObject().Select(p => p.Name).ToArray();
-        Dictionary<string, string> resources = new Dictionary<string, string>();
+        System.Text.Json.JsonElement element = resource.RootElement.GetProperty("supplemental").GetProperty($"plurals-type-{type}").GetProperty(culture.Name);
+        string[] children = element.EnumerateObject().Select(p => p.Name).ToArray();
+        Dictionary<string, string> resources = new();
+        Dictionary<string, List<string>> examples = new();
         foreach (string key in children)
         {
-            string cldr = element.Value.GetProperty(key).GetString().Split('@')[0].Trim();
-            resources.Add(key.Replace("pluralRule-count-", ""), cldr);
+            string[] cldr = element.GetProperty(key).GetString().Split('@');
+            string expression = cldr[0].Trim();
+            resources.Add(key.Replace("pluralRule-count-", ""), expression);
+            if (cldr.Length > 1)
+            {
+                examples.Add(
+                    key.Replace("pluralRule-count-", ""),
+                    cldr.Skip(1)
+                        .Select(
+                            s => s.Split(" ")
+                                .Select(s => s.Trim().TrimEnd(','))
+                                .Where(s => !string.IsNullOrEmpty(s))
+                                .Where(s => Regex.IsMatch(s, @"^-?[0-9]+(\.[0-9]+)?(~-?[0-9]+(\.[0-9]+)?)?$"))
+                                .Select(s => s.Split('~').ToTestableRange())
+                                .SelectMany(s => s))
+                        .SelectMany(s => s)
+                        .ToList());
+            }
         }
-        this.GenerateCulture(culture, type.FirstCharToUpper(), resources);
+        if ((culture.Name == "lv" || culture.Name == "prg") && type == "cardinal")
+        {
+            if (!examples.ContainsKey("zero"))
+            {
+                examples.Add("zero", new());
+            }
+            if (!examples.ContainsKey("one"))
+            {
+                examples.Add("one", new());
+            }
+            examples["zero"].Add("1.11");
+            examples["one"].Add("2.21");
+        }
+        this.GenerateCulture(culture, type.FirstCharToUpper(), resources, examples);
         return true;
     }
 
-    protected void GenerateCulture(CultureInfo culture, string type, Dictionary<string, string> resources)
+    protected void GenerateCulture(CultureInfo culture, string type, Dictionary<string, string> resources, Dictionary<string, List<string>> examples)
     {
         string csharp = this.CultureTemplate(new
         {
@@ -116,6 +157,16 @@ public class CldrPluralRules : BaseCommand
             resources = resources
         });
         File.WriteAllText(Path.Combine(this.OutputPath, "Resources", $"{type}s", $"{culture.EnglishName.ToValidClassName()}PluralRules{type}Resource.cs"), csharp);
+        string tests = this.CultureTestsTemplate(new
+        {
+            script = SCRIPT,
+            locale = culture.Name,
+            type = type,
+            @namespace = $"{this.Namespace}.Tests.Resources.{type}s",
+            classPrefix = $"{culture.EnglishName.ToValidClassName()}",
+            examples = examples
+        });
+        File.WriteAllText(Path.Combine(this.OutputPath, "..", "..", "tests", $"{this.Namespace}.Tests", "Resources", $"{type}s", $"{culture.EnglishName.ToValidClassName()}PluralRules{type}ResourceTests.cs"), tests);
     }
 
     protected void GenerateLocalizer(Dictionary<string, string> cultures, string type)
@@ -128,6 +179,14 @@ public class CldrPluralRules : BaseCommand
             cultures = cultures
         });
         File.WriteAllText(Path.Combine(this.OutputPath, "Globalization", $"PluralRules{type}Localizer.cs"), csharp);
+        string tests = this.LocalizerTestsTemplate(new
+        {
+            script = SCRIPT,
+            @namespace = this.Namespace,
+            type = type,
+            cultures = cultures
+        });
+        File.WriteAllText(Path.Combine(this.OutputPath, "..", "..", "tests", $"{this.Namespace}.Tests", "Globalization", $"PluralRules{type}LocalizerTests.cs"), tests);
     }
 }
 
