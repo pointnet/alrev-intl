@@ -1,0 +1,16 @@
+version: 2
+updates: 
+  - package-ecosystem: "nuget"
+    target-branch: "develop"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "nuget dependencies"
+  - package-ecosystem: "npm"
+    target-branch: "develop"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "npm dependencies"
