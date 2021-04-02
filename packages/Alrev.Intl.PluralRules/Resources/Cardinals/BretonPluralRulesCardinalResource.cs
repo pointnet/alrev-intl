@@ -31,7 +31,7 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
             null => throw new ArgumentNullException(nameof(context)),
             IPluralRulesContext prc when prc.n % 10 == 1 && (prc.n % 100).NotIn(11, 71, 91) => PluralRulesValues.One,
             IPluralRulesContext prc when prc.n % 10 == 2 && (prc.n % 100).NotIn(12, 72, 92) => PluralRulesValues.Two,
-            IPluralRulesContext prc when (prc.n % 10).In(new int[] { 9 }.Concat(Enumerable.Range(3, 2)).Cast<double>().ToArray()) && (prc.n % 100).NotIn(Array.Empty<int>().Concat(Enumerable.Range(10, 10)).Concat(Enumerable.Range(70, 10)).Concat(Enumerable.Range(90, 10)).Cast<double>().ToArray()) => PluralRulesValues.Few,
+            IPluralRulesContext prc when (prc.n % 10).In(new int[] { 9 }.Concat(Enumerable.Range(3, 2)).Select<int, double>(i => i).ToArray()) && (prc.n % 100).NotIn(Array.Empty<int>().Concat(Enumerable.Range(10, 10)).Concat(Enumerable.Range(70, 10)).Concat(Enumerable.Range(90, 10)).Select<int, double>(i => i).ToArray()) => PluralRulesValues.Few,
             IPluralRulesContext prc when prc.n != 0 && prc.n % 1000000 == 0 => PluralRulesValues.Many,
             _ => PluralRulesValues.Other
         };

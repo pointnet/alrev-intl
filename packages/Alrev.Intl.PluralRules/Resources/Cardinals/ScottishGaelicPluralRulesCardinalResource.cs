@@ -30,7 +30,7 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
             null => throw new ArgumentNullException(nameof(context)),
             IPluralRulesContext prc when prc.n.In(1, 11) => PluralRulesValues.One,
             IPluralRulesContext prc when prc.n.In(2, 12) => PluralRulesValues.Two,
-            IPluralRulesContext prc when prc.n == prc.i && prc.n.In(Array.Empty<int>().Concat(Enumerable.Range(3, 8)).Concat(Enumerable.Range(13, 7)).Cast<double>().ToArray()) => PluralRulesValues.Few,
+            IPluralRulesContext prc when prc.n == prc.i && prc.n.In(Array.Empty<int>().Concat(Enumerable.Range(3, 8)).Concat(Enumerable.Range(13, 7)).Select<int, double>(i => i).ToArray()) => PluralRulesValues.Few,
             _ => PluralRulesValues.Other
         };
     }

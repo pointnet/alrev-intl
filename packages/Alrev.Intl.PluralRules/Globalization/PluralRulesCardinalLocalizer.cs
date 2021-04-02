@@ -216,7 +216,8 @@ namespace Alrev.Intl.PluralRules.Globalization
         public IPluralRulesResource GetLocalizer(CultureInfo culture) => culture switch 
         {
             null => throw new ArgumentNullException(nameof(culture)),
-            _ => this.GetValueOrDefault(culture.Name, null) ?? this.GetValueOrDefault(culture.Parent?.Name, null)
+            CultureInfo c when string.IsNullOrEmpty(c.Name) => throw new ArgumentException("CultureInfo.InvariantCulture is not supported", nameof(culture)),
+            _ => this.GetValueOrDefault(culture.Name, null) ?? this.GetValueOrDefault(culture.Parent.Name, null)
         };
     }
 }
