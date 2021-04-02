@@ -20,11 +20,11 @@ jobs:
         run: dotnet build --no-restore
       - name: Test
         run: dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat='json%2copencover' /p:CoverletOutput='../' /p:MergeWith='../coverage.json'
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
-      with:
-        files: ./coverage.opencover.xml
-        directory: ./tests/
-        flags: unittests
-        name: codecov-opencover
-        verbose: true
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          files: ./coverage.opencover.xml
+          directory: ./tests/
+          flags: unittests
+          name: codecov-opencover
+          verbose: true
