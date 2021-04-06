@@ -5,37 +5,103 @@ using System.Text.RegularExpressions;
 
 namespace Alrev.Intl.PluralRules
 {
-    // http://unicode.org/reports/tr35/tr35-numbers.html#Operands
+    /// <summary>
+    ///   The context to evaluate.
+    /// </summary>
+    /// <seealso href="http://unicode.org/reports/tr35/tr35-numbers.html#Operands"/>
     public class PluralRulesContext : IPluralRulesContext
     {
         private string _initial = string.Empty;
 
+        /// <summary>
+        ///   The original value of the <see cref="PluralRulesContext"/>
+        /// </summary>
         public string input { get; private set; } = string.Empty;
 
+        /// <summary>
+        ///   Absolute value of the source number.
+        /// </summary>
         public double n { get; private set; } = 0;
 
+        /// <summary>
+        ///   Integer digits of n.
+        /// </summary>
         public int i { get; private set; } = 0;
 
+        /// <summary>
+        ///   Number of visible fraction digits in n, with trailing zeros.
+        /// </summary>
         public int v { get; private set; } = 0;
 
+        /// <summary>
+        ///   Number of visible fraction digits in n, without trailing zeros.
+        /// </summary>
         public int w { get; private set; } = 0;
 
+        /// <summary>
+        ///   Visible fractional digits in n, with trailing zeros.
+        /// </summary>
         public int f { get; private set; } = 0;
 
+        /// <summary>
+        ///   Visible fractional digits in n, without trailing zeros.
+        /// </summary>
         public int t { get; private set; } = 0;
 
+        /// <summary>
+        ///   Currently, synonym for ‘c’. however, may be redefined in the future.
+        /// </summary>
         public int e { get; private set; } = 0;
 
+        /// <summary>
+        ///   Compact decimal exponent value: exponent of the power of 10 used in compact decimal formatting.
+        /// </summary>
         public int c { get; private set; } = 0;
 
         private PluralRulesContext(string input) => this.input = input;
 
+        /// <summary>
+        ///   Creates a <see cref="PluralRulesContext"/> for a specific integer.
+        /// </summary>
+        /// <param name="value">
+        ///   The specific integer.
+        /// </param>
+        /// <returns>
+        ///   A new context.
+        /// </returns>
         public static PluralRulesContext Create(int value) => Create(value.ToString(CultureInfo.InvariantCulture));
 
+        /// <summary>
+        ///   Creates a <see cref="PluralRulesContext"/> for a specific decimal.
+        /// </summary>
+        /// <param name="value">
+        ///   The specific decimal.
+        /// </param>
+        /// <returns>
+        ///   A new context.
+        /// </returns>
         public static PluralRulesContext Create(decimal value) => Create(value.ToString(CultureInfo.InvariantCulture));
 
+        /// <summary>
+        ///   Creates a <see cref="PluralRulesContext"/> for a specific double.
+        /// </summary>
+        /// <param name="value">
+        ///   The specific double.
+        /// </param>
+        /// <returns>
+        ///   A new context.
+        /// </returns>
         public static PluralRulesContext Create(double value) => Create(value.ToString(CultureInfo.InvariantCulture));
 
+        /// <summary>
+        ///   Creates a <see cref="PluralRulesContext"/> for a specific string.
+        /// </summary>
+        /// <param name="value">
+        ///   The specific string.
+        /// </param>
+        /// <returns>
+        ///   A new context.
+        /// </returns>
         public static PluralRulesContext Create(string value)
         {
             if (!Regex.IsMatch(value, @"^-?[0-9]+(\.[0-9]+)?([ce][0-9]+)?$"))
