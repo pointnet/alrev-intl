@@ -9,17 +9,6 @@ namespace Alrev.Intl.Abstractions
     /// <typeparam name="T">An <see cref="IResource"/></typeparam>
     public interface IResourceSetLocalizer<T>
     {
-
-        /// <summary>
-        /// Gets the resource for the culture used by the current thread
-        /// </summary>
-        T CurrentLocalizer { get; }
-
-        /// <summary>
-        /// Gets the resource for the current user interface culture used by the Resource Manager to look up culture-specific resources at run-time
-        /// </summary>
-        T CurrentUILocalizer { get; }
-
         /// <summary>
         /// Gets the resource for the specified <see cref="CultureInfo"/>
         /// </summary>
