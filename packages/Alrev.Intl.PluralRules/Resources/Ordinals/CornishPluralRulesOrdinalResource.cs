@@ -14,16 +14,33 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Ordinals
 {
-    // https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#kw
+	/// <summary>
+	/// Ordinal <see cref="IPluralRulesResource"/> for 'Cornish' [kw]
+	/// </summary>
+	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#kw"/>
     public class CornishPluralRulesOrdinalResource : IPluralRulesResource, IResource
     {
+        /// <summary>
+        /// The <see cref="IPluralRulesResource"/> locale
+        /// </summary>
         public string Locale { get; } = "kw";
 
+        /// <summary>
+        /// The <see cref="IPluralRulesResource"/> type
+        /// </summary>
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.Ordinal;
 
-        // one - n = 1..4 or n % 100 = 1..4,21..24,41..44,61..64,81..84
-        // many - n = 5 or n % 100 = 5
-        // other - 
+		/// <summary>
+  		/// Evaluates a <see cref="IPluralRulesContext"/> against the 'Cornish' [kw] Ordinal <see cref="IPluralRulesResource"/>
+  		/// </summary>
+  		/// <param name="context">A <see cref="IPluralRulesContext"/></param>
+  		/// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
+  		/// <remarks>
+        /// one - n = 1..4 or n % 100 = 1..4,21..24,41..44,61..64,81..84
+        /// many - n = 5 or n % 100 = 5
+        /// other - 
+  		/// </remarks>
+        /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
             null => throw new ArgumentNullException(nameof(context)),

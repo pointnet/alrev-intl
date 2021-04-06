@@ -14,14 +14,31 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Ordinals
 {
-    // https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#sr
+	/// <summary>
+	/// Ordinal <see cref="IPluralRulesResource"/> for 'Serbian' [sr]
+	/// </summary>
+	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#sr"/>
     public class SerbianPluralRulesOrdinalResource : IPluralRulesResource, IResource
     {
+        /// <summary>
+        /// The <see cref="IPluralRulesResource"/> locale
+        /// </summary>
         public string Locale { get; } = "sr";
 
+        /// <summary>
+        /// The <see cref="IPluralRulesResource"/> type
+        /// </summary>
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.Ordinal;
 
-        // other - 
+		/// <summary>
+  		/// Evaluates a <see cref="IPluralRulesContext"/> against the 'Serbian' [sr] Ordinal <see cref="IPluralRulesResource"/>
+  		/// </summary>
+  		/// <param name="context">A <see cref="IPluralRulesContext"/></param>
+  		/// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
+  		/// <remarks>
+        /// other - 
+  		/// </remarks>
+        /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
             null => throw new ArgumentNullException(nameof(context)),

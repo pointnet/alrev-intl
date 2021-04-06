@@ -17,11 +17,16 @@ using System.Globalization;
 
 namespace Alrev.Intl.PluralRules.Globalization
 {
-    // https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html
+    /// <summary>
+    /// The Cardinal plural rules localizer
+    /// </summary>
     public class PluralRulesCardinalLocalizer : ReadOnlyDictionary<string, IPluralRulesResource>, IResourceSetLocalizer<IPluralRulesResource>
     {
         private PluralRulesCardinalLocalizer(IDictionary<string, IPluralRulesResource> dictionary) : base(dictionary) { }
-
+    
+        /// <summary>
+        /// The class constructor
+        /// </summary>
         public PluralRulesCardinalLocalizer() : this(new Dictionary<string, IPluralRulesResource>
         {
             { "af", new AfrikaansPluralRulesCardinalResource() },
@@ -208,11 +213,27 @@ namespace Alrev.Intl.PluralRules.Globalization
             { "zu", new IsiZuluPluralRulesCardinalResource() },
         })
         { }
-
+    
+        /// <summary>
+        /// Gets the <see cref="IPluralRulesResource"/> for the culture used by the current thread
+        /// </summary>
         public IPluralRulesResource CurrentLocalizer => this.GetLocalizer(CultureInfo.CurrentCulture);
-
+    
+        /// <summary>
+        /// Gets the <see cref="IPluralRulesResource"/> for the current user interface culture used by the Resource Manager to look up culture-specific resources at run-time
+        /// </summary>
         public IPluralRulesResource CurrentUILocalizer => this.GetLocalizer(CultureInfo.CurrentUICulture);
-
+    
+        /// <summary>
+        /// Gets the <see cref="IPluralRulesResource"/> for the specified <see cref="CultureInfo"/>
+        /// </summary>
+        /// <param name="culture">The <see cref="CultureInfo"/></param>
+        /// <returns>An <see cref="IPluralRulesResource"/> for the specified <see cref="CultureInfo"/> or null</returns>
+        /// <remarks>
+        /// If the specified <see cref="CultureInfo"/> does not exists, it will try to use the parent <see cref="CultureInfo"/> of the specified one.
+        /// </remarks>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
         public IPluralRulesResource GetLocalizer(CultureInfo culture) => culture switch 
         {
             null => throw new ArgumentNullException(nameof(culture)),

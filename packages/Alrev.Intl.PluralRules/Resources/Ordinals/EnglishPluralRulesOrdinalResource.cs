@@ -14,17 +14,34 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Ordinals
 {
-    // https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#en
+	/// <summary>
+	/// Ordinal <see cref="IPluralRulesResource"/> for 'English' [en]
+	/// </summary>
+	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#en"/>
     public class EnglishPluralRulesOrdinalResource : IPluralRulesResource, IResource
     {
+        /// <summary>
+        /// The <see cref="IPluralRulesResource"/> locale
+        /// </summary>
         public string Locale { get; } = "en";
 
+        /// <summary>
+        /// The <see cref="IPluralRulesResource"/> type
+        /// </summary>
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.Ordinal;
 
-        // one - n % 10 = 1 and n % 100 != 11
-        // two - n % 10 = 2 and n % 100 != 12
-        // few - n % 10 = 3 and n % 100 != 13
-        // other - 
+		/// <summary>
+  		/// Evaluates a <see cref="IPluralRulesContext"/> against the 'English' [en] Ordinal <see cref="IPluralRulesResource"/>
+  		/// </summary>
+  		/// <param name="context">A <see cref="IPluralRulesContext"/></param>
+  		/// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
+  		/// <remarks>
+        /// one - n % 10 = 1 and n % 100 != 11
+        /// two - n % 10 = 2 and n % 100 != 12
+        /// few - n % 10 = 3 and n % 100 != 13
+        /// other - 
+  		/// </remarks>
+        /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
             null => throw new ArgumentNullException(nameof(context)),

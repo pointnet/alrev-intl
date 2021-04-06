@@ -14,15 +14,32 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-    // https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#hi
+	/// <summary>
+	/// Cardinal <see cref="IPluralRulesResource"/> for 'Hindi' [hi]
+	/// </summary>
+	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#hi"/>
     public class HindiPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
+        /// <summary>
+        /// The <see cref="IPluralRulesResource"/> locale
+        /// </summary>
         public string Locale { get; } = "hi";
 
+        /// <summary>
+        /// The <see cref="IPluralRulesResource"/> type
+        /// </summary>
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.Cardinal;
 
-        // one - i = 0 or n = 1
-        // other - 
+		/// <summary>
+  		/// Evaluates a <see cref="IPluralRulesContext"/> against the 'Hindi' [hi] Cardinal <see cref="IPluralRulesResource"/>
+  		/// </summary>
+  		/// <param name="context">A <see cref="IPluralRulesContext"/></param>
+  		/// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
+  		/// <remarks>
+        /// one - i = 0 or n = 1
+        /// other - 
+  		/// </remarks>
+        /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
             null => throw new ArgumentNullException(nameof(context)),

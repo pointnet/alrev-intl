@@ -14,17 +14,34 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-    // https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#ru
+	/// <summary>
+	/// Cardinal <see cref="IPluralRulesResource"/> for 'Russian' [ru]
+	/// </summary>
+	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#ru"/>
     public class RussianPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
+        /// <summary>
+        /// The <see cref="IPluralRulesResource"/> locale
+        /// </summary>
         public string Locale { get; } = "ru";
 
+        /// <summary>
+        /// The <see cref="IPluralRulesResource"/> type
+        /// </summary>
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.Cardinal;
 
-        // one - v = 0 and i % 10 = 1 and i % 100 != 11
-        // few - v = 0 and i % 10 = 2..4 and i % 100 != 12..14
-        // many - v = 0 and i % 10 = 0 or v = 0 and i % 10 = 5..9 or v = 0 and i % 100 = 11..14
-        // other - 
+		/// <summary>
+  		/// Evaluates a <see cref="IPluralRulesContext"/> against the 'Russian' [ru] Cardinal <see cref="IPluralRulesResource"/>
+  		/// </summary>
+  		/// <param name="context">A <see cref="IPluralRulesContext"/></param>
+  		/// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
+  		/// <remarks>
+        /// one - v = 0 and i % 10 = 1 and i % 100 != 11
+        /// few - v = 0 and i % 10 = 2..4 and i % 100 != 12..14
+        /// many - v = 0 and i % 10 = 0 or v = 0 and i % 10 = 5..9 or v = 0 and i % 100 = 11..14
+        /// other - 
+  		/// </remarks>
+        /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
             null => throw new ArgumentNullException(nameof(context)),

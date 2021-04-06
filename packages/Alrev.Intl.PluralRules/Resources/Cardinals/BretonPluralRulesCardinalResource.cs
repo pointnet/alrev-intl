@@ -14,18 +14,35 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-    // https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#br
+	/// <summary>
+	/// Cardinal <see cref="IPluralRulesResource"/> for 'Breton' [br]
+	/// </summary>
+	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#br"/>
     public class BretonPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
+        /// <summary>
+        /// The <see cref="IPluralRulesResource"/> locale
+        /// </summary>
         public string Locale { get; } = "br";
 
+        /// <summary>
+        /// The <see cref="IPluralRulesResource"/> type
+        /// </summary>
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.Cardinal;
 
-        // one - n % 10 = 1 and n % 100 != 11,71,91
-        // two - n % 10 = 2 and n % 100 != 12,72,92
-        // few - n % 10 = 3..4,9 and n % 100 != 10..19,70..79,90..99
-        // many - n != 0 and n % 1000000 = 0
-        // other - 
+		/// <summary>
+  		/// Evaluates a <see cref="IPluralRulesContext"/> against the 'Breton' [br] Cardinal <see cref="IPluralRulesResource"/>
+  		/// </summary>
+  		/// <param name="context">A <see cref="IPluralRulesContext"/></param>
+  		/// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
+  		/// <remarks>
+        /// one - n % 10 = 1 and n % 100 != 11,71,91
+        /// two - n % 10 = 2 and n % 100 != 12,72,92
+        /// few - n % 10 = 3..4,9 and n % 100 != 10..19,70..79,90..99
+        /// many - n != 0 and n % 1000000 = 0
+        /// other - 
+  		/// </remarks>
+        /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
             null => throw new ArgumentNullException(nameof(context)),
