@@ -69,6 +69,7 @@ namespace Alrev.Intl.PluralRules
         /// <returns>
         ///   A new context.
         /// </returns>
+        /// <exception cref="ArgumentException"></exception>
         public static PluralRulesContext Create(int value) => Create(value.ToString(CultureInfo.InvariantCulture));
 
         /// <summary>
@@ -80,6 +81,7 @@ namespace Alrev.Intl.PluralRules
         /// <returns>
         ///   A new context.
         /// </returns>
+        /// <exception cref="ArgumentException"></exception>
         public static PluralRulesContext Create(decimal value) => Create(value.ToString(CultureInfo.InvariantCulture));
 
         /// <summary>
@@ -91,6 +93,7 @@ namespace Alrev.Intl.PluralRules
         /// <returns>
         ///   A new context.
         /// </returns>
+        /// <exception cref="ArgumentException"></exception>
         public static PluralRulesContext Create(double value) => Create(value.ToString(CultureInfo.InvariantCulture));
 
         /// <summary>
@@ -102,11 +105,12 @@ namespace Alrev.Intl.PluralRules
         /// <returns>
         ///   A new context.
         /// </returns>
+        /// <exception cref="ArgumentException"></exception>
         public static PluralRulesContext Create(string value)
         {
             if (!Regex.IsMatch(value, @"^-?[0-9]+(\.[0-9]+)?([ce][0-9]+)?$"))
             {
-                throw new ArgumentException($"PluralRulesContext invalid format: {value}");
+                throw new ArgumentException($"PluralRulesContext invalid format: {value}", nameof(value));
             }
             PluralRulesContext context = new(value);
             context._initial = value;
