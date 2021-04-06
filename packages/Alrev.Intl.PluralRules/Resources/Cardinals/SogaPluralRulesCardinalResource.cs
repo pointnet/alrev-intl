@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-	/// <summary>
-	/// Cardinal <see cref="IPluralRulesResource"/> for 'Soga' [xog]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#xog"/>
+    /// <summary>
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'Soga' [xog]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#xog"/>
     public class SogaPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

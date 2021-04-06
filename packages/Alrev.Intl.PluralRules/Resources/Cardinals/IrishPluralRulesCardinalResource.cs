@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-	/// <summary>
-	/// Cardinal <see cref="IPluralRulesResource"/> for 'Irish' [ga]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#ga"/>
+    /// <summary>
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'Irish' [ga]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#ga"/>
     public class IrishPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

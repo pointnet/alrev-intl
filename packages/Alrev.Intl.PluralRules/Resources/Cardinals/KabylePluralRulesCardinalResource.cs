@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-	/// <summary>
-	/// Cardinal <see cref="IPluralRulesResource"/> for 'Kabyle' [kab]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#kab"/>
+    /// <summary>
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'Kabyle' [kab]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#kab"/>
     public class KabylePluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

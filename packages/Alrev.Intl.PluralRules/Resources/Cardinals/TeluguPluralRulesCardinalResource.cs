@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-	/// <summary>
-	/// Cardinal <see cref="IPluralRulesResource"/> for 'Telugu' [te]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#te"/>
+    /// <summary>
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'Telugu' [te]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#te"/>
     public class TeluguPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-	/// <summary>
-	/// Cardinal <see cref="IPluralRulesResource"/> for 'Manx' [gv]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#gv"/>
+    /// <summary>
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'Manx' [gv]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#gv"/>
     public class ManxPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

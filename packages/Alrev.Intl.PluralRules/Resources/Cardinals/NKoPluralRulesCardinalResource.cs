@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-	/// <summary>
-	/// Cardinal <see cref="IPluralRulesResource"/> for 'N&#8217;Ko' [nqo]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#nqo"/>
+    /// <summary>
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'N&#8217;Ko' [nqo]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#nqo"/>
     public class NKoPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

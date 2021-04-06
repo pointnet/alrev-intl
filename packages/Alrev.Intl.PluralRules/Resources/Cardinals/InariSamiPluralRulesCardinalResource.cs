@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-	/// <summary>
-	/// Cardinal <see cref="IPluralRulesResource"/> for 'Inari Sami' [smn]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#smn"/>
+    /// <summary>
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'Inari Sami' [smn]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#smn"/>
     public class InariSamiPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

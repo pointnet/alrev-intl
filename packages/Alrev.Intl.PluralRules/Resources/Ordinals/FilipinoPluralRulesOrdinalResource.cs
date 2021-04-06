@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Ordinals
 {
-	/// <summary>
-	/// Ordinal <see cref="IPluralRulesResource"/> for 'Filipino' [fil]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#fil"/>
+    /// <summary>
+    /// Ordinal <see cref="IPluralRulesResource"/> for 'Filipino' [fil]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#fil"/>
     public class FilipinoPluralRulesOrdinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

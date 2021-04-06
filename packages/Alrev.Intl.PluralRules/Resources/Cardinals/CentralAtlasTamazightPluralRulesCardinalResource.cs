@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-	/// <summary>
-	/// Cardinal <see cref="IPluralRulesResource"/> for 'Central Atlas Tamazight' [tzm]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#tzm"/>
+    /// <summary>
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'Central Atlas Tamazight' [tzm]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#tzm"/>
     public class CentralAtlasTamazightPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Ordinals
 {
-	/// <summary>
-	/// Ordinal <see cref="IPluralRulesResource"/> for 'Basque' [eu]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#eu"/>
+    /// <summary>
+    /// Ordinal <see cref="IPluralRulesResource"/> for 'Basque' [eu]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#eu"/>
     public class BasquePluralRulesOrdinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

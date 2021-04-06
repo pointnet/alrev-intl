@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-	/// <summary>
-	/// Cardinal <see cref="IPluralRulesResource"/> for 'Tachelhit' [shi]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#shi"/>
+    /// <summary>
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'Tachelhit' [shi]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#shi"/>
     public class TachelhitPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

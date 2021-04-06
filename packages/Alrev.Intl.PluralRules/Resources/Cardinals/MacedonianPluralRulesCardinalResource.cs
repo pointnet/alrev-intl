@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-	/// <summary>
-	/// Cardinal <see cref="IPluralRulesResource"/> for 'Macedonian' [mk]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#mk"/>
+    /// <summary>
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'Macedonian' [mk]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#mk"/>
     public class MacedonianPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

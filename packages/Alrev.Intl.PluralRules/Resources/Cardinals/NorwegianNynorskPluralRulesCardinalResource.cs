@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-	/// <summary>
-	/// Cardinal <see cref="IPluralRulesResource"/> for 'Norwegian Nynorsk' [nn]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#nn"/>
+    /// <summary>
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'Norwegian Nynorsk' [nn]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#nn"/>
     public class NorwegianNynorskPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

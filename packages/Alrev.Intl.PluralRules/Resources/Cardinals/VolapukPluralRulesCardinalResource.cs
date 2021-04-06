@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
-	/// <summary>
-	/// Cardinal <see cref="IPluralRulesResource"/> for 'Volap&#252;k' [vo]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#vo"/>
+    /// <summary>
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'Volap&#252;k' [vo]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#vo"/>
     public class VolapukPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

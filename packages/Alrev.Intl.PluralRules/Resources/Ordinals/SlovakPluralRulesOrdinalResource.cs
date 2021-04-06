@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Ordinals
 {
-	/// <summary>
-	/// Ordinal <see cref="IPluralRulesResource"/> for 'Slovak' [sk]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#sk"/>
+    /// <summary>
+    /// Ordinal <see cref="IPluralRulesResource"/> for 'Slovak' [sk]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#sk"/>
     public class SlovakPluralRulesOrdinalResource : IPluralRulesResource, IResource
     {
         /// <summary>

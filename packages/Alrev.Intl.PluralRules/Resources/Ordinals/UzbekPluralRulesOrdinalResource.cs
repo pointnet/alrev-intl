@@ -14,10 +14,10 @@ using System.Linq;
 
 namespace Alrev.Intl.PluralRules.Resources.Ordinals
 {
-	/// <summary>
-	/// Ordinal <see cref="IPluralRulesResource"/> for 'Uzbek' [uz]
-	/// </summary>
-	/// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#uz"/>
+    /// <summary>
+    /// Ordinal <see cref="IPluralRulesResource"/> for 'Uzbek' [uz]
+    /// </summary>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#uz"/>
     public class UzbekPluralRulesOrdinalResource : IPluralRulesResource, IResource
     {
         /// <summary>
