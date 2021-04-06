@@ -30,17 +30,17 @@ namespace Alrev.Intl.PluralRules.Resources.Ordinals
         /// </summary>
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.Ordinal;
 
-		/// <summary>
-  		/// Evaluates a <see cref="IPluralRulesContext"/> against the 'Azerbaijani' [az] Ordinal <see cref="IPluralRulesResource"/>
-  		/// </summary>
-  		/// <param name="context">A <see cref="IPluralRulesContext"/></param>
-  		/// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
-  		/// <remarks>
+        /// <summary>
+        /// Evaluates a <see cref="IPluralRulesContext"/> against the 'Azerbaijani' [az] Ordinal <see cref="IPluralRulesResource"/>
+        /// </summary>
+        /// <param name="context">A <see cref="IPluralRulesContext"/></param>
+        /// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
+        /// <remarks>
         /// one - i % 10 = 1,2,5,7,8 or i % 100 = 20,50,70,80
         /// few - i % 10 = 3,4 or i % 1000 = 100,200,300,400,500,600,700,800,900
         /// many - i = 0 or i % 10 = 6 or i % 100 = 40,60,90
         /// other - 
-  		/// </remarks>
+        /// </remarks>
         /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {

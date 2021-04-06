@@ -30,19 +30,19 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
         /// </summary>
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.Cardinal;
 
-		/// <summary>
-  		/// Evaluates a <see cref="IPluralRulesContext"/> against the 'Welsh' [cy] Cardinal <see cref="IPluralRulesResource"/>
-  		/// </summary>
-  		/// <param name="context">A <see cref="IPluralRulesContext"/></param>
-  		/// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
-  		/// <remarks>
+        /// <summary>
+        /// Evaluates a <see cref="IPluralRulesContext"/> against the 'Welsh' [cy] Cardinal <see cref="IPluralRulesResource"/>
+        /// </summary>
+        /// <param name="context">A <see cref="IPluralRulesContext"/></param>
+        /// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
+        /// <remarks>
         /// zero - n = 0
         /// one - n = 1
         /// two - n = 2
         /// few - n = 3
         /// many - n = 6
         /// other - 
-  		/// </remarks>
+        /// </remarks>
         /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {

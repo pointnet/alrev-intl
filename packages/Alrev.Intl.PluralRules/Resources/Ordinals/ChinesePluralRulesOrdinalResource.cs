@@ -30,14 +30,14 @@ namespace Alrev.Intl.PluralRules.Resources.Ordinals
         /// </summary>
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.Ordinal;
 
-		/// <summary>
-  		/// Evaluates a <see cref="IPluralRulesContext"/> against the 'Chinese' [zh] Ordinal <see cref="IPluralRulesResource"/>
-  		/// </summary>
-  		/// <param name="context">A <see cref="IPluralRulesContext"/></param>
-  		/// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
-  		/// <remarks>
+        /// <summary>
+        /// Evaluates a <see cref="IPluralRulesContext"/> against the 'Chinese' [zh] Ordinal <see cref="IPluralRulesResource"/>
+        /// </summary>
+        /// <param name="context">A <see cref="IPluralRulesContext"/></param>
+        /// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
+        /// <remarks>
         /// other - 
-  		/// </remarks>
+        /// </remarks>
         /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {

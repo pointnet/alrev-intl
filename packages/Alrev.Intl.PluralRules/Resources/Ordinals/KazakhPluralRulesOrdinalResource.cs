@@ -30,15 +30,15 @@ namespace Alrev.Intl.PluralRules.Resources.Ordinals
         /// </summary>
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.Ordinal;
 
-		/// <summary>
-  		/// Evaluates a <see cref="IPluralRulesContext"/> against the 'Kazakh' [kk] Ordinal <see cref="IPluralRulesResource"/>
-  		/// </summary>
-  		/// <param name="context">A <see cref="IPluralRulesContext"/></param>
-  		/// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
-  		/// <remarks>
+        /// <summary>
+        /// Evaluates a <see cref="IPluralRulesContext"/> against the 'Kazakh' [kk] Ordinal <see cref="IPluralRulesResource"/>
+        /// </summary>
+        /// <param name="context">A <see cref="IPluralRulesContext"/></param>
+        /// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
+        /// <remarks>
         /// many - n % 10 = 6 or n % 10 = 9 or n % 10 = 0 and n != 0
         /// other - 
-  		/// </remarks>
+        /// </remarks>
         /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
