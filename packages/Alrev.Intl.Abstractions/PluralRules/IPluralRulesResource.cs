@@ -16,7 +16,7 @@
         /// </summary>
         /// <param name="context">A <see cref="IPluralRulesContext"/></param>
         /// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
-        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="System.ArgumentNullException"></exception>
         PluralRulesValues Evaluate(IPluralRulesContext context);
     }
 }

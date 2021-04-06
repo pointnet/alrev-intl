@@ -7,7 +7,7 @@
     public interface IPluralRulesContext
     {
         /// <summary>
-        ///   The original value of the <see cref="PluralRulesContext"/>
+        ///   The original value of the <see cref="IPluralRulesContext"/>
         /// </summary>
         string input { get; }
 
