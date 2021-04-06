@@ -28,10 +28,6 @@ namespace {{namespace}}
         })
         { }
 
-        public IRelativeTimeResourceSet CurrentLocalizer => this.GetLocalizer(CultureInfo.CurrentCulture);
-
-        public IRelativeTimeResourceSet CurrentUILocalizer => this.GetLocalizer(CultureInfo.CurrentUICulture);
-
         public IRelativeTimeResourceSet GetLocalizer(CultureInfo culture) => this.GetValueOrDefault(culture.Name, null) ?? this.GetValueOrDefault(culture.Parent?.Name, null);
     }
 }
