@@ -24,7 +24,7 @@ namespace Alrev.Intl.PluralRules.Tests
         }
 
         [Fact]
-        public void EvaluateFrenchOrdinal_ShouldReturn_PluralRulesValuesOne()
+        public void EvaluateFrenchOrdinalWithString_ShouldReturn_PluralRulesValuesOne()
         {
             PluralRulesEvaluator pre = new PluralRulesEvaluator();
             PluralRulesValues result = pre.Evaluate("1", PluralRulesTypeValues.Ordinal, new CultureInfo("fr"));
@@ -32,10 +32,42 @@ namespace Alrev.Intl.PluralRules.Tests
         }
 
         [Fact]
-        public void EvaluateFrenchCardinal_ShouldReturn_PluralRulesValuesOne()
+        public void EvaluateFrenchCardinalWithString_ShouldReturn_PluralRulesValuesOne()
         {
             PluralRulesEvaluator pre = new PluralRulesEvaluator();
             PluralRulesValues result = pre.Evaluate("1", PluralRulesTypeValues.Cardinal, new CultureInfo("fr"));
+            Assert.Equal(PluralRulesValues.One, result);
+        }
+
+        [Fact]
+        public void EvaluateFrenchOrdinalWithInteger_ShouldReturn_PluralRulesValuesOne()
+        {
+            PluralRulesEvaluator pre = new PluralRulesEvaluator();
+            PluralRulesValues result = pre.Evaluate(1, PluralRulesTypeValues.Ordinal, new CultureInfo("fr"));
+            Assert.Equal(PluralRulesValues.One, result);
+        }
+
+        [Fact]
+        public void EvaluateFrenchCardinalWithInteger_ShouldReturn_PluralRulesValuesOne()
+        {
+            PluralRulesEvaluator pre = new PluralRulesEvaluator();
+            PluralRulesValues result = pre.Evaluate(1, PluralRulesTypeValues.Cardinal, new CultureInfo("fr"));
+            Assert.Equal(PluralRulesValues.One, result);
+        }
+
+        [Fact]
+        public void EvaluateFrenchOrdinalWithDouble_ShouldReturn_PluralRulesValuesOne()
+        {
+            PluralRulesEvaluator pre = new PluralRulesEvaluator();
+            PluralRulesValues result = pre.Evaluate(1.0, PluralRulesTypeValues.Ordinal, new CultureInfo("fr"));
+            Assert.Equal(PluralRulesValues.One, result);
+        }
+
+        [Fact]
+        public void EvaluateFrenchCardinalWithDouble_ShouldReturn_PluralRulesValuesOne()
+        {
+            PluralRulesEvaluator pre = new PluralRulesEvaluator();
+            PluralRulesValues result = pre.Evaluate(1.0, PluralRulesTypeValues.Cardinal, new CultureInfo("fr"));
             Assert.Equal(PluralRulesValues.One, result);
         }
     }

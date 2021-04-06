@@ -11,17 +11,6 @@ namespace Alrev.Intl.Abstractions.PluralRules
         /// <summary>
         /// Evaluate <see cref="PluralRulesValues"/> for the specific <see cref="CultureInfo"/>
         /// </summary>
-        /// <param name="value">The integer value to evaluate</param>
-        /// <param name="rulesType">The localizer type</param>
-        /// <param name="culture">The <see cref="CultureInfo"/> to evaluate</param>
-        /// <returns>A <see cref="PluralRulesValues"/> corresponding to the specified value</returns>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="ArgumentException"></exception>
-        PluralRulesValues Evaluate(decimal value, PluralRulesTypeValues rulesType, CultureInfo culture);
-
-        /// <summary>
-        /// Evaluate <see cref="PluralRulesValues"/> for the specific <see cref="CultureInfo"/>
-        /// </summary>
         /// <param name="value">The decimal value to evaluate</param>
         /// <param name="rulesType">The localizer type</param>
         /// <param name="culture">The <see cref="CultureInfo"/> to evaluate</param>
