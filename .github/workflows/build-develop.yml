@@ -37,7 +37,7 @@ jobs:
                 echo "FILE_NAME=TestReport.${{github.run_number}}.md" >> $GITHUB_ENV
               fi
       - name: Test
-        run: dotnet test --no-restore --no-build --verbosity normal --logger:'liquid.md;LogFileName=${{github.workspace}}/${{env.FILE_NAME}};Title=${{env.TITLE}};' /p:CollectCoverage=true /p:CoverletOutputFormat='json%2copencover' /p:CoverletOutput='../' /p:MergeWith='../coverage.json'
+        run: dotnet test --no-restore --no-build --verbosity normal --logger:'liquid.md;LogFileName=${{github.workspace}}/${{env.FILE_NAME}};Title=${{env.TITLE}};' /p:CollectCoverage=true /p:CoverletOutputFormat='json%2copencover%2clcov' /p:CoverletOutput='../' /p:MergeWith='../coverage.json'
       - name: Upload Test results as a Build Artifact
         uses: actions/upload-artifact@v2
         if: ${{always()}}
@@ -58,3 +58,8 @@ jobs:
           flags: unittests
           name: codecov-opencover
           verbose: true
+      - name: Publish coverage report to Coveralls.io
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./tests/coverage.info 
