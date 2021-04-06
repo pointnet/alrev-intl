@@ -24,7 +24,7 @@ namespace Alrev.Intl.PluralRules
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
         public PluralRulesValues Evaluate(int value, PluralRulesTypeValues rulesType, CultureInfo culture)
-            => this.Evaluate(PluralRulesContext.Create(value), rulesType, culture);
+            => this.Evaluate(PluralRulesContext.Create(value.ToString(CultureInfo.InvariantCulture)), rulesType, culture);
 
         /// <summary>
         /// Evaluate <see cref="PluralRulesValues"/> for the specific <see cref="CultureInfo"/>
@@ -36,7 +36,7 @@ namespace Alrev.Intl.PluralRules
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
         public PluralRulesValues Evaluate(decimal value, PluralRulesTypeValues rulesType, CultureInfo culture)
-            => this.Evaluate(PluralRulesContext.Create(value), rulesType, culture);
+            => this.Evaluate(PluralRulesContext.Create(value.ToString(CultureInfo.InvariantCulture)), rulesType, culture);
 
         /// <summary>
         /// Evaluate <see cref="PluralRulesValues"/> for the specific <see cref="CultureInfo"/>
@@ -48,7 +48,7 @@ namespace Alrev.Intl.PluralRules
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
         public PluralRulesValues Evaluate(double value, PluralRulesTypeValues rulesType, CultureInfo culture)
-            => this.Evaluate(PluralRulesContext.Create(value), rulesType, culture);
+            => this.Evaluate(PluralRulesContext.Create(value.ToString(CultureInfo.InvariantCulture)), rulesType, culture);
 
         /// <summary>
         /// Evaluate <see cref="PluralRulesValues"/> for the specific <see cref="CultureInfo"/>
@@ -72,7 +72,7 @@ namespace Alrev.Intl.PluralRules
             };
             if (resource is null)
             {
-                return PluralRulesValues.Unknown;
+                throw new CultureNotFoundException(nameof(culture), "Specified culture was not found in plural rules localizer");
             }
             return resource.Evaluate(context);
         }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using Xunit;
 
 namespace Alrev.Intl.PluralRules.Tests
@@ -7,7 +6,15 @@ namespace Alrev.Intl.PluralRules.Tests
     public class PluralRulesContextTests
     {
         [Theory]
+        [InlineData(null)]
         [InlineData("")]
+        public void NullOrWhiteSpace_ShouldThrow_ArgumentNullException(string input)
+        {
+            Exception ex = Record.Exception(() => PluralRulesContext.Create(input));
+            Assert.IsType<ArgumentNullException>(ex);
+        }
+
+        [Theory]
         [InlineData("invalid")]
         [InlineData("+1")]
         [InlineData("--1")]
@@ -50,104 +57,10 @@ namespace Alrev.Intl.PluralRules.Tests
         [InlineData("-123c5", 12300000, 12300000, 0, 0, 0, 0, 5, 5)]
         [InlineData("-1200.50", 1200.5, 1200, 2, 1, 50, 5, 0, 0)]
         [InlineData("-1.20050c3", 1200.5, 1200, 1, 1, 5, 5, 3, 3)]
-        public void SpecificString_ShouldReturn_ExpectedResult(string input, double n, int i, int v, int w, int f, int t, int e, int c)
+        public void SpecificInput_ShouldReturn_ExpectedResult(string input, double n, int i, int v, int w, int f, int t, int e, int c)
         {
             PluralRulesContext prc = PluralRulesContext.Create(input);
             Assert.Equal(input, prc.input);
-            Assert.Equal(n, prc.n);
-            Assert.Equal(i, prc.i);
-            Assert.Equal(v, prc.v);
-            Assert.Equal(w, prc.w);
-            Assert.Equal(f, prc.f);
-            Assert.Equal(t, prc.t);
-            Assert.Equal(c, prc.c);
-            Assert.Equal(e, prc.e);
-        }
-
-        [Theory]
-        [InlineData(-0, 0, 0, 0, 0, 0, 0, 0, 0)]
-        [InlineData(1, 1, 1, 0, 0, 0, 0, 0, 0)]
-        [InlineData(1200000, 1200000, 1200000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(1.2e6, 1200000, 1200000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(123e6, 123000000, 123000000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(123e5, 12300000, 12300000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(1.20050e4, 12005, 12005, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-1, 1, 1, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-1200000, 1200000, 1200000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-1.2e6, 1200000, 1200000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-123e6, 123000000, 123000000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-123e5, 12300000, 12300000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-1.20050e4, 12005, 12005, 0, 0, 0, 0, 0, 0)]
-        public void SpecificInteger_ShouldReturn_ExpectedResult(int input, double n, int i, int v, int w, int f, int t, int e, int c)
-        {
-            PluralRulesContext prc = PluralRulesContext.Create(input);
-            Assert.Equal(input.ToString(CultureInfo.InvariantCulture), prc.input);
-            Assert.Equal(n, prc.n);
-            Assert.Equal(i, prc.i);
-            Assert.Equal(v, prc.v);
-            Assert.Equal(w, prc.w);
-            Assert.Equal(f, prc.f);
-            Assert.Equal(t, prc.t);
-            Assert.Equal(c, prc.c);
-            Assert.Equal(e, prc.e);
-        }
-
-        [Theory]
-        [InlineData(-0, 0, 0, 0, 0, 0, 0, 0, 0)]
-        [InlineData(1, 1, 1, 0, 0, 0, 0, 0, 0)]
-        [InlineData(1.3, 1.3, 1, 1, 1, 3, 3, 0, 0)]
-        [InlineData(1.03, 1.03, 1, 2, 2, 3, 3, 0, 0)]
-        [InlineData(1.230, 1.23, 1, 2, 2, 23, 23, 0, 0)]
-        [InlineData(1200000, 1200000, 1200000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(1.2e6, 1200000, 1200000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(123e6, 123000000, 123000000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(123e5, 12300000, 12300000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(1.2005e3, 1200.5, 1200, 1, 1, 5, 5, 0, 0)]
-        [InlineData(-1, 1, 1, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-1.3, 1.3, 1, 1, 1, 3, 3, 0, 0)]
-        [InlineData(-1.03, 1.03, 1, 2, 2, 3, 3, 0, 0)]
-        [InlineData(-1.230, 1.23, 1, 2, 2, 23, 23, 0, 0)]
-        [InlineData(-1200000, 1200000, 1200000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-1.2e6, 1200000, 1200000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-123e6, 123000000, 123000000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-123e5, 12300000, 12300000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-1.20050e3, 1200.5, 1200, 1, 1, 5, 5, 0, 0)]
-        public void SpecificDouble_ShouldReturn_ExpectedResult(double input, double n, int i, int v, int w, int f, int t, int e, int c)
-        {
-            PluralRulesContext prc = PluralRulesContext.Create(input);
-            Assert.Equal(input.ToString(CultureInfo.InvariantCulture), prc.input);
-            Assert.Equal(n, prc.n);
-            Assert.Equal(i, prc.i);
-            Assert.Equal(v, prc.v);
-            Assert.Equal(w, prc.w);
-            Assert.Equal(f, prc.f);
-            Assert.Equal(t, prc.t);
-            Assert.Equal(c, prc.c);
-            Assert.Equal(e, prc.e);
-        }
-
-        [Theory]
-        [InlineData(-0, 0, 0, 0, 0, 0, 0, 0, 0)]
-        [InlineData(1, 1, 1, 0, 0, 0, 0, 0, 0)]
-        [InlineData(1.3, 1.3, 1, 1, 1, 3, 3, 0, 0)]
-        [InlineData(1.03, 1.03, 1, 2, 2, 3, 3, 0, 0)]
-        [InlineData(1.230, 1.23, 1, 2, 2, 23, 23, 0, 0)]
-        [InlineData(1.2e6, 1200000, 1200000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(123e6, 123000000, 123000000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(123e5, 12300000, 12300000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(1.2005e3, 1200.5, 1200, 1, 1, 5, 5, 0, 0)]
-        [InlineData(-1, 1, 1, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-1.3, 1.3, 1, 1, 1, 3, 3, 0, 0)]
-        [InlineData(-1.03, 1.03, 1, 2, 2, 3, 3, 0, 0)]
-        [InlineData(-1.230, 1.23, 1, 2, 2, 23, 23, 0, 0)]
-        [InlineData(-1200000, 1200000, 1200000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-123e6, 123000000, 123000000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-123e5, 12300000, 12300000, 0, 0, 0, 0, 0, 0)]
-        [InlineData(-1.20050e3, 1200.5, 1200, 1, 1, 5, 5, 0, 0)]
-        public void SpecificDecimal_ShouldReturn_ExpectedResult(decimal input, double n, int i, int v, int w, int f, int t, int e, int c)
-        {
-            PluralRulesContext prc = PluralRulesContext.Create(input);
-            Assert.Equal(input.ToString(CultureInfo.InvariantCulture), prc.input);
             Assert.Equal(n, prc.n);
             Assert.Equal(i, prc.i);
             Assert.Equal(v, prc.v);

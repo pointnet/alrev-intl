@@ -61,42 +61,6 @@ namespace Alrev.Intl.PluralRules
         private PluralRulesContext(string input) => this.input = input;
 
         /// <summary>
-        ///   Creates a <see cref="PluralRulesContext"/> for a specific integer.
-        /// </summary>
-        /// <param name="value">
-        ///   The specific integer.
-        /// </param>
-        /// <returns>
-        ///   A new context.
-        /// </returns>
-        /// <exception cref="ArgumentException"></exception>
-        public static PluralRulesContext Create(int value) => Create(value.ToString(CultureInfo.InvariantCulture));
-
-        /// <summary>
-        ///   Creates a <see cref="PluralRulesContext"/> for a specific decimal.
-        /// </summary>
-        /// <param name="value">
-        ///   The specific decimal.
-        /// </param>
-        /// <returns>
-        ///   A new context.
-        /// </returns>
-        /// <exception cref="ArgumentException"></exception>
-        public static PluralRulesContext Create(decimal value) => Create(value.ToString(CultureInfo.InvariantCulture));
-
-        /// <summary>
-        ///   Creates a <see cref="PluralRulesContext"/> for a specific double.
-        /// </summary>
-        /// <param name="value">
-        ///   The specific double.
-        /// </param>
-        /// <returns>
-        ///   A new context.
-        /// </returns>
-        /// <exception cref="ArgumentException"></exception>
-        public static PluralRulesContext Create(double value) => Create(value.ToString(CultureInfo.InvariantCulture));
-
-        /// <summary>
         ///   Creates a <see cref="PluralRulesContext"/> for a specific string.
         /// </summary>
         /// <param name="value">
@@ -106,8 +70,13 @@ namespace Alrev.Intl.PluralRules
         ///   A new context.
         /// </returns>
         /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="ArgumentNullException"></exception>
         public static PluralRulesContext Create(string value)
         {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentNullException(nameof(value), "value must not be null");
+            }
             if (!Regex.IsMatch(value, @"^-?[0-9]+(\.[0-9]+)?([ce][0-9]+)?$"))
             {
                 throw new ArgumentException($"PluralRulesContext invalid format: {value}", nameof(value));
