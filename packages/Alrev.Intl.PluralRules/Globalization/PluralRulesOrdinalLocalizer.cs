@@ -121,16 +121,6 @@ namespace Alrev.Intl.PluralRules.Globalization
         { }
     
         /// <summary>
-        /// Gets the <see cref="IPluralRulesResource"/> for the culture used by the current thread
-        /// </summary>
-        public IPluralRulesResource CurrentLocalizer => this.GetLocalizer(CultureInfo.CurrentCulture);
-    
-        /// <summary>
-        /// Gets the <see cref="IPluralRulesResource"/> for the current user interface culture used by the Resource Manager to look up culture-specific resources at run-time
-        /// </summary>
-        public IPluralRulesResource CurrentUILocalizer => this.GetLocalizer(CultureInfo.CurrentUICulture);
-    
-        /// <summary>
         /// Gets the <see cref="IPluralRulesResource"/> for the specified <see cref="CultureInfo"/>
         /// </summary>
         /// <param name="culture">The <see cref="CultureInfo"/></param>
@@ -142,7 +132,7 @@ namespace Alrev.Intl.PluralRules.Globalization
         /// <exception cref="ArgumentException"></exception>
         public IPluralRulesResource GetLocalizer(CultureInfo culture) => culture switch 
         {
-            null => throw new ArgumentNullException(nameof(culture)),
+            null => throw new ArgumentNullException("CultureInfo must not be null", nameof(culture)),
             CultureInfo c when string.IsNullOrEmpty(c.Name) => throw new ArgumentException("CultureInfo.InvariantCulture is not supported", nameof(culture)),
             _ => this.GetValueOrDefault(culture.Name, null) ?? this.GetValueOrDefault(culture.Parent.Name, null)
         };

@@ -43,7 +43,7 @@ namespace Alrev.Intl.PluralRules.Resources.Ordinals
         /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
-            null => throw new ArgumentNullException(nameof(context)),
+            null => throw new ArgumentNullException("IPluralRulesContext must not be null", nameof(context)),
             IPluralRulesContext prc when prc.i == 1 => PluralRulesValues.One,
             IPluralRulesContext prc when prc.i == 0 || (prc.i % 100).In(new int[] { 40, 60, 80 }.Concat(Enumerable.Range(2, 19)).Select<int, double>(i => i).ToArray()) => PluralRulesValues.Many,
             _ => PluralRulesValues.Other

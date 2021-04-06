@@ -43,7 +43,7 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
         /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesValues Evaluate(IPluralRulesContext context) => context switch
         {
-            null => throw new ArgumentNullException(nameof(context)),
+            null => throw new ArgumentNullException("IPluralRulesContext must not be null", nameof(context)),
             IPluralRulesContext prc when prc.n == 0 => PluralRulesValues.Zero,
             IPluralRulesContext prc when prc.i.In(0, 1) && prc.n != 0 => PluralRulesValues.One,
             _ => PluralRulesValues.Other

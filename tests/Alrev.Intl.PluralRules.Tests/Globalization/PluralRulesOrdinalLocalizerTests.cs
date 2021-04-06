@@ -66,23 +66,5 @@ namespace Alrev.Intl.PluralRules.Tests.Globalization
             IPluralRulesResource resource = localizer.GetLocalizer(new CultureInfo("en-US"));
             Assert.Equal("en", (resource as IResource).Locale);
         }
-
-        [Fact]
-        public void GetCurrentLocalizer_ShouldReturn_ThreadCurrentCultureLocalizer()
-        {
-            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en");
-            PluralRulesOrdinalLocalizer localizer = new PluralRulesOrdinalLocalizer();
-            Assert.Equal(Thread.CurrentThread.CurrentCulture.Name, (localizer.CurrentLocalizer as IResource).Locale);
-            Assert.Equal(CultureInfo.CurrentCulture.Name, (localizer.CurrentLocalizer as IResource).Locale);
-        }
-
-        [Fact]
-        public void GetCurrentUILocalizer_ShouldReturn_ThreadCurrentUICultureLocalizer()
-        {
-            CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en");
-            PluralRulesOrdinalLocalizer localizer = new PluralRulesOrdinalLocalizer();
-            Assert.Equal(Thread.CurrentThread.CurrentUICulture.Name, (localizer.CurrentUILocalizer as IResource).Locale);
-            Assert.Equal(CultureInfo.CurrentUICulture.Name, (localizer.CurrentUILocalizer as IResource).Locale);
-        }
     }
 }
