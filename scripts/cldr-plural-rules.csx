@@ -150,6 +150,7 @@ public class CldrPluralRules : BaseCommand
         {
             script = SCRIPT,
             locale = culture.Name,
+            englishName = culture.EnglishName,
             type = type,
             @namespace = $"{this.Namespace}.Resources.{type}s",
             classPrefix = $"{culture.EnglishName.ToValidClassName()}",
