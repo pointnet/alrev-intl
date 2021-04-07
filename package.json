@@ -23,7 +23,7 @@
   },
   "scripts": {
     "local-test": "dotnet test --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=\"json%2copencover\" /p:CoverletOutput=\"../\" /p:MergeWith=\"../coverage.json\"",
-    "postlocal-test": "dotnet tool run reportgenerator -reports:.\\tests\\coverage.net5.0.opencover.xml -targetdir:coveragereport -reporttypes:Html",
+    "postlocal-test": "dotnet tool run reportgenerator -reports:.\\tests\\coverage.net5.0.opencover.xml -targetdir:.\\tests\\coveragereport -reporttypes:Html",
     "cldr-plural-rules": "cd scripts && dotnet tool run dotnet-script .\\cldr-plural-rules.csx ..\\packages\\Alrev.Intl.PluralRules\\ -nm ..\\node_modules\\ -na Alrev.Intl.PluralRules",
     "cldr-relative-time": "cd scripts && dotnet tool run dotnet-script .\\cldr-relative-time.csx ..\\packages\\Alrev.Intl.RelativeTime\\ -nm ..\\node_modules\\ -na Alrev.Intl.RelativeTime"
   },
