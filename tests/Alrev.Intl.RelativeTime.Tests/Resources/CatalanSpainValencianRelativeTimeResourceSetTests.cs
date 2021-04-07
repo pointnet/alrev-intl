@@ -7,6 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.RelativeTime;
 using System;
 using System.Globalization;
@@ -59,7 +60,8 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         public void SpecificRelativeTimeUnit_ShouldReturn_IRelativeTimeResourceSet(RelativeTimeUnitValues expected)
         {
             IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("ca-ES-valencia"));
-            System.Console.WriteLine(resourceSet);
+            System.Console.WriteLine(resourceSet is null);
+            System.Console.WriteLine((resourceSet as IResource).Locale);
             IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(expected);
             Assert.Equal(expected, resourceStyles.RelativeTimeUnit);
         }
