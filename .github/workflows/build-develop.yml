@@ -31,9 +31,9 @@ jobs:
       - name: Test
         run: dotnet test --no-restore --no-build /p:CollectCoverage=true /p:CoverletOutputFormat="opencover"
       - name: Aggregate net5.0 coverage
-        run: dotnet tool run reportgenerator -reports:./tests/**/*.net5.0.opencover.xml -targetdir:./.coverage/net50 -reporttypes:Html;lcov
+        run: dotnet tool run reportgenerator -reports:tests/**/*.net5.0.opencover.xml -targetdir:.coverage/net50 -reporttypes:Html;lcov
       - name: Aggregate netcoreapp3.1 coverage
-        run: dotnet tool run reportgenerator -reports:./tests/**/*.netcoreapp3.1.opencover.xml -targetdir:./.coverage/netcoreapp31 -reporttypes:Html;lcov
+        run: dotnet tool run reportgenerator -reports:tests/**/*.netcoreapp3.1.opencover.xml -targetdir:.coverage/netcoreapp31 -reporttypes:Html;lcov
       - name: Publish net5.0 coverage report to Coveralls.io
         uses: coverallsapp/github-action@master
         with:
