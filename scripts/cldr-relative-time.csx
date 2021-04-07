@@ -79,7 +79,7 @@ public class CldrRelativeTime : BaseCommand
         {
             if (this.ProcessCulture(culture))
             {
-                cultures.Add(culture.Name, culture.EnglishName.ToValidClassName());
+                cultures.Add(culture.Name.ToLowerInvariant(), culture.EnglishName.ToValidClassName());
             }
         }
         this.GenerateLocalizer(cultures);
@@ -172,7 +172,7 @@ public class CldrRelativeTime : BaseCommand
         string csharp = this.CultureTemplate(new
         {
             script = SCRIPT,
-            locale = culture.Name,
+            locale = culture.Name.ToLowerInvariant(),
             englishName = culture.EnglishName,
             @namespace = $"{this.Namespace}.Resources",
             classPrefix = culture.EnglishName.ToValidClassName(),
@@ -182,7 +182,7 @@ public class CldrRelativeTime : BaseCommand
         string tests = this.CultureTestsTemplate(new
         {
             script = SCRIPT,
-            locale = culture.Name,
+            locale = culture.Name.ToLowerInvariant(),
             @namespace = $"{this.Namespace}.Tests.Resources",
             classPrefix = $"{culture.EnglishName.ToValidClassName()}",
             relativeTimes = relativeTimes
