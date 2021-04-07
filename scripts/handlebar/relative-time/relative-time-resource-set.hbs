@@ -44,13 +44,13 @@ namespace {{namespace}}
         /// </summary>
         /// <param name="relativeTimeUnit">The resource unit to get</param>
         /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
-        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        /// <exception cref="NotImplementedException"></exception>
         public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
         {
 {{#each relativeTimes}}
             RelativeTimeUnitValues.{{@key}} => this.{{@key}},
 {{/each}}
-            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+            _ => throw new NotImplementedException($"Relative time unit '{relativeTimeUnit}' is not supported")
         };
     }
 }

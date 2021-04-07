@@ -55,6 +55,7 @@ public class CldrRelativeTime : BaseCommand
     public static int Execute(string[] args) => McMaster.Extensions.CommandLineUtils.CommandLineApplication.Execute<CldrRelativeTime>(args);
 
     private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-resource-set.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-resource-set-tests.hbs"));
     private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-localizer.hbs"));
     private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-localizer-tests.hbs"));
 
@@ -178,6 +179,15 @@ public class CldrRelativeTime : BaseCommand
             relativeTimes = relativeTimes
         });
         File.WriteAllText(Path.Combine(this.OutputPath, "Resources", $"{culture.EnglishName.ToValidClassName()}RelativeTimeResourceSet.cs"), csharp);
+        string tests = this.CultureTestsTemplate(new
+        {
+            script = SCRIPT,
+            locale = culture.Name,
+            @namespace = $"{this.Namespace}.Tests.Resources",
+            classPrefix = $"{culture.EnglishName.ToValidClassName()}",
+            relativeTimes = relativeTimes
+        });
+        File.WriteAllText(Path.Combine(this.OutputPath, "..", "..", "tests", $"{this.Namespace}.Tests", "Resources", $"{culture.EnglishName.ToValidClassName()}RelativeTimeResourceSetTests.cs"), tests);
     }
 
     protected void GenerateLocalizer(Dictionary<string, string> cultures)
