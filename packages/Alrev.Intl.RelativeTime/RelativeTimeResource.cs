@@ -9,14 +9,14 @@ namespace Alrev.Intl.RelativeTime
     public class RelativeTimeResource : ReadOnlyDictionary<int, string>, IRelativeTimeResource, IResource
     {
         public string Locale { get; }
-        public RelativeTimeTypeValues RelativeTimeType { get; }
+        public RelativeTimeStylesValues RelativeTimeStyle { get; }
         public string DisplayName { get; }
         public IReadOnlyDictionary<PluralRulesValues, string> Past { get; }
         public IReadOnlyDictionary<PluralRulesValues, string> Future { get; }
 
         public RelativeTimeResource(
             string locale,
-            RelativeTimeTypeValues relativeTimeType,
+            RelativeTimeStylesValues relativeTimeType,
             string displayName,
             IDictionary<int, string> dictionary,
             IDictionary<PluralRulesValues, string> past,
@@ -24,7 +24,7 @@ namespace Alrev.Intl.RelativeTime
             : base(dictionary)
         {
             this.Locale = locale;
-            this.RelativeTimeType = relativeTimeType;
+            this.RelativeTimeStyle = relativeTimeType;
             this.DisplayName = displayName;
             this.Past = new RelativeTimePluralRulesResource(past ?? new Dictionary<PluralRulesValues, string>());
             this.Future = new RelativeTimePluralRulesResource(future ?? new Dictionary<PluralRulesValues, string>());
