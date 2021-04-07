@@ -714,7 +714,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         /// <param name="relativeTimeUnit">The resource unit to get</param>
         /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
-        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        /// <exception cref="NotImplementedException"></exception>
         public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
         {
             RelativeTimeUnitValues.Era => this.Era,
@@ -739,7 +739,7 @@ namespace Alrev.Intl.RelativeTime.Resources
             RelativeTimeUnitValues.Minute => this.Minute,
             RelativeTimeUnitValues.Second => this.Second,
             RelativeTimeUnitValues.Zone => this.Zone,
-            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+            _ => throw new NotImplementedException($"Relative time unit '{relativeTimeUnit}' is not supported")
         };
     }
 }
