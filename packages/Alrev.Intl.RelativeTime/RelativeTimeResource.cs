@@ -17,9 +17,14 @@ namespace Alrev.Intl.RelativeTime
         public string Locale { get; }
 
         /// <summary>
-        /// Gets the RelativeTimeStylesValues of the resource
+        /// Gets the RelativeTimeUnitValues of the resource
         /// </summary>
-        public RelativeTimeStylesValues RelativeTimeStyle { get; }
+        public RelativeTimeUnitValues RelativeTimeUnit { get; }
+
+        /// <summary>
+        /// Gets the RelativeTimeStyleValues of the resource
+        /// </summary>
+        public RelativeTimeStyleValues RelativeTimeStyle { get; }
 
         /// <summary>
         /// Gets the resource display name
@@ -40,14 +45,16 @@ namespace Alrev.Intl.RelativeTime
         /// The class constructor
         /// </summary>
         /// <param name="locale">The resource locale</param>
-        /// <param name="relativeTimeStyle">The resource <see cref="RelativeTimeStylesValues"/></param>
+        /// <param name="relativeTimeUnit">The resource <see cref="RelativeTimeUnitValues"/></param>
+        /// <param name="relativeTimeStyle">The resource <see cref="RelativeTimeStyleValues"/></param>
         /// <param name="displayName">The resource display name</param>
         /// <param name="dictionary">The resource current dictionary</param>
         /// <param name="past">The resource past dictionary</param>
         /// <param name="future">The resource future dictionary</param>
         public RelativeTimeResource(
             string locale,
-            RelativeTimeStylesValues relativeTimeStyle,
+            RelativeTimeUnitValues relativeTimeUnit,
+            RelativeTimeStyleValues relativeTimeStyle,
             string displayName,
             IDictionary<int, string> dictionary,
             IDictionary<PluralRulesValues, string> past,
@@ -55,6 +62,7 @@ namespace Alrev.Intl.RelativeTime
             : base(dictionary)
         {
             this.Locale = locale;
+            this.RelativeTimeUnit = relativeTimeUnit;
             this.RelativeTimeStyle = relativeTimeStyle;
             this.DisplayName = displayName;
             this.Past = new RelativeTimePluralRulesResource(past ?? new Dictionary<PluralRulesValues, string>());
