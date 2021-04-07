@@ -1,10 +1,16 @@
-﻿namespace Alrev.Intl.Abstractions.RelativeTime
+﻿using System;
+
+namespace Alrev.Intl.Abstractions.RelativeTime
 {
     /// <summary>
     /// Interface of Relative Time Styles
     /// </summary>
     public interface IRelativeTimeStylesResource
     {
+        /// <summary>
+        /// Gets the Relative Time styles unit
+        /// </summary>
+        RelativeTimeUnitValues RelativeTimeUnit { get; }
         /// <summary>
         /// Gets the Relative Time Long style resource
         /// </summary>
@@ -25,7 +31,7 @@
         /// </summary>
         /// <param name="relativeTimeStyle">The resource style to get</param>
         /// <returns>An <see cref="IRelativeTimeResource"/></returns>
-        /// <exception cref="RelativeTimeStyleNotFoundException"></exception>
+        /// <exception cref="NotImplementedException"></exception>
         IRelativeTimeResource GetRelativeTimeResource(RelativeTimeStyleValues relativeTimeStyle);
     }
 }

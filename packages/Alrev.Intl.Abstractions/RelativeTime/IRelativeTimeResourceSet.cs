@@ -1,4 +1,6 @@
-﻿namespace Alrev.Intl.Abstractions.RelativeTime
+﻿using System;
+
+namespace Alrev.Intl.Abstractions.RelativeTime
 {
     /// <summary>
     /// Interface of a Relative Time resource set
@@ -120,7 +122,7 @@
         /// </summary>
         /// <param name="relativeTimeUnit">The resource unit to get</param>
         /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
-        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        /// <exception cref="NotImplementedException"></exception>
         IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit);
     }
 }
