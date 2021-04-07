@@ -59,6 +59,7 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         public void SpecificRelativeTimeUnit_ShouldReturn_IRelativeTimeResourceSet(RelativeTimeUnitValues expected)
         {
             IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("ca-ES-valencia"));
+            System.Console.WriteLine(resourceSet);
             IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(expected);
             Assert.Equal(expected, resourceStyles.RelativeTimeUnit);
         }
