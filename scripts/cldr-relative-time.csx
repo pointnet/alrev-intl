@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 
 public record RelativeTime(
+    string Unit,
     string Type,
     string DisplayName,
     Dictionary<int, string> Current,
@@ -96,29 +97,7 @@ public class CldrRelativeTime : BaseCommand
         System.Text.Json.JsonProperty language = resource.RootElement.GetProperty("main").EnumerateObject().First();
         foreach (string prefix in prefixes)
         {
-            Dictionary<string, RelativeTime> styles = new();
-            foreach (string suffix in suffixes)
-            {
-                string key = $"{prefix}{suffix}";
-                System.Text.Json.JsonElement field = resource.RootElement
-                    .GetProperty("main")
-                    .GetProperty(language.Name)
-                    .GetProperty("dates")
-                    .GetProperty("fields")
-                    .GetProperty(key);
-                styles.Add(suffix switch
-                {
-                    "-narrow" => "narrow",
-                    "-short" => "short",
-                    _ => "long"
-                }, this.ProcessRelativeTime(key, suffix switch
-                {
-                    "-narrow" => "RelativeTimeStylesValues.Narrow",
-                    "-short" => "RelativeTimeStylesValues.Short",
-                    _ => "RelativeTimeStylesValues.Long"
-                }, field));
-            }
-            relativeTimes.Add(prefix switch
+            string titleCasePrefix = prefix switch
             {
                 "weekOfMonth" => "WeekOfMonth",
                 "dayOfYear" => "DayOfYear",
@@ -132,27 +111,52 @@ public class CldrRelativeTime : BaseCommand
                 "sat" => "Saturday",
                 "dayperiod" => "DayPeriod",
                 _ => CultureInfo.InvariantCulture.TextInfo.ToTitleCase(prefix)
-            }, styles);
+            };
+            Dictionary<string, RelativeTime> styles = new();
+            foreach (string suffix in suffixes)
+            {
+                string key = $"{prefix}{suffix}";
+                System.Text.Json.JsonElement field = resource.RootElement
+                    .GetProperty("main")
+                    .GetProperty(language.Name)
+                    .GetProperty("dates")
+                    .GetProperty("fields")
+                    .GetProperty(key);
+
+                styles.Add(suffix switch
+                {
+                    "-narrow" => "narrow",
+                    "-short" => "short",
+                    _ => "long"
+                }, this.ProcessRelativeTime(key, titleCasePrefix, suffix switch
+                {
+                    "-narrow" => "RelativeTimeStyleValues.Narrow",
+                    "-short" => "RelativeTimeStyleValues.Short",
+                    _ => "RelativeTimeStyleValues.Long"
+                }, field));
+            }
+            relativeTimes.Add(titleCasePrefix, styles);
         }
         this.GenerateCulture(culture, relativeTimes);
         return true;
     }
 
-    protected RelativeTime ProcessRelativeTime(string key, string type, System.Text.Json.JsonElement field)
+    protected RelativeTime ProcessRelativeTime(string key, string titleCasePrefix, string type, System.Text.Json.JsonElement field)
     {
         string[] keys = field.EnumerateObject().Select(p => p.Name).ToArray();
         string displayName = keys.Contains("displayName") ? field.GetProperty("displayName").GetString() : null;
         System.Text.Json.JsonElement? past = keys.Contains("relativeTime-type-past") ? field.GetProperty("relativeTime-type-past") : null;
         System.Text.Json.JsonElement? future = keys.Contains("relativeTime-type-future") ? field.GetProperty("relativeTime-type-future") : null;
         return new RelativeTime(
+            $"RelativeTimeUnitValues.{titleCasePrefix}",
             type,
             displayName,
             keys.Where(key => key.StartsWith("relative-type-")).ToDictionary(key => int.Parse(key.Replace("relative-type-", "")), key => field.GetProperty(key).GetString()),
-            this.ProcessRelativeTimPlurals(past),
-            this.ProcessRelativeTimPlurals(future));
+            this.ProcessRelativeTimePlurals(past),
+            this.ProcessRelativeTimePlurals(future));
     }
 
-    protected Dictionary<string, string> ProcessRelativeTimPlurals(System.Text.Json.JsonElement? field)
+    protected Dictionary<string, string> ProcessRelativeTimePlurals(System.Text.Json.JsonElement? field)
     {
         if (!field.HasValue) return null;
         string[] keys = field.Value.EnumerateObject().Select(p => p.Name).ToArray();

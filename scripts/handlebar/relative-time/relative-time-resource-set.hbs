@@ -33,9 +33,24 @@ namespace {{namespace}}
         /// </summary>
         public IRelativeTimeStylesResource {{@key}} { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.{{@key}},
 {{#with this/long}}{{> resource}}{{/with}},
 {{#with this/narrow}}{{> resource}}{{/with}},
 {{#with this/short}}{{> resource}}{{/with}});
 {{/each}}
+
+        /// <summary>
+        /// Gets the Relative Time resource styles based on the unit specified
+        /// </summary>
+        /// <param name="relativeTimeUnit">The resource unit to get</param>
+        /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
+        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
+        {
+{{#each relativeTimes}}
+            RelativeTimeUnitValues.{{@key}} => this.{{@key}},
+{{/each}}
+            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+        };
     }
 }
