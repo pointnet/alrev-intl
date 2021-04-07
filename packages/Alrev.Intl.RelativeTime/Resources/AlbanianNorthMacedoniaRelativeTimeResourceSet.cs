@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Albanian (North Macedonia)' [sq-MK]
+    /// </summary>
     public class AlbanianNorthMacedoniaRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "sq-MK";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "erë",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "erë",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "erë",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "vit",
                 new Dictionary<int, string> { { -1, "vjet" }, { 0, "sivjet" }, { 1, "mot" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vit më parë" }, { PluralRulesValues.Other, "{0} vjet më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} viti" }, { PluralRulesValues.Other, "pas {0} vjetësh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "vit",
                 new Dictionary<int, string> { { -1, "vitin e kaluar" }, { 0, "këtë vit" }, { 1, "vitin e ardhshëm" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vit më parë" }, { PluralRulesValues.Other, "{0} vjet më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} viti" }, { PluralRulesValues.Other, "pas {0} vjetësh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "vit",
                 new Dictionary<int, string> { { -1, "vitin e kaluar" }, { 0, "këtë vit" }, { 1, "vitin e ardhshëm" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vit më parë" }, { PluralRulesValues.Other, "{0} vjet më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} viti" }, { PluralRulesValues.Other, "pas {0} vjetësh" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "tremujor",
                 new Dictionary<int, string> { { -1, "tremujorin e kaluar" }, { 0, "këtë tremujor" }, { 1, "tremujorin e ardhshëm" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} tremujor më parë" }, { PluralRulesValues.Other, "{0} tremujorë më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} tremujori" }, { PluralRulesValues.Other, "pas {0} tremujorësh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "tremujor",
                 new Dictionary<int, string> { { -1, "tremujorin e kaluar" }, { 0, "këtë tremujor" }, { 1, "tremujorin e ardhshëm" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} tremujor më parë" }, { PluralRulesValues.Other, "{0} tremujorë më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} tremujori" }, { PluralRulesValues.Other, "pas {0} tremujorësh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "tremujor",
                 new Dictionary<int, string> { { -1, "tremujorin e kaluar" }, { 0, "këtë tremujor" }, { 1, "tremujorin e ardhshëm" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} tremujor më parë" }, { PluralRulesValues.Other, "{0} tremujorë më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} tremujori" }, { PluralRulesValues.Other, "pas {0} tremujorësh" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "muaj",
                 new Dictionary<int, string> { { -1, "muajin e kaluar" }, { 0, "këtë muaj" }, { 1, "muajin e ardhshëm" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} muaj më parë" }, { PluralRulesValues.Other, "{0} muaj më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} muaji" }, { PluralRulesValues.Other, "pas {0} muajsh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "muaj",
                 new Dictionary<int, string> { { -1, "muajin e kaluar" }, { 0, "këtë muaj" }, { 1, "muajin e ardhshëm" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} muaj më parë" }, { PluralRulesValues.Other, "{0} muaj më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} muaji" }, { PluralRulesValues.Other, "pas {0} muajsh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "muaj",
                 new Dictionary<int, string> { { -1, "muajin e kaluar" }, { 0, "këtë muaj" }, { 1, "muajin e ardhshëm" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} muaj më parë" }, { PluralRulesValues.Other, "{0} muaj më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} muaji" }, { PluralRulesValues.Other, "pas {0} muajsh" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "javë",
                 new Dictionary<int, string> { { -1, "javën e kaluar" }, { 0, "këtë javë" }, { 1, "javën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} javë më parë" }, { PluralRulesValues.Other, "{0} javë më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} jave" }, { PluralRulesValues.Other, "pas {0} javësh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "javë",
                 new Dictionary<int, string> { { -1, "javën e kaluar" }, { 0, "këtë javë" }, { 1, "javën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} javë më parë" }, { PluralRulesValues.Other, "{0} javë më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} jave" }, { PluralRulesValues.Other, "pas {0} javësh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "javë",
                 new Dictionary<int, string> { { -1, "javën e kaluar" }, { 0, "këtë javë" }, { 1, "javën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} javë më parë" }, { PluralRulesValues.Other, "{0} javë më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} jave" }, { PluralRulesValues.Other, "pas {0} javësh" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "javë e muajit",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "javë e muajit",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "javë e muajit",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ditë",
                 new Dictionary<int, string> { { -1, "dje" }, { 0, "sot" }, { 1, "nesër" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ditë më parë" }, { PluralRulesValues.Other, "{0} ditë më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} dite" }, { PluralRulesValues.Other, "pas {0} ditësh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ditë",
                 new Dictionary<int, string> { { -1, "dje" }, { 0, "sot" }, { 1, "nesër" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ditë më parë" }, { PluralRulesValues.Other, "{0} ditë më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} dite" }, { PluralRulesValues.Other, "pas {0} ditësh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ditë",
                 new Dictionary<int, string> { { -1, "dje" }, { 0, "sot" }, { 1, "nesër" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ditë më parë" }, { PluralRulesValues.Other, "{0} ditë më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} dite" }, { PluralRulesValues.Other, "pas {0} ditësh" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ditë e vitit",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ditë e vitit",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ditë e vitit",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ditë e javës",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ditë e javës",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ditë e javës",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ditë pune e muajit",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ditë pune e muajit",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ditë pune e muajit",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "të dielën e kaluar" }, { 0, "këtë të diel" }, { 1, "të dielën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të dielë më parë" }, { PluralRulesValues.Other, "{0} të diela më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të diele" }, { PluralRulesValues.Other, "pas {0} të dielash" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "të dielën e kaluar" }, { 0, "këtë të diel" }, { 1, "të dielën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të dielë më parë" }, { PluralRulesValues.Other, "{0} të diela më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të diele" }, { PluralRulesValues.Other, "pas {0} të dielash" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "të dielën e kaluar" }, { 0, "këtë të diel" }, { 1, "të dielën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të dielë më parë" }, { PluralRulesValues.Other, "{0} të diela më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të diele" }, { PluralRulesValues.Other, "pas {0} të dielash" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "të hënën e kaluar" }, { 0, "këtë të hënë" }, { 1, "të hënën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të hënë më parë" }, { PluralRulesValues.Other, "{0} të hëna më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të hëne" }, { PluralRulesValues.Other, "pas {0} të hënash" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "të hënën e kaluar" }, { 0, "këtë të hënë" }, { 1, "të hënën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të hënë më parë" }, { PluralRulesValues.Other, "{0} të hëna më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të hëne" }, { PluralRulesValues.Other, "pas {0} të hënash" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "të hënën e kaluar" }, { 0, "këtë të hënë" }, { 1, "të hënën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të hënë më parë" }, { PluralRulesValues.Other, "{0} të hëna më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të hëne" }, { PluralRulesValues.Other, "pas {0} të hënash" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "të martën e kaluar" }, { 0, "këtë të martë" }, { 1, "të martën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të martë më parë" }, { PluralRulesValues.Other, "{0} të marta më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të marte" }, { PluralRulesValues.Other, "pas {0} të martash" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "të martën e kaluar" }, { 0, "këtë të martë" }, { 1, "të martën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të martë më parë" }, { PluralRulesValues.Other, "{0} të marta më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të marte" }, { PluralRulesValues.Other, "pas {0} të martash" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "të martën e kaluar" }, { 0, "këtë të martë" }, { 1, "të martën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të martë më parë" }, { PluralRulesValues.Other, "{0} të marta më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të marte" }, { PluralRulesValues.Other, "pas {0} të martash" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "të mërkurën e kaluar" }, { 0, "këtë të mërkurë" }, { 1, "të mërkurën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të mërkurë më parë" }, { PluralRulesValues.Other, "{0} të mërkura më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të mërkure" }, { PluralRulesValues.Other, "pas {0} të mërkurash" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "të mërkurën e kaluar" }, { 0, "këtë të mërkurë" }, { 1, "të mërkurën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të mërkurë më parë" }, { PluralRulesValues.Other, "{0} të mërkura më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të mërkure" }, { PluralRulesValues.Other, "pas {0} të mërkurash" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "të mërkurën e kaluar" }, { 0, "këtë të mërkurë" }, { 1, "të mërkurën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të mërkurë më parë" }, { PluralRulesValues.Other, "{0} të mërkura më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të mërkure" }, { PluralRulesValues.Other, "pas {0} të mërkurash" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "të enjten e kaluar" }, { 0, "këtë të enjte" }, { 1, "të enjten e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të enjte më parë" }, { PluralRulesValues.Other, "{0} të enjte më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të enjteje" }, { PluralRulesValues.Other, "pas {0} të enjtesh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "të enjten e kaluar" }, { 0, "këtë të enjte" }, { 1, "të enjten e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të enjte më parë" }, { PluralRulesValues.Other, "{0} të enjte më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të enjteje" }, { PluralRulesValues.Other, "pas {0} të enjtesh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "të enjten e kaluar" }, { 0, "këtë të enjte" }, { 1, "të enjten e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të enjte më parë" }, { PluralRulesValues.Other, "{0} të enjte më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të enjteje" }, { PluralRulesValues.Other, "pas {0} të enjtesh" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "të premten e kaluar" }, { 0, "këtë të premte" }, { 1, "të premten e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të premte më parë" }, { PluralRulesValues.Other, "{0} të premte më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të premteje" }, { PluralRulesValues.Other, "pas {0} të premtesh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "të premten e kaluar" }, { 0, "këtë të premte" }, { 1, "të premten e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të premte më parë" }, { PluralRulesValues.Other, "{0} të premte më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të premteje" }, { PluralRulesValues.Other, "pas {0} të premtesh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "të premten e kaluar" }, { 0, "këtë të premte" }, { 1, "të premten e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të premte më parë" }, { PluralRulesValues.Other, "{0} të premte më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të premteje" }, { PluralRulesValues.Other, "pas {0} të premtesh" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "të shtunën e kaluar" }, { 0, "këtë të shtunë" }, { 1, "të shtunën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të shtunë më parë" }, { PluralRulesValues.Other, "{0} të shtuna më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të shtune" }, { PluralRulesValues.Other, "pas {0} të shtunash" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "të shtunën e kaluar" }, { 0, "këtë të shtunë" }, { 1, "të shtunën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të shtunë më parë" }, { PluralRulesValues.Other, "{0} të shtuna më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të shtune" }, { PluralRulesValues.Other, "pas {0} të shtunash" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "të shtunën e kaluar" }, { 0, "këtë të shtunë" }, { 1, "të shtunën e ardhshme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} të shtunë më parë" }, { PluralRulesValues.Other, "{0} të shtuna më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të shtune" }, { PluralRulesValues.Other, "pas {0} të shtunash" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "paradite/pasdite",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "paradite/pasdite",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "paradite/pasdite",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "orë",
                 new Dictionary<int, string> { { 0, "këtë orë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} orë më parë" }, { PluralRulesValues.Other, "{0} orë më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} ore" }, { PluralRulesValues.Other, "pas {0} orësh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "orë",
                 new Dictionary<int, string> { { 0, "këtë orë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} orë më parë" }, { PluralRulesValues.Other, "{0} orë më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} ore" }, { PluralRulesValues.Other, "pas {0} orësh" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "orë",
                 new Dictionary<int, string> { { 0, "këtë orë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} orë më parë" }, { PluralRulesValues.Other, "{0} orë më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} ore" }, { PluralRulesValues.Other, "pas {0} orësh" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "minutë",
                 new Dictionary<int, string> { { 0, "këtë minutë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} minutë më parë" }, { PluralRulesValues.Other, "{0} minuta më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} minute" }, { PluralRulesValues.Other, "pas {0} minutash" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "min",
                 new Dictionary<int, string> { { 0, "këtë minutë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min më parë" }, { PluralRulesValues.Other, "{0} min më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} min" }, { PluralRulesValues.Other, "pas {0} min" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "min",
                 new Dictionary<int, string> { { 0, "këtë minutë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min më parë" }, { PluralRulesValues.Other, "{0} min më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} min" }, { PluralRulesValues.Other, "pas {0} min" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "sekondë",
                 new Dictionary<int, string> { { 0, "tani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sekondë më parë" }, { PluralRulesValues.Other, "{0} sekonda më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} sekonde" }, { PluralRulesValues.Other, "pas {0} sekondash" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "sek",
                 new Dictionary<int, string> { { 0, "tani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sek më parë" }, { PluralRulesValues.Other, "{0} sek më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} sek" }, { PluralRulesValues.Other, "pas {0} sek" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "sek",
                 new Dictionary<int, string> { { 0, "tani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sek më parë" }, { PluralRulesValues.Other, "{0} sek më parë" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} sek" }, { PluralRulesValues.Other, "pas {0} sek" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "brezi orar",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "brezi orar",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "brezi orar",
                 null,
                 null,

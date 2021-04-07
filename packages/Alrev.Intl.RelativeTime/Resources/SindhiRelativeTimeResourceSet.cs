@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Sindhi' [sd]
+    /// </summary>
     public class SindhiRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "sd";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "دور",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "دور",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "دور",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "سال",
                 new Dictionary<int, string> { { -1, "پويون سال" }, { 0, "پويون سال" }, { 1, "پويون سال" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سال پهرين" }, { PluralRulesValues.Other, "{0} سال پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سالن ۾" }, { PluralRulesValues.Other, "{0} سالن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "سال",
                 new Dictionary<int, string> { { -1, "پوئين سال" }, { 0, "هن سال" }, { 1, "اڳيئن سال" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سال پهرين" }, { PluralRulesValues.Other, "{0} سال پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سالن ۾" }, { PluralRulesValues.Other, "{0} سالن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "سال",
                 new Dictionary<int, string> { { -1, "پوئين سال" }, { 0, "هن سال" }, { 1, "اڳين سال" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سال پهرين" }, { PluralRulesValues.Other, "{0} سال پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سالن ۾" }, { PluralRulesValues.Other, "{0} سالن ۾" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ٽي ماهي",
                 new Dictionary<int, string> { { -1, "پوئين ٽي ماهي" }, { 0, "هن ٽي ماهي" }, { 1, "اڳين ٽي ماهي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ٽي ماهي پهرين" }, { PluralRulesValues.Other, "{0} ٽي ماهي پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ٽي ماهي ۾" }, { PluralRulesValues.Other, "{0} ٽي ماهي ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ٽي ماهي",
                 new Dictionary<int, string> { { -1, "پوئين ٽي ماهي" }, { 0, "هن ٽي ماهي" }, { 1, "اڳين ٽي ماهي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ٽي ماهي پهرين" }, { PluralRulesValues.Other, "{0} ٽي ماهي پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ٽي ماهي ۾" }, { PluralRulesValues.Other, "{0} ٽي ماهي ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ٽي ماهي",
                 new Dictionary<int, string> { { -1, "پوئين ٽي ماهي" }, { 0, "هن ٽي ماهي" }, { 1, "اڳين ٽي ماهي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ٽي ماهي پهرين" }, { PluralRulesValues.Other, "{0} ٽي ماهي پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ٽي ماهي ۾" }, { PluralRulesValues.Other, "{0} ٽي ماهي ۾" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "مهينو",
                 new Dictionary<int, string> { { -1, "پوئين مهيني" }, { 0, "هن مهيني" }, { 1, "اڳين مهيني" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} مهينا پهرين" }, { PluralRulesValues.Other, "{0} مهينا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} مهينن ۾" }, { PluralRulesValues.Other, "{0} مهينن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "مهينو",
                 new Dictionary<int, string> { { -1, "پوئين مهيني" }, { 0, "هن مهيني" }, { 1, "اڳين مهيني" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} مهينا پهرين" }, { PluralRulesValues.Other, "{0} مهينا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} مهينن ۾" }, { PluralRulesValues.Other, "{0} مهينن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "مهينو",
                 new Dictionary<int, string> { { -1, "پوئين مهيني" }, { 0, "هن مهيني" }, { 1, "اڳين مهيني" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} مهينا پهرين" }, { PluralRulesValues.Other, "{0} مهينا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} مهينن ۾" }, { PluralRulesValues.Other, "{0} مهينن ۾" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "هفتو",
                 new Dictionary<int, string> { { -1, "پوئين هفتي" }, { 0, "هن هفتي" }, { 1, "اڳين هفتي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} هفتا پهرين" }, { PluralRulesValues.Other, "{0} هفتا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} هفتن ۾" }, { PluralRulesValues.Other, "{0} هفتن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "هفتو",
                 new Dictionary<int, string> { { -1, "پوئين هفتي" }, { 0, "هن هفتي" }, { 1, "اڳين هفتي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} هفتا پهرين" }, { PluralRulesValues.Other, "{0} هفتا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} هفتن ۾" }, { PluralRulesValues.Other, "{0} هفتن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "هفتو",
                 new Dictionary<int, string> { { -1, "پوئين هفتي" }, { 0, "هن هفتي" }, { 1, "اڳين هفتي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} هفتا پهرين" }, { PluralRulesValues.Other, "{0} هفتا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} هفتن ۾" }, { PluralRulesValues.Other, "{0} هفتن ۾" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "مهيني جي هفتي",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "مهيني جي هفتي",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "مهيني جي هفتي",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ڏينهن",
                 new Dictionary<int, string> { { -1, "ڪل" }, { 0, "اڄ" }, { 1, "سڀاڻي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڏينهن پهرين" }, { PluralRulesValues.Other, "{0} ڏينهن پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڏينهن ۾" }, { PluralRulesValues.Other, "{0} ڏينهن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ڏينهن",
                 new Dictionary<int, string> { { -1, "ڪل" }, { 0, "اڄ" }, { 1, "سڀاڻي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڏينهن پهرين" }, { PluralRulesValues.Other, "{0} ڏينهن پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڏينهن ۾" }, { PluralRulesValues.Other, "{0} ڏينهن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ڏينهن",
                 new Dictionary<int, string> { { -1, "ڪل" }, { 0, "اڄ" }, { 1, "سڀاڻي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڏينهن پهرين" }, { PluralRulesValues.Other, "{0} ڏينهن پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڏينهن ۾" }, { PluralRulesValues.Other, "{0} ڏينهن ۾" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "سال جو ڏينهن",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "سال جو ڏينهن",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "سال جو ڏينهن",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "هفتي جو ڏينهن",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "هفتي جو ڏينهن",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "هفتي جو ڏينهن",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "مهيني جي موڪل جو ڏينهن",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "مهيني جي موڪل جو ڏينهن",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "مهيني جي موڪل جو ڏينهن",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين آچر" }, { 0, "هن آچر" }, { 1, "اڳين آچر" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} آچر پهرين" }, { PluralRulesValues.Other, "{0} آچر پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} آچرن ۾" }, { PluralRulesValues.Other, "{0} آچرن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين آچر" }, { 0, "هن آچر" }, { 1, "اڳين آچر" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} آچر پهرين" }, { PluralRulesValues.Other, "{0} آچر پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} آچرن ۾" }, { PluralRulesValues.Other, "{0} آچرن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين آچر" }, { 0, "هن آچر" }, { 1, "اڳين آچر" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} آچر پهرين" }, { PluralRulesValues.Other, "{0} آچر پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} آچرن ۾" }, { PluralRulesValues.Other, "{0} آچرن ۾" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين سومر" }, { 0, "هن سومر" }, { 1, "اڳين سومر" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سومر پهرين" }, { PluralRulesValues.Other, "{0} سومر پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سومرن ۾" }, { PluralRulesValues.Other, "{0} سومرن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين سومر" }, { 0, "هن سومر" }, { 1, "اڳين سومر" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سومر پهرين" }, { PluralRulesValues.Other, "{0} سومر پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سومرن ۾" }, { PluralRulesValues.Other, "{0} سومرن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين سومر" }, { 0, "هن سومر" }, { 1, "اڳين سومر" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سومر پهرين" }, { PluralRulesValues.Other, "{0} سومر پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سومرن ۾" }, { PluralRulesValues.Other, "{0} سومرن ۾" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين اڱاري" }, { 0, "هن اڱاري" }, { 1, "اڳين اڱاري" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اڱارا پهرين" }, { PluralRulesValues.Other, "{0} اڱارا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اڱارن ۾" }, { PluralRulesValues.Other, "{0} اڱارن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين اڱاري" }, { 0, "هن اڱاري" }, { 1, "اڳين اڱاري" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اڱارا پهرين" }, { PluralRulesValues.Other, "{0} اڱارا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اڱارن ۾" }, { PluralRulesValues.Other, "{0} اڱارن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين اڱاري" }, { 0, "هن اڱاري" }, { 1, "اڳين اڱاري" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اڱارا پهرين" }, { PluralRulesValues.Other, "{0} اڱارا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اڱارن ۾" }, { PluralRulesValues.Other, "{0} اڱارن ۾" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين اربع" }, { 0, "هن اربع" }, { 1, "اڳين اربع" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اربعا پهرين" }, { PluralRulesValues.Other, "{0} اربعا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اربعن ۾" }, { PluralRulesValues.Other, "{0} اربعن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين اربع" }, { 0, "هن اربع" }, { 1, "اڳين اربع" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اربعا پهرين" }, { PluralRulesValues.Other, "{0} اربعا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اربعن ۾" }, { PluralRulesValues.Other, "{0} اربعن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين اربع" }, { 0, "هن اربع" }, { 1, "اڳين اربع" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اربعا پهرين" }, { PluralRulesValues.Other, "{0} اربعا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اربعن ۾" }, { PluralRulesValues.Other, "{0} اربعن ۾" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين خميس" }, { 0, "هن خميس" }, { 1, "اڳين خميس" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} خميس پهرين" }, { PluralRulesValues.Other, "{0} خميس پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} خميسن ۾" }, { PluralRulesValues.Other, "{0} خميسن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين خميس" }, { 0, "هن خميس" }, { 1, "اڳين خميس" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} خميس پهرين" }, { PluralRulesValues.Other, "{0} خميس پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} خميسن ۾" }, { PluralRulesValues.Other, "{0} خميسن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين خميس" }, { 0, "هن خميس" }, { 1, "اڳين خميس" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} خميس پهرين" }, { PluralRulesValues.Other, "{0} خميس پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} خميسن ۾" }, { PluralRulesValues.Other, "{0} خميسن ۾" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين جمعي" }, { 0, "هن جمعي" }, { 1, "اڳين جمعي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} جمعا پهرين" }, { PluralRulesValues.Other, "{0} جمعا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} جمعن ۾" }, { PluralRulesValues.Other, "{0} جمعن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين جمعي" }, { 0, "هن جمعي" }, { 1, "اڳين جمعي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} جمعا پهرين" }, { PluralRulesValues.Other, "{0} جمعا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} جمعن ۾" }, { PluralRulesValues.Other, "{0} جمعن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين جمعي" }, { 0, "هن جمعي" }, { 1, "اڳين جمعي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} جمعا پهرين" }, { PluralRulesValues.Other, "{0} جمعا پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} جمعن ۾" }, { PluralRulesValues.Other, "{0} جمعن ۾" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين ڇنڇر" }, { 0, "هن ڇنڇر" }, { 1, "اڳين ڇنڇر" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڇنڇر پهرين" }, { PluralRulesValues.Other, "{0} ڇنڇر پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڇنڇرن ۾" }, { PluralRulesValues.Other, "{0} ڇنڇرن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين ڇنڇر" }, { 0, "هن ڇنڇر" }, { 1, "اڳين ڇنڇر" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڇنڇر پهرين" }, { PluralRulesValues.Other, "{0} ڇنڇر پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڇنڇرن ۾" }, { PluralRulesValues.Other, "{0} ڇنڇرن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "پوئين ڇنڇر" }, { 0, "هن ڇنڇر" }, { 1, "اڳين ڇنڇر" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڇنڇر پهرين" }, { PluralRulesValues.Other, "{0} ڇنڇر پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڇنڇرن ۾" }, { PluralRulesValues.Other, "{0} ڇنڇرن ۾" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "صبح/شام",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "صبح، منجهند/منجهند، شام",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "صبح، منجهند/منجهند، شام",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ڪلاڪ",
                 new Dictionary<int, string> { { 0, "هن ڪلڪ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڪلاڪ پهرين" }, { PluralRulesValues.Other, "{0} ڪلاڪ پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڪلاڪ ۾" }, { PluralRulesValues.Other, "{0} ڪلاڪ ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ڪلاڪ",
                 new Dictionary<int, string> { { 0, "هن ڪلڪ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڪلاڪ پهرين" }, { PluralRulesValues.Other, "{0} ڪلاڪ پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڪلاڪ ۾" }, { PluralRulesValues.Other, "{0} ڪلاڪ ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ڪلاڪ",
                 new Dictionary<int, string> { { 0, "هن ڪلڪ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڪلاڪ پهرين" }, { PluralRulesValues.Other, "{0} ڪلاڪ پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ڪلاڪ ۾" }, { PluralRulesValues.Other, "{0} ڪلاڪ ۾" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "منٽ",
                 new Dictionary<int, string> { { 0, "هن منٽ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} منٽ پهرين" }, { PluralRulesValues.Other, "{0} منٽ پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} منٽن ۾" }, { PluralRulesValues.Other, "+{0} min" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "منٽ",
                 new Dictionary<int, string> { { 0, "هن منٽ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} منٽ پهرين" }, { PluralRulesValues.Other, "{0} منٽ پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} منٽن ۾" }, { PluralRulesValues.Other, "{0} منٽن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "منٽ",
                 new Dictionary<int, string> { { 0, "هن منٽ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} منٽ پهرين" }, { PluralRulesValues.Other, "{0} منٽ پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} منٽن ۾" }, { PluralRulesValues.Other, "{0} منٽن ۾" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "سيڪنڊ",
                 new Dictionary<int, string> { { 0, "هاڻي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سيڪنڊ پهرين" }, { PluralRulesValues.Other, "{0} سيڪنڊ پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سيڪنڊن ۾" }, { PluralRulesValues.Other, "{0} سيڪنڊن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "سيڪنڊ",
                 new Dictionary<int, string> { { 0, "هاڻي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سيڪنڊ پهرين" }, { PluralRulesValues.Other, "{0} سيڪنڊ پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سيڪنڊن ۾" }, { PluralRulesValues.Other, "{0} سيڪنڊن ۾" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "سيڪنڊ",
                 new Dictionary<int, string> { { 0, "هاڻي" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سيڪنڊ پهرين" }, { PluralRulesValues.Other, "{0} سيڪنڊ پهرين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سيڪنڊن ۾" }, { PluralRulesValues.Other, "{0} سيڪنڊن ۾" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Sindhi' [sd]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ٽائيم زون",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ٽائيم زون",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ٽائيم زون",
                 null,
                 null,

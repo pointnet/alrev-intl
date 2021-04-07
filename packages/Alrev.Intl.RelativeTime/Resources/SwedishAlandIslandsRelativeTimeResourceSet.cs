@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+    /// </summary>
     public class SwedishAlandIslandsRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "sv-AX";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "era",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "era",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "era",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "år",
                 new Dictionary<int, string> { { -1, "i fjol" }, { 0, "i år" }, { 1, "nästa år" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} år sedan" }, { PluralRulesValues.Other, "för {0} år sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} år" }, { PluralRulesValues.Other, "om {0} år" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "år",
                 new Dictionary<int, string> { { -1, "i fjol" }, { 0, "i år" }, { 1, "nästa år" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} år" }, { PluralRulesValues.Other, "−{0} år" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} år" }, { PluralRulesValues.Other, "+{0} år" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "år",
                 new Dictionary<int, string> { { -1, "i fjol" }, { 0, "i år" }, { 1, "nästa år" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} år sen" }, { PluralRulesValues.Other, "för {0} år sen" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} år" }, { PluralRulesValues.Other, "om {0} år" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "kvartal",
                 new Dictionary<int, string> { { -1, "förra kvartalet" }, { 0, "detta kvartal" }, { 1, "nästa kvartal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} kvartal sedan" }, { PluralRulesValues.Other, "för {0} kvartal sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} kvartal" }, { PluralRulesValues.Other, "om {0} kvartal" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "kv.",
                 new Dictionary<int, string> { { -1, "förra kv." }, { 0, "detta kv." }, { 1, "nästa kv." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} kv" }, { PluralRulesValues.Other, "−{0} kv" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} kv." }, { PluralRulesValues.Other, "+{0} kv." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "kv.",
                 new Dictionary<int, string> { { -1, "förra kv." }, { 0, "detta kv." }, { 1, "nästa kv." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} kv. sen" }, { PluralRulesValues.Other, "för {0} kv. sen" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} kv." }, { PluralRulesValues.Other, "om {0} kv." } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "månad",
                 new Dictionary<int, string> { { -1, "förra månaden" }, { 0, "denna månad" }, { 1, "nästa månad" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} månad sedan" }, { PluralRulesValues.Other, "för {0} månader sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} månad" }, { PluralRulesValues.Other, "om {0} månader" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "mån",
                 new Dictionary<int, string> { { -1, "förra mån." }, { 0, "denna mån." }, { 1, "nästa mån." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} mån" }, { PluralRulesValues.Other, "−{0} mån" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} mån." }, { PluralRulesValues.Other, "+{0} mån." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "m",
                 new Dictionary<int, string> { { -1, "förra mån." }, { 0, "denna mån." }, { 1, "nästa mån." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} mån. sen" }, { PluralRulesValues.Other, "för {0} mån. sen" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} mån." }, { PluralRulesValues.Other, "om {0} mån." } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "vecka",
                 new Dictionary<int, string> { { -1, "förra veckan" }, { 0, "denna vecka" }, { 1, "nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} vecka sedan" }, { PluralRulesValues.Other, "för {0} veckor sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} vecka" }, { PluralRulesValues.Other, "om {0} veckor" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "v",
                 new Dictionary<int, string> { { -1, "förra v." }, { 0, "denna v." }, { 1, "nästa v." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} v" }, { PluralRulesValues.Other, "−{0} v" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} v." }, { PluralRulesValues.Other, "+{0} v." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "v",
                 new Dictionary<int, string> { { -1, "förra v." }, { 0, "denna v." }, { 1, "nästa v." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} v. sedan" }, { PluralRulesValues.Other, "för {0} v. sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} v." }, { PluralRulesValues.Other, "om {0} v." } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "vecka i månaden",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "vk.i mån.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "vk. i mån.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "dag",
                 new Dictionary<int, string> { { -2, "i förrgår" }, { -1, "i går" }, { 0, "i dag" }, { 1, "i morgon" }, { 2, "i övermorgon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} dag sedan" }, { PluralRulesValues.Other, "för {0} dagar sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} dag" }, { PluralRulesValues.Other, "om {0} dagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "dag",
                 new Dictionary<int, string> { { -2, "i förrgår" }, { -1, "igår" }, { 0, "idag" }, { 1, "imorgon" }, { 2, "i övermorgon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} d" }, { PluralRulesValues.Other, "−{0} d" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} d" }, { PluralRulesValues.Other, "+{0} d" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "dag",
                 new Dictionary<int, string> { { -2, "i förrgår" }, { -1, "i går" }, { 0, "i dag" }, { 1, "i morgon" }, { 2, "i övermorgon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} d sedan" }, { PluralRulesValues.Other, "för {0} d sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} d" }, { PluralRulesValues.Other, "om {0} d" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "dag under året",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "dag under året",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "dag under året",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "veckodag",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "veckodag",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "veckodag",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "veckodag i månad",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "veckodag i mån.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "veckodag i mån.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "söndag förra veckan" }, { 0, "söndag denna vecka" }, { 1, "söndag nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} söndag sedan" }, { PluralRulesValues.Other, "för {0} söndagar sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} söndag" }, { PluralRulesValues.Other, "om {0} söndagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "förra sön." }, { 0, "denna sön." }, { 1, "nästa sön." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} sön" }, { PluralRulesValues.Other, "−{0} sön" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} sön" }, { PluralRulesValues.Other, "+{0} sön" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "sön. förra veckan" }, { 0, "sön. denna vecka" }, { 1, "sön. nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} sön. sen" }, { PluralRulesValues.Other, "för {0} sön. sen" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} sön." }, { PluralRulesValues.Other, "om {0} sön." } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "måndag förra veckan" }, { 0, "måndag denna vecka" }, { 1, "måndag nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} måndag sedan" }, { PluralRulesValues.Other, "för {0} måndagar sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} måndag" }, { PluralRulesValues.Other, "om {0} måndagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "mån. förra veckan" }, { 0, "mån. denna vecka" }, { 1, "mån. nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "–{0} månd" }, { PluralRulesValues.Other, "–{0} månd" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} må." }, { PluralRulesValues.Other, "+{0} må." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "mån. förra veckan" }, { 0, "mån. denna vecka" }, { 1, "mån. nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} månd. sen" }, { PluralRulesValues.Other, "för {0} månd. sen" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} månd." }, { PluralRulesValues.Other, "om {0} månd." } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "tisdag förra veckan" }, { 0, "tisdag denna vecka" }, { 1, "tisdag nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} tisdag sedan" }, { PluralRulesValues.Other, "för {0} tisdagar sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} tisdag" }, { PluralRulesValues.Other, "om {0} tisdagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "förra tis." }, { 0, "denna tis." }, { 1, "nästa tis." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} tis" }, { PluralRulesValues.Other, "−{0} tis" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} tis" }, { PluralRulesValues.Other, "+{0} tis" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "tis. förra veckan" }, { 0, "tis. denna vecka" }, { 1, "tis. nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} tis. sen" }, { PluralRulesValues.Other, "för {0} tis. sen" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} tis." }, { PluralRulesValues.Other, "om {0} tis." } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "onsdag förra veckan" }, { 0, "onsdag denna vecka" }, { 1, "onsdag nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} onsdag sedan" }, { PluralRulesValues.Other, "för {0} onsdagar sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} onsdag" }, { PluralRulesValues.Other, "om {0} onsdagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "förra ons." }, { 0, "denna ons." }, { 1, "nästa ons." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} ons" }, { PluralRulesValues.Other, "−{0} ons" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} ons" }, { PluralRulesValues.Other, "+{0} ons" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ons. förra veckan" }, { 0, "ons. denna vecka" }, { 1, "ons. nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} ons. sen" }, { PluralRulesValues.Other, "för {0} ons. sen" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} ons." }, { PluralRulesValues.Other, "om {0} ons." } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "torsdag förra veckan" }, { 0, "torsdag denna vecka" }, { 1, "torsdag nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} torsdag sedan" }, { PluralRulesValues.Other, "för {0} torsdagar sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} torsdag" }, { PluralRulesValues.Other, "om {0} torsdagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "förra tors." }, { 0, "denna tors." }, { 1, "nästa tors." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} tors" }, { PluralRulesValues.Other, "−{0} tors" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} tors" }, { PluralRulesValues.Other, "+{0} tors" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "tors. förra veckan" }, { 0, "tors. denna vecka" }, { 1, "tors. nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} tors. sen" }, { PluralRulesValues.Other, "för {0} tors. sen" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} tors." }, { PluralRulesValues.Other, "om {0} tors." } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "fredag förra veckan" }, { 0, "fredag denna vecka" }, { 1, "fredag nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} fredag sedan" }, { PluralRulesValues.Other, "för {0} fredagar sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} fredag" }, { PluralRulesValues.Other, "om {0} fredagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "förra fre." }, { 0, "denna fre." }, { 1, "nästa fre." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} fre" }, { PluralRulesValues.Other, "−{0} fre" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} fre" }, { PluralRulesValues.Other, "+{0} fre" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "fre. förra veckan" }, { 0, "fre. denna vecka" }, { 1, "fre. nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} fre. sen" }, { PluralRulesValues.Other, "för {0} fred. sen" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} fre." }, { PluralRulesValues.Other, "om {0} fre." } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "lördag förra veckan" }, { 0, "lördag denna vecka" }, { 1, "lördag nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} lördag sedan" }, { PluralRulesValues.Other, "för {0} lördagar sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} lördag" }, { PluralRulesValues.Other, "om {0} lördagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "förra lör." }, { 0, "denna lör." }, { 1, "nästa lör." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} lör" }, { PluralRulesValues.Other, "−{0} lör" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} lör" }, { PluralRulesValues.Other, "+{0} lör" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "lör. förra veckan" }, { 0, "lör. denna vecka" }, { 1, "lör. nästa vecka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} lör. sen" }, { PluralRulesValues.Other, "för {0} lör. sen" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} lör." }, { PluralRulesValues.Other, "om {0} lör." } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "fm/em",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "fm/em",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "fm/em",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "timme",
                 new Dictionary<int, string> { { 0, "denna timme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} timme sedan" }, { PluralRulesValues.Other, "för {0} timmar sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} timme" }, { PluralRulesValues.Other, "om {0} timmar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "h",
                 new Dictionary<int, string> { { 0, "denna timme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} h" }, { PluralRulesValues.Other, "−{0} h" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} h" }, { PluralRulesValues.Other, "+{0} h" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "tim",
                 new Dictionary<int, string> { { 0, "denna timme" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} tim sedan" }, { PluralRulesValues.Other, "för {0} tim sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} tim" }, { PluralRulesValues.Other, "om {0} tim" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "minut",
                 new Dictionary<int, string> { { 0, "denna minut" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} minut sedan" }, { PluralRulesValues.Other, "för {0} minuter sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} minut" }, { PluralRulesValues.Other, "om {0} minuter" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "m",
                 new Dictionary<int, string> { { 0, "denna minut" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} min" }, { PluralRulesValues.Other, "−{0} min" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} min" }, { PluralRulesValues.Other, "+{0} min" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "min",
                 new Dictionary<int, string> { { 0, "denna minut" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} min sen" }, { PluralRulesValues.Other, "för {0} min sen" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} min" }, { PluralRulesValues.Other, "om {0} min" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "sekund",
                 new Dictionary<int, string> { { 0, "nu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} sekund sedan" }, { PluralRulesValues.Other, "för {0} sekunder sedan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} sekund" }, { PluralRulesValues.Other, "om {0} sekunder" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "s",
                 new Dictionary<int, string> { { 0, "nu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "−{0} s" }, { PluralRulesValues.Other, "−{0} s" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} s" }, { PluralRulesValues.Other, "+{0} s" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "sek",
                 new Dictionary<int, string> { { 0, "nu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "för {0} s sen" }, { PluralRulesValues.Other, "för {0} s sen" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "om {0} sek" }, { PluralRulesValues.Other, "om {0} sek" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Swedish (&#197;land Islands)' [sv-AX]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "tidszon",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "tidszon",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "tidszon",
                 null,
                 null,

@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Pashto (Pakistan)' [ps-PK]
+    /// </summary>
     public class PashtoPakistanRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "ps-PK";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "پېر",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "پېر",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "پېر",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "کال",
                 new Dictionary<int, string> { { -1, "پروسږکال" }, { 0, "سږکال" }, { 1, "راتلونکی کال" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} کال مخکے" }, { PluralRulesValues.Other, "{0} کاله مخکے" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} کال کے" }, { PluralRulesValues.Other, "په {0} کالونو کے" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "کال",
                 new Dictionary<int, string> { { -1, "تير کال" }, { 0, "سږ کال" }, { 1, "راتلونکی کال" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} کال مخکے" }, { PluralRulesValues.Other, "{0} کاله مخکے" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} کال کے" }, { PluralRulesValues.Other, "په {0} کالونو کے" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "کال",
                 new Dictionary<int, string> { { -1, "تېر کال" }, { 0, "سږ کال" }, { 1, "روتلونکی کال" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} کال مخکے" }, { PluralRulesValues.Other, "{0} کاله مخکے" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} کال کے" }, { PluralRulesValues.Other, "په {0} کالونو کے" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "څلورمه برخه",
                 new Dictionary<int, string> { { -1, "ورستۍ ربع" }, { 0, "دا ربع" }, { 1, "راتلونکې ربع" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ربع مخکې" }, { PluralRulesValues.Other, "{0} ربعې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ربع کې" }, { PluralRulesValues.Other, "په {0} ربعو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "څلورمه برخه",
                 new Dictionary<int, string> { { -1, "ورستۍ ربع" }, { 0, "دا ربع" }, { 1, "راتلونکې ربع" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ربع مخکې" }, { PluralRulesValues.Other, "{0} ربعې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ربع کې" }, { PluralRulesValues.Other, "په {0} ربعو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "څلورمه برخه",
                 new Dictionary<int, string> { { -1, "ورستۍ ربع" }, { 0, "دا ربع" }, { 1, "راتلونکې ربع" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ربع مخکې" }, { PluralRulesValues.Other, "{0} ربعې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ربع کې" }, { PluralRulesValues.Other, "په {0} ربعو کې" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "مياشت",
                 new Dictionary<int, string> { { -1, "تېره مياشت" }, { 0, "دا مياشت" }, { 1, "راتلونکې مياشت" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} مياشت مخکې" }, { PluralRulesValues.Other, "{0} مياشتې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} مياشت کې" }, { PluralRulesValues.Other, "په {0} مياشتو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "مياشت",
                 new Dictionary<int, string> { { -1, "تېره مياشت" }, { 0, "دا مياشت" }, { 1, "راتلونکې مياشت" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} مياشت مخکې" }, { PluralRulesValues.Other, "{0} مياشت مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} مياشت کې" }, { PluralRulesValues.Other, "په {0} مياشت کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "مياشت",
                 new Dictionary<int, string> { { -1, "تېره مياشت" }, { 0, "دا مياشت" }, { 1, "راتلونکې مياشت" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} مياشت مخکې" }, { PluralRulesValues.Other, "{0} مياشت مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} مياشت کې" }, { PluralRulesValues.Other, "په {0} مياشت کې" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "اونۍ",
                 new Dictionary<int, string> { { -1, "تيره اونۍ" }, { 0, "دا اونۍ" }, { 1, "راتلونکې اونۍ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اونۍ مخکې" }, { PluralRulesValues.Other, "{0} اونۍ مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} اونۍ کې" }, { PluralRulesValues.Other, "په {0} اونيو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "اونۍ",
                 new Dictionary<int, string> { { -1, "تېره اونۍ" }, { 0, "دا اونۍ" }, { 1, "راتلونکې اونۍ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اونۍ مخکې" }, { PluralRulesValues.Other, "{0} اونۍ مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} اونۍ کې" }, { PluralRulesValues.Other, "په {0} اونۍ کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "اونۍ",
                 new Dictionary<int, string> { { -1, "تېره اونۍ" }, { 0, "دا اونۍ" }, { 1, "راتلونکې اونۍ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} اونۍ مخکې" }, { PluralRulesValues.Other, "{0} اونۍ مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} اونۍ کې" }, { PluralRulesValues.Other, "په {0} اونۍ کې" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "د مياشتے اونۍ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "د مياشتے اونۍ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "د مياشتے اونۍ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ورځ",
                 new Dictionary<int, string> { { -1, "پرون" }, { 0, "نن" }, { 1, "سبا" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ورځ مخکې" }, { PluralRulesValues.Other, "{0} ورځې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ورځ کې" }, { PluralRulesValues.Other, "په {0} ورځو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ورځ",
                 new Dictionary<int, string> { { -1, "پرون" }, { 0, "نن" }, { 1, "سبا" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ورځ مخکې" }, { PluralRulesValues.Other, "{0} ورځې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ورځ کې" }, { PluralRulesValues.Other, "په {0} ورځو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ورځ",
                 new Dictionary<int, string> { { -1, "پرون" }, { 0, "نن" }, { 1, "سبا" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ورځ مخکې" }, { PluralRulesValues.Other, "{0} ورځې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ورځ کې" }, { PluralRulesValues.Other, "په {0} ورځو کې" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "د کال ورځ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "د کال ورځ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "د کال ورځ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "د اونۍ ورځ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "د اونۍ ورځ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "د اونۍ ورځ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "د مياشتے اونۍ ورځ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "د مياشتے اونۍ ورځ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "د مياشتے اونۍ ورځ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "تېره يکشنبه" }, { 0, "دا يکشنبه" }, { 1, "راتلونکې يکشنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} يکشنبه مخکې" }, { PluralRulesValues.Other, "{0} يکشنبې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} يکشنبه کې" }, { PluralRulesValues.Other, "په {0} يکشنبو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "تېره يکشنبه" }, { 0, "دا يکشنبه" }, { 1, "راتلونکې يکشنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} يکشنبه مخکې" }, { PluralRulesValues.Other, "{0} يکشنبه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} يکشنبه کې" }, { PluralRulesValues.Other, "په {0} يکشنبه کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "تېره يکشنبه" }, { 0, "دا يکشنبه" }, { 1, "راتلونکې يکشنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} يکشنبه مخکې" }, { PluralRulesValues.Other, "{0} يکشنبه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} يکشنبه کې" }, { PluralRulesValues.Other, "په {0} يکشنبه کې" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "تېره دوشنبه" }, { 0, "دا دوشنبه" }, { 1, "راتلونکې دوشنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} دوشنبه مخکې" }, { PluralRulesValues.Other, "{0} دوشنبې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} دوشنبه کې" }, { PluralRulesValues.Other, "په {0} دوشنبو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "تېره دوشنبه" }, { 0, "دا دوشنبه" }, { 1, "راتلونکې دوشنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} دوشنبه مخکې" }, { PluralRulesValues.Other, "{0} دوشنبه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} دوشنبه کې" }, { PluralRulesValues.Other, "په {0} دوشنبه کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "تېره دوشنبه" }, { 0, "دا دوشنبه" }, { 1, "راتلونکې دوشنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} دوشنبه مخکې" }, { PluralRulesValues.Other, "{0} دوشنبه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} دوشنبه کې" }, { PluralRulesValues.Other, "په {0} دوشنبه کې" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "تيره سه شنبه" }, { 0, "دا سه شنبه" }, { 1, "راتلونکې سه شنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سه شنبه مخکې" }, { PluralRulesValues.Other, "{0} سه شنبې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} سه شنبه کې" }, { PluralRulesValues.Other, "په {0} سه شنبو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "تيره سه شنبه" }, { 0, "دا سه شنبه" }, { 1, "راتلونکې سه شنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سه شنبه مخکې" }, { PluralRulesValues.Other, "{0} سه شنبه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} سه شنبه کې" }, { PluralRulesValues.Other, "په {0} سه شنبه کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "تېره سه شنبه" }, { 0, "دا سه شنبه" }, { 1, "راتلونکې سه شنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} سه شنبه مخکې" }, { PluralRulesValues.Other, "{0} سه شنبه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} سه شنبه کې" }, { PluralRulesValues.Other, "په {0} سه شنبه کې" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "تېره چارشنبه" }, { 0, "دا چارشنبه" }, { 1, "راتلونکې چارشنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} چارشنبه مخکې" }, { PluralRulesValues.Other, "{0} چارشنبې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} چارشنبه کې" }, { PluralRulesValues.Other, "په {0} چارشنبو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "تېره چارشنبه" }, { 0, "دا چارشنبه" }, { 1, "راتلونکې چارشنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} چارشنبه مخکې" }, { PluralRulesValues.Other, "{0} چارشنبه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} چارشنبه کې" }, { PluralRulesValues.Other, "په {0} چارشنبه کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "تېره چارشنبه" }, { 0, "دا چارشنبه" }, { 1, "راتلونکې چارشنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} چارشنبه مخکې" }, { PluralRulesValues.Other, "{0} چارشنبه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} چارشنبه کې" }, { PluralRulesValues.Other, "په {0} چارشنبه کې" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "تېره پنجشنبه" }, { 0, "دا پنجشنبه" }, { 1, "راتلونکې پنجشنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} پنجشنبه مخکې" }, { PluralRulesValues.Other, "{0} پنجشنبې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} پنجشنبه کې" }, { PluralRulesValues.Other, "په {0} پنجشنبو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "تېره پنجشنبه" }, { 0, "دا پنجشنبه" }, { 1, "راتلونکې پنجشنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} پنجشنبه مخکې" }, { PluralRulesValues.Other, "{0} پنجشنبه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} پنجشنبه کې" }, { PluralRulesValues.Other, "په {0} پنجشنبه کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "تېره پنجشنبه" }, { 0, "دا پنجشنبه" }, { 1, "راتلونکې پنجشنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} پنجشنبه مخکې" }, { PluralRulesValues.Other, "{0} پنجشنبه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} پنجشنبه کې" }, { PluralRulesValues.Other, "په {0} پنجشنبه کې" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "تېره جمعه" }, { 0, "دا جمعه" }, { 1, "راتلونکې جمعه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} جمعه مخکې" }, { PluralRulesValues.Other, "{0} جمعې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} جمعه کې" }, { PluralRulesValues.Other, "په {0} جمعو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "تېره جمعه" }, { 0, "دا جمعه" }, { 1, "راتلونکې جمعه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} جمعه مخکې" }, { PluralRulesValues.Other, "{0} جمعه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} جمعه کې" }, { PluralRulesValues.Other, "په {0} جمعه کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "تېره جمعه" }, { 0, "دا جمعه" }, { 1, "راتلونکې جمعه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} جمعه مخکې" }, { PluralRulesValues.Other, "{0} جمعه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} جمعه کې" }, { PluralRulesValues.Other, "په {0} جمعه کې" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "تېره شنبه" }, { 0, "دا شنبه" }, { 1, "راتلونکې شنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} شنبه مخکې" }, { PluralRulesValues.Other, "{0} شنبې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} شنبه کې" }, { PluralRulesValues.Other, "په {0} شنبو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "تېره شنبه" }, { 0, "دا شنبه" }, { 1, "راتلونکې شنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} شنبه مخکې" }, { PluralRulesValues.Other, "{0} شنبه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} شنبه کې" }, { PluralRulesValues.Other, "په {0} شنبه کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "تېره شنبه" }, { 0, "دا شنبه" }, { 1, "راتلونکې شنبه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} شنبه مخکې" }, { PluralRulesValues.Other, "{0} شنبه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} شنبه کې" }, { PluralRulesValues.Other, "په {0} شنبه کې" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ورځ شېبه",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ورځ شېبه",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ورځ شېبه",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ساعت",
                 new Dictionary<int, string> { { 0, "دا ساعت" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ساعت مخکې" }, { PluralRulesValues.Other, "{0} ساعتونه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ساعت کې" }, { PluralRulesValues.Other, "په {0} ساعتو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ساعت",
                 new Dictionary<int, string> { { 0, "دا ساعت" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ساعت مخکې" }, { PluralRulesValues.Other, "{0} ساعت مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ساعت کې" }, { PluralRulesValues.Other, "په {0} ساعت کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ساعت",
                 new Dictionary<int, string> { { 0, "دا ساعت" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ساعت مخکې" }, { PluralRulesValues.Other, "{0} ساعت مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ساعت کې" }, { PluralRulesValues.Other, "په {0} ساعت کې" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "دقيقه",
                 new Dictionary<int, string> { { 0, "دا دقيقه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} دقيقه مخکې" }, { PluralRulesValues.Other, "{0} دقيقې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} دقيقه کې" }, { PluralRulesValues.Other, "په {0} دقيقو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "دقيقه",
                 new Dictionary<int, string> { { 0, "دا دقيقه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} دقيقه مخکې" }, { PluralRulesValues.Other, "{0} دقيقه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} دقيقه کې" }, { PluralRulesValues.Other, "په {0} دقيقه کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "دقيقه",
                 new Dictionary<int, string> { { 0, "دا دقيقه" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} دقيقه مخکې" }, { PluralRulesValues.Other, "{0} دقيقه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} دقيقه کې" }, { PluralRulesValues.Other, "په {0} دقيقه کې" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ثانيه",
                 new Dictionary<int, string> { { 0, "اوس" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ثانيه مخکې" }, { PluralRulesValues.Other, "{0} ثانيې مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ثانيه کې" }, { PluralRulesValues.Other, "په {0} ثانيو کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ثانيه",
                 new Dictionary<int, string> { { 0, "اوس" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ثانيه کې" }, { PluralRulesValues.Other, "{0} ثانيه کې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ثانيه کې" }, { PluralRulesValues.Other, "په {0} ثانيه کې" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ثانيه",
                 new Dictionary<int, string> { { 0, "اوس" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ثانيه مخکې" }, { PluralRulesValues.Other, "{0} ثانيه مخکې" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ثانيه کې" }, { PluralRulesValues.Other, "په {0} ثانيه کې" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "وخت سيمه",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "وخت سيمه",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "وخت سيمه",
                 null,
                 null,

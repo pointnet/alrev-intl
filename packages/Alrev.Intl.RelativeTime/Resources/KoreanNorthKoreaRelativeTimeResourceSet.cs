@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Korean (North Korea)' [ko-KP]
+    /// </summary>
     public class KoreanNorthKoreaRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "ko-KP";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "연호",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "연호",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "연호",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "년",
                 new Dictionary<int, string> { { -1, "작년" }, { 0, "올해" }, { 1, "내년" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}년 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}년 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "년",
                 new Dictionary<int, string> { { -1, "작년" }, { 0, "올해" }, { 1, "내년" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}년 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}년 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "년",
                 new Dictionary<int, string> { { -1, "작년" }, { 0, "올해" }, { 1, "내년" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}년 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}년 후" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "분기",
                 new Dictionary<int, string> { { -1, "지난 분기" }, { 0, "이번 분기" }, { 1, "다음 분기" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분기 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분기 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "분기",
                 new Dictionary<int, string> { { -1, "지난 분기" }, { 0, "이번 분기" }, { 1, "다음 분기" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분기 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분기 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "분기",
                 new Dictionary<int, string> { { -1, "지난 분기" }, { 0, "이번 분기" }, { 1, "다음 분기" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분기 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분기 후" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "월",
                 new Dictionary<int, string> { { -1, "지난달" }, { 0, "이번 달" }, { 1, "다음 달" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}개월 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}개월 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "월",
                 new Dictionary<int, string> { { -1, "지난달" }, { 0, "이번 달" }, { 1, "다음 달" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}개월 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}개월 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "월",
                 new Dictionary<int, string> { { -1, "지난달" }, { 0, "이번 달" }, { 1, "다음 달" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}개월 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}개월 후" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "주",
                 new Dictionary<int, string> { { -1, "지난주" }, { 0, "이번 주" }, { 1, "다음 주" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "주",
                 new Dictionary<int, string> { { -1, "지난주" }, { 0, "이번 주" }, { 1, "다음 주" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "주",
                 new Dictionary<int, string> { { -1, "지난주" }, { 0, "이번 주" }, { 1, "다음 주" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "월의 주",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "월의 주",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "월의 주",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "일",
                 new Dictionary<int, string> { { -2, "그저께" }, { -1, "어제" }, { 0, "오늘" }, { 1, "내일" }, { 2, "모레" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}일 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}일 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "일",
                 new Dictionary<int, string> { { -2, "그저께" }, { -1, "어제" }, { 0, "오늘" }, { 1, "내일" }, { 2, "모레" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}일 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}일 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "일",
                 new Dictionary<int, string> { { -2, "그저께" }, { -1, "어제" }, { 0, "오늘" }, { 1, "내일" }, { 2, "모레" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}일 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}일 후" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "년의 일",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "년의 일",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "년의 일",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "요일",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "요일",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "요일",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "월의 평일",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "월의 평일",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "월의 평일",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "지난 일요일" }, { 0, "이번 일요일" }, { 1, "다음 일요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 일요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 일요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "지난 일요일" }, { 0, "이번 일요일" }, { 1, "다음 일요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 일요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 일요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "지난 일요일" }, { 0, "이번 일요일" }, { 1, "다음 일요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 일요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 일요일" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "지난 월요일" }, { 0, "이번 월요일" }, { 1, "다음 월요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 월요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 월요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "지난 월요일" }, { 0, "이번 월요일" }, { 1, "다음 월요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 월요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 월요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "지난 월요일" }, { 0, "이번 월요일" }, { 1, "다음 월요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 월요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 월요일" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "지난 화요일" }, { 0, "이번 화요일" }, { 1, "다음 화요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 화요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 화요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "지난 화요일" }, { 0, "이번 화요일" }, { 1, "다음 화요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 화요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 화요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "지난 화요일" }, { 0, "이번 화요일" }, { 1, "다음 화요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 화요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 화요일" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "지난 수요일" }, { 0, "이번 수요일" }, { 1, "다음 수요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 수요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 수요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "지난 수요일" }, { 0, "이번 수요일" }, { 1, "다음 수요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 수요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 수요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "지난 수요일" }, { 0, "이번 수요일" }, { 1, "다음 수요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 수요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 수요일" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "지난 목요일" }, { 0, "이번 목요일" }, { 1, "다음 목요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 목요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 목요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "지난 목요일" }, { 0, "이번 목요일" }, { 1, "다음 목요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 목요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 목요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "지난 목요일" }, { 0, "이번 목요일" }, { 1, "다음 목요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 목요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 목요일" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "지난 금요일" }, { 0, "이번 금요일" }, { 1, "다음 금요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 금요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 금요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "지난 금요일" }, { 0, "이번 금요일" }, { 1, "다음 금요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 금요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 금요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "지난 금요일" }, { 0, "이번 금요일" }, { 1, "다음 금요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 금요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 금요일" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "지난 토요일" }, { 0, "이번 토요일" }, { 1, "다음 토요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 토요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 토요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "지난 토요일" }, { 0, "이번 토요일" }, { 1, "다음 토요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 토요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 토요일" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "지난 토요일" }, { 0, "이번 토요일" }, { 1, "다음 토요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 전 토요일" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 토요일" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "오전/오후",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "오전/오후",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "오전/오후",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "시",
                 new Dictionary<int, string> { { 0, "현재 시간" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}시간 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}시간 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "시",
                 new Dictionary<int, string> { { 0, "현재 시간" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}시간 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}시간 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "시",
                 new Dictionary<int, string> { { 0, "현재 시간" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}시간 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}시간 후" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "분",
                 new Dictionary<int, string> { { 0, "현재 분" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "분",
                 new Dictionary<int, string> { { 0, "현재 분" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "분",
                 new Dictionary<int, string> { { 0, "현재 분" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분 후" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "초",
                 new Dictionary<int, string> { { 0, "지금" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}초 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}초 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "초",
                 new Dictionary<int, string> { { 0, "지금" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}초 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}초 후" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "초",
                 new Dictionary<int, string> { { 0, "지금" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}초 전" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}초 후" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "시간대",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "시간대",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "시간대",
                 null,
                 null,

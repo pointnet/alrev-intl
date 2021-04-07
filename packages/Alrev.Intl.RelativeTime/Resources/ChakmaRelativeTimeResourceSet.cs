@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Chakma' [ccp]
+    /// </summary>
     public class ChakmaRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "ccp";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "𑄡𑄪𑄇𑄴",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "𑄡𑄪𑄇𑄴",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "𑄡𑄪𑄇𑄴",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "𑄝𑄧𑄏𑄧𑄢𑄴",
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄳𑄠𑄬 𑄝𑄧𑄏𑄧𑄢𑄴" }, { 0, "𑄃𑄬 𑄝𑄧𑄏𑄧𑄢𑄴" }, { 1, "𑄎𑄬𑄢𑄧 𑄝𑄧𑄏𑄧𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄧𑄏𑄧𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄧𑄏𑄧𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄧𑄏𑄧𑄢𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄧𑄏𑄧𑄢𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "𑄝𑄧𑄏𑄧𑄢𑄴",
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄳𑄠𑄬 𑄝𑄧𑄏𑄧𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄝𑄧𑄏𑄧𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄝𑄧𑄏𑄧𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄧𑄏𑄧𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄧𑄏𑄧𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄧𑄏𑄧𑄢𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄧𑄏𑄧𑄢𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "𑄝𑄧𑄏𑄧𑄢𑄴",
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄳𑄠𑄬 𑄝𑄧𑄏𑄧𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄝𑄧𑄏𑄧𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄝𑄧𑄏𑄧𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄧𑄏𑄧𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄧𑄏𑄧𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄧𑄏𑄧𑄢𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄧𑄏𑄧𑄢𑄬" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴",
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄳𑄠𑄬 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄖𑄨𑄚𑄴𑄟𑄏𑄬" }, { PluralRulesValues.Other, "{0} 𑄖𑄨𑄚𑄟𑄏𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴",
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄳𑄠𑄬 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴 𑄃𑄬𑄉" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄖𑄨𑄚𑄴𑄟𑄏𑄬" }, { PluralRulesValues.Other, "{0} 𑄖𑄨𑄚𑄴𑄟𑄏𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴",
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄳𑄠𑄬 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0}𑄖𑄨𑄚𑄴𑄟𑄏𑄧𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄖𑄨𑄚𑄴𑄟𑄏𑄬" }, { PluralRulesValues.Other, "{0} 𑄖𑄨𑄚𑄴𑄟𑄏𑄬" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "𑄟𑄏𑄴",
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄟𑄏𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄟𑄏𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄟𑄏𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄏𑄧 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄏𑄧 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄏𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄏𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "𑄟𑄏𑄴",
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄟𑄏𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄟𑄏𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄟𑄏𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄏𑄧 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄏𑄧 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄏𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄏𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "𑄟𑄏𑄴",
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄉𑄬 𑄟𑄏𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄟𑄏𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄟𑄏𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄇𑄏𑄧 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄏𑄧 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄏𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄏𑄬" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "𑄥𑄛𑄴𑄖",
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄥𑄛𑄴𑄖" }, { 0, "𑄃𑄳𑄆𑄬 𑄥𑄛𑄴𑄖" }, { 1, "𑄛𑄧𑄢𑄬 𑄥𑄛𑄴𑄖" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄛𑄴𑄖 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄛𑄴𑄖 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄛𑄴𑄖𑄠𑄴" }, { PluralRulesValues.Other, "{0} 𑄥𑄛𑄴𑄖𑄠𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "𑄥𑄛𑄴𑄖",
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄥𑄛𑄴𑄖" }, { 0, "𑄃𑄳𑄆𑄬 𑄥𑄛𑄴𑄖" }, { 1, "𑄛𑄧𑄢𑄬 𑄥𑄛𑄴𑄖" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄛𑄴𑄖𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄛𑄴𑄖𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄛𑄴𑄖𑄠𑄴" }, { PluralRulesValues.Other, "{0} 𑄥𑄛𑄴𑄖𑄠𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "𑄥𑄛𑄴𑄖",
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄥𑄛𑄴𑄖" }, { 0, "𑄃𑄳𑄆𑄬 𑄥𑄛𑄴𑄖" }, { 1, "𑄛𑄧𑄢𑄬 𑄥𑄛𑄴𑄖" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄛𑄴𑄖 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄛𑄴𑄖 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄛𑄴𑄖𑄠𑄴" }, { PluralRulesValues.Other, "{0} 𑄥𑄛𑄴𑄖𑄠𑄴" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Week Of Month",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Week Of Month",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Week Of Month",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "𑄘𑄨𑄚𑄴",
                 new Dictionary<int, string> { { -2, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄛𑄧𑄢𑄴𑄥𑄪" }, { -1, "𑄉𑄬𑄣𑄴𑄣𑄳𑄠𑄇𑄬𑄣𑄳𑄠𑄬" }, { 0, "𑄃𑄬𑄌𑄴𑄥𑄳𑄠" }, { 1, "𑄃𑄬𑄎𑄬𑄖𑄴𑄖𑄳𑄠𑄇𑄬𑄣𑄳𑄠𑄬" }, { 2, "𑄃𑄬𑄎𑄬𑄖𑄴𑄖𑄳𑄠𑄬 𑄛𑄧𑄢𑄴𑄥𑄪" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄘𑄨𑄚𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄘𑄨𑄚𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄘𑄨𑄚𑄮 𑄟𑄧𑄖𑄴𑄙𑄳𑄠" }, { PluralRulesValues.Other, "{0} 𑄘𑄨𑄚𑄮 𑄟𑄧𑄖𑄴𑄙𑄳𑄠" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "𑄘𑄨𑄚𑄴",
                 new Dictionary<int, string> { { -2, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄛𑄧𑄢𑄴𑄥𑄪" }, { -1, "𑄉𑄬𑄣𑄴𑄣𑄳𑄠𑄇𑄬𑄣𑄴𑄣𑄳𑄠𑄬" }, { 0, "𑄃𑄬𑄌𑄴𑄥𑄳𑄠𑄬" }, { 1, "𑄃𑄬𑄎𑄬𑄖𑄴𑄖𑄳𑄠𑄇𑄬𑄣𑄴𑄣𑄳𑄠𑄬" }, { 2, "𑄃𑄬𑄎𑄬𑄖𑄴𑄖𑄳𑄠𑄇𑄬𑄣𑄴𑄣𑄳𑄠𑄬 𑄛𑄧𑄢𑄴𑄥𑄪" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄘𑄨𑄚𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄘𑄨𑄚𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄘𑄨𑄚𑄮 𑄟𑄧𑄖𑄴𑄙𑄳𑄠" }, { PluralRulesValues.Other, "{0} 𑄘𑄨𑄚𑄮 𑄟𑄧𑄖𑄴𑄙𑄳𑄠" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "𑄘𑄨𑄚𑄴",
                 new Dictionary<int, string> { { -2, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄛𑄧𑄢𑄴𑄥𑄪" }, { -1, "𑄉𑄬𑄣𑄴𑄣𑄳𑄠𑄇𑄬𑄣𑄴𑄣𑄳𑄠𑄬" }, { 0, "𑄃𑄬𑄌𑄴𑄥𑄳𑄠𑄬" }, { 1, "𑄃𑄬𑄎𑄬𑄖𑄴𑄖𑄳𑄠𑄇𑄬𑄣𑄴𑄣𑄳𑄠𑄬" }, { 2, "𑄃𑄬𑄎𑄬𑄖𑄴𑄖𑄳𑄠𑄇𑄬𑄣𑄴𑄣𑄳𑄠𑄬 𑄛𑄧𑄢𑄴𑄥𑄪" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄘𑄨𑄚𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄘𑄨𑄚𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄘𑄨𑄚𑄮 𑄟𑄧𑄖𑄴𑄙𑄳𑄠" }, { PluralRulesValues.Other, "{0} 𑄘𑄨𑄚𑄮 𑄟𑄧𑄖𑄴𑄙𑄳𑄠" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Day Of Year",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Day Of Year",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Day Of Year",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "𑄥𑄛𑄴𑄖𑄢𑄴 𑄘𑄨𑄚𑄴",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "𑄥𑄛𑄴𑄖𑄢𑄴 𑄘𑄨𑄚𑄴",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "𑄥𑄛𑄴𑄖𑄢𑄴 𑄘𑄨𑄚𑄴",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Weekday Of Month",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Weekday Of Month",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Weekday Of Month",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄢𑄧𑄝𑄨𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄢𑄧𑄝𑄨𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄢𑄧𑄝𑄨𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄢𑄧𑄝𑄨𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄢𑄧𑄝𑄨𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄢𑄧𑄝𑄨𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄢𑄧𑄝𑄨𑄝𑄢𑄧𑄖𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄢𑄧𑄝𑄨𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄢𑄧𑄝𑄨𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄢𑄧𑄝𑄨𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄢𑄧𑄝𑄨𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄢𑄧𑄝𑄨𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄢𑄧𑄝𑄨𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄢𑄧𑄝𑄨𑄝𑄢𑄧𑄖𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄢𑄧𑄝𑄨𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄢𑄧𑄝𑄨𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄢𑄧𑄝𑄨𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄢𑄧𑄝𑄨𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄢𑄧𑄝𑄨𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄢𑄧𑄝𑄨𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄢𑄧𑄝𑄨𑄝𑄢𑄧𑄖𑄴" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄥𑄧𑄟𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄥𑄧𑄟𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄥𑄧𑄟𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄧𑄟𑄴𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄥𑄧𑄟𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄧𑄟𑄴𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄥𑄧𑄟𑄴𑄝𑄢𑄧𑄖𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄥𑄧𑄟𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄥𑄧𑄟𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄥𑄧𑄟𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄧𑄟𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄧𑄟𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄧𑄟𑄴𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄥𑄧𑄟𑄴𑄝𑄢𑄧𑄖𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄥𑄧𑄟𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄥𑄧𑄟𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄥𑄧𑄟𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄧𑄟𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄧𑄟𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄧𑄟𑄴𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄥𑄧𑄟𑄴𑄝𑄢𑄧𑄖𑄴" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄧𑄖𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄧𑄖𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄧𑄖𑄴" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄝𑄪𑄖𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄝𑄪𑄖𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄝𑄪𑄖𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄪𑄖𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄪𑄖𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄪𑄖𑄴𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄝𑄪𑄖𑄴𑄝𑄢𑄧𑄖𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄝𑄪𑄖𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄝𑄪𑄖𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄝𑄪𑄖𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄪𑄖𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄪𑄖𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄪𑄖𑄴𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄝𑄪𑄖𑄴𑄝𑄢𑄧𑄖𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄝𑄪𑄖𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄝𑄪𑄖𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄝𑄪𑄖𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄪𑄖𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄪𑄖𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄪𑄖𑄴𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄝𑄪𑄖𑄴𑄝𑄢𑄧𑄖𑄴" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄧𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄬" }, { PluralRulesValues.Other, "{0} 𑄝𑄨𑄥𑄪𑄖𑄴𑄝𑄢𑄬" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄧𑄖𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄧𑄖𑄴" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄥𑄮𑄚𑄨𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄥𑄮𑄚𑄨𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄥𑄮𑄚𑄨𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄮𑄚𑄨𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄮𑄚𑄨𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄮𑄚𑄨𑄝𑄢𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄮𑄚𑄨𑄝𑄢𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄥𑄮𑄚𑄨𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄥𑄮𑄚𑄨𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄥𑄮𑄚𑄨𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄮𑄚𑄨𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄮𑄚𑄨𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄮𑄚𑄨𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄥𑄮𑄚𑄨𑄝𑄢𑄧𑄖𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "𑄉𑄬𑄣𑄧𑄘𑄬 𑄥𑄮𑄚𑄨𑄝𑄢𑄴" }, { 0, "𑄃𑄳𑄆𑄬 𑄥𑄮𑄚𑄨𑄝𑄢𑄴" }, { 1, "𑄛𑄧𑄢𑄬 𑄥𑄮𑄚𑄨𑄝𑄢𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄮𑄚𑄨𑄝𑄢𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄮𑄚𑄨𑄝𑄢𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄮𑄚𑄨𑄝𑄢𑄧𑄖𑄴" }, { PluralRulesValues.Other, "{0} 𑄥𑄮𑄚𑄨𑄝𑄢𑄧𑄖𑄴" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "AM/PM",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "𑄊𑄮𑄚𑄴𑄓",
                 new Dictionary<int, string> { { 0, "𑄃𑄳𑄆𑄬 𑄊𑄮𑄚𑄴𑄓𑄠𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄊𑄮𑄚𑄴𑄓 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄊𑄮𑄚𑄴𑄓 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄊𑄮𑄚𑄴𑄓𑄠𑄴" }, { PluralRulesValues.Other, "{0} 𑄊𑄮𑄚𑄴𑄓𑄠𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "𑄊𑄮𑄚𑄴𑄓",
                 new Dictionary<int, string> { { 0, "𑄃𑄳𑄆𑄬 𑄊𑄮𑄚𑄴𑄓𑄠𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄊𑄮𑄚𑄴𑄓 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄊𑄮𑄚𑄴𑄓 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄊𑄮𑄚𑄴𑄓𑄠𑄴" }, { PluralRulesValues.Other, "{0} 𑄊𑄮𑄚𑄴𑄓𑄠𑄴" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "𑄊𑄮𑄚𑄴𑄓",
                 new Dictionary<int, string> { { 0, "𑄃𑄳𑄆𑄬 𑄊𑄮𑄚𑄴𑄓𑄠𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄊𑄮𑄚𑄴𑄓 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄊𑄮𑄚𑄴𑄓 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄊𑄮𑄚𑄴𑄓𑄠𑄴" }, { PluralRulesValues.Other, "{0} 𑄊𑄮𑄚𑄴𑄓𑄠𑄴" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "𑄟𑄨𑄚𑄨𑄖𑄴",
                 new Dictionary<int, string> { { 0, "𑄃𑄳𑄆𑄬 𑄟𑄨𑄚𑄨𑄖𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄨𑄚𑄨𑄖𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄨𑄚𑄨𑄖𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄨𑄚𑄨𑄘𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄨𑄚𑄨𑄘𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "𑄟𑄨𑄚𑄨𑄖𑄴",
                 new Dictionary<int, string> { { 0, "𑄃𑄳𑄆𑄬 𑄟𑄨𑄚𑄨𑄖𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄨𑄚𑄨𑄖𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄨𑄚𑄨𑄖𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄨𑄚𑄨𑄘𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄨𑄚𑄨𑄘𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "𑄟𑄨𑄚𑄨𑄖𑄴",
                 new Dictionary<int, string> { { 0, "𑄃𑄳𑄆𑄬 𑄟𑄨𑄚𑄨𑄖𑄴" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄨𑄚𑄨𑄖𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄨𑄚𑄨𑄖𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄟𑄨𑄚𑄨𑄘𑄬" }, { PluralRulesValues.Other, "{0} 𑄟𑄨𑄚𑄨𑄘𑄬" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "𑄥𑄬𑄉𑄬𑄚𑄴",
                 new Dictionary<int, string> { { 0, "𑄃𑄨𑄇𑄴𑄅𑄚𑄪" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄬𑄉𑄬𑄚𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄬𑄉𑄬𑄚𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄬𑄉𑄬𑄚𑄴𑄘𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄬𑄉𑄬𑄚𑄴𑄘𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "𑄥𑄬𑄉𑄬𑄚𑄴",
                 new Dictionary<int, string> { { 0, "𑄃𑄨𑄇𑄴𑄅𑄚𑄪" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄬𑄉𑄬𑄚𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄬𑄉𑄬𑄚𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄬𑄉𑄬𑄚𑄴" }, { PluralRulesValues.Other, "{0} 𑄥𑄬𑄉𑄬𑄚𑄴𑄘𑄬" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "𑄥𑄬𑄉𑄬𑄚𑄴",
                 new Dictionary<int, string> { { 0, "𑄃𑄨𑄇𑄴𑄅𑄚𑄪" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄬𑄉𑄬𑄚𑄴 𑄃𑄉𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄬𑄉𑄬𑄚𑄴 𑄃𑄉𑄬" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} 𑄥𑄬𑄉𑄬𑄚𑄴𑄘𑄬" }, { PluralRulesValues.Other, "{0} 𑄥𑄬𑄉𑄬𑄚𑄴𑄘𑄬" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Chakma' [ccp]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "𑄃𑄧𑄇𑄴𑄖𑄧𑄢𑄴 𑄎𑄉",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "𑄃𑄧𑄇𑄴𑄖𑄧𑄢𑄴 𑄎𑄉",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "𑄃𑄧𑄇𑄴𑄖𑄧𑄢𑄴 𑄎𑄉",
                 null,
                 null,

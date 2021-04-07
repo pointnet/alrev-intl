@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Arabic (Morocco)' [ar-MA]
+    /// </summary>
     public class ArabicMoroccoRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "ar-MA";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "العصر",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "العصر",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "العصر",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "السنة",
                 new Dictionary<int, string> { { -1, "السنة الماضية" }, { 0, "السنة الحالية" }, { 1, "السنة القادمة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} سنة" }, { PluralRulesValues.One, "قبل سنة واحدة" }, { PluralRulesValues.Two, "قبل سنتين" }, { PluralRulesValues.Few, "قبل {0} سنوات" }, { PluralRulesValues.Many, "قبل {0} سنة" }, { PluralRulesValues.Other, "قبل {0} سنة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} سنة" }, { PluralRulesValues.One, "خلال سنة واحدة" }, { PluralRulesValues.Two, "خلال سنتين" }, { PluralRulesValues.Few, "خلال {0} سنوات" }, { PluralRulesValues.Many, "خلال {0} سنة" }, { PluralRulesValues.Other, "خلال {0} سنة" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "السنة",
                 new Dictionary<int, string> { { -1, "السنة الماضية" }, { 0, "السنة الحالية" }, { 1, "السنة القادمة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} سنة" }, { PluralRulesValues.One, "قبل سنة واحدة" }, { PluralRulesValues.Two, "قبل سنتين" }, { PluralRulesValues.Few, "قبل {0} سنوات" }, { PluralRulesValues.Many, "قبل {0} سنة" }, { PluralRulesValues.Other, "قبل {0} سنة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} سنة" }, { PluralRulesValues.One, "خلال سنة واحدة" }, { PluralRulesValues.Two, "خلال سنتين" }, { PluralRulesValues.Few, "خلال {0} سنوات" }, { PluralRulesValues.Many, "خلال {0} سنة" }, { PluralRulesValues.Other, "خلال {0} سنة" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "السنة",
                 new Dictionary<int, string> { { -1, "السنة الماضية" }, { 0, "السنة الحالية" }, { 1, "السنة القادمة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} سنة" }, { PluralRulesValues.One, "قبل سنة واحدة" }, { PluralRulesValues.Two, "قبل سنتين" }, { PluralRulesValues.Few, "قبل {0} سنوات" }, { PluralRulesValues.Many, "قبل {0} سنة" }, { PluralRulesValues.Other, "قبل {0} سنة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} سنة" }, { PluralRulesValues.One, "خلال سنة واحدة" }, { PluralRulesValues.Two, "خلال سنتين" }, { PluralRulesValues.Few, "خلال {0} سنوات" }, { PluralRulesValues.Many, "خلال {0} سنة" }, { PluralRulesValues.Other, "خلال {0} سنة" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ربع السنة",
                 new Dictionary<int, string> { { -1, "الربع الأخير" }, { 0, "هذا الربع" }, { 1, "الربع القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} ربع سنة" }, { PluralRulesValues.One, "قبل ربع سنة واحد" }, { PluralRulesValues.Two, "قبل ربعي سنة" }, { PluralRulesValues.Few, "قبل {0} أرباع سنة" }, { PluralRulesValues.Many, "قبل {0} ربع سنة" }, { PluralRulesValues.Other, "قبل {0} ربع سنة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ربع سنة" }, { PluralRulesValues.One, "خلال ربع سنة واحد" }, { PluralRulesValues.Two, "خلال ربعي سنة" }, { PluralRulesValues.Few, "خلال {0} أرباع سنة" }, { PluralRulesValues.Many, "خلال {0} ربع سنة" }, { PluralRulesValues.Other, "خلال {0} ربع سنة" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ربع السنة",
                 new Dictionary<int, string> { { -1, "الربع الأخير" }, { 0, "هذا الربع" }, { 1, "الربع القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} ربع سنة" }, { PluralRulesValues.One, "قبل ربع سنة واحد" }, { PluralRulesValues.Two, "قبل ربعي سنة" }, { PluralRulesValues.Few, "قبل {0} أرباع سنة" }, { PluralRulesValues.Many, "قبل {0} ربع سنة" }, { PluralRulesValues.Other, "قبل {0} ربع سنة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ربع سنة" }, { PluralRulesValues.One, "خلال ربع سنة واحد" }, { PluralRulesValues.Two, "خلال ربعي سنة" }, { PluralRulesValues.Few, "خلال {0} أرباع سنة" }, { PluralRulesValues.Many, "خلال {0} ربع سنة" }, { PluralRulesValues.Other, "خلال {0} ربع سنة" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ربع السنة",
                 new Dictionary<int, string> { { -1, "الربع الأخير" }, { 0, "هذا الربع" }, { 1, "الربع القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} ربع سنة" }, { PluralRulesValues.One, "قبل ربع سنة واحد" }, { PluralRulesValues.Two, "قبل ربعي سنة" }, { PluralRulesValues.Few, "قبل {0} أرباع سنة" }, { PluralRulesValues.Many, "قبل {0} ربع سنة" }, { PluralRulesValues.Other, "قبل {0} ربع سنة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ربع سنة" }, { PluralRulesValues.One, "خلال ربع سنة واحد" }, { PluralRulesValues.Two, "خلال ربعي سنة" }, { PluralRulesValues.Few, "خلال {0} أرباع سنة" }, { PluralRulesValues.Many, "خلال {0} ربع سنة" }, { PluralRulesValues.Other, "خلال {0} ربع سنة" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "الشهر",
                 new Dictionary<int, string> { { -1, "الشهر الماضي" }, { 0, "هذا الشهر" }, { 1, "الشهر القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} شهر" }, { PluralRulesValues.One, "قبل شهر واحد" }, { PluralRulesValues.Two, "قبل شهرين" }, { PluralRulesValues.Few, "قبل {0} أشهر" }, { PluralRulesValues.Many, "قبل {0} شهرًا" }, { PluralRulesValues.Other, "قبل {0} شهر" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} شهر" }, { PluralRulesValues.One, "خلال شهر واحد" }, { PluralRulesValues.Two, "خلال شهرين" }, { PluralRulesValues.Few, "خلال {0} أشهر" }, { PluralRulesValues.Many, "خلال {0} شهرًا" }, { PluralRulesValues.Other, "خلال {0} شهر" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "الشهر",
                 new Dictionary<int, string> { { -1, "الشهر الماضي" }, { 0, "هذا الشهر" }, { 1, "الشهر القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} شهر" }, { PluralRulesValues.One, "قبل شهر واحد" }, { PluralRulesValues.Two, "قبل شهرين" }, { PluralRulesValues.Few, "قبل {0} أشهر" }, { PluralRulesValues.Many, "قبل {0} شهرًا" }, { PluralRulesValues.Other, "قبل {0} شهر" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} شهر" }, { PluralRulesValues.One, "خلال شهر واحد" }, { PluralRulesValues.Two, "خلال شهرين" }, { PluralRulesValues.Few, "خلال {0} أشهر" }, { PluralRulesValues.Many, "خلال {0} شهرًا" }, { PluralRulesValues.Other, "خلال {0} شهر" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "الشهر",
                 new Dictionary<int, string> { { -1, "الشهر الماضي" }, { 0, "هذا الشهر" }, { 1, "الشهر القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} شهر" }, { PluralRulesValues.One, "قبل شهر واحد" }, { PluralRulesValues.Two, "قبل شهرين" }, { PluralRulesValues.Few, "خلال {0} أشهر" }, { PluralRulesValues.Many, "قبل {0} شهرًا" }, { PluralRulesValues.Other, "قبل {0} شهر" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} شهر" }, { PluralRulesValues.One, "خلال شهر واحد" }, { PluralRulesValues.Two, "خلال شهرين" }, { PluralRulesValues.Few, "خلال {0} أشهر" }, { PluralRulesValues.Many, "خلال {0} شهرًا" }, { PluralRulesValues.Other, "خلال {0} شهر" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "الأسبوع",
                 new Dictionary<int, string> { { -1, "الأسبوع الماضي" }, { 0, "هذا الأسبوع" }, { 1, "الأسبوع القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} أسبوع" }, { PluralRulesValues.One, "قبل أسبوع واحد" }, { PluralRulesValues.Two, "قبل أسبوعين" }, { PluralRulesValues.Few, "قبل {0} أسابيع" }, { PluralRulesValues.Many, "قبل {0} أسبوعًا" }, { PluralRulesValues.Other, "قبل {0} أسبوع" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} أسبوع" }, { PluralRulesValues.One, "خلال أسبوع واحد" }, { PluralRulesValues.Two, "خلال أسبوعين" }, { PluralRulesValues.Few, "خلال {0} أسابيع" }, { PluralRulesValues.Many, "خلال {0} أسبوعًا" }, { PluralRulesValues.Other, "خلال {0} أسبوع" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "الأسبوع",
                 new Dictionary<int, string> { { -1, "الأسبوع الماضي" }, { 0, "هذا الأسبوع" }, { 1, "الأسبوع القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} أسبوع" }, { PluralRulesValues.One, "قبل أسبوع واحد" }, { PluralRulesValues.Two, "قبل أسبوعين" }, { PluralRulesValues.Few, "قبل {0} أسابيع" }, { PluralRulesValues.Many, "قبل {0} أسبوعًا" }, { PluralRulesValues.Other, "قبل {0} أسبوع" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} أسبوع" }, { PluralRulesValues.One, "خلال أسبوع واحد" }, { PluralRulesValues.Two, "خلال أسبوعين" }, { PluralRulesValues.Few, "خلال {0} أسابيع" }, { PluralRulesValues.Many, "خلال {0} أسبوعًا" }, { PluralRulesValues.Other, "خلال {0} أسبوع" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "الأسبوع",
                 new Dictionary<int, string> { { -1, "الأسبوع الماضي" }, { 0, "هذا الأسبوع" }, { 1, "الأسبوع القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} أسبوع" }, { PluralRulesValues.One, "قبل أسبوع واحد" }, { PluralRulesValues.Two, "قبل أسبوعين" }, { PluralRulesValues.Few, "قبل {0} أسابيع" }, { PluralRulesValues.Many, "قبل {0} أسبوعًا" }, { PluralRulesValues.Other, "قبل {0} أسبوع" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} أسبوع" }, { PluralRulesValues.One, "خلال أسبوع واحد" }, { PluralRulesValues.Two, "خلال {0} أسبوعين" }, { PluralRulesValues.Few, "خلال {0} أسابيع" }, { PluralRulesValues.Many, "خلال {0} أسبوعًا" }, { PluralRulesValues.Other, "خلال {0} أسبوع" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "الأسبوع من الشهر",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "أسبوع/شهر",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "أسبوع من شهر",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "يوم",
                 new Dictionary<int, string> { { -2, "أول أمس" }, { -1, "أمس" }, { 0, "اليوم" }, { 1, "غدًا" }, { 2, "بعد الغد" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} يوم" }, { PluralRulesValues.One, "قبل يوم واحد" }, { PluralRulesValues.Two, "قبل يومين" }, { PluralRulesValues.Few, "قبل {0} أيام" }, { PluralRulesValues.Many, "قبل {0} يومًا" }, { PluralRulesValues.Other, "قبل {0} يوم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} يوم" }, { PluralRulesValues.One, "خلال يوم واحد" }, { PluralRulesValues.Two, "خلال يومين" }, { PluralRulesValues.Few, "خلال {0} أيام" }, { PluralRulesValues.Many, "خلال {0} يومًا" }, { PluralRulesValues.Other, "خلال {0} يوم" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "يوم",
                 new Dictionary<int, string> { { -2, "أول أمس" }, { -1, "أمس" }, { 0, "اليوم" }, { 1, "غدًا" }, { 2, "بعد الغد" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} يوم" }, { PluralRulesValues.One, "قبل يوم واحد" }, { PluralRulesValues.Two, "قبل يومين" }, { PluralRulesValues.Few, "قبل {0} أيام" }, { PluralRulesValues.Many, "قبل {0} يومًا" }, { PluralRulesValues.Other, "قبل {0} يوم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} يوم" }, { PluralRulesValues.One, "خلال يوم واحد" }, { PluralRulesValues.Two, "خلال يومين" }, { PluralRulesValues.Few, "خلال {0} أيام" }, { PluralRulesValues.Many, "خلال {0} يومًا" }, { PluralRulesValues.Other, "خلال {0} يوم" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "يوم",
                 new Dictionary<int, string> { { -2, "أول أمس" }, { -1, "أمس" }, { 0, "اليوم" }, { 1, "غدًا" }, { 2, "بعد الغد" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} يوم" }, { PluralRulesValues.One, "قبل يوم واحد" }, { PluralRulesValues.Two, "قبل يومين" }, { PluralRulesValues.Few, "قبل {0} أيام" }, { PluralRulesValues.Many, "قبل {0} يومًا" }, { PluralRulesValues.Other, "قبل {0} يوم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} يوم" }, { PluralRulesValues.One, "خلال يوم واحد" }, { PluralRulesValues.Two, "خلال يومين" }, { PluralRulesValues.Few, "خلال {0} أيام" }, { PluralRulesValues.Many, "خلال {0} يومًا" }, { PluralRulesValues.Other, "خلال {0} يوم" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "يوم من السنة",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "يوم/سنة",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "يوم من سنة",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "اليوم",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "اليوم",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "اليوم",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "يوم عمل من الشهر",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "يوم عمل/شهر",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "يوم عمل من شهر",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "الأحد الماضي" }, { 0, "الأحد الحالي" }, { 1, "الأحد القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} أحد" }, { PluralRulesValues.One, "الأحد الماضي" }, { PluralRulesValues.Two, "الأحد قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} أحد" }, { PluralRulesValues.Many, "قبل {0} أحد" }, { PluralRulesValues.Other, "قبل {0} أحد" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} أحد" }, { PluralRulesValues.One, "الأحد القادم" }, { PluralRulesValues.Two, "الأحد بعد القادم" }, { PluralRulesValues.Few, "خلال {0} أحد" }, { PluralRulesValues.Many, "خلال {0} أحد" }, { PluralRulesValues.Other, "خلال {0} أحد" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "الأحد الماضي" }, { 0, "الأحد الحالي" }, { 1, "الأحد القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} أحد" }, { PluralRulesValues.One, "أحد ماضي" }, { PluralRulesValues.Two, "أحد قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} أحد" }, { PluralRulesValues.Many, "قبل {0} أحد" }, { PluralRulesValues.Other, "قبل {0} أحد" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} أحد" }, { PluralRulesValues.One, "أحد قادم" }, { PluralRulesValues.Two, "أحد بعد القادم" }, { PluralRulesValues.Few, "خلال {0} أحد" }, { PluralRulesValues.Many, "خلال {0} أحد" }, { PluralRulesValues.Other, "خلال {0} أحد" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "الأحد الماضي" }, { 0, "الأحد الحالي" }, { 1, "الأحد القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} أحد" }, { PluralRulesValues.One, "أحد ماضي" }, { PluralRulesValues.Two, "أحد قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} أحد" }, { PluralRulesValues.Many, "قبل {0} أحد" }, { PluralRulesValues.Other, "قبل {0} أحد" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} أحد" }, { PluralRulesValues.One, "أحد قادم" }, { PluralRulesValues.Two, "أحد بعد القادم" }, { PluralRulesValues.Few, "خلال {0} أحد" }, { PluralRulesValues.Many, "خلال {0} أحد" }, { PluralRulesValues.Other, "خلال {0} أحد" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "الإثنين الماضي" }, { 0, "الإثنين الحالي" }, { 1, "الإثنين القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} إثنين" }, { PluralRulesValues.One, "الإثنين الماضي" }, { PluralRulesValues.Two, "الإثنين قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} أيام إثنين" }, { PluralRulesValues.Many, "قبل {0} يوم إثنين" }, { PluralRulesValues.Other, "قبل {0} يوم إثنين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} إثنين" }, { PluralRulesValues.One, "الإثنين القادم" }, { PluralRulesValues.Two, "الإثنين بعد القادم" }, { PluralRulesValues.Few, "خلال {0} أيام إثنين" }, { PluralRulesValues.Many, "خلال {0} يوم إثنين" }, { PluralRulesValues.Other, "خلال {0} يوم إثنين" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "الإثنين الماضي" }, { 0, "الإثنين الحالي" }, { 1, "الإثنين القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} إثنين" }, { PluralRulesValues.One, "إثنين ماضي" }, { PluralRulesValues.Two, "إثنين قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} إثنين" }, { PluralRulesValues.Many, "قبل {0} إثنين" }, { PluralRulesValues.Other, "قبل {0} إثنين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} إثنين" }, { PluralRulesValues.One, "إثنين قادم" }, { PluralRulesValues.Two, "الإثنين بعد القادم" }, { PluralRulesValues.Few, "خلال {0} إثنين" }, { PluralRulesValues.Many, "خلال {0} إثنين" }, { PluralRulesValues.Other, "خلال {0} إثنين" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "الإثنين الماضي" }, { 0, "الإثنين الحالي" }, { 1, "الإثنين القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} إثنين" }, { PluralRulesValues.One, "الإثنين الماضي" }, { PluralRulesValues.Two, "الإثنين قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} إثنين" }, { PluralRulesValues.Many, "قبل {0} إثنين" }, { PluralRulesValues.Other, "قبل {0} إثنين" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} إثنين" }, { PluralRulesValues.One, "الإثنين القادم" }, { PluralRulesValues.Two, "الإثنين بعد القادم" }, { PluralRulesValues.Few, "خلال {0} إثنين" }, { PluralRulesValues.Many, "خلال {0} إثنين" }, { PluralRulesValues.Other, "خلال {0} إثنين" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "الثلاثاء الماضي" }, { 0, "الثلاثاء الحالي" }, { 1, "الثلاثاء القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} يوم ثلاثاء" }, { PluralRulesValues.One, "الثلاثاء الماضي" }, { PluralRulesValues.Two, "الثلاثاء قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} أيام ثلاثاء" }, { PluralRulesValues.Many, "قبل {0} يوم ثلاثاء" }, { PluralRulesValues.Other, "قبل {0} يوم ثلاثاء" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} يوم ثلاثاء" }, { PluralRulesValues.One, "الثلاثاء القادم" }, { PluralRulesValues.Two, "الثلاثاء بعد القادم" }, { PluralRulesValues.Few, "خلال {0} أيام ثلاثاء" }, { PluralRulesValues.Many, "خلال {0} يوم ثلاثاء" }, { PluralRulesValues.Other, "خلال {0} يوم ثلاثاء" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "الثلاثاء الماضي" }, { 0, "الثلاثاء الحالي" }, { 1, "الثلاثاء القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} ثلاثاء" }, { PluralRulesValues.One, "ثلاثاء ماضي" }, { PluralRulesValues.Two, "ثلاثاء قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} ثلاثاء" }, { PluralRulesValues.Many, "قبل {0} ثلاثاء" }, { PluralRulesValues.Other, "قبل {0} ثلاثاء" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ثلاثاء" }, { PluralRulesValues.One, "ثلاثاء قادم" }, { PluralRulesValues.Two, "ثلاثاء بعد القادم" }, { PluralRulesValues.Few, "خلال {0} ثلاثاء" }, { PluralRulesValues.Many, "خلال {0} ثلاثاء" }, { PluralRulesValues.Other, "خلال {0} ثلاثاء" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "الثلاثاء الماضي" }, { 0, "الثلاثاء الحالي" }, { 1, "الثلاثاء القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} ثلاثاء" }, { PluralRulesValues.One, "ثلاثاء ماضي" }, { PluralRulesValues.Two, "ثلاثاء قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} ثلاثاء" }, { PluralRulesValues.Many, "قبل {0} ثلاثاء" }, { PluralRulesValues.Other, "قبل {0} ثلاثاء" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ثلاثاء" }, { PluralRulesValues.One, "ثلاثاء قادم" }, { PluralRulesValues.Two, "ثلاثاء بعد القادم" }, { PluralRulesValues.Few, "خلال {0} ثلاثاء" }, { PluralRulesValues.Many, "خلال {0} ثلاثاء" }, { PluralRulesValues.Other, "خلال {0} ثلاثاء" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "الأربعاء الماضي" }, { 0, "الأربعاء الحالي" }, { 1, "الأربعاء القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} يوم أربعاء" }, { PluralRulesValues.One, "الأربعاء الماضي" }, { PluralRulesValues.Two, "الأربعاء قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} أيام أربعاء" }, { PluralRulesValues.Many, "قبل {0} يوم أربعاء" }, { PluralRulesValues.Other, "قبل {0} يوم أربعاء" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} يوم أربعاء" }, { PluralRulesValues.One, "الأربعاء القادم" }, { PluralRulesValues.Two, "الأربعاء بعد القادم" }, { PluralRulesValues.Few, "خلال {0} أيام أربعاء" }, { PluralRulesValues.Many, "خلال {0} يوم أربعاء" }, { PluralRulesValues.Other, "خلال {0} يوم أربعاء" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "الأربعاء الماضي" }, { 0, "الأربعاء الحالي" }, { 1, "الأربعاء القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} أربعاء" }, { PluralRulesValues.One, "أربعاء ماضي" }, { PluralRulesValues.Two, "أربعاء قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} أربعاء" }, { PluralRulesValues.Many, "قبل {0} أربعاء" }, { PluralRulesValues.Other, "قبل {0} أربعاء" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} أربعاء" }, { PluralRulesValues.One, "أربعاء قادم" }, { PluralRulesValues.Two, "أربعاء بعد القادم" }, { PluralRulesValues.Few, "خلال {0} أربعاء" }, { PluralRulesValues.Many, "خلال {0} أربعاء" }, { PluralRulesValues.Other, "خلال {0} أربعاء" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "الأربعاء الماضي" }, { 0, "الأربعاء الحالي" }, { 1, "الأربعاء القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} أربعاء" }, { PluralRulesValues.One, "أربعاء ماضي" }, { PluralRulesValues.Two, "أربعاء قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} أربعاء" }, { PluralRulesValues.Many, "قبل {0} أربعاء" }, { PluralRulesValues.Other, "قبل {0} أربعاء" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} أربعاء" }, { PluralRulesValues.One, "خلال {0} أربعاء" }, { PluralRulesValues.Two, "خلال {0} أربعاء" }, { PluralRulesValues.Few, "خلال {0} أربعاء" }, { PluralRulesValues.Many, "خلال {0} أربعاء" }, { PluralRulesValues.Other, "خلال {0} أربعاء" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "الخميس الماضي" }, { 0, "الخميس الحالي" }, { 1, "الخميس القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} يوم خميس" }, { PluralRulesValues.One, "الخميس الماضي" }, { PluralRulesValues.Two, "الخميس قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} أيام خميس" }, { PluralRulesValues.Many, "قبل {0} يوم خميس" }, { PluralRulesValues.Other, "قبل {0} يوم خميس" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} يوم خميس" }, { PluralRulesValues.One, "الخميس القادم" }, { PluralRulesValues.Two, "الخميس بعد القادم" }, { PluralRulesValues.Few, "خلال {0} أيام خميس" }, { PluralRulesValues.Many, "خلال {0} يوم خميس" }, { PluralRulesValues.Other, "خلال {0} يوم خميس" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "الخميس الماضي" }, { 0, "الخميس الحالي" }, { 1, "الخميس القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} خميس" }, { PluralRulesValues.One, "خميس ماضي" }, { PluralRulesValues.Two, "خميس قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} خميس" }, { PluralRulesValues.Many, "قبل {0} خميس" }, { PluralRulesValues.Other, "قبل {0} خميس" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} خميس" }, { PluralRulesValues.One, "خلال {0} يوم خميس" }, { PluralRulesValues.Two, "الخميس بعد القادم" }, { PluralRulesValues.Few, "خلال {0} خميس" }, { PluralRulesValues.Many, "خلال {0} خميس" }, { PluralRulesValues.Other, "خلال {0} خميس" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "الخميس الماضي" }, { 0, "الخميس الحالي" }, { 1, "الخميس القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} خميس" }, { PluralRulesValues.One, "خميس ماضي" }, { PluralRulesValues.Two, "خميس قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} خميس" }, { PluralRulesValues.Many, "قبل {0} خميس" }, { PluralRulesValues.Other, "قبل {0} خميس" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} خميس" }, { PluralRulesValues.One, "الخميس القادم" }, { PluralRulesValues.Two, "الخميس بعد القادم" }, { PluralRulesValues.Few, "خلال {0} خميس" }, { PluralRulesValues.Many, "خلال {0} خميس" }, { PluralRulesValues.Other, "خلال {0} خميس" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "الجمعة الماضي" }, { 0, "الجمعة الحالي" }, { 1, "الجمعة القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} يوم جمعة" }, { PluralRulesValues.One, "الجمعة الماضي" }, { PluralRulesValues.Two, "الجمعة قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} أيام جمعة" }, { PluralRulesValues.Many, "قبل {0} يوم جمعة" }, { PluralRulesValues.Other, "قبل {0} يوم جمعة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} يوم جمعة" }, { PluralRulesValues.One, "الجمعة القادم" }, { PluralRulesValues.Two, "الجمعة بعد القادم" }, { PluralRulesValues.Few, "خلال {0} أيام جمعة" }, { PluralRulesValues.Many, "خلال {0} يوم جمعة" }, { PluralRulesValues.Other, "خلال {0} يوم جمعة" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "الجمعة الماضي" }, { 0, "الجمعة الحالي" }, { 1, "الجمعة القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} جمعة" }, { PluralRulesValues.One, "جمعة ماضي" }, { PluralRulesValues.Two, "جمعة قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} جمعة" }, { PluralRulesValues.Many, "قبل {0} جمعة" }, { PluralRulesValues.Other, "قبل {0} جمعة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} جمعة" }, { PluralRulesValues.One, "جمعة قادم" }, { PluralRulesValues.Two, "جمعة بعد القادم" }, { PluralRulesValues.Few, "خلال {0} جمعة" }, { PluralRulesValues.Many, "خلال {0} جمعة" }, { PluralRulesValues.Other, "خلال {0} جمعة" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "الجمعة الماضي" }, { 0, "الجمعة الحالي" }, { 1, "الجمعة القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} جمعة" }, { PluralRulesValues.One, "جمعة ماضي" }, { PluralRulesValues.Two, "جمعة قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} جمعة" }, { PluralRulesValues.Many, "قبل {0} جمعة" }, { PluralRulesValues.Other, "قبل {0} جمعة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} جمعة" }, { PluralRulesValues.One, "جمعة قادم" }, { PluralRulesValues.Two, "جمعة بعد القادم" }, { PluralRulesValues.Few, "خلال {0} جمعة" }, { PluralRulesValues.Many, "خلال {0} جمعة" }, { PluralRulesValues.Other, "خلال {0} جمعة" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "السبت الماضي" }, { 0, "السبت الحالي" }, { 1, "السبت القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} يوم سبت" }, { PluralRulesValues.One, "السبت الماضي" }, { PluralRulesValues.Two, "السبت قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} يوم سبت" }, { PluralRulesValues.Many, "قبل {0} يوم سبت" }, { PluralRulesValues.Other, "قبل {0} يوم سبت" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "السبت القادم" }, { PluralRulesValues.One, "السبت القادم" }, { PluralRulesValues.Two, "السبت بعد القادم" }, { PluralRulesValues.Few, "السبت بعد {0} أسابيع" }, { PluralRulesValues.Many, "خلال {0} يوم سبت" }, { PluralRulesValues.Other, "بعد {0} يوم سبت" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "السبت الماضي" }, { 0, "السبت الحالي" }, { 1, "السبت القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} سبت" }, { PluralRulesValues.One, "سبت ماضي" }, { PluralRulesValues.Two, "سبت قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} سبت" }, { PluralRulesValues.Many, "قبل {0} سبت" }, { PluralRulesValues.Other, "قبل {0} سبت" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} سبت" }, { PluralRulesValues.One, "سبت قادم" }, { PluralRulesValues.Two, "سبت بعد القادم" }, { PluralRulesValues.Few, "خلال {0} سبت" }, { PluralRulesValues.Many, "خلال {0} سبت" }, { PluralRulesValues.Other, "خلال {0} سبت" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "السبت الماضي" }, { 0, "السبت الحالي" }, { 1, "السبت القادم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} سبت" }, { PluralRulesValues.One, "سبت ماضي" }, { PluralRulesValues.Two, "سبت قبل الماضي" }, { PluralRulesValues.Few, "قبل {0} سبت" }, { PluralRulesValues.Many, "قبل {0} سبت" }, { PluralRulesValues.Other, "قبل {0} سبت" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} سبت" }, { PluralRulesValues.One, "سبت قادم" }, { PluralRulesValues.Two, "سبت بعد القادم" }, { PluralRulesValues.Few, "خلال {0} سبت" }, { PluralRulesValues.Many, "خلال {0} سبت" }, { PluralRulesValues.Other, "خلال {0} سبت" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ص/م",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ص/م",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ص/م",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "الساعات",
                 new Dictionary<int, string> { { 0, "الساعة الحالية" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} ساعة" }, { PluralRulesValues.One, "قبل ساعة واحدة" }, { PluralRulesValues.Two, "قبل ساعتين" }, { PluralRulesValues.Few, "قبل {0} ساعات" }, { PluralRulesValues.Many, "قبل {0} ساعة" }, { PluralRulesValues.Other, "قبل {0} ساعة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ساعة" }, { PluralRulesValues.One, "خلال ساعة واحدة" }, { PluralRulesValues.Two, "خلال ساعتين" }, { PluralRulesValues.Few, "خلال {0} ساعات" }, { PluralRulesValues.Many, "خلال {0} ساعة" }, { PluralRulesValues.Other, "خلال {0} ساعة" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "الساعات",
                 new Dictionary<int, string> { { 0, "الساعة الحالية" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} ساعة" }, { PluralRulesValues.One, "قبل ساعة واحدة" }, { PluralRulesValues.Two, "قبل ساعتين" }, { PluralRulesValues.Few, "قبل {0} ساعات" }, { PluralRulesValues.Many, "قبل {0} ساعة" }, { PluralRulesValues.Other, "قبل {0} ساعة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ساعة" }, { PluralRulesValues.One, "خلال ساعة واحدة" }, { PluralRulesValues.Two, "خلال ساعتين" }, { PluralRulesValues.Few, "خلال {0} ساعات" }, { PluralRulesValues.Many, "خلال {0} ساعة" }, { PluralRulesValues.Other, "خلال {0} ساعة" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "الساعات",
                 new Dictionary<int, string> { { 0, "الساعة الحالية" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} ساعة" }, { PluralRulesValues.One, "قبل ساعة واحدة" }, { PluralRulesValues.Two, "قبل ساعتين" }, { PluralRulesValues.Few, "قبل {0} ساعات" }, { PluralRulesValues.Many, "قبل {0} ساعة" }, { PluralRulesValues.Other, "قبل {0} ساعة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ساعة" }, { PluralRulesValues.One, "خلال ساعة واحدة" }, { PluralRulesValues.Two, "خلال ساعتين" }, { PluralRulesValues.Few, "خلال {0} ساعات" }, { PluralRulesValues.Many, "خلال {0} ساعة" }, { PluralRulesValues.Other, "خلال {0} ساعة" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "الدقائق",
                 new Dictionary<int, string> { { 0, "هذه الدقيقة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} دقيقة" }, { PluralRulesValues.One, "قبل دقيقة واحدة" }, { PluralRulesValues.Two, "قبل دقيقتين" }, { PluralRulesValues.Few, "قبل {0} دقائق" }, { PluralRulesValues.Many, "قبل {0} دقيقة" }, { PluralRulesValues.Other, "قبل {0} دقيقة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} دقيقة" }, { PluralRulesValues.One, "خلال دقيقة واحدة" }, { PluralRulesValues.Two, "خلال دقيقتين" }, { PluralRulesValues.Few, "خلال {0} دقائق" }, { PluralRulesValues.Many, "خلال {0} دقيقة" }, { PluralRulesValues.Other, "خلال {0} دقيقة" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "الدقائق",
                 new Dictionary<int, string> { { 0, "هذه الدقيقة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} دقيقة" }, { PluralRulesValues.One, "قبل دقيقة واحدة" }, { PluralRulesValues.Two, "قبل دقيقتين" }, { PluralRulesValues.Few, "قبل {0} دقائق" }, { PluralRulesValues.Many, "قبل {0} دقيقة" }, { PluralRulesValues.Other, "قبل {0} دقيقة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} دقيقة" }, { PluralRulesValues.One, "خلال دقيقة واحدة" }, { PluralRulesValues.Two, "خلال دقيقتين" }, { PluralRulesValues.Few, "خلال {0} دقائق" }, { PluralRulesValues.Many, "خلال {0} دقيقة" }, { PluralRulesValues.Other, "خلال {0} دقيقة" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "الدقائق",
                 new Dictionary<int, string> { { 0, "هذه الدقيقة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} دقيقة" }, { PluralRulesValues.One, "قبل دقيقة واحدة" }, { PluralRulesValues.Two, "قبل دقيقتين" }, { PluralRulesValues.Few, "قبل {0} دقائق" }, { PluralRulesValues.Many, "قبل {0} دقيقة" }, { PluralRulesValues.Other, "قبل {0} دقيقة" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} دقيقة" }, { PluralRulesValues.One, "خلال دقيقة واحدة" }, { PluralRulesValues.Two, "خلال دقيقتين" }, { PluralRulesValues.Few, "خلال {0} دقائق" }, { PluralRulesValues.Many, "خلال {0} دقيقة" }, { PluralRulesValues.Other, "خلال {0} دقيقة" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "الثواني",
                 new Dictionary<int, string> { { 0, "الآن" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} ثانية" }, { PluralRulesValues.One, "قبل ثانية واحدة" }, { PluralRulesValues.Two, "قبل ثانيتين" }, { PluralRulesValues.Few, "قبل {0} ثوانِ" }, { PluralRulesValues.Many, "قبل {0} ثانية" }, { PluralRulesValues.Other, "قبل {0} ثانية" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ثانية" }, { PluralRulesValues.One, "خلال ثانية واحدة" }, { PluralRulesValues.Two, "خلال ثانيتين" }, { PluralRulesValues.Few, "خلال {0} ثوانٍ" }, { PluralRulesValues.Many, "خلال {0} ثانية" }, { PluralRulesValues.Other, "خلال {0} ثانية" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "الثواني",
                 new Dictionary<int, string> { { 0, "الآن" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} ثانية" }, { PluralRulesValues.One, "قبل ثانية واحدة" }, { PluralRulesValues.Two, "قبل ثانيتين" }, { PluralRulesValues.Few, "قبل {0} ثوانٍ" }, { PluralRulesValues.Many, "قبل {0} ثانية" }, { PluralRulesValues.Other, "قبل {0} ثانية" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ثانية" }, { PluralRulesValues.One, "خلال ثانية واحدة" }, { PluralRulesValues.Two, "خلال ثانيتين" }, { PluralRulesValues.Few, "خلال {0} ثوانٍ" }, { PluralRulesValues.Many, "خلال {0} ثانية" }, { PluralRulesValues.Other, "خلال {0} ثانية" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "الثواني",
                 new Dictionary<int, string> { { 0, "الآن" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} ثانية" }, { PluralRulesValues.One, "قبل ثانية واحدة" }, { PluralRulesValues.Two, "قبل ثانيتين" }, { PluralRulesValues.Few, "قبل {0} ثوانٍ" }, { PluralRulesValues.Many, "قبل {0} ثانية" }, { PluralRulesValues.Other, "قبل {0} ثانية" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ثانية" }, { PluralRulesValues.One, "خلال ثانية واحدة" }, { PluralRulesValues.Two, "خلال ثانيتين" }, { PluralRulesValues.Few, "خلال {0} ثوانٍ" }, { PluralRulesValues.Many, "خلال {0} ثانية" }, { PluralRulesValues.Other, "خلال {0} ثانية" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Morocco)' [ar-MA]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "التوقيت",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "توقيت",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "توقيت",
                 null,
                 null,

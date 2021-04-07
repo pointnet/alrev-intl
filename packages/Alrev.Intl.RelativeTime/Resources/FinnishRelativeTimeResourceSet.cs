@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Finnish' [fi]
+    /// </summary>
     public class FinnishRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "fi";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "aikakausi",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "aikakausi",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "aikakausi",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "vuosi",
                 new Dictionary<int, string> { { -1, "viime vuonna" }, { 0, "tänä vuonna" }, { 1, "ensi vuonna" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vuosi sitten" }, { PluralRulesValues.Other, "{0} vuotta sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vuoden päästä" }, { PluralRulesValues.Other, "{0} vuoden päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "v",
                 new Dictionary<int, string> { { -1, "viime v" }, { 0, "tänä v" }, { 1, "ensi v" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} v sitten" }, { PluralRulesValues.Other, "{0} v sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} v päästä" }, { PluralRulesValues.Other, "{0} v päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "v",
                 new Dictionary<int, string> { { -1, "viime v" }, { 0, "tänä v" }, { 1, "ensi v" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} v sitten" }, { PluralRulesValues.Other, "{0} v sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} v päästä" }, { PluralRulesValues.Other, "{0} v päästä" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "neljännesvuosi",
                 new Dictionary<int, string> { { -1, "viime neljännesvuonna" }, { 0, "tänä neljännesvuonna" }, { 1, "ensi neljännesvuonna" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} neljännesvuosi sitten" }, { PluralRulesValues.Other, "{0} neljännesvuotta sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} neljännesvuoden päästä" }, { PluralRulesValues.Other, "{0} neljännesvuoden päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "nelj.",
                 new Dictionary<int, string> { { -1, "viime nelj." }, { 0, "tänä nelj." }, { 1, "ensi nelj." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} nelj. sitten" }, { PluralRulesValues.Other, "{0} nelj. sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} nelj. päästä" }, { PluralRulesValues.Other, "{0} nelj. päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "neljännes",
                 new Dictionary<int, string> { { -1, "viime neljänneksenä" }, { 0, "tänä neljänneksenä" }, { 1, "ensi neljänneksenä" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} neljännes sitten" }, { PluralRulesValues.Other, "{0} neljännestä sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} neljänneksen päästä" }, { PluralRulesValues.Other, "{0} neljänneksen päästä" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "kuukausi",
                 new Dictionary<int, string> { { -1, "viime kuussa" }, { 0, "tässä kuussa" }, { 1, "ensi kuussa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} kuukausi sitten" }, { PluralRulesValues.Other, "{0} kuukautta sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} kuukauden päästä" }, { PluralRulesValues.Other, "{0} kuukauden päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "kk",
                 new Dictionary<int, string> { { -1, "viime kk" }, { 0, "tässä kk" }, { 1, "ensi kk" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} kk sitten" }, { PluralRulesValues.Other, "{0} kk sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} kk päästä" }, { PluralRulesValues.Other, "{0} kk päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "kk",
                 new Dictionary<int, string> { { -1, "viime kk" }, { 0, "tässä kk" }, { 1, "ensi kk" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} kk sitten" }, { PluralRulesValues.Other, "{0} kk sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} kk päästä" }, { PluralRulesValues.Other, "{0} kk päästä" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "viikko",
                 new Dictionary<int, string> { { -1, "viime viikolla" }, { 0, "tällä viikolla" }, { 1, "ensi viikolla" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} viikko sitten" }, { PluralRulesValues.Other, "{0} viikkoa sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} viikon päästä" }, { PluralRulesValues.Other, "{0} viikon päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "vk",
                 new Dictionary<int, string> { { -1, "viime vk" }, { 0, "tällä vk" }, { 1, "ensi vk" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vk sitten" }, { PluralRulesValues.Other, "{0} vk sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vk päästä" }, { PluralRulesValues.Other, "{0} vk päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "vk",
                 new Dictionary<int, string> { { -1, "viime vk" }, { 0, "tällä vk" }, { 1, "ensi vk" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vk sitten" }, { PluralRulesValues.Other, "{0} vk sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vk päästä" }, { PluralRulesValues.Other, "{0} vk päästä" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "kuukauden viikko",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "kuukauden vk",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "kuukauden vk",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "päivä",
                 new Dictionary<int, string> { { -2, "toissa päivänä" }, { -1, "eilen" }, { 0, "tänään" }, { 1, "huomenna" }, { 2, "ylihuomenna" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} päivä sitten" }, { PluralRulesValues.Other, "{0} päivää sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} päivän päästä" }, { PluralRulesValues.Other, "{0} päivän päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "pv",
                 new Dictionary<int, string> { { -2, "toissap." }, { -1, "eilen" }, { 0, "tänään" }, { 1, "huom." }, { 2, "ylihuom." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} pv sitten" }, { PluralRulesValues.Other, "{0} pv sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} pv päästä" }, { PluralRulesValues.Other, "{0} pv päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "pv",
                 new Dictionary<int, string> { { -2, "toissap." }, { -1, "eilen" }, { 0, "tänään" }, { 1, "huom." }, { 2, "ylihuom." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} pv sitten" }, { PluralRulesValues.Other, "{0} pv sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} pv päästä" }, { PluralRulesValues.Other, "{0} pv päästä" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "vuodenpäivä",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "vuodenpv",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "vuodenpv",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "viikonpäivä",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "viikonpäivä",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "viikonpäivä",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "kuukauden viikonpäivä",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "kuukauden vk päivä",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "kuukauden vk päivä",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "viime sunnuntaina" }, { 0, "tänä sunnuntaina" }, { 1, "ensi sunnuntaina" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sunnuntai sitten" }, { PluralRulesValues.Other, "{0} sunnuntaita sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sunnuntain päästä" }, { PluralRulesValues.Other, "{0} sunnuntain päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "viime su" }, { 0, "tänä su" }, { 1, "ensi su" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} su sitten" }, { PluralRulesValues.Other, "{0} su sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} su päästä" }, { PluralRulesValues.Other, "{0} su päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "viime su" }, { 0, "tänä su" }, { 1, "ensi su" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} su sitten" }, { PluralRulesValues.Other, "{0} su sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} su päästä" }, { PluralRulesValues.Other, "{0} su päästä" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "viime maanantaina" }, { 0, "tänä maanantaina" }, { 1, "ensi maanantaina" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} maanantai sitten" }, { PluralRulesValues.Other, "{0} maanantaita sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} maanantain päästä" }, { PluralRulesValues.Other, "{0} maanantain päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "viime ma" }, { 0, "tänä ma" }, { 1, "ensi ma" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ma sitten" }, { PluralRulesValues.Other, "{0} ma sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ma päästä" }, { PluralRulesValues.Other, "{0} ma päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "viime ma" }, { 0, "tänä ma" }, { 1, "ensi ma" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ma sitten" }, { PluralRulesValues.Other, "{0} ma sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ma päästä" }, { PluralRulesValues.Other, "{0} ma päästä" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "viime tiistaina" }, { 0, "tänä tiistaina" }, { 1, "ensi tiistaina" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} tiistai sitten" }, { PluralRulesValues.Other, "{0} tiistaita sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} tiistain päästä" }, { PluralRulesValues.Other, "{0} tiistain päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "viime ti" }, { 0, "tänä ti" }, { 1, "ensi ti" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ti sitten" }, { PluralRulesValues.Other, "{0} ti sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ti päästä" }, { PluralRulesValues.Other, "{0} ti päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "viime ti" }, { 0, "tänä ti" }, { 1, "ensi ti" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ti sitten" }, { PluralRulesValues.Other, "{0} ti sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ti päästä" }, { PluralRulesValues.Other, "{0} ti päästä" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "viime keskiviikkona" }, { 0, "tänä keskiviikkona" }, { 1, "ensi keskiviikkona" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} keskiviikko sitten" }, { PluralRulesValues.Other, "{0} keskiviikkoa sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} keskiviikon päästä" }, { PluralRulesValues.Other, "{0} keskiviikon päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "viime ke" }, { 0, "tänä ke" }, { 1, "ensi ke" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ke sitten" }, { PluralRulesValues.Other, "{0} ke sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ke päästä" }, { PluralRulesValues.Other, "{0} ke päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "viime ke" }, { 0, "tänä ke" }, { 1, "ensi ke" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ke sitten" }, { PluralRulesValues.Other, "{0} ke sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ke päästä" }, { PluralRulesValues.Other, "{0} ke päästä" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "viime torstaina" }, { 0, "tänä torstaina" }, { 1, "ensi torstaina" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} torstai sitten" }, { PluralRulesValues.Other, "{0} torstaita sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} torstain päästä" }, { PluralRulesValues.Other, "{0} torstain päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "viime to" }, { 0, "tänä to" }, { 1, "ensi to" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} to sitten" }, { PluralRulesValues.Other, "{0} to sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} to päästä" }, { PluralRulesValues.Other, "{0} to päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "viime to" }, { 0, "tänä to" }, { 1, "ensi to" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} to sitten" }, { PluralRulesValues.Other, "{0} to sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} to päästä" }, { PluralRulesValues.Other, "{0} to päästä" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "viime perjantaina" }, { 0, "tänä perjantaina" }, { 1, "ensi perjantaina" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} perjantai sitten" }, { PluralRulesValues.Other, "{0} perjantaita sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} perjantain päästä" }, { PluralRulesValues.Other, "{0} perjantain päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "viime pe" }, { 0, "tänä pe" }, { 1, "ensi pe" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} pe sitten" }, { PluralRulesValues.Other, "{0} pe sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} pe päästä" }, { PluralRulesValues.Other, "{0} pe päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "viime pe" }, { 0, "tänä pe" }, { 1, "ensi pe" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} pe sitten" }, { PluralRulesValues.Other, "{0} pe sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} pe päästä" }, { PluralRulesValues.Other, "{0} pe päästä" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "viime lauantaina" }, { 0, "tänä lauantaina" }, { 1, "ensi lauantaina" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} lauantai sitten" }, { PluralRulesValues.Other, "{0} lauantaita sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} lauantain päästä" }, { PluralRulesValues.Other, "{0} lauantain päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "viime la" }, { 0, "tänä la" }, { 1, "ensi la" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} la sitten" }, { PluralRulesValues.Other, "{0} la sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} la päästä" }, { PluralRulesValues.Other, "{0} la päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "viime la" }, { 0, "tänä la" }, { 1, "ensi la" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} la sitten" }, { PluralRulesValues.Other, "{0} la sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} la päästä" }, { PluralRulesValues.Other, "{0} la päästä" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "vuorokaudenaika",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "vuorokaudenaika",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "vuorokaudenaika",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "tunti",
                 new Dictionary<int, string> { { 0, "tämän tunnin aikana" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} tunti sitten" }, { PluralRulesValues.Other, "{0} tuntia sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} tunnin päästä" }, { PluralRulesValues.Other, "{0} tunnin päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "t",
                 new Dictionary<int, string> { { 0, "tunnin sisällä" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} t sitten" }, { PluralRulesValues.Other, "{0} t sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} t päästä" }, { PluralRulesValues.Other, "{0} t päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "t",
                 new Dictionary<int, string> { { 0, "tunnin sisällä" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} t sitten" }, { PluralRulesValues.Other, "{0} t sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} t päästä" }, { PluralRulesValues.Other, "{0} t päästä" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "minuutti",
                 new Dictionary<int, string> { { 0, "tämän minuutin aikana" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} minuutti sitten" }, { PluralRulesValues.Other, "{0} minuuttia sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} minuutin päästä" }, { PluralRulesValues.Other, "{0} minuutin päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "min",
                 new Dictionary<int, string> { { 0, "minuutin sisällä" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min sitten" }, { PluralRulesValues.Other, "{0} min sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min päästä" }, { PluralRulesValues.Other, "{0} min päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "min",
                 new Dictionary<int, string> { { 0, "minuutin sisällä" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min sitten" }, { PluralRulesValues.Other, "{0} min sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min päästä" }, { PluralRulesValues.Other, "{0} min päästä" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "sekunti",
                 new Dictionary<int, string> { { 0, "nyt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sekunti sitten" }, { PluralRulesValues.Other, "{0} sekuntia sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sekunnin päästä" }, { PluralRulesValues.Other, "{0} sekunnin päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "s",
                 new Dictionary<int, string> { { 0, "nyt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} s sitten" }, { PluralRulesValues.Other, "{0} s sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} s päästä" }, { PluralRulesValues.Other, "{0} s päästä" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "s",
                 new Dictionary<int, string> { { 0, "nyt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} s sitten" }, { PluralRulesValues.Other, "{0} s sitten" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} s päästä" }, { PluralRulesValues.Other, "{0} s päästä" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Finnish' [fi]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "aikavyöhyke",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "aikavyöhyke",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "aikavyöhyke",
                 null,
                 null,

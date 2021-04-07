@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Bangla (India)' [bn-IN]
+    /// </summary>
     public class BanglaIndiaRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "bn-IN";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "যুগ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "যুগ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "যুগ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "বছর",
                 new Dictionary<int, string> { { -1, "গত বছর" }, { 0, "এই বছর" }, { 1, "পরের বছর" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বছর পূর্বে" }, { PluralRulesValues.Other, "{0} বছর পূর্বে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বছরে" }, { PluralRulesValues.Other, "{0} বছরে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "বছর",
                 new Dictionary<int, string> { { -1, "গত বছর" }, { 0, "এই বছর" }, { 1, "পরের বছর" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বছর পূর্বে" }, { PluralRulesValues.Other, "{0} বছর পূর্বে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বছরে" }, { PluralRulesValues.Other, "{0} বছরে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "বছর",
                 new Dictionary<int, string> { { -1, "গত বছর" }, { 0, "এই বছর" }, { 1, "পরের বছর" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বছর পূর্বে" }, { PluralRulesValues.Other, "{0} বছর পূর্বে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বছরে" }, { PluralRulesValues.Other, "{0} বছরে" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ত্রৈমাসিক",
                 new Dictionary<int, string> { { -1, "গত ত্রৈমাসিক" }, { 0, "এই ত্রৈমাসিক" }, { 1, "পরের ত্রৈমাসিক" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ত্রৈমাসিক আগে" }, { PluralRulesValues.Other, "{0} ত্রৈমাসিক আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ত্রৈমাসিকে" }, { PluralRulesValues.Other, "{0} ত্রৈমাসিকে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ত্রৈমাসিক",
                 new Dictionary<int, string> { { -1, "গত ত্রৈমাসিক" }, { 0, "এই ত্রৈমাসিক" }, { 1, "পরের ত্রৈমাসিক" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ত্রৈমাসিক আগে" }, { PluralRulesValues.Other, "{0} ত্রৈমাসিক আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ত্রৈমাসিকে" }, { PluralRulesValues.Other, "{0} ত্রৈমাসিকে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ত্রৈমাসিক",
                 new Dictionary<int, string> { { -1, "গত ত্রৈমাসিক" }, { 0, "এই ত্রৈমাসিক" }, { 1, "পরের ত্রৈমাসিক" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ত্রৈমাসিক আগে" }, { PluralRulesValues.Other, "{0} ত্রৈমাসিক আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ত্রৈমাসিকে" }, { PluralRulesValues.Other, "{0} ত্রৈমাসিকে" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "মাস",
                 new Dictionary<int, string> { { -1, "গত মাস" }, { 0, "এই মাস" }, { 1, "পরের মাস" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মাস আগে" }, { PluralRulesValues.Other, "{0} মাস আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মাসে" }, { PluralRulesValues.Other, "{0} মাসে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "মাস",
                 new Dictionary<int, string> { { -1, "গত মাস" }, { 0, "এই মাস" }, { 1, "পরের মাস" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মাস আগে" }, { PluralRulesValues.Other, "{0} মাস আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মাসে" }, { PluralRulesValues.Other, "{0} মাসে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "মাস",
                 new Dictionary<int, string> { { -1, "গত মাস" }, { 0, "এই মাস" }, { 1, "পরের মাস" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মাস আগে" }, { PluralRulesValues.Other, "{0} মাস আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মাসে" }, { PluralRulesValues.Other, "{0} মাসে" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "সপ্তাহ",
                 new Dictionary<int, string> { { -1, "গত সপ্তাহ" }, { 0, "এই সপ্তাহ" }, { 1, "পরের সপ্তাহ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সপ্তাহ আগে" }, { PluralRulesValues.Other, "{0} সপ্তাহ আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সপ্তাহে" }, { PluralRulesValues.Other, "{0} সপ্তাহে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "সপ্তাহ",
                 new Dictionary<int, string> { { -1, "গত সপ্তাহ" }, { 0, "এই সপ্তাহ" }, { 1, "পরের সপ্তাহ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সপ্তাহ আগে" }, { PluralRulesValues.Other, "{0} সপ্তাহ আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সপ্তাহে" }, { PluralRulesValues.Other, "{0} সপ্তাহে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "সপ্তাহ",
                 new Dictionary<int, string> { { -1, "গত সপ্তাহ" }, { 0, "এই সপ্তাহ" }, { 1, "পরের সপ্তাহ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সপ্তাহ আগে" }, { PluralRulesValues.Other, "{0} সপ্তাহ আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সপ্তাহে" }, { PluralRulesValues.Other, "{0} সপ্তাহে" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "মাসের সপ্তাহ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "মাসের সপ্তাহ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "মাসের সপ্তাহ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "দিন",
                 new Dictionary<int, string> { { -2, "গত পরশু" }, { -1, "গতকাল" }, { 0, "আজ" }, { 1, "আগামীকাল" }, { 2, "আগামী পরশু" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} দিন আগে" }, { PluralRulesValues.Other, "{0} দিন আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} দিনের মধ্যে" }, { PluralRulesValues.Other, "{0} দিনের মধ্যে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "দিন",
                 new Dictionary<int, string> { { -2, "গত পরশু" }, { -1, "গতকাল" }, { 0, "আজ" }, { 1, "আগামীকাল" }, { 2, "আগামী পরশু" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} দিন আগে" }, { PluralRulesValues.Other, "{0} দিন আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} দিনের মধ্যে" }, { PluralRulesValues.Other, "{0} দিনের মধ্যে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "দিন",
                 new Dictionary<int, string> { { -2, "গত পরশু" }, { -1, "গতকাল" }, { 0, "আজ" }, { 1, "আগামীকাল" }, { 2, "আগামী পরশু" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} দিন আগে" }, { PluralRulesValues.Other, "{0} দিন আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} দিনের মধ্যে" }, { PluralRulesValues.Other, "{0} দিনের মধ্যে" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "বছরের দিন",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "বছরের দিন",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "বছরের দিন",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "সপ্তাহের দিন",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "সপ্তাহের দিন",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "সপ্তাহের দিন",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "মাসের কার্য দিবস",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "মাসের কার্য দিবস",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "মাসের কার্য দিবস",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "গত রবিবার" }, { 0, "এই রবিবার" }, { 1, "পরের রবিবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} রবিবার আগে" }, { PluralRulesValues.Other, "{0} রবিবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} রবিবারেতে" }, { PluralRulesValues.Other, "{0} রবিবারেতে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "গত রবিবার" }, { 0, "এই রবিবার" }, { 1, "পরের রবিবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} রবিবার আগে" }, { PluralRulesValues.Other, "{0} রবিবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} রবিবারেতে" }, { PluralRulesValues.Other, "{0} রবিবারেতে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "গত রবিবার" }, { 0, "এই রবিবার" }, { 1, "পরের রবিবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} রবিবার আগে" }, { PluralRulesValues.Other, "{0} রবিবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} রবিবারেতে" }, { PluralRulesValues.Other, "{0} রবিবারেতে" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "গত সোমবার" }, { 0, "এই সোমবার" }, { 1, "পরের সোমবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সোমবার আগে" }, { PluralRulesValues.Other, "{0} সোমবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সোমবারেতে" }, { PluralRulesValues.Other, "{0} সোমবারেতে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "গত সোমবার" }, { 0, "এই সোমবার" }, { 1, "পরের সোমবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সোমবার আগে" }, { PluralRulesValues.Other, "{0} সোমবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সোমবারেতে" }, { PluralRulesValues.Other, "{0} সোমবারেতে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "গত সোমবার" }, { 0, "এই সোমবার" }, { 1, "পরের সোমবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সোমবার আগে" }, { PluralRulesValues.Other, "{0} সোমবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সোমবারেতে" }, { PluralRulesValues.Other, "{0} সোমবারেতে" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "গত মঙ্গলবার" }, { 0, "এই মঙ্গলবার" }, { 1, "পরের মঙ্গলবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মঙ্গলবার আগে" }, { PluralRulesValues.Other, "{0} মঙ্গলবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মঙ্গলবারে" }, { PluralRulesValues.Other, "{0} মঙ্গলবারে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "গত মঙ্গলবার" }, { 0, "এই মঙ্গলবার" }, { 1, "পরের মঙ্গলবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মঙ্গলবার আগে" }, { PluralRulesValues.Other, "{0} মঙ্গলবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মঙ্গলবারে" }, { PluralRulesValues.Other, "{0} মঙ্গলবারে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "গত মঙ্গলবার" }, { 0, "এই মঙ্গলবার" }, { 1, "পরের মঙ্গলবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মঙ্গলবার আগে" }, { PluralRulesValues.Other, "{0} মঙ্গলবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মঙ্গলবারে" }, { PluralRulesValues.Other, "{0} মঙ্গলবারে" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "গত বুধবার" }, { 0, "এই বুধবার" }, { 1, "পরের বুধবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বুধবার আগে" }, { PluralRulesValues.Other, "{0} বুধবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বুধবারে" }, { PluralRulesValues.Other, "{0} বুধবারে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "গত বুধবার" }, { 0, "এই বুধবার" }, { 1, "পরের বুধবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বুধবার আগে" }, { PluralRulesValues.Other, "{0} বুধবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বুধবারে" }, { PluralRulesValues.Other, "{0} বুধবারে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "গত বুধবার" }, { 0, "এই বুধবার" }, { 1, "পরের বুধবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বুধবার আগে" }, { PluralRulesValues.Other, "{0} বুধবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বুধবারে" }, { PluralRulesValues.Other, "{0} বুধবারে" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "গত বৃহস্পতিবার" }, { 0, "এই বৃহস্পতিবার" }, { 1, "পরের বৃহস্পতিবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বৃহস্পতিবার আগে" }, { PluralRulesValues.Other, "{0} বৃহস্পতিবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বৃহস্পতিবারে" }, { PluralRulesValues.Other, "{0} বৃহস্পতিবারে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "গত বৃহস্পতিবার" }, { 0, "এই বৃহস্পতিবার" }, { 1, "পরের বৃহস্পতিবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বৃহস্পতিবার আগে" }, { PluralRulesValues.Other, "{0} বৃহস্পতিবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বৃহস্পতিবারে" }, { PluralRulesValues.Other, "{0} বৃহস্পতিবারে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "গত বৃহস্পতিবার" }, { 0, "এই বৃহস্পতিবার" }, { 1, "পরের বৃহস্পতিবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বৃহস্পতিবার আগে" }, { PluralRulesValues.Other, "{0} বৃহস্পতিবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} বৃহস্পতিবারে" }, { PluralRulesValues.Other, "{0} বৃহস্পতিবারে" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "গত শুক্রবার" }, { 0, "এই শুক্রবার" }, { 1, "পরের শুক্রবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} শুক্রবার আগে" }, { PluralRulesValues.Other, "{0} শুক্রবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} শুক্রবারে" }, { PluralRulesValues.Other, "{0} শুক্রবারে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "গত শুক্রবার" }, { 0, "এই শুক্রবার" }, { 1, "পরের শুক্রবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} শুক্রবার আগে" }, { PluralRulesValues.Other, "{0} শুক্রবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} শুক্রবারে" }, { PluralRulesValues.Other, "{0} শুক্রবারে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "গত শুক্রবার" }, { 0, "এই শুক্রবার" }, { 1, "পরের শুক্রবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} শুক্রবার আগে" }, { PluralRulesValues.Other, "{0} শুক্রবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} শুক্রবারে" }, { PluralRulesValues.Other, "{0} শুক্রবারে" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "গত শনিবার" }, { 0, "এই শনিবার" }, { 1, "পরের শনিবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} শনিবার আগে" }, { PluralRulesValues.Other, "{0} শনিবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} শনিবারে" }, { PluralRulesValues.Other, "{0} শনিবারে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "গত শনিবার" }, { 0, "এই শনিবার" }, { 1, "পরের শনিবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} শনিবার আগে" }, { PluralRulesValues.Other, "{0} শনিবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} শনিবারে" }, { PluralRulesValues.Other, "{0} শনিবারে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "গত শনিবার" }, { 0, "এই শনিবার" }, { 1, "পরের শনিবার" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} শনিবার আগে" }, { PluralRulesValues.Other, "{0} শনিবার আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} শনিবারে" }, { PluralRulesValues.Other, "{0} শনিবারে" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "AM/PM",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ঘণ্টা",
                 new Dictionary<int, string> { { 0, "এই ঘণ্টায়" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ঘন্টা আগে" }, { PluralRulesValues.Other, "{0} ঘন্টা আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ঘন্টায়" }, { PluralRulesValues.Other, "{0} ঘন্টায়" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ঘণ্টা",
                 new Dictionary<int, string> { { 0, "এই ঘণ্টায়" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ঘন্টা আগে" }, { PluralRulesValues.Other, "{0} ঘন্টা আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ঘন্টায়" }, { PluralRulesValues.Other, "{0} ঘন্টায়" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ঘণ্টা",
                 new Dictionary<int, string> { { 0, "এই ঘণ্টায়" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ঘন্টা আগে" }, { PluralRulesValues.Other, "{0} ঘন্টা আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ঘন্টায়" }, { PluralRulesValues.Other, "{0} ঘন্টায়" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "মিনিট",
                 new Dictionary<int, string> { { 0, "এই মিনিট" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মিনিট আগে" }, { PluralRulesValues.Other, "{0} মিনিট আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মিনিটে" }, { PluralRulesValues.Other, "{0} মিনিটে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "মিনিট",
                 new Dictionary<int, string> { { 0, "এই মিনিট" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মিনিট আগে" }, { PluralRulesValues.Other, "{0} মিনিট আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মিনিটে" }, { PluralRulesValues.Other, "{0} মিনিটে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "মিনিট",
                 new Dictionary<int, string> { { 0, "এই মিনিট" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মিনিট আগে" }, { PluralRulesValues.Other, "{0} মিনিট আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} মিনিটে" }, { PluralRulesValues.Other, "{0} মিনিটে" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "সেকেন্ড",
                 new Dictionary<int, string> { { 0, "এখন" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সেকেন্ড পূর্বে" }, { PluralRulesValues.Other, "{0} সেকেন্ড পূর্বে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সেকেন্ডে" }, { PluralRulesValues.Other, "{0} সেকেন্ডে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "সেকেন্ড",
                 new Dictionary<int, string> { { 0, "এখন" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সেকেন্ড আগে" }, { PluralRulesValues.Other, "{0} সেকেন্ড আগে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সেকেন্ডে" }, { PluralRulesValues.Other, "{0} সেকেন্ডে" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "সেকেন্ড",
                 new Dictionary<int, string> { { 0, "এখন" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সেকেন্ড পূর্বে" }, { PluralRulesValues.Other, "{0} সেকেন্ড পূর্বে" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} সেকেন্ডে" }, { PluralRulesValues.Other, "{0} সেকেন্ডে" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Bangla (India)' [bn-IN]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "সময় অঞ্চল",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "অঞ্চল",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "অঞ্চল",
                 null,
                 null,

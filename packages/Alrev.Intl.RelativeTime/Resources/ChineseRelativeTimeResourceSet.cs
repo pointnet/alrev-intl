@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Chinese' [zh-Hant]
+    /// </summary>
     public class ChineseRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "zh-Hant";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "年代",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "年代",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "年代",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "年",
                 new Dictionary<int, string> { { -1, "去年" }, { 0, "今年" }, { 1, "明年" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 年前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 年後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "年",
                 new Dictionary<int, string> { { -1, "去年" }, { 0, "今年" }, { 1, "明年" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 年前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 年後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "年",
                 new Dictionary<int, string> { { -1, "去年" }, { 0, "今年" }, { 1, "明年" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 年前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 年後" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "季",
                 new Dictionary<int, string> { { -1, "上一季" }, { 0, "這一季" }, { 1, "下一季" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 季前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 季後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "季",
                 new Dictionary<int, string> { { -1, "上一季" }, { 0, "這一季" }, { 1, "下一季" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 季前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 季後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "季",
                 new Dictionary<int, string> { { -1, "上一季" }, { 0, "這一季" }, { 1, "下一季" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 季前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 季後" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "月",
                 new Dictionary<int, string> { { -1, "上個月" }, { 0, "本月" }, { 1, "下個月" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個月前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個月後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "月",
                 new Dictionary<int, string> { { -1, "上個月" }, { 0, "本月" }, { 1, "下個月" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個月前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個月後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "月",
                 new Dictionary<int, string> { { -1, "上個月" }, { 0, "本月" }, { 1, "下個月" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個月前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個月後" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "週",
                 new Dictionary<int, string> { { -1, "上週" }, { 0, "本週" }, { 1, "下週" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 週前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 週後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "週",
                 new Dictionary<int, string> { { -1, "上週" }, { 0, "本週" }, { 1, "下週" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 週前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 週後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "週",
                 new Dictionary<int, string> { { -1, "上週" }, { 0, "本週" }, { 1, "下週" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 週前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 週後" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "週",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "週",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "週",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "日",
                 new Dictionary<int, string> { { -2, "前天" }, { -1, "昨天" }, { 0, "今天" }, { 1, "明天" }, { 2, "後天" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 天前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 天後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "日",
                 new Dictionary<int, string> { { -2, "前天" }, { -1, "昨天" }, { 0, "今天" }, { 1, "明天" }, { 2, "後天" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 天前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 天後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "日",
                 new Dictionary<int, string> { { -2, "前天" }, { -1, "昨天" }, { 0, "今天" }, { 1, "明天" }, { 2, "後天" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 天前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 天後" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "年天",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "年天",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "年天",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "週天",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "週天",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "週天",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "每月平日",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "每月平日",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "每月平日",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "上週日" }, { 0, "本週日" }, { 1, "下週日" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週日前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週日後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "上週日" }, { 0, "本週日" }, { 1, "下週日" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週日前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週日後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "上週日" }, { 0, "本週日" }, { 1, "下週日" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週日前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週日後" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "上週一" }, { 0, "本週一" }, { 1, "下週一" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週一前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週一後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "上週一" }, { 0, "本週一" }, { 1, "下週一" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週一前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週一後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "上週一" }, { 0, "本週一" }, { 1, "下週一" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週一前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週一後" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "上週二" }, { 0, "本週二" }, { 1, "下週二" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週二前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週二後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "上週二" }, { 0, "本週二" }, { 1, "下週二" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週二前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週二後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "上週二" }, { 0, "本週二" }, { 1, "下週二" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週二前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週二後" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "上週三" }, { 0, "本週三" }, { 1, "下週三" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週三前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週三後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "上週三" }, { 0, "本週三" }, { 1, "下週三" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週三前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週三後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "上週三" }, { 0, "本週三" }, { 1, "下週三" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週三前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週三後" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "上週四" }, { 0, "本週四" }, { 1, "下週四" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週四前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週四後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "上週四" }, { 0, "本週四" }, { 1, "下週四" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週四前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週四後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "上週四" }, { 0, "本週四" }, { 1, "下週四" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週四前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週四後" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "上週五" }, { 0, "本週五" }, { 1, "下週五" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週五前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週五後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "上週五" }, { 0, "本週五" }, { 1, "下週五" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週五前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週五後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "上週五" }, { 0, "本週五" }, { 1, "下週五" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週五前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週五後" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "上週六" }, { 0, "本週六" }, { 1, "下週六" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週六前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週六後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "上週六" }, { 0, "本週六" }, { 1, "下週六" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週六前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週六後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "上週六" }, { 0, "本週六" }, { 1, "下週六" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週六前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 個週六後" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "上午/下午",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "上午/下午",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "上午/下午",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "小時",
                 new Dictionary<int, string> { { 0, "這一小時" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 小時前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 小時後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "小時",
                 new Dictionary<int, string> { { 0, "這一小時" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 小時前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 小時後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "小時",
                 new Dictionary<int, string> { { 0, "這一小時" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 小時前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 小時後" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "分鐘",
                 new Dictionary<int, string> { { 0, "這一分鐘" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 分鐘前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 分鐘後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "分鐘",
                 new Dictionary<int, string> { { 0, "這一分鐘" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 分鐘前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 分鐘後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "分鐘",
                 new Dictionary<int, string> { { 0, "這一分鐘" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 分鐘前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 分鐘後" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "秒",
                 new Dictionary<int, string> { { 0, "現在" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 秒前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 秒後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "秒",
                 new Dictionary<int, string> { { 0, "現在" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 秒前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 秒後" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "秒",
                 new Dictionary<int, string> { { 0, "現在" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 秒前" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} 秒後" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Chinese' [zh-Hant]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "時區",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "時區",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "時區",
                 null,
                 null,

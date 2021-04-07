@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Lao' [lo]
+    /// </summary>
     public class LaoRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "lo";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ສະໄໝ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ສະໄໝ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ສະໄໝ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ປີ",
                 new Dictionary<int, string> { { -1, "ປີກາຍ" }, { 0, "ປີນີ້" }, { 1, "ປີໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ປີກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ປີ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ປີ",
                 new Dictionary<int, string> { { -1, "ປີກາຍ" }, { 0, "ປີນີ້" }, { 1, "ປີໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ປີກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ປີ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ປີ",
                 new Dictionary<int, string> { { -1, "ປີກາຍ" }, { 0, "ປີນີ້" }, { 1, "ປີໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ປີກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ປີ" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ໄຕຣມາດ",
                 new Dictionary<int, string> { { -1, "ໄຕຣມາດກ່ອນໜ້າ" }, { 0, "ໄຕຣມາດນີ້" }, { 1, "ໄຕຣມາດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ໄຕຣມາດກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ໄຕຣມາດ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ຕມ.",
                 new Dictionary<int, string> { { -1, "ໄຕຣມາດກ່ອນໜ້າ" }, { 0, "ໄຕຣມາດນີ້" }, { 1, "ໄຕຣມາດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ຕມ. ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ຕມ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ຕມ.",
                 new Dictionary<int, string> { { -1, "ໄຕຣມາດກ່ອນໜ້າ" }, { 0, "ໄຕຣມາດນີ້" }, { 1, "ໄຕຣມາດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ຕມ. ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ຕມ." } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ເດືອນ",
                 new Dictionary<int, string> { { -1, "ເດືອນແລ້ວ" }, { 0, "ເດືອນນີ້" }, { 1, "ເດືອນໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ເດືອນກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ເດືອນ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ດ.",
                 new Dictionary<int, string> { { -1, "ເດືອນແລ້ວ" }, { 0, "ເດືອນນີ້" }, { 1, "ເດືອນໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ດ. ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ດ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ດ.",
                 new Dictionary<int, string> { { -1, "ເດືອນແລ້ວ" }, { 0, "ເດືອນນີ້" }, { 1, "ເດືອນໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ດ. ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ດ." } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ອາທິດ",
                 new Dictionary<int, string> { { -1, "ອາທິດແລ້ວ" }, { 0, "ອາທິດນີ້" }, { 1, "ອາທິດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ອາທິດກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ອາທິດ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ອ.",
                 new Dictionary<int, string> { { -1, "ອາທິດແລ້ວ" }, { 0, "ອາທິດນີ້" }, { 1, "ອາທິດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ອທ. ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ອທ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ອ.",
                 new Dictionary<int, string> { { -1, "ອາທິດແລ້ວ" }, { 0, "ອາທິດນີ້" }, { 1, "ອາທິດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ອທ. ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ອທ." } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ອາທິດຂອງເດືອນ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ອທ ຂອງ ດ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ອທ ຂອງ ດ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ມື້",
                 new Dictionary<int, string> { { -2, "ມື້ກ່ອນ" }, { -1, "ມື້ວານ" }, { 0, "ມື້ນີ້" }, { 1, "ມື້ອື່ນ" }, { 2, "ມື້ຮື" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ມື້ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ມື້" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ມື້",
                 new Dictionary<int, string> { { -2, "ມື້ກ່ອນ" }, { -1, "ມື້ວານ" }, { 0, "ມື້ນີ້" }, { 1, "ມື້ອື່ນ" }, { 2, "ມື້ຮື" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ມື້ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ມື້" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ມື້",
                 new Dictionary<int, string> { { -2, "ມື້ກ່ອນ" }, { -1, "ມື້ວານ" }, { 0, "ມື້ນີ້" }, { 1, "ມື້ອື່ນ" }, { 2, "ມື້ຮື" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ມື້ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ມື້" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ມື້ຂອງປີ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ມື້ຂອງປີ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ມື້ຂອງປີ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ມື້ຂອງອາທິດ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ມື້ຂອງອາທິດ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ມື້ຂອງອາທິດ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ມື້ເຮັດວຽກຂອງເດືອນ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ມຮວ ຂອງ ດ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ມຮວ ຂອງ ດ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ວັນອາທິດແລ້ວ" }, { 0, "ວັນອາທິດນີ້" }, { 1, "ວັນອາທິດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນອາທິດກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນອາທິດ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ວັນທິດແລ້ວ" }, { 0, "ວັນທິດນີ້" }, { 1, "ວັນທິດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນອາທິດກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນອາທິດ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ວັນທິດແລ້ວ" }, { 0, "ວັນທິດນີ້" }, { 1, "ວັນທິດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນອາທິດກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນອາທິດ" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ວັນຈັນແລ້ວ" }, { 0, "ວັນຈັນນີ້" }, { 1, "ວັນຈັນໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນຈັນກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນຈັນ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ຈັນແລ້ວ" }, { 0, "ຈັນນີ້" }, { 1, "ຈັນໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນຈັນກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນຈັນ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ຈັນແລ້ວ" }, { 0, "ຈັນນີ້" }, { 1, "ຈັນໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນຈັນກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນຈັນ" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ວັນອັງຄານແລ້ວ" }, { 0, "ວັນອັງຄານນີ້" }, { 1, "ວັນອັງຄານໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນອັງຄານກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນອັງຄານ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ອັງຄານແລ້ວ" }, { 0, "ອັງຄານນີ້" }, { 1, "ອັງຄານໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນອັງຄານກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນອັງຄານ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ອັງຄານແລ້ວ" }, { 0, "ອັງຄານນີ້" }, { 1, "ອັງຄານໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນອັງຄານກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນອັງຄານ" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ວັນພຸດແລ້ວ" }, { 0, "ວັນພຸດນີ້" }, { 1, "ວັນພຸດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນພຸດກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນພຸດ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ພຸດແລ້ວ" }, { 0, "ພຸດນີ້" }, { 1, "ພຸດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນພຸດກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນພຸດ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ພຸດແລ້ວ" }, { 0, "ພຸດນີ້" }, { 1, "ພຸດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນພຸດກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນພຸດ" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ວັນພະຫັດແລ້ວ" }, { 0, "ວັນພະຫັດນີ້" }, { 1, "ວັນພະຫັດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນພະຫັດກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນພະຫັດ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ພະຫັດແລ້ວ" }, { 0, "ພະຫັດນີ້" }, { 1, "ພະຫັດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນພະຫັດກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນພະຫັດ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ພະຫັດແລ້ວ" }, { 0, "ພະຫັດນີ້" }, { 1, "ພະຫັດໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນພະຫັດກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນພະຫັດ" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ວັນສຸກແລ້ວ" }, { 0, "ວັນສຸກນີ້" }, { 1, "ວັນສຸກໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນສຸກກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ວັນສຸກ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ສຸກແລ້ວ" }, { 0, "ສຸກນີ້" }, { 1, "ສຸກໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນສຸກກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ວັນສຸກ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ສຸກແລ້ວ" }, { 0, "ສຸກນີ້" }, { 1, "ສຸກໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນສຸກກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ວັນສຸກ" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ວັນເສົາແລ້ວ" }, { 0, "ວັນເສົານີ້" }, { 1, "ວັນເສົາໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນເສົາກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນເສົາ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ເສົາແລ້ວ" }, { 0, "ເສົານີ້" }, { 1, "ເສົາໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນເສົາກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນເສົາ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ເສົາແລ້ວ" }, { 0, "ເສົານີ້" }, { 1, "ເສົາໜ້າ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວັນເສົາກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວັນເສົາ" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ກ່ອນທ່ຽງ/ຫຼັງທ່ຽງ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ກ່ອນທ່ຽງ/ຫຼັງທ່ຽງ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ກ່ອນທ່ຽງ/ຫຼັງທ່ຽງ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ຊົ່ວໂມງ",
                 new Dictionary<int, string> { { 0, "ຊົ່ວໂມງນີ້" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ຊົ່ວໂມງກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ຊົ່ວໂມງ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ຊມ.",
                 new Dictionary<int, string> { { 0, "ຊົ່ວໂມງນີ້" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ຊມ. ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ຊມ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ຊມ.",
                 new Dictionary<int, string> { { 0, "ຊົ່ວໂມງນີ້" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ຊມ. ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ຊມ." } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ນາທີ",
                 new Dictionary<int, string> { { 0, "ນາທີນີ້" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ນາທີກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ນາທີ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ນທ.",
                 new Dictionary<int, string> { { 0, "ນາທີນີ້" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ນທ. ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ນທ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ນທ.",
                 new Dictionary<int, string> { { 0, "ນາທີນີ້" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ນທ. ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ນທ." } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ວິນາທີ",
                 new Dictionary<int, string> { { 0, "ຕອນນີ້" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວິນາທີກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນອີກ {0} ວິນາທີ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ວິ.",
                 new Dictionary<int, string> { { 0, "ຕອນນີ້" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວິ. ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວິ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ວິ.",
                 new Dictionary<int, string> { { 0, "ຕອນນີ້" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ວິ. ກ່ອນ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ໃນ {0} ວິ." } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Lao' [lo]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ເຂດເວລາ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ເຂດເວລາ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ເຂດເວລາ",
                 null,
                 null,

@@ -10,16 +10,23 @@
 using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.RelativeTime;
 using Alrev.Intl.RelativeTime.Resources;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 
 namespace Alrev.Intl.RelativeTime.Globalization
 {
+    /// <summary>
+    /// The Relative Time resource set localizer
+    /// </summary>
     public class RelativeTimeLocalizer : ReadOnlyDictionary<string, IRelativeTimeResourceSet>, IResourceSetLocalizer<IRelativeTimeResourceSet>
     {
         private RelativeTimeLocalizer(IDictionary<string, IRelativeTimeResourceSet> dictionary) : base(dictionary) { }
 
+        /// <summary>
+        /// The class constructor
+        /// </summary>
         public RelativeTimeLocalizer() : this(new Dictionary<string, IRelativeTimeResourceSet>
         {
             { "af", new AfrikaansRelativeTimeResourceSet() },
@@ -544,10 +551,21 @@ namespace Alrev.Intl.RelativeTime.Globalization
         })
         { }
 
-        public IRelativeTimeResourceSet CurrentLocalizer => this.GetLocalizer(CultureInfo.CurrentCulture);
-
-        public IRelativeTimeResourceSet CurrentUILocalizer => this.GetLocalizer(CultureInfo.CurrentUICulture);
-
-        public IRelativeTimeResourceSet GetLocalizer(CultureInfo culture) => this.GetValueOrDefault(culture.Name, null) ?? this.GetValueOrDefault(culture.Parent?.Name, null);
+        /// <summary>
+        /// Gets the <see cref="IRelativeTimeResourceSet"/> for the specified <see cref="CultureInfo"/>
+        /// </summary>
+        /// <param name="culture">The <see cref="CultureInfo"/></param>
+        /// <returns>An <see cref="IRelativeTimeResourceSet"/> for the specified <see cref="CultureInfo"/> or null</returns>
+        /// <remarks>
+        /// If the specified <see cref="CultureInfo"/> does not exists, it will try to use the parent <see cref="CultureInfo"/> of the specified one.
+        /// </remarks>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        public IRelativeTimeResourceSet GetLocalizer(CultureInfo culture) => culture switch 
+        {
+            null => throw new ArgumentNullException(nameof(culture), "CultureInfo must not be null"),
+            CultureInfo c when string.IsNullOrEmpty(c.Name) => throw new ArgumentException("CultureInfo.InvariantCulture is not supported", nameof(culture)),
+            _ => this.GetValueOrDefault(culture.Name, null) ?? this.GetValueOrDefault(culture.Parent.Name, null)
+        };
     }
 }

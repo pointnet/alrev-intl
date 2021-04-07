@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Czech' [cs]
+    /// </summary>
     public class CzechRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "cs";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "letopočet",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "let.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "letop.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "rok",
                 new Dictionary<int, string> { { -1, "minulý rok" }, { 0, "tento rok" }, { 1, "příští rok" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} rokem" }, { PluralRulesValues.Few, "před {0} lety" }, { PluralRulesValues.Many, "před {0} roku" }, { PluralRulesValues.Other, "před {0} lety" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} rok" }, { PluralRulesValues.Few, "za {0} roky" }, { PluralRulesValues.Many, "za {0} roku" }, { PluralRulesValues.Other, "za {0} let" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "r.",
                 new Dictionary<int, string> { { -1, "minulý rok" }, { 0, "tento rok" }, { 1, "příští rok" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} r." }, { PluralRulesValues.Few, "před {0} r." }, { PluralRulesValues.Many, "před {0} r." }, { PluralRulesValues.Other, "před {0} l." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} r." }, { PluralRulesValues.Few, "za {0} r." }, { PluralRulesValues.Many, "za {0} r." }, { PluralRulesValues.Other, "za {0} l." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "r.",
                 new Dictionary<int, string> { { -1, "minulý rok" }, { 0, "tento rok" }, { 1, "příští rok" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} r." }, { PluralRulesValues.Few, "před {0} r." }, { PluralRulesValues.Many, "před {0} r." }, { PluralRulesValues.Other, "před {0} l." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} r." }, { PluralRulesValues.Few, "za {0} r." }, { PluralRulesValues.Many, "za {0} r." }, { PluralRulesValues.Other, "za {0} l." } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "čtvrtletí",
                 new Dictionary<int, string> { { -1, "minulé čtvrtletí" }, { 0, "toto čtvrtletí" }, { 1, "příští čtvrtletí" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} čtvrtletím" }, { PluralRulesValues.Few, "před {0} čtvrtletími" }, { PluralRulesValues.Many, "před {0} čtvrtletí" }, { PluralRulesValues.Other, "před {0} čtvrtletími" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} čtvrtletí" }, { PluralRulesValues.Few, "za {0} čtvrtletí" }, { PluralRulesValues.Many, "za {0} čtvrtletí" }, { PluralRulesValues.Other, "za {0} čtvrtletí" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Q",
                 new Dictionary<int, string> { { -1, "minulé čtvrtletí" }, { 0, "toto čtvrtletí" }, { 1, "příští čtvrtletí" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "-{0} Q" }, { PluralRulesValues.Few, "-{0} Q" }, { PluralRulesValues.Many, "-{0} Q" }, { PluralRulesValues.Other, "-{0} Q" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} Q" }, { PluralRulesValues.Few, "+{0} Q" }, { PluralRulesValues.Many, "+{0} Q" }, { PluralRulesValues.Other, "+{0} Q" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Q",
                 new Dictionary<int, string> { { -1, "minulé čtvrtletí" }, { 0, "toto čtvrtletí" }, { 1, "příští čtvrtletí" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "-{0} Q" }, { PluralRulesValues.Few, "-{0} Q" }, { PluralRulesValues.Many, "-{0} Q" }, { PluralRulesValues.Other, "-{0} Q" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} Q" }, { PluralRulesValues.Few, "+{0} Q" }, { PluralRulesValues.Many, "+{0} Q" }, { PluralRulesValues.Other, "+{0} Q" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "měsíc",
                 new Dictionary<int, string> { { -1, "minulý měsíc" }, { 0, "tento měsíc" }, { 1, "příští měsíc" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} měsícem" }, { PluralRulesValues.Few, "před {0} měsíci" }, { PluralRulesValues.Many, "před {0} měsíce" }, { PluralRulesValues.Other, "před {0} měsíci" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} měsíc" }, { PluralRulesValues.Few, "za {0} měsíce" }, { PluralRulesValues.Many, "za {0} měsíce" }, { PluralRulesValues.Other, "za {0} měsíců" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "měs.",
                 new Dictionary<int, string> { { -1, "minulý měs." }, { 0, "tento měs." }, { 1, "příští měs." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} měs." }, { PluralRulesValues.Few, "před {0} měs." }, { PluralRulesValues.Many, "před {0} měs." }, { PluralRulesValues.Other, "před {0} měs." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} měs." }, { PluralRulesValues.Few, "za {0} měs." }, { PluralRulesValues.Many, "za {0} měs." }, { PluralRulesValues.Other, "za {0} měs." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "měs.",
                 new Dictionary<int, string> { { -1, "minulý měs." }, { 0, "tento měs." }, { 1, "příští měs." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} měs." }, { PluralRulesValues.Few, "před {0} měs." }, { PluralRulesValues.Many, "před {0} měs." }, { PluralRulesValues.Other, "před {0} měs." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} měs." }, { PluralRulesValues.Few, "za {0} měs." }, { PluralRulesValues.Many, "za {0} měs." }, { PluralRulesValues.Other, "za {0} měs." } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "týden",
                 new Dictionary<int, string> { { -1, "minulý týden" }, { 0, "tento týden" }, { 1, "příští týden" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} týdnem" }, { PluralRulesValues.Few, "před {0} týdny" }, { PluralRulesValues.Many, "před {0} týdne" }, { PluralRulesValues.Other, "před {0} týdny" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} týden" }, { PluralRulesValues.Few, "za {0} týdny" }, { PluralRulesValues.Many, "za {0} týdne" }, { PluralRulesValues.Other, "za {0} týdnů" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "týd.",
                 new Dictionary<int, string> { { -1, "minulý týd." }, { 0, "tento týd." }, { 1, "příští týd." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} týd." }, { PluralRulesValues.Few, "před {0} týd." }, { PluralRulesValues.Many, "před {0} týd." }, { PluralRulesValues.Other, "před {0} týd." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} týd." }, { PluralRulesValues.Few, "za {0} týd." }, { PluralRulesValues.Many, "za {0} týd." }, { PluralRulesValues.Other, "za {0} týd." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "týd.",
                 new Dictionary<int, string> { { -1, "minulý týd." }, { 0, "tento týd." }, { 1, "příští týd." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} týd." }, { PluralRulesValues.Few, "před {0} týd." }, { PluralRulesValues.Many, "před {0} týd." }, { PluralRulesValues.Other, "před {0} týd." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} týd." }, { PluralRulesValues.Few, "za {0} týd." }, { PluralRulesValues.Many, "za {0} týd." }, { PluralRulesValues.Other, "za {0} týd." } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "týden v měsíci",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "týd. v m.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "týd. v m.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "den",
                 new Dictionary<int, string> { { -2, "předevčírem" }, { -1, "včera" }, { 0, "dnes" }, { 1, "zítra" }, { 2, "pozítří" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} dnem" }, { PluralRulesValues.Few, "před {0} dny" }, { PluralRulesValues.Many, "před {0} dne" }, { PluralRulesValues.Other, "před {0} dny" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} den" }, { PluralRulesValues.Few, "za {0} dny" }, { PluralRulesValues.Many, "za {0} dne" }, { PluralRulesValues.Other, "za {0} dní" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "den",
                 new Dictionary<int, string> { { -2, "předevčírem" }, { -1, "včera" }, { 0, "dnes" }, { 1, "zítra" }, { 2, "pozítří" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} dnem" }, { PluralRulesValues.Few, "před {0} dny" }, { PluralRulesValues.Many, "před {0} dne" }, { PluralRulesValues.Other, "před {0} dny" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} den" }, { PluralRulesValues.Few, "za {0} dny" }, { PluralRulesValues.Many, "za {0} dne" }, { PluralRulesValues.Other, "za {0} dní" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "den",
                 new Dictionary<int, string> { { -2, "předevčírem" }, { -1, "včera" }, { 0, "dnes" }, { 1, "zítra" }, { 2, "pozítří" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} dnem" }, { PluralRulesValues.Few, "před {0} dny" }, { PluralRulesValues.Many, "před {0} dne" }, { PluralRulesValues.Other, "před {0} dny" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} den" }, { PluralRulesValues.Few, "za {0} dny" }, { PluralRulesValues.Many, "za {0} dne" }, { PluralRulesValues.Other, "za {0} dní" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "den v roce",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "d. v r.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "den v r.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "den v týdnu",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "d. v týd.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "den v týd.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "den týdne v měsíci",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "d. týd. v měs.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "den týd. v měs.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "minulou neděli" }, { 0, "tuto neděli" }, { 1, "příští neděli" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} nedělí" }, { PluralRulesValues.Few, "před {0} nedělemi" }, { PluralRulesValues.Many, "před {0} neděle" }, { PluralRulesValues.Other, "před {0} nedělemi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} neděli" }, { PluralRulesValues.Few, "za {0} neděle" }, { PluralRulesValues.Many, "za {0} neděle" }, { PluralRulesValues.Other, "za {0} nedělí" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "minulou neděli" }, { 0, "tuto neděli" }, { 1, "příští neděli" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} nedělí" }, { PluralRulesValues.Few, "před {0} nedělemi" }, { PluralRulesValues.Many, "před {0} neděle" }, { PluralRulesValues.Other, "před {0} nedělemi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} neděli" }, { PluralRulesValues.Few, "za {0} neděle" }, { PluralRulesValues.Many, "za {0} neděle" }, { PluralRulesValues.Other, "za {0} nedělí" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "minulou neděli" }, { 0, "tuto neděli" }, { 1, "příští neděli" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} nedělí" }, { PluralRulesValues.Few, "před {0} nedělemi" }, { PluralRulesValues.Many, "před {0} neděle" }, { PluralRulesValues.Other, "před {0} nedělemi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} neděli" }, { PluralRulesValues.Few, "za {0} neděle" }, { PluralRulesValues.Many, "za {0} neděle" }, { PluralRulesValues.Other, "za {0} nedělí" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "minulé pondělí" }, { 0, "toto pondělí" }, { 1, "příští pondělí" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} pondělím" }, { PluralRulesValues.Few, "před {0} pondělími" }, { PluralRulesValues.Many, "před {0} pondělí" }, { PluralRulesValues.Other, "před {0} pondělími" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} pondělí" }, { PluralRulesValues.Few, "za {0} pondělí" }, { PluralRulesValues.Many, "za {0} pondělí" }, { PluralRulesValues.Other, "za {0} pondělí" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "minulé pondělí" }, { 0, "toto pondělí" }, { 1, "příští pondělí" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} pondělím" }, { PluralRulesValues.Few, "před {0} pondělími" }, { PluralRulesValues.Many, "před {0} pondělí" }, { PluralRulesValues.Other, "před {0} pondělími" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} pondělí" }, { PluralRulesValues.Few, "za {0} pondělí" }, { PluralRulesValues.Many, "za {0} pondělí" }, { PluralRulesValues.Other, "za {0} pondělí" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "minulé pondělí" }, { 0, "toto pondělí" }, { 1, "příští pondělí" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} pondělím" }, { PluralRulesValues.Few, "před {0} pondělími" }, { PluralRulesValues.Many, "před {0} pondělí" }, { PluralRulesValues.Other, "před {0} pondělími" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} pondělí" }, { PluralRulesValues.Few, "za {0} pondělí" }, { PluralRulesValues.Many, "za {0} pondělí" }, { PluralRulesValues.Other, "za {0} pondělí" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "minulé úterý" }, { 0, "toto úterý" }, { 1, "příští úterý" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} úterým" }, { PluralRulesValues.Few, "před {0} úterými" }, { PluralRulesValues.Many, "před {0} úterý" }, { PluralRulesValues.Other, "před {0} úterými" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} úterý" }, { PluralRulesValues.Few, "za {0} úterý" }, { PluralRulesValues.Many, "za {0} úterý" }, { PluralRulesValues.Other, "za {0} úterý" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "minulé úterý" }, { 0, "toto úterý" }, { 1, "příští úterý" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} úterým" }, { PluralRulesValues.Few, "před {0} úterými" }, { PluralRulesValues.Many, "před {0} úterý" }, { PluralRulesValues.Other, "před {0} úterými" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} úterý" }, { PluralRulesValues.Few, "za {0} úterý" }, { PluralRulesValues.Many, "za {0} úterý" }, { PluralRulesValues.Other, "za {0} úterý" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "minulé úterý" }, { 0, "toto úterý" }, { 1, "příští úterý" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} úterým" }, { PluralRulesValues.Few, "před {0} úterými" }, { PluralRulesValues.Many, "před {0} úterý" }, { PluralRulesValues.Other, "před {0} úterými" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} úterý" }, { PluralRulesValues.Few, "za {0} úterý" }, { PluralRulesValues.Many, "za {0} úterý" }, { PluralRulesValues.Other, "za {0} úterý" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "minulou středu" }, { 0, "tuto středu" }, { 1, "příští středu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} středou" }, { PluralRulesValues.Few, "před {0} středami" }, { PluralRulesValues.Many, "před {0} středy" }, { PluralRulesValues.Other, "před {0} středami" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} středu" }, { PluralRulesValues.Few, "za {0} středy" }, { PluralRulesValues.Many, "za {0} středy" }, { PluralRulesValues.Other, "za {0} střed" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "minulou středu" }, { 0, "tuto středu" }, { 1, "příští středu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} středou" }, { PluralRulesValues.Few, "před {0} středami" }, { PluralRulesValues.Many, "před {0} středy" }, { PluralRulesValues.Other, "před {0} středami" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} středu" }, { PluralRulesValues.Few, "za {0} středy" }, { PluralRulesValues.Many, "za {0} středy" }, { PluralRulesValues.Other, "za {0} střed" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "minulou středu" }, { 0, "tuto středu" }, { 1, "příští středu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} středou" }, { PluralRulesValues.Few, "před {0} středami" }, { PluralRulesValues.Many, "před {0} středy" }, { PluralRulesValues.Other, "před {0} středami" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} středu" }, { PluralRulesValues.Few, "za {0} středy" }, { PluralRulesValues.Many, "za {0} středy" }, { PluralRulesValues.Other, "za {0} střed" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "minulý čtvrtek" }, { 0, "tento čtvrtek" }, { 1, "příští čtvrtek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} čtvrtkem" }, { PluralRulesValues.Few, "před {0} čtvrtky" }, { PluralRulesValues.Many, "před {0} čtvrtku" }, { PluralRulesValues.Other, "před {0} čtvrtky" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} čtvrtek" }, { PluralRulesValues.Few, "za {0} čtvrtky" }, { PluralRulesValues.Many, "za {0} čtvrtku" }, { PluralRulesValues.Other, "za {0} čtvrtků" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "minulý čtvrtek" }, { 0, "tento čtvrtek" }, { 1, "příští čtvrtek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} čtvrtkem" }, { PluralRulesValues.Few, "před {0} čtvrtky" }, { PluralRulesValues.Many, "před {0} čtvrtku" }, { PluralRulesValues.Other, "před {0} čtvrtky" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} čtvrtek" }, { PluralRulesValues.Few, "za {0} čtvrtky" }, { PluralRulesValues.Many, "za {0} čtvrtku" }, { PluralRulesValues.Other, "za {0} čtvrtků" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "minulý čtvrtek" }, { 0, "tento čtvrtek" }, { 1, "příští čtvrtek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} čtvrtkem" }, { PluralRulesValues.Few, "před {0} čtvrtky" }, { PluralRulesValues.Many, "před {0} čtvrtku" }, { PluralRulesValues.Other, "před {0} čtvrtky" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} čtvrtek" }, { PluralRulesValues.Few, "za {0} čtvrtky" }, { PluralRulesValues.Many, "za {0} čtvrtku" }, { PluralRulesValues.Other, "za {0} čtvrtků" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "minulý pátek" }, { 0, "tento pátek" }, { 1, "příští pátek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} pátkem" }, { PluralRulesValues.Few, "před {0} pátky" }, { PluralRulesValues.Many, "před {0} pátku" }, { PluralRulesValues.Other, "před {0} pátky" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} pátek" }, { PluralRulesValues.Few, "za {0} pátky" }, { PluralRulesValues.Many, "za {0} pátku" }, { PluralRulesValues.Other, "za {0} pátků" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "minulý pátek" }, { 0, "tento pátek" }, { 1, "příští pátek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} pátkem" }, { PluralRulesValues.Few, "před {0} pátky" }, { PluralRulesValues.Many, "před {0} pátku" }, { PluralRulesValues.Other, "před {0} pátky" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} pátek" }, { PluralRulesValues.Few, "za {0} pátky" }, { PluralRulesValues.Many, "za {0} pátku" }, { PluralRulesValues.Other, "za {0} pátků" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "minulý pátek" }, { 0, "tento pátek" }, { 1, "příští pátek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} pátkem" }, { PluralRulesValues.Few, "před {0} pátky" }, { PluralRulesValues.Many, "před {0} pátku" }, { PluralRulesValues.Other, "před {0} pátky" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} pátek" }, { PluralRulesValues.Few, "za {0} pátky" }, { PluralRulesValues.Many, "za {0} pátku" }, { PluralRulesValues.Other, "za {0} pátků" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "minulou sobotu" }, { 0, "tuto sobotu" }, { 1, "příští sobotu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} sobotou" }, { PluralRulesValues.Few, "před {0} sobotami" }, { PluralRulesValues.Many, "před {0} soboty" }, { PluralRulesValues.Other, "před {0} sobotami" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sobotu" }, { PluralRulesValues.Few, "za {0} soboty" }, { PluralRulesValues.Many, "za {0} soboty" }, { PluralRulesValues.Other, "za {0} sobot" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "minulou sobotu" }, { 0, "tuto sobotu" }, { 1, "příští sobotu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} sobotou" }, { PluralRulesValues.Few, "před {0} sobotami" }, { PluralRulesValues.Many, "před {0} soboty" }, { PluralRulesValues.Other, "před {0} sobotami" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sobotu" }, { PluralRulesValues.Few, "za {0} soboty" }, { PluralRulesValues.Many, "za {0} soboty" }, { PluralRulesValues.Other, "za {0} sobot" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "minulou sobotu" }, { 0, "tuto sobotu" }, { 1, "příští sobotu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} sobotou" }, { PluralRulesValues.Few, "před {0} sobotami" }, { PluralRulesValues.Many, "před {0} soboty" }, { PluralRulesValues.Other, "před {0} sobotami" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sobotu" }, { PluralRulesValues.Few, "za {0} soboty" }, { PluralRulesValues.Many, "za {0} soboty" }, { PluralRulesValues.Other, "za {0} sobot" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "část dne",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "část d.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "část dne",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "hodina",
                 new Dictionary<int, string> { { 0, "tuto hodinu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} hodinou" }, { PluralRulesValues.Few, "před {0} hodinami" }, { PluralRulesValues.Many, "před {0} hodiny" }, { PluralRulesValues.Other, "před {0} hodinami" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} hodinu" }, { PluralRulesValues.Few, "za {0} hodiny" }, { PluralRulesValues.Many, "za {0} hodiny" }, { PluralRulesValues.Other, "za {0} hodin" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "h",
                 new Dictionary<int, string> { { 0, "tuto hodinu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} h" }, { PluralRulesValues.Few, "před {0} h" }, { PluralRulesValues.Many, "před {0} h" }, { PluralRulesValues.Other, "před {0} h" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} h" }, { PluralRulesValues.Few, "za {0} h" }, { PluralRulesValues.Many, "za {0} h" }, { PluralRulesValues.Other, "za {0} h" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "h",
                 new Dictionary<int, string> { { 0, "tuto hodinu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} h" }, { PluralRulesValues.Few, "před {0} h" }, { PluralRulesValues.Many, "před {0} h" }, { PluralRulesValues.Other, "před {0} h" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} h" }, { PluralRulesValues.Few, "za {0} h" }, { PluralRulesValues.Many, "za {0} h" }, { PluralRulesValues.Other, "za {0} h" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "minuta",
                 new Dictionary<int, string> { { 0, "tuto minutu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} minutou" }, { PluralRulesValues.Few, "před {0} minutami" }, { PluralRulesValues.Many, "před {0} minuty" }, { PluralRulesValues.Other, "před {0} minutami" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} minutu" }, { PluralRulesValues.Few, "za {0} minuty" }, { PluralRulesValues.Many, "za {0} minuty" }, { PluralRulesValues.Other, "za {0} minut" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "min",
                 new Dictionary<int, string> { { 0, "tuto minutu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} min" }, { PluralRulesValues.Few, "před {0} min" }, { PluralRulesValues.Many, "před {0} min" }, { PluralRulesValues.Other, "před {0} min" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} min" }, { PluralRulesValues.Few, "za {0} min" }, { PluralRulesValues.Many, "za {0} min" }, { PluralRulesValues.Other, "za {0} min" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "min",
                 new Dictionary<int, string> { { 0, "tuto minutu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} min" }, { PluralRulesValues.Few, "před {0} min" }, { PluralRulesValues.Many, "před {0} min" }, { PluralRulesValues.Other, "před {0} min" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} min" }, { PluralRulesValues.Few, "za {0} min" }, { PluralRulesValues.Many, "za {0} min" }, { PluralRulesValues.Other, "za {0} min" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "sekunda",
                 new Dictionary<int, string> { { 0, "nyní" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} sekundou" }, { PluralRulesValues.Few, "před {0} sekundami" }, { PluralRulesValues.Many, "před {0} sekundy" }, { PluralRulesValues.Other, "před {0} sekundami" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sekundu" }, { PluralRulesValues.Few, "za {0} sekundy" }, { PluralRulesValues.Many, "za {0} sekundy" }, { PluralRulesValues.Other, "za {0} sekund" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "s",
                 new Dictionary<int, string> { { 0, "nyní" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} s" }, { PluralRulesValues.Few, "před {0} s" }, { PluralRulesValues.Many, "před {0} s" }, { PluralRulesValues.Other, "před {0} s" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} s" }, { PluralRulesValues.Few, "za {0} s" }, { PluralRulesValues.Many, "za {0} s" }, { PluralRulesValues.Other, "za {0} s" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "s",
                 new Dictionary<int, string> { { 0, "nyní" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "před {0} s" }, { PluralRulesValues.Few, "před {0} s" }, { PluralRulesValues.Many, "před {0} s" }, { PluralRulesValues.Other, "před {0} s" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} s" }, { PluralRulesValues.Few, "za {0} s" }, { PluralRulesValues.Many, "za {0} s" }, { PluralRulesValues.Other, "za {0} s" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Czech' [cs]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "časové pásmo",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "pásmo",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "čas. pásmo",
                 null,
                 null,

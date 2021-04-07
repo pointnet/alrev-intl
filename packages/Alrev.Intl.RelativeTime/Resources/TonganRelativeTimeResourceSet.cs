@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Tongan' [to]
+    /// </summary>
     public class TonganRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "to";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "kuonga",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "kuonga",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "kuonga",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "taʻu",
                 new Dictionary<int, string> { { -1, "taʻu kuoʻosi" }, { 0, "taʻú ni" }, { 1, "taʻu kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "taʻu ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he taʻu ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "taʻu",
                 new Dictionary<int, string> { { -1, "taʻu kuoʻosi" }, { 0, "taʻú ni" }, { 1, "taʻu kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "taʻu ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he taʻu ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "taʻu",
                 new Dictionary<int, string> { { -1, "taʻu kuoʻosi" }, { 0, "taʻú ni" }, { 1, "taʻu kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "taʻu ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he taʻu ʻe {0}" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "kuata",
                 new Dictionary<int, string> { { -1, "kuata kuoʻosi" }, { 0, "kuata koʻeni" }, { 1, "kuata hoko" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "kuata ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he kuata ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "kuata",
                 new Dictionary<int, string> { { -1, "kuata kuoʻosi" }, { 0, "kuata koʻeni" }, { 1, "kuata hoko" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "kuata ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he kuata ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "kuata",
                 new Dictionary<int, string> { { -1, "kuata kuoʻosi" }, { 0, "kuata koʻeni" }, { 1, "kuata hoko" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "kuata ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he kuata ʻe {0}" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "māhina",
                 new Dictionary<int, string> { { -1, "māhina kuoʻosi" }, { 0, "māhiná ni" }, { 1, "māhina kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "māhina ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he māhina ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "māhina",
                 new Dictionary<int, string> { { -1, "māhina kuoʻosi" }, { 0, "māhiná ni" }, { 1, "māhina kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "māhina ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he māhina ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "māhina",
                 new Dictionary<int, string> { { -1, "māhina kuoʻosi" }, { 0, "māhiná ni" }, { 1, "māhina kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "māhina ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he māhina ʻe {0}" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "uike",
                 new Dictionary<int, string> { { -1, "uike kuoʻosi" }, { 0, "uiké ni" }, { 1, "uike kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "uike ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he uike ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "uike",
                 new Dictionary<int, string> { { -1, "uike kuoʻosi" }, { 0, "uiké ni" }, { 1, "uike kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "uike ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he uike ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "uike",
                 new Dictionary<int, string> { { -1, "uike kuoʻosi" }, { 0, "uiké ni" }, { 1, "uike kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "uike ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he uike ʻe {0}" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "uike ʻo e māhina",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "uk ʻoe mh",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "uike ʻoe māhina",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ʻaho",
                 new Dictionary<int, string> { { -2, "ʻaneheafi" }, { -1, "ʻaneafi" }, { 0, "ʻahó ni" }, { 1, "ʻapongipongi" }, { 2, "ʻahepongipongi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻaho ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he ʻaho ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ʻaho",
                 new Dictionary<int, string> { { -2, "ʻaneheafi" }, { -1, "ʻaneafi" }, { 0, "ʻahó ni" }, { 1, "ʻapongipongi" }, { 2, "ʻahepongipongi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻaho ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he ʻaho ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ʻaho",
                 new Dictionary<int, string> { { -2, "ʻaneheafi" }, { -1, "ʻaneafi" }, { 0, "ʻahó ni" }, { 1, "ʻapongipongi" }, { 2, "ʻahepongipongi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻaho ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he ʻaho ʻe {0}" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ʻaho ʻo e taʻu",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ʻaho ʻoe taʻu",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ʻaho ʻoe taʻu",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ʻaho ʻo e uike",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ʻaho ʻoe uike",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ʻaho ʻoe uike",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ʻaho ʻo e mahina",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ʻaho ʻo e mahina",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ʻaho ʻo e mahina",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Sāpate kuoʻosi" }, { 0, "Sāpaté ni" }, { 1, "Sāpate kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Sāpate ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Sāpate ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Sāpate kuoʻosi" }, { 0, "Sāpaté ni" }, { 1, "Sāpate kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Sāpate ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Sāpate ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Sāpate kuoʻosi" }, { 0, "Sāpaté ni" }, { 1, "Sāpate kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Sāpate ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Sāpate ʻe {0} ʻi he kahaʻu" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Mōnite kuoʻosi" }, { 0, "Mōnité ni" }, { 1, "Mōnite kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Mōnite ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Mōnite ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Mōnite kuoʻosi" }, { 0, "Mōnité ni" }, { 1, "Mōnite kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Mōnite ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Mōnite ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Mōnite kuoʻosi" }, { 0, "Mōnité ni" }, { 1, "Mōnite kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Mōnite ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Mōnite ʻe {0} ʻi he kahaʻu" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Tūsite kuoʻosi" }, { 0, "Tūsité ni" }, { 1, "Tūsite kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Tūsite ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Tūsite ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Tūsite kuoʻosi" }, { 0, "Tūsité ni" }, { 1, "Tūsite kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Tūsite ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Tūsite ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Tūsite kuoʻosi" }, { 0, "Tūsité ni" }, { 1, "Tūsite kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Tūsite ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Tūsite ʻe {0} ʻi he kahaʻu" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Pulelulu kuoʻosi" }, { 0, "Pulelulú ni" }, { 1, "Pulelulu kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Pulelulu ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Pulelulu ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Pulelulu kuoʻosi" }, { 0, "Pulelulú ni" }, { 1, "Pulelulu kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Pulelulu ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Pulelulu ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Pulelulu kuoʻosi" }, { 0, "Pulelulú ni" }, { 1, "Pulelulu kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Pulelulu ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Pulelulu ʻe {0} ʻi he kahaʻu" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Tuʻapulelulu kuoʻosi" }, { 0, "Tuʻapulelulú ni" }, { 1, "Tuʻapulelulu kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Tuʻapulelulu ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Tuʻapulelulu ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Tuʻapulelulu kuoʻosi" }, { 0, "Tuʻapulelulú ni" }, { 1, "Tuʻapulelulu kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Tuʻapulelulu ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Tuʻapulelulu ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Tuʻapulelulu kuoʻosi" }, { 0, "Tuʻapulelulú ni" }, { 1, "Tuʻapulelulu kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Tuʻapulelulu ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Tuʻapulelulu ʻe {0} ʻi he kahaʻu" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Falaite kuoʻosi" }, { 0, "Falaité ni" }, { 1, "Falaite kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Falaite ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Falaite ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Falaite kuoʻosi" }, { 0, "Falaité ni" }, { 1, "Falaite kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Falaite ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Falaite ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Falaite kuoʻosi" }, { 0, "Falaité ni" }, { 1, "Falaite kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Falaite ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Falaite ʻe {0} ʻi he kahaʻu" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Tokonaki kuoʻosi" }, { 0, "Tokonakí ni" }, { 1, "Tokonaki kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Tokonaki ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Ngaahi Tokonaki ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Tokonaki kuoʻosi" }, { 0, "Tokonakí ni" }, { 1, "Tokonaki kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Tokonaki ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Tokonaki ʻe {0} ʻi he kahaʻu" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Tokonaki kuoʻosi" }, { 0, "Tokonakí ni" }, { 1, "Tokonaki kahaʻu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Tokonaki ʻe {0} ʻi he kuohili" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "Tokonaki ʻe {0} ʻi he kahaʻu" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "AM/PM",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "houa",
                 new Dictionary<int, string> { { 0, "ko e houa ʻeni" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "houa ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he houa ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "houa",
                 new Dictionary<int, string> { { 0, "ko e houa ʻeni" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "houa ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he houa ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "houa",
                 new Dictionary<int, string> { { 0, "ko e houa ʻeni" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "houa ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he houa ʻe {0}" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "miniti",
                 new Dictionary<int, string> { { 0, "ko e miniti ʻeni" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "miniti ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he miniti ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "miniti",
                 new Dictionary<int, string> { { 0, "ko e miniti ʻeni" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "miniti ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he miniti ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "miniti",
                 new Dictionary<int, string> { { 0, "ko e miniti ʻeni" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "miniti ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he miniti ʻe {0}" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "sekoni",
                 new Dictionary<int, string> { { 0, "taimí ni" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sekoni ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he sekoni ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "sekoni",
                 new Dictionary<int, string> { { 0, "taimí ni" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sekoni ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he sekoni ʻe {0}" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "sekoni",
                 new Dictionary<int, string> { { 0, "taimí ni" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sekoni ʻe {0} kuoʻosi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ʻi he sekoni ʻe {0}" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Tongan' [to]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "taimi fakavahe",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "taimi fakavahe",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "taimi fakavahe",
                 null,
                 null,

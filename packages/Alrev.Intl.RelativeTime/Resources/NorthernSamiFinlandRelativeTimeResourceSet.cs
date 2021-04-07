@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Northern Sami (Finland)' [se-FI]
+    /// </summary>
     public class NorthernSamiFinlandRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "se-FI";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "áigodat",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "áig.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "áig.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "jahki",
                 new Dictionary<int, string> { { -1, "diibmá" }, { 0, "dán jagi" }, { 1, "boahtte jagi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "diibmá" }, { PluralRulesValues.Two, "ovddet jagi" }, { PluralRulesValues.Other, "{0} jagi dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} jagi siste" }, { PluralRulesValues.Two, "{0} jagi siste" }, { PluralRulesValues.Other, "{0} jagi siste" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "j.",
                 new Dictionary<int, string> { { -1, "diibmá" }, { 0, "dán jagi" }, { 1, "boahtte jagi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} j. dás ovdal" }, { PluralRulesValues.Two, "{0} jagi dás ovdal" }, { PluralRulesValues.Other, "{0} j. dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} jagi siste" }, { PluralRulesValues.Two, "{0} jagi siste" }, { PluralRulesValues.Other, "{0} jagi siste" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "j.",
                 new Dictionary<int, string> { { -1, "diibmá" }, { 0, "dán jagi" }, { 1, "boahtte jagi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "diibmá" }, { PluralRulesValues.Two, "ovddet jagi" }, { PluralRulesValues.Other, "{0} j. dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} j. siste" }, { PluralRulesValues.Two, "{0} jagi siste" }, { PluralRulesValues.Other, "{0} j. siste" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "njealjádasjahki",
                 new Dictionary<int, string> { { -1, "mannan njealjádasjagi" }, { 0, "dán njealjádasjagi" }, { 1, "boahtte njealjádasjagi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "-{0} njealjádasjagi dás ovdal" }, { PluralRulesValues.Two, "-{0} njealjádasjagi dás ovdal" }, { PluralRulesValues.Other, "-{0} njealjádasjagi dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "čuovvovaš {0} njealjádasjagi" }, { PluralRulesValues.Two, "čuovvovaš {0} njealjádasjagi" }, { PluralRulesValues.Other, "čuovvovaš {0} njealjádasjagi" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "jahkenjealjádas",
                 new Dictionary<int, string> { { -1, "mannan njealjádasjagi" }, { 0, "dán njealjádasjagi" }, { 1, "boahtte njealjádasjagi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} njealj.j. dás ovdal" }, { PluralRulesValues.Two, "-{0} njealjádasjagi dás ovdal" }, { PluralRulesValues.Other, "{0} njealj.j. dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "boahtte {0} njealj.j." }, { PluralRulesValues.Two, "boahtte {0} njealjádasjagi" }, { PluralRulesValues.Other, "boahtte {0} njealj.j." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "njealj.j.",
                 new Dictionary<int, string> { { -1, "mannan njealjádasjagi" }, { 0, "dán njealjádasjagi" }, { 1, "boahtte njealjádasjagi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} njealj.j. dás ovdal" }, { PluralRulesValues.Two, "{0} njealjádasjagi dás ovdal" }, { PluralRulesValues.Other, "{0} njealj.j. dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "boahtte {0} njealj.j." }, { PluralRulesValues.Two, "boahtte {0} njealjádasjagi" }, { PluralRulesValues.Other, "boahtte {0} njealj.j." } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "mánnu",
                 new Dictionary<int, string> { { -1, "mannan mánu" }, { 0, "dán mánu" }, { 1, "boahtte mánu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mánnu dás ovdal" }, { PluralRulesValues.Two, "{0} mánu dás ovdal" }, { PluralRulesValues.Other, "{0} mánu dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mánu siste" }, { PluralRulesValues.Two, "{0} mánu siste" }, { PluralRulesValues.Other, "{0} mánu siste" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "m.",
                 new Dictionary<int, string> { { -1, "mannan mánu" }, { 0, "dán mánu" }, { 1, "boahtte mánu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mánnu dás ovdal" }, { PluralRulesValues.Two, "{0} mánu dás ovdal" }, { PluralRulesValues.Other, "{0} mánu dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mánu geahčen" }, { PluralRulesValues.Two, "{0} mánu geahčen" }, { PluralRulesValues.Other, "{0} mánu geahčen" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "m.",
                 new Dictionary<int, string> { { -1, "mannan mánu" }, { 0, "dán mánu" }, { 1, "boahtte mánu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mánnu dás ovdal" }, { PluralRulesValues.Two, "{0} mánu dás ovdal" }, { PluralRulesValues.Other, "{0} mánu dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mánu siste" }, { PluralRulesValues.Two, "{0} mánu siste" }, { PluralRulesValues.Other, "{0} mánu siste" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "vahkku",
                 new Dictionary<int, string> { { -1, "mannan vahku" }, { 0, "dán vahku" }, { 1, "boahtte vahku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vahkku dás ovdal" }, { PluralRulesValues.Two, "{0} vahku dás ovdal" }, { PluralRulesValues.Other, "{0} vahku dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vahku geahčen" }, { PluralRulesValues.Two, "{0} vahku geahčen" }, { PluralRulesValues.Other, "{0} vahku geahčen" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "v(k)",
                 new Dictionary<int, string> { { -1, "mannan vahku" }, { 0, "dán vahku" }, { 1, "boahtte vahku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vahkku dás ovdal" }, { PluralRulesValues.Two, "{0} vahku dás ovdal" }, { PluralRulesValues.Other, "{0} v(k) dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} v(k) geahčen" }, { PluralRulesValues.Two, "{0} v(k) geahčen" }, { PluralRulesValues.Other, "{0} v(k) geahčen" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "v(k)",
                 new Dictionary<int, string> { { -1, "mannan vahku" }, { 0, "dán vahku" }, { 1, "boahtte vahku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} v(k) dás ovdal" }, { PluralRulesValues.Two, "{0} vahku dás ovdal" }, { PluralRulesValues.Other, "{0} v(k) dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} v(k) siste" }, { PluralRulesValues.Two, "{0} vahku siste" }, { PluralRulesValues.Other, "{0} v(k) siste" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "mánu vahkku",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "m. v(k)",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "m. v(k)",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "beaivi",
                 new Dictionary<int, string> { { -2, "ovddet beaivvi" }, { -1, "ikte" }, { 0, "odne" }, { 1, "ihttin" }, { 2, "don beaivve" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ikte" }, { PluralRulesValues.Two, "ovddet beaivve" }, { PluralRulesValues.Other, "{0} beaivve dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} beaivve siste" }, { PluralRulesValues.Two, "{0} beaivve siste" }, { PluralRulesValues.Other, "{0} beaivve siste" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "b.",
                 new Dictionary<int, string> { { -2, "ovddet beaivvi" }, { -1, "ikte" }, { 0, "odne" }, { 1, "ihttin" }, { 2, "don beaivve" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ikte" }, { PluralRulesValues.Two, "ovddet beaivve" }, { PluralRulesValues.Other, "{0} beaivve dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} beaivve siste" }, { PluralRulesValues.Two, "{0} beaivve siste" }, { PluralRulesValues.Other, "{0} beaivve siste" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "b.",
                 new Dictionary<int, string> { { -2, "ovddet beaivvi" }, { -1, "ikte" }, { 0, "odne" }, { 1, "ihttin" }, { 2, "don beaivve" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ikte" }, { PluralRulesValues.Two, "ovddet beaivve" }, { PluralRulesValues.Other, "{0} beaivve dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} beaivve siste" }, { PluralRulesValues.Two, "{0} beaivve siste" }, { PluralRulesValues.Other, "{0} beaivve siste" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "jagi beaivi",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "j. beaivi",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "j. beaivi",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "vahkkobeaivi",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "v(k) beaivi",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "v(k) beaivi",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "mánu vahkkobeaivi",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "m. v(k)b.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "m. v(k)b.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "mannan sotnabeaivve" }, { 0, "dán sotnabeaivve" }, { 1, "boahtte sotnabeaivve" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan sotnabeaivve" }, { PluralRulesValues.Two, "ovddet sotnabeaivve" }, { PluralRulesValues.Other, "{0} sotnabeaivve dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "boahtte sotnabeaivve" }, { PluralRulesValues.Two, "boahtte {0} sotnabeaivve" }, { PluralRulesValues.Other, "boahtte {0} sotnabeaivve" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "mannan so" }, { 0, "dán so" }, { 1, "boahtte so" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mannan so" }, { PluralRulesValues.Two, "ovddet sotnabeaivve" }, { PluralRulesValues.Other, "{0} so dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} boahtte so" }, { PluralRulesValues.Two, "boahtte {0} sotnabeaivve" }, { PluralRulesValues.Other, "{0} boahtte so" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "mannan so" }, { 0, "dán so" }, { 1, "boahtte so" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan so" }, { PluralRulesValues.Two, "ovddet sotnabeaivve" }, { PluralRulesValues.Other, "{0} so dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "boahtte so" }, { PluralRulesValues.Two, "maŋit sotnabeaivve" }, { PluralRulesValues.Other, "{0} boahtte so" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "mannan mánnodaga" }, { 0, "dán mánnodaga" }, { 1, "boahtte mánnodaga" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan mánnodaga" }, { PluralRulesValues.Two, "ovddet mánnodaga" }, { PluralRulesValues.Other, "{0} mánnodaga dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} boahtte mánnodaga" }, { PluralRulesValues.Two, "boahtte {0} mánnodaga" }, { PluralRulesValues.Other, "boahtte {0} mánnodaga" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "mannan má" }, { 0, "dán má" }, { 1, "boahtte má" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mannan má" }, { PluralRulesValues.Two, "ovddet má" }, { PluralRulesValues.Other, "{0} má dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} boahtte má" }, { PluralRulesValues.Two, "{0} boahtte mánnodaga" }, { PluralRulesValues.Other, "{0} boahtte má" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "mannan má" }, { 0, "dán má" }, { 1, "boahtte má" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan má" }, { PluralRulesValues.Two, "ovddet má" }, { PluralRulesValues.Other, "{0} má dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} boahtte má" }, { PluralRulesValues.Two, "{0} boahtte mánnodaga" }, { PluralRulesValues.Other, "{0} boahtte má" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "mannan disdaga" }, { 0, "dán disdaga" }, { 1, "boahtte disdaga" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan disdaga" }, { PluralRulesValues.Two, "ovddet disdaga" }, { PluralRulesValues.Other, "{0} disdaga dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} boahtte disdaga" }, { PluralRulesValues.Two, "{0} boahtte disdaga" }, { PluralRulesValues.Other, "{0} boahtte disdaga" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "mannan di" }, { 0, "dán di" }, { 1, "boahtte di" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mannan di" }, { PluralRulesValues.Two, "ovddet disdaga" }, { PluralRulesValues.Other, "{0} di dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} boahtte di" }, { PluralRulesValues.Two, "{0} boahtte disdaga" }, { PluralRulesValues.Other, "{0} boahtte di" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "mannan di" }, { 0, "dán di" }, { 1, "boahtte di" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan di" }, { PluralRulesValues.Two, "ovddet disdaga" }, { PluralRulesValues.Other, "{0} di dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "boahtte di" }, { PluralRulesValues.Two, "{0} boahtte disdaga" }, { PluralRulesValues.Other, "{0} boahtte di" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "mannan gaskavahku" }, { 0, "dán gaskavahku" }, { 1, "boahtte gaskavahku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan gaskavahku" }, { PluralRulesValues.Two, "ovddet gaskavahku" }, { PluralRulesValues.Other, "{0} gaskavahku dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "boahtte gaskavahku" }, { PluralRulesValues.Two, "{0} boahtte gaskavahku" }, { PluralRulesValues.Other, "{0} boahtte gaskavahku" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "mannan ga" }, { 0, "dán ga" }, { 1, "boahtte ga" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mannan ga" }, { PluralRulesValues.Two, "ovddet gaskavahku" }, { PluralRulesValues.Other, "{0} ga dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} boahtte ga" }, { PluralRulesValues.Two, "{0} boahtte gaskavahku" }, { PluralRulesValues.Other, "{0} boahtte ga" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "mannan ga" }, { 0, "dán ga" }, { 1, "boahtte ga" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan ga" }, { PluralRulesValues.Two, "ovddet gaskavahku" }, { PluralRulesValues.Other, "{0} ga dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "boahtte ga" }, { PluralRulesValues.Two, "{0} boahtte gaskavahku" }, { PluralRulesValues.Other, "{0} boahtte ga" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "mannan duorastaga" }, { 0, "dán duorastaga" }, { 1, "boahtte duorastaga" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan duorastaga" }, { PluralRulesValues.Two, "ovddet duorastaga" }, { PluralRulesValues.Other, "{0} duorastaga dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "boahtte duorastaga" }, { PluralRulesValues.Two, "+{0} boahtte duorastaga" }, { PluralRulesValues.Other, "+{0} boahtte duorastaga" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "mannan du" }, { 0, "dán du" }, { 1, "boahtte du" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mannan du" }, { PluralRulesValues.Two, "ovddet duorastaga" }, { PluralRulesValues.Other, "{0} du dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} boahtte du" }, { PluralRulesValues.Two, "+{0} boahtte duorastaga" }, { PluralRulesValues.Other, "+{0} boahtte du" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "mannan du" }, { 0, "dán du" }, { 1, "boahtte du" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan du" }, { PluralRulesValues.Two, "ovddet duorastaga" }, { PluralRulesValues.Other, "{0} du dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "boahtte du" }, { PluralRulesValues.Two, "+{0} boahtte duorastaga" }, { PluralRulesValues.Other, "+{0} boahtte du" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "mannan bearjadaga" }, { 0, "dán bearjadaga" }, { 1, "boahtte bearjadaga" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan bearjadaga" }, { PluralRulesValues.Two, "ovddet bearjadaga" }, { PluralRulesValues.Other, "-{0} bearjadaga dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "boahtte bearjadaga" }, { PluralRulesValues.Two, "boahtte {0} bearjadaga" }, { PluralRulesValues.Other, "boahtte {0} bearjadaga" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "mannan be" }, { 0, "dán be" }, { 1, "boahtte be" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mannan be" }, { PluralRulesValues.Two, "ovddet bearjadaga" }, { PluralRulesValues.Other, "-{0} be dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "boahtte {0} be" }, { PluralRulesValues.Two, "boahtte {0} bearjadaga" }, { PluralRulesValues.Other, "boahtte {0} be" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "mannan be" }, { 0, "dán be" }, { 1, "boahtte be" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan be" }, { PluralRulesValues.Two, "ovddet bearjadaga" }, { PluralRulesValues.Other, "-{0} be dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "boahtte be" }, { PluralRulesValues.Two, "boahtte {0} bearjadaga" }, { PluralRulesValues.Other, "boahtte {0} be" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "mannan lávvordaga" }, { 0, "dán lávvordaga" }, { 1, "boahtte lávvordaga" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan lávvordaga" }, { PluralRulesValues.Two, "ovddet lávvordaga" }, { PluralRulesValues.Other, "-{0} lávvordaga dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} boahtte lávvordaga" }, { PluralRulesValues.Two, "boahtte {0} lávvordaga" }, { PluralRulesValues.Other, "boahtte {0} lávvordaga" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "mannan lá" }, { 0, "dán lá" }, { 1, "boahtte lá" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mannan lá" }, { PluralRulesValues.Two, "ovddet lá" }, { PluralRulesValues.Other, "-{0} lá dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} boahtte lá" }, { PluralRulesValues.Two, "boahtte {0} lá" }, { PluralRulesValues.Other, "boahtte {0} lá" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "mannan lá" }, { 0, "dán lá" }, { 1, "boahtte lá" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "mannan lá" }, { PluralRulesValues.Two, "ovddet lá" }, { PluralRulesValues.Other, "-{0} lá dás ovdal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} boahtte lá" }, { PluralRulesValues.Two, "boahtte {0} lá" }, { PluralRulesValues.Other, "boahtte {0} lá" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ib/eb",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ib/eb",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ib/eb",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "diibmu",
                 new Dictionary<int, string> { { 0, "dán diimmu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} diibmu áigi" }, { PluralRulesValues.Two, "{0} diimmu áigi" }, { PluralRulesValues.Other, "{0} diimmu áigi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} diimmu siste" }, { PluralRulesValues.Two, "{0} diimmu siste" }, { PluralRulesValues.Other, "{0} diimmu siste" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "dmu",
                 new Dictionary<int, string> { { 0, "dán diimmu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} dmu áigi" }, { PluralRulesValues.Two, "{0} diimmu áigi" }, { PluralRulesValues.Other, "{0} dmu áigi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} dmu siste" }, { PluralRulesValues.Two, "{0} diimmu siste" }, { PluralRulesValues.Other, "{0} dmu siste" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "dmu",
                 new Dictionary<int, string> { { 0, "dán diimmu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} dmu áigi" }, { PluralRulesValues.Two, "{0} diimmu áigi" }, { PluralRulesValues.Other, "{0} dmu áigi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} dmu siste" }, { PluralRulesValues.Two, "{0} diimmu siste" }, { PluralRulesValues.Other, "{0} dmu siste" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "minuhtta",
                 new Dictionary<int, string> { { 0, "dán minuhta" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} minuhtta áigi" }, { PluralRulesValues.Two, "{0} minuhta áigi" }, { PluralRulesValues.Other, "{0} minuhta áigi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} minuhta siste" }, { PluralRulesValues.Two, "{0} minuhta siste" }, { PluralRulesValues.Other, "{0} minuhta siste" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "min.",
                 new Dictionary<int, string> { { 0, "dán minuhta" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min. áigi" }, { PluralRulesValues.Two, "{0} minuhta áigi" }, { PluralRulesValues.Other, "{0} min. áigi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min. siste" }, { PluralRulesValues.Two, "{0} minuhta siste" }, { PluralRulesValues.Other, "{0} min. siste" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "min.",
                 new Dictionary<int, string> { { 0, "dán minuhta" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min. áigi" }, { PluralRulesValues.Two, "{0} minuhta áigi" }, { PluralRulesValues.Other, "{0} min. áigi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min. siste" }, { PluralRulesValues.Two, "{0} minuhta siste" }, { PluralRulesValues.Other, "{0} min. siste" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "sekunda",
                 new Dictionary<int, string> { { 0, "dál" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sekunda áigi" }, { PluralRulesValues.Two, "{0} sekundda áigi" }, { PluralRulesValues.Other, "{0} sekundda áigi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sekundda siste" }, { PluralRulesValues.Two, "{0} sekundda siste" }, { PluralRulesValues.Other, "{0} sekundda siste" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "sek.",
                 new Dictionary<int, string> { { 0, "dál" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sek. áigi" }, { PluralRulesValues.Two, "{0} sekundda áigi" }, { PluralRulesValues.Other, "{0} sek. áigi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sek. siste" }, { PluralRulesValues.Two, "{0} sekundda siste" }, { PluralRulesValues.Other, "{0} sek. siste" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "sek.",
                 new Dictionary<int, string> { { 0, "dál" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sek. áigi" }, { PluralRulesValues.Two, "{0} sekundda áigi" }, { PluralRulesValues.Other, "{0} sek. áigi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sek. siste" }, { PluralRulesValues.Two, "{0} sekundda siste" }, { PluralRulesValues.Other, "{0} sek. siste" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Finland)' [se-FI]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "áigeavádat",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "á.av.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "á.av.",
                 null,
                 null,

@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Vietnamese' [vi]
+    /// </summary>
     public class VietnameseRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "vi";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "thời đại",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "thời đại",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "thời đại",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Năm",
                 new Dictionary<int, string> { { -1, "năm ngoái" }, { 0, "năm nay" }, { 1, "năm sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} năm trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} năm nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Năm",
                 new Dictionary<int, string> { { -1, "năm ngoái" }, { 0, "năm nay" }, { 1, "năm sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} năm trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} năm nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Năm",
                 new Dictionary<int, string> { { -1, "năm ngoái" }, { 0, "năm nay" }, { 1, "năm sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} năm trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} năm nữa" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Quý",
                 new Dictionary<int, string> { { -1, "quý trước" }, { 0, "quý này" }, { 1, "quý sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} quý trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} quý nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Quý",
                 new Dictionary<int, string> { { -1, "quý trước" }, { 0, "quý này" }, { 1, "quý sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} quý trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} quý nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Quý",
                 new Dictionary<int, string> { { -1, "quý trước" }, { 0, "quý này" }, { 1, "quý sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} quý trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} quý nữa" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Tháng",
                 new Dictionary<int, string> { { -1, "tháng trước" }, { 0, "tháng này" }, { 1, "tháng sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} tháng trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} tháng nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Tháng",
                 new Dictionary<int, string> { { -1, "tháng trước" }, { 0, "tháng này" }, { 1, "tháng sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} tháng trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} tháng nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Tháng",
                 new Dictionary<int, string> { { -1, "tháng trước" }, { 0, "tháng này" }, { 1, "tháng sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} tháng trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} tháng nữa" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Tuần",
                 new Dictionary<int, string> { { -1, "tuần trước" }, { 0, "tuần này" }, { 1, "tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} tuần trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} tuần nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Tuần",
                 new Dictionary<int, string> { { -1, "tuần trước" }, { 0, "tuần này" }, { 1, "tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} tuần trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} tuần nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Tuần",
                 new Dictionary<int, string> { { -1, "tuần trước" }, { 0, "tuần này" }, { 1, "tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} tuần trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} tuần nữa" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "tuần trong tháng",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "tuần trong tháng",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "tuần trong tháng",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Ngày",
                 new Dictionary<int, string> { { -2, "Hôm kia" }, { -1, "Hôm qua" }, { 0, "Hôm nay" }, { 1, "Ngày mai" }, { 2, "Ngày kia" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ngày trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} ngày nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Ngày",
                 new Dictionary<int, string> { { -2, "Hôm kia" }, { -1, "hôm qua" }, { 0, "hôm nay" }, { 1, "ngày mai" }, { 2, "Ngày kia" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ngày trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} ngày nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Ngày",
                 new Dictionary<int, string> { { -2, "Hôm kia" }, { -1, "hôm qua" }, { 0, "hôm nay" }, { 1, "ngày mai" }, { 2, "Ngày kia" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ngày trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} ngày nữa" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ngày trong năm",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ngày trong năm",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ngày trong năm",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ngày trong tuần",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ngày trong tuần",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ngày trong tuần",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ngày thường trong tháng",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ngày thường trong tháng",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ngày thường trong tháng",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Chủ Nhật tuần trước" }, { 0, "Chủ Nhật tuần này" }, { 1, "Chủ Nhật tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Chủ Nhật trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Chủ Nhật nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Chủ Nhật tuần trước" }, { 0, "Chủ Nhật tuần này" }, { 1, "Chủ Nhật tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Chủ Nhật trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Chủ Nhật nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Chủ Nhật tuần trước" }, { 0, "Chủ Nhật tuần này" }, { 1, "Chủ Nhật tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Chủ Nhật trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Chủ Nhật nữa" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Hai tuần trước" }, { 0, "Thứ Hai tuần này" }, { 1, "Thứ Hai tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Hai trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Hai nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Hai tuần trước" }, { 0, "Thứ Hai tuần này" }, { 1, "Thứ Hai tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Hai trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Hai nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Hai tuần trước" }, { 0, "Thứ Hai tuần này" }, { 1, "Thứ Hai tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Hai trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Hai nữa" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Ba tuần trước" }, { 0, "Thứ Ba tuần này" }, { 1, "Thứ Ba tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Ba trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Ba nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Ba tuần trước" }, { 0, "Thứ Ba tuần này" }, { 1, "Thứ Ba tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Ba trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Ba nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Ba tuần trước" }, { 0, "Thứ Ba tuần này" }, { 1, "Thứ Ba tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Ba trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Ba nữa" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Tư tuần trước" }, { 0, "Thứ Tư tuần này" }, { 1, "Thứ Tư tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Tư trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Tư nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Tư tuần trước" }, { 0, "Thứ Tư tuần này" }, { 1, "Thứ Tư tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Tư trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Tư nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Tư tuần trước" }, { 0, "Thứ Tư tuần này" }, { 1, "Thứ Tư tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Tư trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Tư nữa" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Năm tuần trước" }, { 0, "Thứ Năm tuần này" }, { 1, "Thứ Năm tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Năm trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Năm nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Năm tuần trước" }, { 0, "Thứ Năm tuần này" }, { 1, "Thứ Năm tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Năm trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Năm nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Năm tuần trước" }, { 0, "Thứ Năm tuần này" }, { 1, "Thứ Năm tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Năm trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Năm nữa" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Sáu tuần trước" }, { 0, "Thứ Sáu tuần này" }, { 1, "Thứ Sáu tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Sáu trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Sáu nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Sáu tuần trước" }, { 0, "Thứ Sáu tuần này" }, { 1, "Thứ Sáu tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Sáu trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Sáu nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Sáu tuần trước" }, { 0, "Thứ Sáu tuần này" }, { 1, "Thứ Sáu tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Sáu trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Sáu nữa" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Bảy tuần trước" }, { 0, "Thứ Bảy tuần này" }, { 1, "Thứ Bảy tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Bảy trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Bảy nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Bảy tuần trước" }, { 0, "Thứ Bảy tuần này" }, { 1, "Thứ Bảy tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Bảy trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Bảy nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Thứ Bảy tuần trước" }, { 0, "Thứ Bảy tuần này" }, { 1, "Thứ Bảy tuần sau" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} Thứ Bảy trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} Thứ Bảy nữa" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "SA/CH",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "SA/CH",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "SA/CH",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Giờ",
                 new Dictionary<int, string> { { 0, "giờ này" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} giờ trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} giờ nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Giờ",
                 new Dictionary<int, string> { { 0, "giờ này" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} giờ trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} giờ nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Giờ",
                 new Dictionary<int, string> { { 0, "giờ này" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} giờ trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} giờ nữa" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Phút",
                 new Dictionary<int, string> { { 0, "phút này" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} phút trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} phút nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Phút",
                 new Dictionary<int, string> { { 0, "phút này" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} phút trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} phút nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Phút",
                 new Dictionary<int, string> { { 0, "phút này" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} phút trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} phút nữa" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Giây",
                 new Dictionary<int, string> { { 0, "bây giờ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} giây trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} giây nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Giây",
                 new Dictionary<int, string> { { 0, "bây giờ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} giây trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} giây nữa" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Giây",
                 new Dictionary<int, string> { { 0, "bây giờ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} giây trước" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "sau {0} giây nữa" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Vietnamese' [vi]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Múi giờ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "Múi giờ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "Múi giờ",
                 null,
                 null,

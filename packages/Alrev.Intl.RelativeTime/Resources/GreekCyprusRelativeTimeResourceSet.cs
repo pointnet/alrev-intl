@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Greek (Cyprus)' [el-CY]
+    /// </summary>
     public class GreekCyprusRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "el-CY";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "περίοδος",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "περ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "περ.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "έτος",
                 new Dictionary<int, string> { { -1, "πέρσι" }, { 0, "φέτος" }, { 1, "επόμενο έτος" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} έτος" }, { PluralRulesValues.Other, "πριν από {0} έτη" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} έτος" }, { PluralRulesValues.Other, "σε {0} έτη" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "έτ.",
                 new Dictionary<int, string> { { -1, "πέρσι" }, { 0, "φέτος" }, { 1, "επόμενο έτος" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} έτος πριν" }, { PluralRulesValues.Other, "{0} έτη πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} έτος" }, { PluralRulesValues.Other, "σε {0} έτη" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "έτ.",
                 new Dictionary<int, string> { { -1, "πέρσι" }, { 0, "φέτος" }, { 1, "επόμενο έτος" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} έτος" }, { PluralRulesValues.Other, "πριν από {0} έτη" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} έτος" }, { PluralRulesValues.Other, "σε {0} έτη" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "τρίμηνο",
                 new Dictionary<int, string> { { -1, "προηγούμενο τρίμηνο" }, { 0, "τρέχον τρίμηνο" }, { 1, "επόμενο τρίμηνο" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} τρίμηνο" }, { PluralRulesValues.Other, "πριν από {0} τρίμηνα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} τρίμηνο" }, { PluralRulesValues.Other, "σε {0} τρίμηνα" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "τρίμ.",
                 new Dictionary<int, string> { { -1, "προηγ. τρίμ." }, { 0, "τρέχον τρίμ." }, { 1, "επόμ. τρίμ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} τρίμ. πριν" }, { PluralRulesValues.Other, "{0} τρίμ. πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} τρίμ." }, { PluralRulesValues.Other, "σε {0} τρίμ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "τρίμ.",
                 new Dictionary<int, string> { { -1, "προηγ. τρίμ." }, { 0, "τρέχον τρίμ." }, { 1, "επόμ. τρίμ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} τρίμ." }, { PluralRulesValues.Other, "πριν από {0} τρίμ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} τρίμ." }, { PluralRulesValues.Other, "σε {0} τρίμ." } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "μήνας",
                 new Dictionary<int, string> { { -1, "προηγούμενος μήνας" }, { 0, "τρέχων μήνας" }, { 1, "επόμενος μήνας" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} μήνα" }, { PluralRulesValues.Other, "πριν από {0} μήνες" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} μήνα" }, { PluralRulesValues.Other, "σε {0} μήνες" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "μήν.",
                 new Dictionary<int, string> { { -1, "προηγ. μήνας" }, { 0, "τρέχ. μήνας" }, { 1, "επόμ. μήνας" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} μ. πριν" }, { PluralRulesValues.Other, "{0} μ. πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} μ." }, { PluralRulesValues.Other, "σε {0} μ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "μήν.",
                 new Dictionary<int, string> { { -1, "προηγούμενος μήνας" }, { 0, "τρέχων μήνας" }, { 1, "επόμενος μήνας" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} μήνα" }, { PluralRulesValues.Other, "πριν από {0} μήνες" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} μήνα" }, { PluralRulesValues.Other, "σε {0} μήνες" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "εβδομάδα",
                 new Dictionary<int, string> { { -1, "προηγούμενη εβδομάδα" }, { 0, "τρέχουσα εβδομάδα" }, { 1, "επόμενη εβδομάδα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} εβδομάδα" }, { PluralRulesValues.Other, "πριν από {0} εβδομάδες" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} εβδομάδα" }, { PluralRulesValues.Other, "σε {0} εβδομάδες" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "εβδ.",
                 new Dictionary<int, string> { { -1, "προηγ. εβδ." }, { 0, "τρέχ. εβδ." }, { 1, "επόμ. εβδ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} εβδ. πριν" }, { PluralRulesValues.Other, "{0} εβδ. πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} εβδ." }, { PluralRulesValues.Other, "σε {0} εβδ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "εβδ.",
                 new Dictionary<int, string> { { -1, "προηγ. εβδομάδα" }, { 0, "τρέχ. εβδομάδα" }, { 1, "επόμ. εβδομάδα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} εβδ." }, { PluralRulesValues.Other, "πριν από {0} εβδ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} εβδ." }, { PluralRulesValues.Other, "σε {0} εβδ." } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "εβδομάδα μήνα",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "εβδ. μήνα",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "εβδ. μήνα",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ημέρα",
                 new Dictionary<int, string> { { -2, "προχθές" }, { -1, "χθες" }, { 0, "σήμερα" }, { 1, "αύριο" }, { 2, "μεθαύριο" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} ημέρα" }, { PluralRulesValues.Other, "πριν από {0} ημέρες" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} ημέρα" }, { PluralRulesValues.Other, "σε {0} ημέρες" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ημ.",
                 new Dictionary<int, string> { { -2, "προχθές" }, { -1, "χθες" }, { 0, "σήμερα" }, { 1, "αύριο" }, { 2, "μεθαύριο" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ημ. πριν" }, { PluralRulesValues.Other, "{0} ημ. πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} ημ." }, { PluralRulesValues.Other, "σε {0} ημ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ημ.",
                 new Dictionary<int, string> { { -2, "προχθές" }, { -1, "χθες" }, { 0, "σήμερα" }, { 1, "αύριο" }, { 2, "μεθαύριο" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} ημ." }, { PluralRulesValues.Other, "πριν από {0} ημ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} ημ." }, { PluralRulesValues.Other, "σε {0} ημ." } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ημέρα έτους",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ημ. έτους",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ημ. έτους",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "καθημερινή",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "καθημερ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "καθημερ.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "καθημερινή μήνα",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "καθημερ. μήνα",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "καθημερ. μήνα",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "προηγούμενη Κυριακή" }, { 0, "αυτήν την Κυριακή" }, { 1, "επόμενη Κυριακή" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Κυριακή" }, { PluralRulesValues.Other, "πριν από {0} Κυριακές" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Κυριακή" }, { PluralRulesValues.Other, "σε {0} Κυριακές" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Κυ" }, { 0, "αυτήν την Κυ" }, { 1, "επόμ. Κυ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Κυ πριν" }, { PluralRulesValues.Other, "{0} Κυ πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Κυ" }, { PluralRulesValues.Other, "σε {0} Κυ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Κυρ." }, { 0, "αυτήν την Κυρ." }, { 1, "επόμ. Κυρ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Κυρ." }, { PluralRulesValues.Other, "πριν από {0} Κυρ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Κυρ." }, { PluralRulesValues.Other, "σε {0} Κυρ." } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "προηγούμενη Δευτέρα" }, { 0, "αυτήν τη Δευτέρα" }, { 1, "επόμενη Δευτέρα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Δευτέρα" }, { PluralRulesValues.Other, "πριν από {0} Δευτέρες" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Δευτέρα" }, { PluralRulesValues.Other, "σε {0} Δευτέρες" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Δε" }, { 0, "αυτήν τη Δε" }, { 1, "επόμ. Δε" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Δε πριν" }, { PluralRulesValues.Other, "{0} Δε πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Δε" }, { PluralRulesValues.Other, "σε {0} Δε" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Δευτ." }, { 0, "αυτήν τη Δευτ." }, { 1, "επόμ. Δευτ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Δευτ." }, { PluralRulesValues.Other, "πριν από {0} Δευτ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Δευτ." }, { PluralRulesValues.Other, "σε {0} Δευτ." } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "προηγούμενη Τρίτη" }, { 0, "αυτήν την Τρίτη" }, { 1, "επόμενη Τρίτη" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Τρίτη" }, { PluralRulesValues.Other, "πριν από {0} Τρίτες" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Τρίτη" }, { PluralRulesValues.Other, "σε {0} Τρίτες" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Τρ" }, { 0, "αυτήν την Τρ" }, { 1, "επόμ. Τρ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Τρ πριν" }, { PluralRulesValues.Other, "{0} Τρ πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Τρ" }, { PluralRulesValues.Other, "σε {0} Τρ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Τρ." }, { 0, "αυτήν την Τρ." }, { 1, "επόμ. Τρ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Τρ." }, { PluralRulesValues.Other, "πριν από {0} Τρ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Τρ." }, { PluralRulesValues.Other, "σε {0} Τρ." } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "προηγούμενη Τετάρτη" }, { 0, "αυτήν την Τετάρτη" }, { 1, "επόμενη Τετάρτη" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Τετάρτη" }, { PluralRulesValues.Other, "πριν από {0} Τετάρτες" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Τετάρτη" }, { PluralRulesValues.Other, "σε {0} Τετάρτες" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Τε" }, { 0, "αυτήν την Τε" }, { 1, "επόμ. Τε" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Τε πριν" }, { PluralRulesValues.Other, "{0} Τε πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Τε" }, { PluralRulesValues.Other, "σε {0} Τε" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Τετ." }, { 0, "αυτήν την Τετ." }, { 1, "επόμ. Τετ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Τετ." }, { PluralRulesValues.Other, "πριν από {0} Τετ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Τετ." }, { PluralRulesValues.Other, "σε {0} Τετ." } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "προηγούμενη Πέμπτη" }, { 0, "αυτήν την Πέμπτη" }, { 1, "επόμενη Πέμπτη" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Πέμπτη" }, { PluralRulesValues.Other, "πριν από {0} Πέμπτες" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Πέμπτη" }, { PluralRulesValues.Other, "σε {0} Πέμπτες" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Πέ" }, { 0, "αυτήν την Πέ" }, { 1, "επόμ. Πέ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Πέ πριν" }, { PluralRulesValues.Other, "{0} Πέ πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Πέ" }, { PluralRulesValues.Other, "σε {0} Πέ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Πέμ." }, { 0, "αυτήν την Πέμ." }, { 1, "επόμ. Πέμ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Πέμ." }, { PluralRulesValues.Other, "πριν από {0} Πέμ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Πέμ." }, { PluralRulesValues.Other, "σε {0} Πέμ." } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "προηγούμενη Παρασκευή" }, { 0, "αυτήν την Παρασκευή" }, { 1, "επόμενη Παρασκευή" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Παρασκευή" }, { PluralRulesValues.Other, "πριν από {0} Παρασκευές" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Παρασκευή" }, { PluralRulesValues.Other, "σε {0} Παρασκευές" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Πα" }, { 0, "αυτήν την Πα" }, { 1, "επόμ. Πα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Πα πριν" }, { PluralRulesValues.Other, "{0} Πα πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Πα" }, { PluralRulesValues.Other, "σε {0} Πα" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Παρ." }, { 0, "αυτήν την Παρ." }, { 1, "επόμ. Παρ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Παρ." }, { PluralRulesValues.Other, "πριν από {0} Παρ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Παρ." }, { PluralRulesValues.Other, "σε {0} Παρ." } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "προηγούμενο Σάββατο" }, { 0, "αυτό το Σάββατο" }, { 1, "επόμενο Σάββατο" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Σάββατο" }, { PluralRulesValues.Other, "πριν από {0} Σάββατα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Σάββατο" }, { PluralRulesValues.Other, "σε {0} Σάββατα" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Σά" }, { 0, "αυτό το Σά" }, { 1, "επόμ. Σά" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Σά πριν" }, { PluralRulesValues.Other, "{0} Σά πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Σά" }, { PluralRulesValues.Other, "σε {0} Σά" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "προηγ. Σάβ." }, { 0, "αυτό το Σάβ." }, { 1, "επόμ. Σάβ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} Σάβ." }, { PluralRulesValues.Other, "πριν από {0} Σάβ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} Σάβ." }, { PluralRulesValues.Other, "σε {0} Σάβ." } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "π.μ./μ.μ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "πμ/μμ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "πμ/μμ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ώρα",
                 new Dictionary<int, string> { { 0, "τρέχουσα ώρα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} ώρα" }, { PluralRulesValues.Other, "πριν από {0} ώρες" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} ώρα" }, { PluralRulesValues.Other, "σε {0} ώρες" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ώ.",
                 new Dictionary<int, string> { { 0, "τρέχουσα ώρα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ώ. πριν" }, { PluralRulesValues.Other, "{0} ώ. πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} ώ." }, { PluralRulesValues.Other, "σε {0} ώ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ώ.",
                 new Dictionary<int, string> { { 0, "τρέχουσα ώρα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} ώ." }, { PluralRulesValues.Other, "πριν από {0} ώ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} ώ." }, { PluralRulesValues.Other, "σε {0} ώ." } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "λεπτό",
                 new Dictionary<int, string> { { 0, "τρέχον λεπτό" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} λεπτό" }, { PluralRulesValues.Other, "πριν από {0} λεπτά" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} λεπτό" }, { PluralRulesValues.Other, "σε {0} λεπτά" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "λ.",
                 new Dictionary<int, string> { { 0, "τρέχον λεπτό" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} λ. πριν" }, { PluralRulesValues.Other, "{0} λ. πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} λ." }, { PluralRulesValues.Other, "σε {0} λ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "λεπ.",
                 new Dictionary<int, string> { { 0, "τρέχον λεπτό" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} λεπ." }, { PluralRulesValues.Other, "πριν από {0} λεπ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} λεπ." }, { PluralRulesValues.Other, "σε {0} λεπ." } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "δευτερόλεπτο",
                 new Dictionary<int, string> { { 0, "τώρα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} δευτερόλεπτο" }, { PluralRulesValues.Other, "πριν από {0} δευτερόλεπτα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} δευτερόλεπτο" }, { PluralRulesValues.Other, "σε {0} δευτερόλεπτα" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "δ.",
                 new Dictionary<int, string> { { 0, "τώρα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} δ. πριν" }, { PluralRulesValues.Other, "{0} δ. πριν" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} δ." }, { PluralRulesValues.Other, "σε {0} δ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "δευτ.",
                 new Dictionary<int, string> { { 0, "τώρα" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "πριν από {0} δευτ." }, { PluralRulesValues.Other, "πριν από {0} δευτ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "σε {0} δευτ." }, { PluralRulesValues.Other, "σε {0} δευτ." } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Greek (Cyprus)' [el-CY]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ζώνη ώρας",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ζώνη",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ζώνη",
                 null,
                 null,

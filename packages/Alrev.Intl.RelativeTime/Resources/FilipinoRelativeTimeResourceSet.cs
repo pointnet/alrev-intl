@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Filipino' [fil]
+    /// </summary>
     public class FilipinoRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "fil";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "panahon",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "panahon",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "panahon",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "taon",
                 new Dictionary<int, string> { { -1, "nakaraang taon" }, { 0, "ngayong taon" }, { 1, "susunod na taon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} taon ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) taon ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} taon" }, { PluralRulesValues.Other, "sa {0} (na) taon" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "taon",
                 new Dictionary<int, string> { { -1, "nakaraang taon" }, { 0, "ngayong taon" }, { 1, "susunod na taon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} taon ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) taon ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} taon" }, { PluralRulesValues.Other, "sa {0} (na) taon" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "taon",
                 new Dictionary<int, string> { { -1, "nakaraang taon" }, { 0, "ngayong taon" }, { 1, "susunod na taon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} taon ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) taon ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} taon" }, { PluralRulesValues.Other, "sa {0} (na) taon" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "quarter",
                 new Dictionary<int, string> { { -1, "nakaraang quarter" }, { 0, "ngayong quarter" }, { 1, "susunod na quarter" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} quarter ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) quarter ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} quarter" }, { PluralRulesValues.Other, "sa {0} (na) quarter" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "qtr.",
                 new Dictionary<int, string> { { -1, "nakaraang quarter" }, { 0, "ngayong quarter" }, { 1, "susunod na quarter" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} quarter ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) quarter ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} quarter" }, { PluralRulesValues.Other, "sa {0} (na) quarter" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "qtr.",
                 new Dictionary<int, string> { { -1, "nakaraang quarter" }, { 0, "ngayong quarter" }, { 1, "susunod na quarter" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} quarter ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) quarter ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} (na) quarter" }, { PluralRulesValues.Other, "sa {0} (na) quarter" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "buwan",
                 new Dictionary<int, string> { { -1, "nakaraang buwan" }, { 0, "ngayong buwan" }, { 1, "susunod na buwan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} buwan ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) buwan ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} buwan" }, { PluralRulesValues.Other, "sa {0} (na) buwan" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "buwan",
                 new Dictionary<int, string> { { -1, "nakaraang buwan" }, { 0, "ngayong buwan" }, { 1, "susunod na buwan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} buwan ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) buwan ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} buwan" }, { PluralRulesValues.Other, "sa {0} (na) buwan" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "buwan",
                 new Dictionary<int, string> { { -1, "nakaraang buwan" }, { 0, "ngayong buwan" }, { 1, "susunod na buwan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} buwan ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) buwan ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} buwan" }, { PluralRulesValues.Other, "sa {0} (na) buwan" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "linggo",
                 new Dictionary<int, string> { { -1, "nakalipas na linggo" }, { 0, "sa linggong ito" }, { 1, "susunod na linggo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} linggo ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) linggo ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} linggo" }, { PluralRulesValues.Other, "sa {0} (na) linggo" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "linggo",
                 new Dictionary<int, string> { { -1, "nakaraang linggo" }, { 0, "ngayong linggo" }, { 1, "susunod na linggo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} linggo ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) linggo ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} linggo" }, { PluralRulesValues.Other, "sa {0} (na) linggo" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "linggo",
                 new Dictionary<int, string> { { -1, "nakaraang linggo" }, { 0, "ngayong linggo" }, { 1, "susunod na linggo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} linggo ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) linggo ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} linggo" }, { PluralRulesValues.Other, "sa {0} (na) linggo" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "linggo ng buwan",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "linggo ng buwan",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "linggo ng buwan",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "araw",
                 new Dictionary<int, string> { { -2, "Araw bago ang kahapon" }, { -1, "kahapon" }, { 0, "ngayong araw" }, { 1, "bukas" }, { 2, "Samakalawa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} araw ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) araw ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} araw" }, { PluralRulesValues.Other, "sa {0} (na) araw" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "araw",
                 new Dictionary<int, string> { { -2, "Araw bago ang kahapon" }, { -1, "kahapon" }, { 0, "ngayong araw" }, { 1, "bukas" }, { 2, "Samakalawa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} araw ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) araw ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} araw" }, { PluralRulesValues.Other, "sa {0} (na) araw" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "araw",
                 new Dictionary<int, string> { { -2, "Araw bago ang kahapon" }, { -1, "kahapon" }, { 0, "ngayong araw" }, { 1, "bukas" }, { 2, "Samakalawa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} (na) araw ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) araw ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} (na) araw" }, { PluralRulesValues.Other, "sa {0} (na) araw" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "araw ng taon",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "araw ng taon",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "araw ng taon",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "araw ng linggo",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "araw ng linggo",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "araw ng linggo",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "karaniwang araw ng buwan",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "karaniwang araw ng buwan",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "karaniwang araw ng buwan",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang linggo" }, { 0, "sa Linggo" }, { 1, "susunod na Linggo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Linggo ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Linggo ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Linggo" }, { PluralRulesValues.Other, "sa {0} (na) Linggo" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Lin." }, { 0, "ngayong Lin." }, { 1, "susunod na Lin." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Linggo ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Linggo ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} linggo" }, { PluralRulesValues.Other, "sa {0} (na) Linggo" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Lin." }, { 0, "ngayong Lin." }, { 1, "susunod na Lin." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Linggo ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Linggo ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Linggo" }, { PluralRulesValues.Other, "sa {0} (na) Linggo" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Lunes" }, { 0, "ngayong Lunes" }, { 1, "susunod na Lunes" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Lunes ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Lunes ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Lunes" }, { PluralRulesValues.Other, "sa {0} (na) Lunes" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Lun." }, { 0, "ngayong Lun." }, { 1, "susunod na Lun." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Lunes ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Lunes ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Lunes" }, { PluralRulesValues.Other, "sa {0} Lunes" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Lun." }, { 0, "ngayong Lun." }, { 1, "susunod na Lun." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Lunes ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Lunes ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Lunes" }, { PluralRulesValues.Other, "sa {0} (na) Lunes" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Martes" }, { 0, "ngayong Martes" }, { 1, "susunod na Martes" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Martes ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Martes ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Martes" }, { PluralRulesValues.Other, "sa {0} (na) Martes" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Mar." }, { 0, "ngayong Mar." }, { 1, "susunod na Mar." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Martes ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Martes ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Martes" }, { PluralRulesValues.Other, "sa {0} (na) Martes ang nakalipas" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Mar." }, { 0, "ngayong Mar." }, { 1, "susunod na Mar." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Martes ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Martes ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Martes" }, { PluralRulesValues.Other, "sa {0} (na) Martes" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Miyerkules" }, { 0, "ngayong Miyerkules" }, { 1, "susunod na Miyerkules" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Miyerkules ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Miyerkules ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Miyerkules" }, { PluralRulesValues.Other, "sa {0} (na) Miyerkules" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Miy." }, { 0, "ngayong Miy." }, { 1, "susunod na Miy." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Miyerkules ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Miyerkules ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Miyerkules" }, { PluralRulesValues.Other, "sa {0} (na) Miyerkules" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Miy." }, { 0, "ngayong Miy." }, { 1, "susunod na Miy." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Miyerkules ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Miyerkules ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Miyerkules" }, { PluralRulesValues.Other, "sa {0} (na) Miyerkules" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Huwebes" }, { 0, "ngayong Huwebes" }, { 1, "susunod na Huwebes" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Huwebes ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Huwebes ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Huwebes" }, { PluralRulesValues.Other, "sa {0} (na) Huwebes" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Huw." }, { 0, "ngayong Huw." }, { 1, "susunod na Huw." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Huwebes ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Huwebes ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Huwebes" }, { PluralRulesValues.Other, "sa {0} (na) Huwebes" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Huw." }, { 0, "ngayong Huw." }, { 1, "susunod na Huw." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Huwebes ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Huwebes ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Huwebes" }, { PluralRulesValues.Other, "sa {0} (na) Huwebes" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Biyernes" }, { 0, "ngayong Biyernes" }, { 1, "susunod na Biyernes" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Biyernes ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Biyernes ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Biyernes" }, { PluralRulesValues.Other, "sa {0} (na) Biyernes" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Biy." }, { 0, "ngayong Biy." }, { 1, "susunod na Biy." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Biyernes ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Biyernes ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Biyernes" }, { PluralRulesValues.Other, "sa {0} (na) Biyernes" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Biy." }, { 0, "ngayong Biy." }, { 1, "susunod na Biy." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Biyernes ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Biyernes ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Biyernes" }, { PluralRulesValues.Other, "sa {0} (na) Biyernes" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Sabado" }, { 0, "ngayong Sabado" }, { 1, "susunod na Sabado" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Sabado ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Sabado ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Sabado" }, { PluralRulesValues.Other, "sa {0} (na) Sabado" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Sab." }, { 0, "ngayong Sab." }, { 1, "susunod na Sab." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Sabado ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Sabado ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Sabado" }, { PluralRulesValues.Other, "sa {0} (na) Sabado ang nakalipas" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "nakaraang Sab." }, { 0, "ngayong Sab." }, { 1, "susunod na Sab." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Sabado ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) Sabado ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} Sabado" }, { PluralRulesValues.Other, "sa {0} (na) Sabado" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "AM/PM",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "oras",
                 new Dictionary<int, string> { { 0, "ngayong oras" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} oras ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) oras ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} oras" }, { PluralRulesValues.Other, "sa {0} (na) oras" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "oras",
                 new Dictionary<int, string> { { 0, "ngayong oras" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} oras nakalipas" }, { PluralRulesValues.Other, "{0} (na) oras nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} oras" }, { PluralRulesValues.Other, "sa {0} (na) oras" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "oras",
                 new Dictionary<int, string> { { 0, "ngayong oras" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} oras ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) oras ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} oras" }, { PluralRulesValues.Other, "sa {0} (na) oras" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "minuto",
                 new Dictionary<int, string> { { 0, "sa minutong ito" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} minuto ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) minuto ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} minuto" }, { PluralRulesValues.Other, "sa {0} (na) minuto" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "min.",
                 new Dictionary<int, string> { { 0, "sa minutong ito" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min. ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) min. ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} min." }, { PluralRulesValues.Other, "sa {0} (na) min." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "min.",
                 new Dictionary<int, string> { { 0, "sa minutong ito" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min. ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) min. ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} min." }, { PluralRulesValues.Other, "sa {0} (na) min." } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "segundo",
                 new Dictionary<int, string> { { 0, "ngayon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} segundo ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) segundo ang nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} segundo" }, { PluralRulesValues.Other, "sa {0} (na) segundo" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "seg.",
                 new Dictionary<int, string> { { 0, "ngayon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} seg. nakalipas" }, { PluralRulesValues.Other, "{0} (na) seg. nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} seg." }, { PluralRulesValues.Other, "sa {0} (na) seg." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "seg.",
                 new Dictionary<int, string> { { 0, "ngayon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} seg. ang nakalipas" }, { PluralRulesValues.Other, "{0} (na) seg. nakalipas" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sa {0} seg." }, { PluralRulesValues.Other, "sa {0} (na) seg." } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Filipino' [fil]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "time zone",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "zone",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "zone",
                 null,
                 null,

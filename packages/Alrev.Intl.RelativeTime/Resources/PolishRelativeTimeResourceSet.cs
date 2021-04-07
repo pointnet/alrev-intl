@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Polish' [pl]
+    /// </summary>
     public class PolishRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "pl";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "era",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "era",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "era",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "rok",
                 new Dictionary<int, string> { { -1, "w zeszłym roku" }, { 0, "w tym roku" }, { 1, "w przyszłym roku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} rok temu" }, { PluralRulesValues.Few, "{0} lata temu" }, { PluralRulesValues.Many, "{0} lat temu" }, { PluralRulesValues.Other, "{0} roku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} rok" }, { PluralRulesValues.Few, "za {0} lata" }, { PluralRulesValues.Many, "za {0} lat" }, { PluralRulesValues.Other, "za {0} roku" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "r.",
                 new Dictionary<int, string> { { -1, "w zeszłym roku" }, { 0, "w tym roku" }, { 1, "w przyszłym roku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} rok temu" }, { PluralRulesValues.Few, "{0} lata temu" }, { PluralRulesValues.Many, "{0} lat temu" }, { PluralRulesValues.Other, "{0} roku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} rok" }, { PluralRulesValues.Few, "za {0} lata" }, { PluralRulesValues.Many, "za {0} lat" }, { PluralRulesValues.Other, "za {0} roku" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "r.",
                 new Dictionary<int, string> { { -1, "w zeszłym roku" }, { 0, "w tym roku" }, { 1, "w przyszłym roku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} rok temu" }, { PluralRulesValues.Few, "{0} lata temu" }, { PluralRulesValues.Many, "{0} lat temu" }, { PluralRulesValues.Other, "{0} roku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} rok" }, { PluralRulesValues.Few, "za {0} lata" }, { PluralRulesValues.Many, "za {0} lat" }, { PluralRulesValues.Other, "za {0} roku" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "kwartał",
                 new Dictionary<int, string> { { -1, "w zeszłym kwartale" }, { 0, "w tym kwartale" }, { 1, "w przyszłym kwartale" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} kwartał temu" }, { PluralRulesValues.Few, "{0} kwartały temu" }, { PluralRulesValues.Many, "{0} kwartałów temu" }, { PluralRulesValues.Other, "{0} kwartału temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} kwartał" }, { PluralRulesValues.Few, "za {0} kwartały" }, { PluralRulesValues.Many, "za {0} kwartałów" }, { PluralRulesValues.Other, "za {0} kwartału" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "kw.",
                 new Dictionary<int, string> { { -1, "w zeszłym kwartale" }, { 0, "w tym kwartale" }, { 1, "w przyszłym kwartale" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} kw. temu" }, { PluralRulesValues.Few, "{0} kw. temu" }, { PluralRulesValues.Many, "{0} kw. temu" }, { PluralRulesValues.Other, "{0} kw. temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} kw." }, { PluralRulesValues.Few, "za {0} kw." }, { PluralRulesValues.Many, "za {0} kw." }, { PluralRulesValues.Other, "za {0} kw." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "kw.",
                 new Dictionary<int, string> { { -1, "w zeszłym kwartale" }, { 0, "w tym kwartale" }, { 1, "w przyszłym kwartale" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} kw. temu" }, { PluralRulesValues.Few, "{0} kw. temu" }, { PluralRulesValues.Many, "{0} kw. temu" }, { PluralRulesValues.Other, "{0} kw. temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} kw." }, { PluralRulesValues.Few, "za {0} kw." }, { PluralRulesValues.Many, "za {0} kw." }, { PluralRulesValues.Other, "za {0} kw." } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "miesiąc",
                 new Dictionary<int, string> { { -1, "w zeszłym miesiącu" }, { 0, "w tym miesiącu" }, { 1, "w przyszłym miesiącu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} miesiąc temu" }, { PluralRulesValues.Few, "{0} miesiące temu" }, { PluralRulesValues.Many, "{0} miesięcy temu" }, { PluralRulesValues.Other, "{0} miesiąca temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} miesiąc" }, { PluralRulesValues.Few, "za {0} miesiące" }, { PluralRulesValues.Many, "za {0} miesięcy" }, { PluralRulesValues.Other, "za {0} miesiąca" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "mc",
                 new Dictionary<int, string> { { -1, "w zeszłym mies." }, { 0, "w tym mies." }, { 1, "w przyszłym mies." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mies. temu" }, { PluralRulesValues.Few, "{0} mies. temu" }, { PluralRulesValues.Many, "{0} mies. temu" }, { PluralRulesValues.Other, "{0} mies. temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} mies." }, { PluralRulesValues.Few, "za {0} mies." }, { PluralRulesValues.Many, "za {0} mies." }, { PluralRulesValues.Other, "za {0} mies." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "mies.",
                 new Dictionary<int, string> { { -1, "w zeszłym mies." }, { 0, "w tym mies." }, { 1, "w przyszłym mies." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mies. temu" }, { PluralRulesValues.Few, "{0} mies. temu" }, { PluralRulesValues.Many, "{0} mies. temu" }, { PluralRulesValues.Other, "{0} mies. temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} mies." }, { PluralRulesValues.Few, "za {0} mies." }, { PluralRulesValues.Many, "za {0} mies." }, { PluralRulesValues.Other, "za {0} mies." } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "tydzień",
                 new Dictionary<int, string> { { -1, "w zeszłym tygodniu" }, { 0, "w tym tygodniu" }, { 1, "w przyszłym tygodniu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} tydzień temu" }, { PluralRulesValues.Few, "{0} tygodnie temu" }, { PluralRulesValues.Many, "{0} tygodni temu" }, { PluralRulesValues.Other, "{0} tygodnia temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} tydzień" }, { PluralRulesValues.Few, "za {0} tygodnie" }, { PluralRulesValues.Many, "za {0} tygodni" }, { PluralRulesValues.Other, "za {0} tygodnia" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "tydz.",
                 new Dictionary<int, string> { { -1, "w zeszłym tyg." }, { 0, "w tym tyg." }, { 1, "w przyszłym tyg." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} tydz. temu" }, { PluralRulesValues.Few, "{0} tyg. temu" }, { PluralRulesValues.Many, "{0} tyg. temu" }, { PluralRulesValues.Other, "{0} tyg. temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} tydz." }, { PluralRulesValues.Few, "za {0} tyg." }, { PluralRulesValues.Many, "za {0} tyg." }, { PluralRulesValues.Other, "za {0} tyg." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "tydz.",
                 new Dictionary<int, string> { { -1, "w zeszłym tyg." }, { 0, "w tym tyg." }, { 1, "w przyszłym tyg." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} tydz. temu" }, { PluralRulesValues.Few, "{0} tyg. temu" }, { PluralRulesValues.Many, "{0} tyg. temu" }, { PluralRulesValues.Other, "{0} tyg. temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} tydz." }, { PluralRulesValues.Few, "za {0} tyg." }, { PluralRulesValues.Many, "za {0} tyg." }, { PluralRulesValues.Other, "za {0} tyg." } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "tydzień miesiąca",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "tydz. mies.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "tydz. mies.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "dzień",
                 new Dictionary<int, string> { { -2, "przedwczoraj" }, { -1, "wczoraj" }, { 0, "dzisiaj" }, { 1, "jutro" }, { 2, "pojutrze" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} dzień temu" }, { PluralRulesValues.Few, "{0} dni temu" }, { PluralRulesValues.Many, "{0} dni temu" }, { PluralRulesValues.Other, "{0} dnia temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} dzień" }, { PluralRulesValues.Few, "za {0} dni" }, { PluralRulesValues.Many, "za {0} dni" }, { PluralRulesValues.Other, "za {0} dnia" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "d.",
                 new Dictionary<int, string> { { -2, "przedwczoraj" }, { -1, "wcz." }, { 0, "dziś" }, { 1, "jutro" }, { 2, "pojutrze" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} dzień temu" }, { PluralRulesValues.Few, "{0} dni temu" }, { PluralRulesValues.Many, "{0} dni temu" }, { PluralRulesValues.Other, "{0} dnia temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} dzień" }, { PluralRulesValues.Few, "za {0} dni" }, { PluralRulesValues.Many, "za {0} dni" }, { PluralRulesValues.Other, "za {0} dnia" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "dz.",
                 new Dictionary<int, string> { { -2, "przedwczoraj" }, { -1, "wczoraj" }, { 0, "dzisiaj" }, { 1, "jutro" }, { 2, "pojutrze" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} dzień temu" }, { PluralRulesValues.Few, "{0} dni temu" }, { PluralRulesValues.Many, "{0} dni temu" }, { PluralRulesValues.Other, "{0} dnia temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} dzień" }, { PluralRulesValues.Few, "za {0} dni" }, { PluralRulesValues.Many, "za {0} dni" }, { PluralRulesValues.Other, "za {0} dnia" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "dzień roku",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "dz. r.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "dz. roku",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "dzień tygodnia",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "dz. tyg.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "dzień tyg.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "dzień miesiąca",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "dz. mies.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "dzień mies.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszłą niedzielę" }, { 0, "w tę niedzielę" }, { 1, "w przyszłą niedzielę" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} niedzielę temu" }, { PluralRulesValues.Few, "{0} niedziele temu" }, { PluralRulesValues.Many, "{0} niedziel temu" }, { PluralRulesValues.Other, "{0} niedzieli temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} niedzielę" }, { PluralRulesValues.Few, "za {0} niedziele" }, { PluralRulesValues.Many, "za {0} niedziel" }, { PluralRulesValues.Other, "za {0} niedzieli" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszłą niedzielę" }, { 0, "w tę niedzielę" }, { 1, "w przyszłą niedzielę" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} niedzielę temu" }, { PluralRulesValues.Few, "{0} niedziele temu" }, { PluralRulesValues.Many, "{0} niedziel temu" }, { PluralRulesValues.Other, "{0} niedzieli temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} niedzielę" }, { PluralRulesValues.Few, "za {0} niedziele" }, { PluralRulesValues.Many, "za {0} niedziel" }, { PluralRulesValues.Other, "za {0} niedzieli" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszłą niedzielę" }, { 0, "w tę niedzielę" }, { 1, "w przyszłą niedzielę" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} niedzielę temu" }, { PluralRulesValues.Few, "{0} niedziele temu" }, { PluralRulesValues.Many, "{0} niedziel temu" }, { PluralRulesValues.Other, "{0} niedzieli temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} niedzielę" }, { PluralRulesValues.Few, "za {0} niedziele" }, { PluralRulesValues.Many, "za {0} niedziel" }, { PluralRulesValues.Other, "za {0} niedzieli" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszły poniedziałek" }, { 0, "w ten poniedziałek" }, { 1, "w przyszły poniedziałek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} poniedziałek temu" }, { PluralRulesValues.Few, "{0} poniedziałki temu" }, { PluralRulesValues.Many, "{0} poniedziałków temu" }, { PluralRulesValues.Other, "{0} poniedziałku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} poniedziałek" }, { PluralRulesValues.Few, "za {0} poniedziałki" }, { PluralRulesValues.Many, "za {0} poniedziałków" }, { PluralRulesValues.Other, "za {0} poniedziałku" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszły poniedziałek" }, { 0, "w ten poniedziałek" }, { 1, "w przyszły poniedziałek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} poniedziałek temu" }, { PluralRulesValues.Few, "{0} poniedziałki temu" }, { PluralRulesValues.Many, "{0} poniedziałków temu" }, { PluralRulesValues.Other, "{0} poniedziałku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} poniedziałek" }, { PluralRulesValues.Few, "za {0} poniedziałki" }, { PluralRulesValues.Many, "za {0} poniedziałków" }, { PluralRulesValues.Other, "za {0} poniedziałku" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszły poniedziałek" }, { 0, "w ten poniedziałek" }, { 1, "w przyszły poniedziałek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} poniedziałek temu" }, { PluralRulesValues.Few, "{0} poniedziałki temu" }, { PluralRulesValues.Many, "{0} poniedziałków temu" }, { PluralRulesValues.Other, "{0} poniedziałku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} poniedziałek" }, { PluralRulesValues.Few, "za {0} poniedziałki" }, { PluralRulesValues.Many, "za {0} poniedziałków" }, { PluralRulesValues.Other, "za {0} poniedziałku" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszły wtorek" }, { 0, "w ten wtorek" }, { 1, "w przyszły wtorek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} wtorek temu" }, { PluralRulesValues.Few, "{0} wtorki temu" }, { PluralRulesValues.Many, "{0} wtorków temu" }, { PluralRulesValues.Other, "{0} wtorku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} wtorek" }, { PluralRulesValues.Few, "za {0} wtorki" }, { PluralRulesValues.Many, "za {0} wtorków" }, { PluralRulesValues.Other, "za {0} wtorku" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszły wtorek" }, { 0, "w ten wtorek" }, { 1, "w przyszły wtorek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} wtorek temu" }, { PluralRulesValues.Few, "{0} wtorki temu" }, { PluralRulesValues.Many, "{0} wtorków temu" }, { PluralRulesValues.Other, "{0} wtorku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} wtorek" }, { PluralRulesValues.Few, "za {0} wtorki" }, { PluralRulesValues.Many, "za {0} wtorków" }, { PluralRulesValues.Other, "za {0} wtorku" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszły wtorek" }, { 0, "w ten wtorek" }, { 1, "w przyszły wtorek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} wtorek temu" }, { PluralRulesValues.Few, "{0} wtorki temu" }, { PluralRulesValues.Many, "{0} wtorków temu" }, { PluralRulesValues.Other, "{0} wtorku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} wtorek" }, { PluralRulesValues.Few, "za {0} wtorki" }, { PluralRulesValues.Many, "za {0} wtorków" }, { PluralRulesValues.Other, "za {0} wtorku" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszłą środę" }, { 0, "w tę środę" }, { 1, "w przyszłą środę" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} środę temu" }, { PluralRulesValues.Few, "{0} środy temu" }, { PluralRulesValues.Many, "{0} śród temu" }, { PluralRulesValues.Other, "{0} środy temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} środę" }, { PluralRulesValues.Few, "za {0} środy" }, { PluralRulesValues.Many, "za {0} śród" }, { PluralRulesValues.Other, "za {0} środy" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszłą środę" }, { 0, "w tę środę" }, { 1, "w przyszłą środę" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} środę temu" }, { PluralRulesValues.Few, "{0} środy temu" }, { PluralRulesValues.Many, "{0} śród temu" }, { PluralRulesValues.Other, "{0} środy temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} środę" }, { PluralRulesValues.Few, "za {0} środy" }, { PluralRulesValues.Many, "za {0} śród" }, { PluralRulesValues.Other, "za {0} środy" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszłą środę" }, { 0, "w tę środę" }, { 1, "w przyszłą środę" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} środę temu" }, { PluralRulesValues.Few, "{0} środy temu" }, { PluralRulesValues.Many, "{0} śród temu" }, { PluralRulesValues.Other, "{0} środy temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} środę" }, { PluralRulesValues.Few, "za {0} środy" }, { PluralRulesValues.Many, "za {0} śród" }, { PluralRulesValues.Other, "za {0} środy" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszły czwartek" }, { 0, "w ten czwartek" }, { 1, "w przyszły czwartek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} czwartek temu" }, { PluralRulesValues.Few, "{0} czwartki temu" }, { PluralRulesValues.Many, "{0} czwartków temu" }, { PluralRulesValues.Other, "{0} czwartku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} czwartek" }, { PluralRulesValues.Few, "za {0} czwartki" }, { PluralRulesValues.Many, "za {0} czwartków" }, { PluralRulesValues.Other, "za {0} czwartku" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszły czwartek" }, { 0, "w ten czwartek" }, { 1, "w przyszły czwartek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} czwartek temu" }, { PluralRulesValues.Few, "{0} czwartki temu" }, { PluralRulesValues.Many, "{0} czwartków temu" }, { PluralRulesValues.Other, "{0} czwartku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} czwartek" }, { PluralRulesValues.Few, "za {0} czwartki" }, { PluralRulesValues.Many, "za {0} czwartków" }, { PluralRulesValues.Other, "za {0} czwartku" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszły czwartek" }, { 0, "w ten czwartek" }, { 1, "w przyszły czwartek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} czwartek temu" }, { PluralRulesValues.Few, "{0} czwartki temu" }, { PluralRulesValues.Many, "{0} czwartków temu" }, { PluralRulesValues.Other, "{0} czwartku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} czwartek" }, { PluralRulesValues.Few, "za {0} czwartki" }, { PluralRulesValues.Many, "za {0} czwartków" }, { PluralRulesValues.Other, "za {0} czwartku" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszły piątek" }, { 0, "w ten piątek" }, { 1, "w przyszły piątek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} piątek temu" }, { PluralRulesValues.Few, "{0} piątki temu" }, { PluralRulesValues.Many, "{0} piątków temu" }, { PluralRulesValues.Other, "{0} piątku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} piątek" }, { PluralRulesValues.Few, "za {0} piątki" }, { PluralRulesValues.Many, "za {0} piątków" }, { PluralRulesValues.Other, "za {0} piątku" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszły piątek" }, { 0, "w ten piątek" }, { 1, "w przyszły piątek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} piątek temu" }, { PluralRulesValues.Few, "{0} piątki temu" }, { PluralRulesValues.Many, "{0} piątków temu" }, { PluralRulesValues.Other, "{0} piątku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} piątek" }, { PluralRulesValues.Few, "za {0} piątki" }, { PluralRulesValues.Many, "za {0} piątków" }, { PluralRulesValues.Other, "za {0} piątku" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszły piątek" }, { 0, "w ten piątek" }, { 1, "w przyszły piątek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} piątek temu" }, { PluralRulesValues.Few, "{0} piątki temu" }, { PluralRulesValues.Many, "{0} piątków temu" }, { PluralRulesValues.Other, "{0} piątku temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} piątek" }, { PluralRulesValues.Few, "za {0} piątki" }, { PluralRulesValues.Many, "za {0} piątków" }, { PluralRulesValues.Other, "za {0} piątku" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszłą sobotę" }, { 0, "w tę sobotę" }, { 1, "w przyszłą sobotę" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sobotę temu" }, { PluralRulesValues.Few, "{0} soboty temu" }, { PluralRulesValues.Many, "{0} sobót temu" }, { PluralRulesValues.Other, "{0} soboty temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sobotę" }, { PluralRulesValues.Few, "za {0} soboty" }, { PluralRulesValues.Many, "za {0} sobót" }, { PluralRulesValues.Other, "za {0} soboty" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszłą sobotę" }, { 0, "w tę sobotę" }, { 1, "w przyszłą sobotę" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sobotę temu" }, { PluralRulesValues.Few, "{0} soboty temu" }, { PluralRulesValues.Many, "{0} sobót temu" }, { PluralRulesValues.Other, "{0} soboty temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sobotę" }, { PluralRulesValues.Few, "za {0} soboty" }, { PluralRulesValues.Many, "za {0} sobót" }, { PluralRulesValues.Other, "za {0} soboty" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "w zeszłą sobotę" }, { 0, "w tę sobotę" }, { 1, "w przyszłą sobotę" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sobotę temu" }, { PluralRulesValues.Few, "{0} soboty temu" }, { PluralRulesValues.Many, "{0} sobót temu" }, { PluralRulesValues.Other, "{0} soboty temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sobotę" }, { PluralRulesValues.Few, "za {0} soboty" }, { PluralRulesValues.Many, "za {0} sobót" }, { PluralRulesValues.Other, "za {0} soboty" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "rano / po południu / wieczorem",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "rano / po poł. / wiecz.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "rano / po południu / wieczorem",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "godzina",
                 new Dictionary<int, string> { { 0, "ta godzina" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} godzinę temu" }, { PluralRulesValues.Few, "{0} godziny temu" }, { PluralRulesValues.Many, "{0} godzin temu" }, { PluralRulesValues.Other, "{0} godziny temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} godzinę" }, { PluralRulesValues.Few, "za {0} godziny" }, { PluralRulesValues.Many, "za {0} godzin" }, { PluralRulesValues.Other, "za {0} godziny" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "g.",
                 new Dictionary<int, string> { { 0, "ta godzina" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} g. temu" }, { PluralRulesValues.Few, "{0} g. temu" }, { PluralRulesValues.Many, "{0} g. temu" }, { PluralRulesValues.Other, "{0} g. temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} g." }, { PluralRulesValues.Few, "za {0} g." }, { PluralRulesValues.Many, "za {0} g." }, { PluralRulesValues.Other, "za {0} g." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "godz.",
                 new Dictionary<int, string> { { 0, "ta godzina" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} godz. temu" }, { PluralRulesValues.Few, "{0} godz. temu" }, { PluralRulesValues.Many, "{0} godz. temu" }, { PluralRulesValues.Other, "{0} godz. temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} godz." }, { PluralRulesValues.Few, "za {0} godz." }, { PluralRulesValues.Many, "za {0} godz." }, { PluralRulesValues.Other, "za {0} godz." } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "minuta",
                 new Dictionary<int, string> { { 0, "ta minuta" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} minutę temu" }, { PluralRulesValues.Few, "{0} minuty temu" }, { PluralRulesValues.Many, "{0} minut temu" }, { PluralRulesValues.Other, "{0} minuty temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} minutę" }, { PluralRulesValues.Few, "za {0} minuty" }, { PluralRulesValues.Many, "za {0} minut" }, { PluralRulesValues.Other, "za {0} minuty" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "min",
                 new Dictionary<int, string> { { 0, "ta minuta" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min temu" }, { PluralRulesValues.Few, "{0} min temu" }, { PluralRulesValues.Many, "{0} min temu" }, { PluralRulesValues.Other, "{0} min temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} min" }, { PluralRulesValues.Few, "za {0} min" }, { PluralRulesValues.Many, "za {0} min" }, { PluralRulesValues.Other, "za {0} min" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "min",
                 new Dictionary<int, string> { { 0, "ta minuta" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min temu" }, { PluralRulesValues.Few, "{0} min temu" }, { PluralRulesValues.Many, "{0} min temu" }, { PluralRulesValues.Other, "{0} min temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} min" }, { PluralRulesValues.Few, "za {0} min" }, { PluralRulesValues.Many, "za {0} min" }, { PluralRulesValues.Other, "za {0} min" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "sekunda",
                 new Dictionary<int, string> { { 0, "teraz" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sekundę temu" }, { PluralRulesValues.Few, "{0} sekundy temu" }, { PluralRulesValues.Many, "{0} sekund temu" }, { PluralRulesValues.Other, "{0} sekundy temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sekundę" }, { PluralRulesValues.Few, "za {0} sekundy" }, { PluralRulesValues.Many, "za {0} sekund" }, { PluralRulesValues.Other, "za {0} sekundy" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "s",
                 new Dictionary<int, string> { { 0, "teraz" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} s temu" }, { PluralRulesValues.Few, "{0} s temu" }, { PluralRulesValues.Many, "{0} s temu" }, { PluralRulesValues.Other, "{0} s temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} s" }, { PluralRulesValues.Few, "za {0} s" }, { PluralRulesValues.Many, "za {0} s" }, { PluralRulesValues.Other, "za {0} s" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "sek.",
                 new Dictionary<int, string> { { 0, "teraz" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sek. temu" }, { PluralRulesValues.Few, "{0} sek. temu" }, { PluralRulesValues.Many, "{0} sek. temu" }, { PluralRulesValues.Other, "{0} sek. temu" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sek." }, { PluralRulesValues.Few, "za {0} sek." }, { PluralRulesValues.Many, "za {0} sek." }, { PluralRulesValues.Other, "za {0} sek." } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Polish' [pl]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "strefa czasowa",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "str. czas.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "str. czasowa",
                 null,
                 null,

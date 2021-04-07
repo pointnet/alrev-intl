@@ -15,534 +15,607 @@ using System.Collections.Generic;
 
 namespace Alrev.Intl.RelativeTime.Resources
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Tigrinya (Eritrea)' [ti-ER]
+    /// </summary>
     public class TigrinyaEritreaRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "ti-ER";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 
+        /// <summary>
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ዘመን",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ዘመን",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ዘመን",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ዓመት",
                 new Dictionary<int, string> { { -1, "ዓሚ" }, { 0, "ሎሚ ዓመት" }, { 1, "ንዓመታ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ዓ" }, { PluralRulesValues.Other, "ቅድሚ {0} ዓ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ዓ" }, { PluralRulesValues.Other, "ኣብ {0} ዓ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ዓመት",
                 new Dictionary<int, string> { { -1, "ዓሚ" }, { 0, "ሎሚ ዓመት" }, { 1, "ንዓመታ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ዓ" }, { PluralRulesValues.Other, "ቅድሚ {0} ዓ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ዓ" }, { PluralRulesValues.Other, "ኣብ {0} ዓ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ዓመት",
                 new Dictionary<int, string> { { -1, "ዓሚ" }, { 0, "ሎሚ ዓመት" }, { 1, "ንዓመታ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ -{0} ዓ" }, { PluralRulesValues.Other, "ቅድሚ {0} ዓ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ዓ" }, { PluralRulesValues.Other, "ኣብ {0} ዓ" } }));
 
+        /// <summary>
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ርብዒ",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ርብዒ" }, { 0, "ህሉው ርብዒ" }, { 1, "ዝመጽእ ርብዒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ርብዒ" }, { PluralRulesValues.Other, "ቅድሚ {0} ርብዒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ርብዒ" }, { PluralRulesValues.Other, "ኣብ {0} ርብዒ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ርብዒ",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ርብዒ" }, { 0, "ህሉው ርብዒ" }, { 1, "ዝመጽእ ርብዒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ርብዒ" }, { PluralRulesValues.Other, "ቅድሚ {0} ርብዒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ርብዒ" }, { PluralRulesValues.Other, "ኣብ {0} ርብዒ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ርብዒ",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ርብዒ" }, { 0, "ህሉው ርብዒ" }, { 1, "ዝመጽእ ርብዒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ርብዒ" }, { PluralRulesValues.Other, "ቅድሚ {0} ርብዒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ርብዒ" }, { PluralRulesValues.Other, "ኣብ {0} ርብዒ" } }));
 
+        /// <summary>
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ወርሒ",
                 new Dictionary<int, string> { { -1, "last month" }, { 0, "ህሉው ወርሒ" }, { 1, "ዝመጽእ ወርሒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ወርሒ" }, { PluralRulesValues.Other, "ቅድሚ {0} ወርሒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ወርሒ" }, { PluralRulesValues.Other, "ኣብ {0} ወርሒ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ወርሒ",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ወርሒ" }, { 0, "ህሉው ወርሒ" }, { 1, "ዝመጽእ ወርሒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ወርሒ" }, { PluralRulesValues.Other, "ቅድሚ {0} ወርሒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ወርሒ" }, { PluralRulesValues.Other, "ኣብ {0} ወርሒ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ወርሒ",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ወርሒ" }, { 0, "ህሉው ወርሒ" }, { 1, "ዝመጽእ ወርሒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ወርሒ" }, { PluralRulesValues.Other, "ቅድሚ {0} ወርሒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ወርሒ" }, { PluralRulesValues.Other, "ኣብ {0} ወርሒ" } }));
 
+        /// <summary>
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "Week",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰሙን" }, { 0, "ህሉው ሰሙን" }, { 1, "ዝመጽእ ሰሙን" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰሙን" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰሙን" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰሙን" }, { PluralRulesValues.Other, "ኣብ {0} ሰሙን" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ሰሙን",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰሙን" }, { 0, "ህሉው ሰሙን" }, { 1, "ዝመጽእ ሰሙን" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰሙን" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰሙን" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰሙን" }, { PluralRulesValues.Other, "ኣብ {0} ሰሙን" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ሰሙን",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰሙን" }, { 0, "ህሉው ሰሙን" }, { 1, "ዝመጽእ ሰሙን" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰሙን" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰሙን" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰሙን" }, { PluralRulesValues.Other, "ኣብ {0} ሰሙን" } }));
 
+        /// <summary>
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ሰሙን ናይ ወርሒ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ሰሙ. ናይ ወር.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ሰሙ. ናይ ወር.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "መዓልቲ",
                 new Dictionary<int, string> { { -1, "ትማሊ" }, { 0, "ሎሚ" }, { 1, "ጽባሕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} መዓልቲ" }, { PluralRulesValues.Other, "ኣብ {0} መዓልቲ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} መዓልቲ" }, { PluralRulesValues.Other, "ኣብ {0} መዓልቲ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "መዓልቲ",
                 new Dictionary<int, string> { { -1, "ትማሊ" }, { 0, "ሎሚ" }, { 1, "ጽባሕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} መዓልቲ" }, { PluralRulesValues.Other, "ቅድሚ {0} መዓልቲ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} መዓልቲ" }, { PluralRulesValues.Other, "ኣብ {0} መዓልቲ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "መዓልቲ",
                 new Dictionary<int, string> { { -1, "ትማሊ" }, { 0, "ሎሚ" }, { 1, "ጽባሕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} መዓልቲ" }, { PluralRulesValues.Other, "ቅድሚ {0} መዓልቲ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} መዓልቲ" }, { PluralRulesValues.Other, "ኣብ {0} መዓልቲ" } }));
 
+        /// <summary>
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "መዓልቲ ናይ ዓመት",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "መዓልቲ ናይ ዓ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "መዓልቲ ናይ ዓ.",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "መዓልቲ ናይ ሰሙን",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "መዓልቲ ናይ ሰ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "መዓልቲ ናይ ሰሙን",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "መዓልታት ስራሕ ናይ ወርሒ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "መ.ስራሕ ናይ ወርሒ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "መዓልታት ስራሕ ናይ ወርሒ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰንበት" }, { 0, "ሎሚ ሰንበት" }, { 1, "ዝመጽእ ሰንበት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰንበት" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰንበት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰንበት" }, { PluralRulesValues.Other, "ኣብ {0} ሰንበት" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰንበት" }, { 0, "ሎሚ ሰንበት" }, { 1, "ዝመጽእ ሰንበት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰንበት" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰንበት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰንበት" }, { PluralRulesValues.Other, "ኣብ {0} ሰንበት" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰንበት" }, { 0, "ሎሚ ሰንበት" }, { 1, "ዝመጽእ ሰንበት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰንበት" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰንበት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰንበት" }, { PluralRulesValues.Other, "ኣብ {0} ሰንበት" } }));
 
+        /// <summary>
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰኑይ" }, { 0, "ሎሚ ሰኑይ" }, { 1, "ዝመጽእ ሰኑይ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰኑይ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰኑይ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰኑይ" }, { PluralRulesValues.Other, "ኣብ {0} ሰኑይ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰኑይ" }, { 0, "ሎሚ ሰኑይ" }, { 1, "ዝመጽእ ሰኑይ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰኑይ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰኑይ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰኑይ" }, { PluralRulesValues.Other, "ኣብ {0} ሰኑይ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰኑይ" }, { 0, "ሎሚ ሰኑይ" }, { 1, "ዝመጽእ ሰኑይ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰኑይ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰኑይ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰኑይ" }, { PluralRulesValues.Other, "ኣብ {0} ሰኑይ" } }));
 
+        /// <summary>
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰሉስ" }, { 0, "ሎሚ ሰሉስ" }, { 1, "ዝመጽእ ሰሉስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰሉስ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰሉስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰሉስ" }, { PluralRulesValues.Other, "ኣብ {0} ሰሉስ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰሉስ" }, { 0, "ሎሚ ሰሉስ" }, { 1, "ዝመጽእ ሰሉስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰሉስ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰሉስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰሉስ" }, { PluralRulesValues.Other, "ኣብ {0} ሰሉስ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰሉስ" }, { 0, "ሎሚ ሰሉስ" }, { 1, "ዝመጽእ ሰሉስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰሉስ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰሉስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰሉስ" }, { PluralRulesValues.Other, "ኣብ {0} ሰሉስ" } }));
 
+        /// <summary>
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ረቡዕ" }, { 0, "ሎሚ ረቡዕ" }, { 1, "ዝመጽእ ረቡዕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ረቡዕ" }, { PluralRulesValues.Other, "ቅድሚ {0} ረቡዕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ረቡዕ" }, { PluralRulesValues.Other, "ኣብ {0} ረቡዕ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ረቡዕ" }, { 0, "ሎሚ ረቡዕ" }, { 1, "ዝመጽእ ረቡዕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ረቡዕ" }, { PluralRulesValues.Other, "ቅድሚ {0} ረቡዕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ረቡዕ" }, { PluralRulesValues.Other, "ኣብ {0} ረቡዕ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ረቡዕ" }, { 0, "ሎሚ ረቡዕ" }, { 1, "ዝመጽእ ረቡዕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ረቡዕ" }, { PluralRulesValues.Other, "ቅድሚ {0} ረቡዕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ረቡዕ" }, { PluralRulesValues.Other, "ኣብ {0} ረቡዕ" } }));
 
+        /// <summary>
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሓሙስ" }, { 0, "ሎሚ ሓሙስ" }, { 1, "ዝመጽእ ሓሙስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሓሙስ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሓሙስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሓሙስ" }, { PluralRulesValues.Other, "ኣብ {0} ሓሙስ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሓሙስ" }, { 0, "ሎሚ ሓሙስ" }, { 1, "ዝመጽእ ሓሙስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሓሙስ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሓሙስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሓሙስ" }, { PluralRulesValues.Other, "ኣብ {0} ሓሙስ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሓሙስ" }, { 0, "ሎሚ ሓሙስ" }, { 1, "ዝመጽእ ሓሙስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሓሙስ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሓሙስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሓሙስ" }, { PluralRulesValues.Other, "ኣብ {0} ሓሙስ" } }));
 
+        /// <summary>
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ዓርቢ" }, { 0, "ሎሚ ዓርቢ" }, { 1, "ዝመጽእ ዓርቢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ዓርቢ" }, { PluralRulesValues.Other, "ቅድሚ {0} ዓርቢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ዓርቢ" }, { PluralRulesValues.Other, "ኣብ {0} ዓርቢ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ዓርቢ" }, { 0, "ሎሚ ዓርቢ" }, { 1, "ዝመጽእ ዓርቢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ዓርቢ" }, { PluralRulesValues.Other, "ቅድሚ {0} ዓርቢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ዓርቢ" }, { PluralRulesValues.Other, "ኣብ {0} ዓርቢ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ዓርቢ" }, { 0, "ሎሚ ዓርቢ" }, { 1, "ዝመጽእ ዓርቢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ዓርቢ" }, { PluralRulesValues.Other, "ቅድሚ {0} ዓርቢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ዓርቢ" }, { PluralRulesValues.Other, "ኣብ {0} ዓርቢ" } }));
 
+        /// <summary>
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ቀዳም" }, { 0, "ሎሚ ቀዳም" }, { 1, "ዝመጽእ ቀዳም" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ቀዳም" }, { PluralRulesValues.Other, "ቅድሚ {0} ቀዳም" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ቀዳም" }, { PluralRulesValues.Other, "ኣብ {0} ቀዳም" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ቀዳም" }, { 0, "ሎሚ ቀዳም" }, { 1, "ዝመጽእ ቀዳም" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ቀዳም" }, { PluralRulesValues.Other, "ቅድሚ {0} ቀዳም" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ቀዳም" }, { PluralRulesValues.Other, "ኣብ {0} ቀዳም" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ቀዳም" }, { 0, "ሎሚ ቀዳም" }, { 1, "ዝመጽእ ቀዳም" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ቀዳም" }, { PluralRulesValues.Other, "ቅድሚ {0} ቀዳም" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ቀዳም" }, { PluralRulesValues.Other, "ኣብ {0} ቀዳም" } }));
 
+        /// <summary>
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ቅድመ ፍርቂ-መዓልቲ/ድሕሪ ፍርቂ-መዓልቲ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ቅድመ ፍርቂ-መዓልቲ/ድሕሪ ፍርቂ-መዓልቲ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ቅድመ ፍርቂ-መዓልቲ/ድሕሪ ፍርቂ-መዓልቲ",
                 null,
                 null,
                 null));
 
+        /// <summary>
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ሰዓት",
                 new Dictionary<int, string> { { 0, "ኣብዚ ሰዓት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰዓት" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰዓት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰዓት" }, { PluralRulesValues.Other, "ኣብ {0} ሰዓት" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ሰዓት",
                 new Dictionary<int, string> { { 0, "ኣብዚ ሰዓት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰዓት" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰዓት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰዓት" }, { PluralRulesValues.Other, "ኣብ {0} ሰዓት" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ሰዓት",
                 new Dictionary<int, string> { { 0, "ኣብዚ ሰዓት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰዓት" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰዓት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰዓት" }, { PluralRulesValues.Other, "ኣብ {0} ሰዓት" } }));
 
+        /// <summary>
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ደቒቕ",
                 new Dictionary<int, string> { { 0, "ኣብዚ ደቒቕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ደቒቕ" }, { PluralRulesValues.Other, "ቅድሚ {0} ደቒቕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ደቒቕ" }, { PluralRulesValues.Other, "ኣብ {0} ደቒቕ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ደቒ.",
                 new Dictionary<int, string> { { 0, "ኣብዚ ደቒቕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ደቒቕ" }, { PluralRulesValues.Other, "ቅድሚ {0} ደቒቕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ደቒቕ" }, { PluralRulesValues.Other, "ኣብ {0} ደቒቕ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ደቒቕ",
                 new Dictionary<int, string> { { 0, "ኣብዚ ደቒቕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ደቒቕ" }, { PluralRulesValues.Other, "ቅድሚ {0} ደቒቕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ደቒቕ" }, { PluralRulesValues.Other, "ኣብ {0} ደቒቕ" } }));
 
+        /// <summary>
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ካልኢት",
                 new Dictionary<int, string> { { 0, "ሕጂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ካልኢት" }, { PluralRulesValues.Other, "ቅድሚ {0} ካልኢት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ካልኢት" }, { PluralRulesValues.Other, "ኣብ {0} ካልኢት" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ካልኢት",
                 new Dictionary<int, string> { { 0, "ሕጂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ካልኢት" }, { PluralRulesValues.Other, "ቅድሚ {0} ካልኢት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ካልኢት" }, { PluralRulesValues.Other, "ኣብ {0} ካልኢት" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ካልኢት",
                 new Dictionary<int, string> { { 0, "ሕጂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ካልኢት" }, { PluralRulesValues.Other, "ቅድሚ {0} ካልኢት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ካልኢት" }, { PluralRulesValues.Other, "ኣብ {0} ካልኢት" } }));
 
+        /// <summary>
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Tigrinya (Eritrea)' [ti-ER]
+        /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Long,
+                RelativeTimeStylesValues.Long,
                 "ክልል",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Narrow,
+                RelativeTimeStylesValues.Narrow,
                 "ክልል",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeTypeValues.Short,
+                RelativeTimeStylesValues.Short,
                 "ክልል",
                 null,
                 null,
