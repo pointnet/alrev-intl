@@ -3,7 +3,7 @@
     /// <summary>
     /// Enumeration of Relative Time styles
     /// </summary>
-    public enum RelativeTimeStylesValues
+    public enum RelativeTimeStyleValues
     {
         /// <summary>
         /// Unknown style

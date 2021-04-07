@@ -14,9 +14,14 @@ namespace Alrev.Intl.Abstractions.RelativeTime
         string DisplayName { get; }
 
         /// <summary>
-        /// Gets the RelativeTimeStylesValues of the resource
+        /// Gets the RelativeTimeUnitValues of the resource
         /// </summary>
-        RelativeTimeStylesValues RelativeTimeStyle { get; }
+        RelativeTimeUnitValues RelativeTimeUnit { get; }
+
+        /// <summary>
+        /// Gets the RelativeTimeStyleValues of the resource
+        /// </summary>
+        RelativeTimeStyleValues RelativeTimeStyle { get; }
 
         /// <summary>
         /// Gets the Past resources dictionary

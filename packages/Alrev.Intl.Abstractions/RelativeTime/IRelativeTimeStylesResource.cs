@@ -19,5 +19,13 @@
         /// Gets the Relative Time Short style resource
         /// </summary>
         IRelativeTimeResource ShortRelativeTimeResource { get; }
+
+        /// <summary>
+        /// Gets the Relative Time resource based on the style specified
+        /// </summary>
+        /// <param name="relativeTimeStyle">The resource style to get</param>
+        /// <returns>An <see cref="IRelativeTimeResource"/></returns>
+        /// <exception cref="RelativeTimeStyleNotFoundException"></exception>
+        IRelativeTimeResource GetRelativeTimeResource(RelativeTimeStyleValues relativeTimeStyle);
     }
 }
