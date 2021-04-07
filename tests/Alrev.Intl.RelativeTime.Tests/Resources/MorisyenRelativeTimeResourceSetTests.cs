@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using Alrev.Intl.Abstractions.RelativeTime;
-using Alrev.Intl.RelativeTime.Globalization;
 using System;
 using System.Globalization;
 using Xunit;
@@ -16,13 +15,20 @@ using Xunit;
 
 namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
 {
+    [Collection("RelativeTimeLocalizer")]
     public class MorisyenRelativeTimeResourceSetTests
     {
+        private RelativeTimeLocalizerFixture fixture;
+
+        public MorisyenRelativeTimeResourceSetTests(RelativeTimeLocalizerFixture fixture)
+        {
+            this.fixture = fixture;
+        }
+
         [Fact]
         public void UnknownRelativeTimeUnit_ShouldThrow_NotImplementedException()
         {
-            RelativeTimeLocalizer localizer = new RelativeTimeLocalizer();
-            IRelativeTimeResourceSet resourceSet = localizer.GetLocalizer(new CultureInfo("mfe"));
+            IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("mfe"));
             Exception ex = Record.Exception(() => resourceSet.GetRelativeTimeStylesResource(RelativeTimeUnitValues.Unknown));
             Assert.IsType<NotImplementedException>(ex);
         }
@@ -52,8 +58,7 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Zone)]
         public void SpecificRelativeTimeUnit_ShouldReturn_IRelativeTimeResourceSet(RelativeTimeUnitValues expected)
         {
-            RelativeTimeLocalizer localizer = new RelativeTimeLocalizer();
-            IRelativeTimeResourceSet resourceSet = localizer.GetLocalizer(new CultureInfo("mfe"));
+            IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("mfe"));
             IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(expected);
             Assert.Equal(expected, resourceStyles.RelativeTimeUnit);
         }

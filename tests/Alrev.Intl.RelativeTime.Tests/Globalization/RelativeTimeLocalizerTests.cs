@@ -9,60 +9,61 @@
 //------------------------------------------------------------------------------
 using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.RelativeTime;
-using Alrev.Intl.RelativeTime.Globalization;
 using System;
 using System.Globalization;
 using Xunit;
 
 namespace Alrev.Intl.RelativeTime.Tests.Globalization
 {
+    [Collection("RelativeTimeLocalizer")]
     public class RelativeTimeLocalizerTests
     {
+        private RelativeTimeLocalizerFixture fixture;
+
+        public RelativeTimeLocalizerTests(RelativeTimeLocalizerFixture fixture)
+        {
+            this.fixture = fixture;
+        }
+
         [Fact]
         public void GetLocalizerWithNullCultureInfo_ShouldThrow_ArgumentNullExpection()
         {
-            RelativeTimeLocalizer localizer = new RelativeTimeLocalizer();
-            Exception ex = Record.Exception(() => localizer.GetLocalizer(null));
+            Exception ex = Record.Exception(() => this.fixture.Localizer.GetLocalizer(null));
             Assert.IsType<ArgumentNullException>(ex);
         }
 
         [Fact]
         public void GetLocalizerWithInvariantCultureInfo_ShouldThrow_ArgumentExpection()
         {
-            RelativeTimeLocalizer localizer = new RelativeTimeLocalizer();
-            Exception ex = Record.Exception(() => localizer.GetLocalizer(CultureInfo.InvariantCulture));
+            Exception ex = Record.Exception(() => this.fixture.Localizer.GetLocalizer(CultureInfo.InvariantCulture));
             Assert.IsType<ArgumentException>(ex);
         }
 
         [Fact]
         public void GetLocalizerWithUnknownCultureInfo_ShouldReturn_Null()
         {
-            RelativeTimeLocalizer localizer = new RelativeTimeLocalizer();
-            IRelativeTimeResourceSet resource = localizer.GetLocalizer(new CultureInfo("aa"));
+            IRelativeTimeResourceSet resource = this.fixture.Localizer.GetLocalizer(new CultureInfo("aa"));
             Assert.Null(resource);
         }
 
         [Fact]
         public void GetLocalizerWithUnknownChildrenCultureInfo_ShouldReturn_Null()
         {
-            RelativeTimeLocalizer localizer = new RelativeTimeLocalizer();
-            IRelativeTimeResourceSet resource = localizer.GetLocalizer(new CultureInfo("aa-DJ"));
+            IRelativeTimeResourceSet resource = this.fixture.Localizer.GetLocalizer(new CultureInfo("aa-DJ"));
             Assert.Null(resource);
         }
 
         [Fact]
         public void GetLocalizerWithCultureInfo_ShouldReturn_IRelativeTimeResourceSet()
         {
-            RelativeTimeLocalizer localizer = new RelativeTimeLocalizer();
-            IRelativeTimeResourceSet resource = localizer.GetLocalizer(new CultureInfo("en"));
+            IRelativeTimeResourceSet resource = this.fixture.Localizer.GetLocalizer(new CultureInfo("en"));
             Assert.Equal("en", (resource as IResource).Locale);
         }
 
         [Fact]
         public void GetLocalizerWithChildrenCultureInfo_ShouldReturn_ParentIRelativeTimeResourceSet()
         {
-            RelativeTimeLocalizer localizer = new RelativeTimeLocalizer();
-            IRelativeTimeResourceSet resource = localizer.GetLocalizer(new CultureInfo("en-US"));
+            IRelativeTimeResourceSet resource = this.fixture.Localizer.GetLocalizer(new CultureInfo("en-US"));
             Assert.Equal("en", (resource as IResource).Locale);
         }
     }
