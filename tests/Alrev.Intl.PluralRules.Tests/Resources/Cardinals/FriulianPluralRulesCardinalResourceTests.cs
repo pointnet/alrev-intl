@@ -7,24 +7,28 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.PluralRules;
-using Alrev.Intl.PluralRules.Globalization;
 using System;
 using System.Globalization;
-using System.Threading;
 using Xunit;
 
 namespace Alrev.Intl.PluralRules.Tests.Resources.Cardinals
 {
+    [Collection("PluralRulesLocalizers")]
     public class FriulianPluralRulesCardinalResourceTests
     {
+        private PluralRulesLocalizersFixture fixture;
+
+        public FriulianPluralRulesCardinalResourceTests(PluralRulesLocalizersFixture fixture)
+        {
+            this.fixture = fixture;
+        }
+
         [Fact]
         public void PluralRulesType_ShouldReturn_PluralRulesValuesCardinal()
         {
             CultureInfo culture = new CultureInfo("fur");
-            PluralRulesCardinalLocalizer localizer = new PluralRulesCardinalLocalizer();
-            IPluralRulesResource resource = localizer.GetLocalizer(culture);
+            IPluralRulesResource resource = this.fixture.CardinalLocalizer.GetLocalizer(culture);
             Assert.Equal(PluralRulesTypeValues.Cardinal, resource.PluralRulesType);
         }
 
@@ -32,8 +36,7 @@ namespace Alrev.Intl.PluralRules.Tests.Resources.Cardinals
         public void EvaluateWithNullPluralRulesContext_ShouldThrow_ArgumentNullExpection()
         {
             CultureInfo culture = new CultureInfo("fur");
-            PluralRulesCardinalLocalizer localizer = new PluralRulesCardinalLocalizer();
-            IPluralRulesResource resource = localizer.GetLocalizer(culture);
+            IPluralRulesResource resource = this.fixture.CardinalLocalizer.GetLocalizer(culture);
             Exception ex = Record.Exception(() => resource.Evaluate(null));
             Assert.IsType<ArgumentNullException>(ex);
         }
@@ -78,8 +81,7 @@ namespace Alrev.Intl.PluralRules.Tests.Resources.Cardinals
         public void Evaluate_ShouldReturn_ExpectedPluralRulesValues(string input, PluralRulesValues expected)
         {
             CultureInfo culture = new CultureInfo("fur");
-            PluralRulesCardinalLocalizer localizer = new PluralRulesCardinalLocalizer();
-            IPluralRulesResource resource = localizer.GetLocalizer(culture);
+            IPluralRulesResource resource = this.fixture.CardinalLocalizer.GetLocalizer(culture);
             PluralRulesValues result = resource.Evaluate(PluralRulesContext.Create(input));
             Assert.Equal(expected, result);
         }

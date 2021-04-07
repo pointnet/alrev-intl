@@ -9,60 +9,61 @@
 //------------------------------------------------------------------------------
 using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.PluralRules;
-using Alrev.Intl.PluralRules.Globalization;
 using System;
 using System.Globalization;
 using Xunit;
 
 namespace Alrev.Intl.PluralRules.Tests.Globalization
 {
+    [Collection("PluralRulesLocalizers")]
     public class PluralRulesOrdinalLocalizerTests
     {
+        private PluralRulesLocalizersFixture fixture;
+
+        public PluralRulesOrdinalLocalizerTests(PluralRulesLocalizersFixture fixture)
+        {
+            this.fixture = fixture;
+        }
+
         [Fact]
         public void GetLocalizerWithNullCultureInfo_ShouldThrow_ArgumentNullExpection()
         {
-            PluralRulesOrdinalLocalizer localizer = new PluralRulesOrdinalLocalizer();
-            Exception ex = Record.Exception(() => localizer.GetLocalizer(null));
+            Exception ex = Record.Exception(() => this.fixture.OrdinalLocalizer.GetLocalizer(null));
             Assert.IsType<ArgumentNullException>(ex);
         }
 
         [Fact]
         public void GetLocalizerWithInvariantCultureInfo_ShouldThrow_ArgumentExpection()
         {
-            PluralRulesOrdinalLocalizer localizer = new PluralRulesOrdinalLocalizer();
-            Exception ex = Record.Exception(() => localizer.GetLocalizer(CultureInfo.InvariantCulture));
+            Exception ex = Record.Exception(() => this.fixture.OrdinalLocalizer.GetLocalizer(CultureInfo.InvariantCulture));
             Assert.IsType<ArgumentException>(ex);
         }
 
         [Fact]
         public void GetLocalizerWithUnknownCultureInfo_ShouldReturn_Null()
         {
-            PluralRulesOrdinalLocalizer localizer = new PluralRulesOrdinalLocalizer();
-            IPluralRulesResource resource = localizer.GetLocalizer(new CultureInfo("aa"));
+            IPluralRulesResource resource = this.fixture.OrdinalLocalizer.GetLocalizer(new CultureInfo("aa"));
             Assert.Null(resource);
         }
 
         [Fact]
         public void GetLocalizerWithUnknownChildrenCultureInfo_ShouldReturn_Null()
         {
-            PluralRulesOrdinalLocalizer localizer = new PluralRulesOrdinalLocalizer();
-            IPluralRulesResource resource = localizer.GetLocalizer(new CultureInfo("aa-DJ"));
+            IPluralRulesResource resource = this.fixture.OrdinalLocalizer.GetLocalizer(new CultureInfo("aa-DJ"));
             Assert.Null(resource);
         }
 
         [Fact]
         public void GetLocalizerWithCultureInfo_ShouldReturn_IPluralRulesResource()
         {
-            PluralRulesOrdinalLocalizer localizer = new PluralRulesOrdinalLocalizer();
-            IPluralRulesResource resource = localizer.GetLocalizer(new CultureInfo("en"));
+            IPluralRulesResource resource = this.fixture.OrdinalLocalizer.GetLocalizer(new CultureInfo("en"));
             Assert.Equal("en", (resource as IResource).Locale);
         }
 
         [Fact]
         public void GetLocalizerWithChildrenCultureInfo_ShouldReturn_ParentIPluralRulesResource()
         {
-            PluralRulesOrdinalLocalizer localizer = new PluralRulesOrdinalLocalizer();
-            IPluralRulesResource resource = localizer.GetLocalizer(new CultureInfo("en-US"));
+            IPluralRulesResource resource = this.fixture.OrdinalLocalizer.GetLocalizer(new CultureInfo("en-US"));
             Assert.Equal("en", (resource as IResource).Locale);
         }
     }
