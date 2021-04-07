@@ -1,5 +1,6 @@
 ﻿using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.RelativeTime;
+using System;
 
 namespace Alrev.Intl.RelativeTime
 {
@@ -18,13 +19,13 @@ namespace Alrev.Intl.RelativeTime
         /// </summary>
         /// <param name="relativeTimeStyle">The resource style to get</param>
         /// <returns>An <see cref="IRelativeTimeResource"/></returns>
-        /// <exception cref="RelativeTimeStyleNotFoundException"></exception>
+        /// <exception cref="NotImplementedException"></exception>
         public IRelativeTimeResource GetRelativeTimeResource(RelativeTimeStyleValues relativeTimeStyle) => relativeTimeStyle switch
         {
             RelativeTimeStyleValues.Long => this.LongRelativeTimeResource,
             RelativeTimeStyleValues.Narrow => this.NarrowRelativeTimeResource,
             RelativeTimeStyleValues.Short => this.ShortRelativeTimeResource,
-            _ => throw new RelativeTimeStyleNotFoundException("Relative time style does not exists", nameof(relativeTimeStyle))
+            _ => throw new NotImplementedException($"Relative time style '{relativeTimeStyle}' is not supported")
         };
     }
 }
