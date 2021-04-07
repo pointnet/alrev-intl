@@ -81,11 +81,11 @@ public class CldrPluralRules : BaseCommand
         {
             if (this.ProcessPluralRules(culture, "ordinal", "ordinals.json"))
             {
-                ordinals.Add(culture.Name, culture.EnglishName.ToValidClassName());
+                ordinals.Add(culture.Name.ToLowerInvariant(), culture.EnglishName.ToValidClassName());
             }
             if (this.ProcessPluralRules(culture, "cardinal", "plurals.json"))
             {
-                cardinals.Add(culture.Name, culture.EnglishName.ToValidClassName());
+                cardinals.Add(culture.Name.ToLowerInvariant(), culture.EnglishName.ToValidClassName());
             }
         }
         this.GenerateLocalizer(ordinals, "Ordinal");
@@ -149,7 +149,7 @@ public class CldrPluralRules : BaseCommand
         string csharp = this.CultureTemplate(new
         {
             script = SCRIPT,
-            locale = culture.Name,
+            locale = culture.Name.ToLowerInvariant(),
             englishName = culture.EnglishName,
             type = type,
             @namespace = $"{this.Namespace}.Resources.{type}s",
@@ -160,7 +160,7 @@ public class CldrPluralRules : BaseCommand
         string tests = this.CultureTestsTemplate(new
         {
             script = SCRIPT,
-            locale = culture.Name,
+            locale = culture.Name.ToLowerInvariant(),
             type = type,
             @namespace = $"{this.Namespace}.Tests.Resources.{type}s",
             classPrefix = $"{culture.EnglishName.ToValidClassName()}",
