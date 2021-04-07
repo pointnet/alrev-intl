@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Afrikaans (Namibia)' [af-NA]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Afrikaans (Namibia)' [af-na]
     /// </summary>
     public class AfrikaansNamibiaRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "af-NA";
+        private const string LOCALE = "af-na";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} j." }, { PluralRulesValues.Other, "oor {0} j." } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} kw." }, { PluralRulesValues.Other, "oor {0} kw." } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} md." }, { PluralRulesValues.Other, "oor {0} md." } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} w." }, { PluralRulesValues.Other, "oor {0} w." } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} dag" }, { PluralRulesValues.Other, "oor {0} dae" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} So." }, { PluralRulesValues.Other, "oor {0} So." } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} Ma." }, { PluralRulesValues.Other, "oor {0} Ma." } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} Di." }, { PluralRulesValues.Other, "oor {0} Di." } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} Wo." }, { PluralRulesValues.Other, "oor {0} Wo." } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} Do." }, { PluralRulesValues.Other, "oor {0} Do." } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} Vr." }, { PluralRulesValues.Other, "oor {0} Vr." } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} Sa." }, { PluralRulesValues.Other, "oor {0} Sa." } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} u." }, { PluralRulesValues.Other, "oor {0} u." } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} min." }, { PluralRulesValues.Other, "oor {0} min." } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "oor {0} s." }, { PluralRulesValues.Other, "oor {0} s." } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-NA]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Afrikaans (Namibia)' [af-na]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

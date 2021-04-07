@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Romanian (Moldova)' [ro-MD]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Romanian (Moldova)' [ro-md]
     /// </summary>
     public class RomanianMoldovaRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "ro-MD";
+        private const string LOCALE = "ro-md";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "peste {0} an" }, { PluralRulesValues.Few, "peste {0} ani" }, { PluralRulesValues.Other, "peste {0} de ani" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "peste {0} trim." }, { PluralRulesValues.Few, "peste {0} trim." }, { PluralRulesValues.Other, "peste {0} trim." } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "peste {0} lună" }, { PluralRulesValues.Few, "peste {0} luni" }, { PluralRulesValues.Other, "peste {0} luni" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "peste {0} săpt." }, { PluralRulesValues.Few, "peste {0} săpt." }, { PluralRulesValues.Other, "peste {0} săpt." } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "peste {0} zi" }, { PluralRulesValues.Few, "peste {0} zile" }, { PluralRulesValues.Other, "peste {0} de zile" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "duminică, peste {0} săpt." }, { PluralRulesValues.Few, "duminică, peste {0} săpt." }, { PluralRulesValues.Other, "duminică, peste {0} săpt." } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "luni, peste {0} săpt." }, { PluralRulesValues.Few, "luni, peste {0} săpt." }, { PluralRulesValues.Other, "luni, peste {0} săpt." } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "marți, peste {0} săpt." }, { PluralRulesValues.Few, "marți, peste {0} săpt." }, { PluralRulesValues.Other, "marți, peste {0} săpt." } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "miercuri, peste {0} săpt." }, { PluralRulesValues.Few, "miercuri, peste {0} săpt." }, { PluralRulesValues.Other, "miercuri, peste {0} săpt." } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "joi, peste {0} săpt." }, { PluralRulesValues.Few, "joi, peste {0} săpt." }, { PluralRulesValues.Other, "joi, peste {0} săpt." } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "vineri, peste {0} săpt." }, { PluralRulesValues.Few, "vineri, peste {0} săpt." }, { PluralRulesValues.Other, "vineri, peste {0} săpt." } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "sâmbătă, peste {0} săpt." }, { PluralRulesValues.Few, "sâmbătă, peste {0} săpt." }, { PluralRulesValues.Other, "sâmbătă, peste {0} săpt." } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "peste {0} h" }, { PluralRulesValues.Few, "peste {0} h" }, { PluralRulesValues.Other, "peste {0} h" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "peste {0} min." }, { PluralRulesValues.Few, "peste {0} min." }, { PluralRulesValues.Other, "peste {0} min." } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "peste {0} sec." }, { PluralRulesValues.Few, "peste {0} sec." }, { PluralRulesValues.Other, "peste {0} sec." } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-MD]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Romanian (Moldova)' [ro-md]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

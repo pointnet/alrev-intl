@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Northern Sami (Sweden)' [se-SE]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Northern Sami (Sweden)' [se-se]
     /// </summary>
     public class NorthernSamiSwedenRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "se-SE";
+        private const string LOCALE = "se-se";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} jahki maŋŋilit" }, { PluralRulesValues.Two, "{0} jahkki maŋŋilit" }, { PluralRulesValues.Other, "{0} jahkki maŋŋilit" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Q" } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mánotbadji maŋŋilit" }, { PluralRulesValues.Two, "{0} mánotbadji maŋŋilit" }, { PluralRulesValues.Other, "{0} mánotbadji maŋŋilit" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vahku maŋŋilit" }, { PluralRulesValues.Two, "{0} vahkku maŋŋilit" }, { PluralRulesValues.Other, "{0} vahkku maŋŋilit" } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} jándor maŋŋilit" }, { PluralRulesValues.Two, "{0} jándor amaŋŋilit" }, { PluralRulesValues.Other, "{0} jándora maŋŋilit" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Sundays" } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Mondays" } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Tuesdays" } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Wednesdays" } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Thursdays" } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Fridays" } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Saturdays" } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} diibmu maŋŋilit" }, { PluralRulesValues.Two, "{0} diibmur maŋŋilit" }, { PluralRulesValues.Other, "{0} diibmur maŋŋilit" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} minuhta maŋŋilit" }, { PluralRulesValues.Two, "{0} minuhtta maŋŋilit" }, { PluralRulesValues.Other, "{0} minuhtta maŋŋilit" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sekunda maŋŋilit" }, { PluralRulesValues.Two, "{0} sekundda maŋŋilit" }, { PluralRulesValues.Other, "{0} sekundda maŋŋilit" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-SE]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Northern Sami (Sweden)' [se-se]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

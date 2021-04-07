@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Dutch (Suriname)' [nl-SR]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Dutch (Suriname)' [nl-sr]
     /// </summary>
     public class DutchSurinameRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "nl-SR";
+        private const string LOCALE = "nl-sr";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} jaar" }, { PluralRulesValues.Other, "over {0} jaar" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} kwartaal" }, { PluralRulesValues.Other, "over {0} kwartalen" } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} maand" }, { PluralRulesValues.Other, "over {0} maanden" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} week" }, { PluralRulesValues.Other, "over {0} weken" } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} dag" }, { PluralRulesValues.Other, "over {0} dgn" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} zon." }, { PluralRulesValues.Other, "over {0} zon." } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} maan." }, { PluralRulesValues.Other, "over {0} maan." } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} dins." }, { PluralRulesValues.Other, "over {0} dins." } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} woens." }, { PluralRulesValues.Other, "over {0} woens." } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} donder." }, { PluralRulesValues.Other, "over {0} donder." } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} vrij." }, { PluralRulesValues.Other, "over {0} vrij." } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} zater." }, { PluralRulesValues.Other, "over {0} zater." } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} uur" }, { PluralRulesValues.Other, "over {0} uur" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} min." }, { PluralRulesValues.Other, "over {0} min." } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "over {0} sec." }, { PluralRulesValues.Other, "over {0} sec." } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-SR]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Dutch (Suriname)' [nl-sr]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

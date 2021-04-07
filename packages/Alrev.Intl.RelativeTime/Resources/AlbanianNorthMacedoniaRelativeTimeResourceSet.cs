@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Albanian (North Macedonia)' [sq-MK]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Albanian (North Macedonia)' [sq-mk]
     /// </summary>
     public class AlbanianNorthMacedoniaRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "sq-MK";
+        private const string LOCALE = "sq-mk";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} viti" }, { PluralRulesValues.Other, "pas {0} vjetësh" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} tremujori" }, { PluralRulesValues.Other, "pas {0} tremujorësh" } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} muaji" }, { PluralRulesValues.Other, "pas {0} muajsh" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} jave" }, { PluralRulesValues.Other, "pas {0} javësh" } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} dite" }, { PluralRulesValues.Other, "pas {0} ditësh" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të diele" }, { PluralRulesValues.Other, "pas {0} të dielash" } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të hëne" }, { PluralRulesValues.Other, "pas {0} të hënash" } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të marte" }, { PluralRulesValues.Other, "pas {0} të martash" } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të mërkure" }, { PluralRulesValues.Other, "pas {0} të mërkurash" } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të enjteje" }, { PluralRulesValues.Other, "pas {0} të enjtesh" } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të premteje" }, { PluralRulesValues.Other, "pas {0} të premtesh" } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} të shtune" }, { PluralRulesValues.Other, "pas {0} të shtunash" } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} ore" }, { PluralRulesValues.Other, "pas {0} orësh" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} min" }, { PluralRulesValues.Other, "pas {0} min" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "pas {0} sek" }, { PluralRulesValues.Other, "pas {0} sek" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-MK]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Albanian (North Macedonia)' [sq-mk]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

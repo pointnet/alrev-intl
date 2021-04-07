@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Arabic (United Arab Emirates)' [ar-ae]
     /// </summary>
     public class ArabicUnitedArabEmiratesRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "ar-AE";
+        private const string LOCALE = "ar-ae";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} سنة" }, { PluralRulesValues.One, "خلال سنة واحدة" }, { PluralRulesValues.Two, "خلال سنتين" }, { PluralRulesValues.Few, "خلال {0} سنوات" }, { PluralRulesValues.Many, "خلال {0} سنة" }, { PluralRulesValues.Other, "خلال {0} سنة" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ربع سنة" }, { PluralRulesValues.One, "خلال ربع سنة واحد" }, { PluralRulesValues.Two, "خلال ربعي سنة" }, { PluralRulesValues.Few, "خلال {0} أرباع سنة" }, { PluralRulesValues.Many, "خلال {0} ربع سنة" }, { PluralRulesValues.Other, "خلال {0} ربع سنة" } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} شهر" }, { PluralRulesValues.One, "خلال شهر واحد" }, { PluralRulesValues.Two, "خلال شهرين" }, { PluralRulesValues.Few, "خلال {0} أشهر" }, { PluralRulesValues.Many, "خلال {0} شهرًا" }, { PluralRulesValues.Other, "خلال {0} شهر" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} أسبوع" }, { PluralRulesValues.One, "خلال أسبوع واحد" }, { PluralRulesValues.Two, "خلال {0} أسبوعين" }, { PluralRulesValues.Few, "خلال {0} أسابيع" }, { PluralRulesValues.Many, "خلال {0} أسبوعًا" }, { PluralRulesValues.Other, "خلال {0} أسبوع" } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} يوم" }, { PluralRulesValues.One, "خلال يوم واحد" }, { PluralRulesValues.Two, "خلال يومين" }, { PluralRulesValues.Few, "خلال {0} أيام" }, { PluralRulesValues.Many, "خلال {0} يومًا" }, { PluralRulesValues.Other, "خلال {0} يوم" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} أحد" }, { PluralRulesValues.One, "أحد قادم" }, { PluralRulesValues.Two, "أحد بعد القادم" }, { PluralRulesValues.Few, "خلال {0} أحد" }, { PluralRulesValues.Many, "خلال {0} أحد" }, { PluralRulesValues.Other, "خلال {0} أحد" } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} إثنين" }, { PluralRulesValues.One, "الإثنين القادم" }, { PluralRulesValues.Two, "الإثنين بعد القادم" }, { PluralRulesValues.Few, "خلال {0} إثنين" }, { PluralRulesValues.Many, "خلال {0} إثنين" }, { PluralRulesValues.Other, "خلال {0} إثنين" } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ثلاثاء" }, { PluralRulesValues.One, "ثلاثاء قادم" }, { PluralRulesValues.Two, "ثلاثاء بعد القادم" }, { PluralRulesValues.Few, "خلال {0} ثلاثاء" }, { PluralRulesValues.Many, "خلال {0} ثلاثاء" }, { PluralRulesValues.Other, "خلال {0} ثلاثاء" } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} أربعاء" }, { PluralRulesValues.One, "خلال {0} أربعاء" }, { PluralRulesValues.Two, "خلال {0} أربعاء" }, { PluralRulesValues.Few, "خلال {0} أربعاء" }, { PluralRulesValues.Many, "خلال {0} أربعاء" }, { PluralRulesValues.Other, "خلال {0} أربعاء" } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} خميس" }, { PluralRulesValues.One, "الخميس القادم" }, { PluralRulesValues.Two, "الخميس بعد القادم" }, { PluralRulesValues.Few, "خلال {0} خميس" }, { PluralRulesValues.Many, "خلال {0} خميس" }, { PluralRulesValues.Other, "خلال {0} خميس" } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} جمعة" }, { PluralRulesValues.One, "جمعة قادم" }, { PluralRulesValues.Two, "جمعة بعد القادم" }, { PluralRulesValues.Few, "خلال {0} جمعة" }, { PluralRulesValues.Many, "خلال {0} جمعة" }, { PluralRulesValues.Other, "خلال {0} جمعة" } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} سبت" }, { PluralRulesValues.One, "سبت قادم" }, { PluralRulesValues.Two, "سبت بعد القادم" }, { PluralRulesValues.Few, "خلال {0} سبت" }, { PluralRulesValues.Many, "خلال {0} سبت" }, { PluralRulesValues.Other, "خلال {0} سبت" } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ساعة" }, { PluralRulesValues.One, "خلال ساعة واحدة" }, { PluralRulesValues.Two, "خلال ساعتين" }, { PluralRulesValues.Few, "خلال {0} ساعات" }, { PluralRulesValues.Many, "خلال {0} ساعة" }, { PluralRulesValues.Other, "خلال {0} ساعة" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} دقيقة" }, { PluralRulesValues.One, "خلال دقيقة واحدة" }, { PluralRulesValues.Two, "خلال دقيقتين" }, { PluralRulesValues.Few, "خلال {0} دقائق" }, { PluralRulesValues.Many, "خلال {0} دقيقة" }, { PluralRulesValues.Other, "خلال {0} دقيقة" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ثانية" }, { PluralRulesValues.One, "خلال ثانية واحدة" }, { PluralRulesValues.Two, "خلال ثانيتين" }, { PluralRulesValues.Few, "خلال {0} ثوانٍ" }, { PluralRulesValues.Many, "خلال {0} ثانية" }, { PluralRulesValues.Other, "خلال {0} ثانية" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-AE]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Arabic (United Arab Emirates)' [ar-ae]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

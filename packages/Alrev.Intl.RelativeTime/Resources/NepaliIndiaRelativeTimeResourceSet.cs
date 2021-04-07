@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Nepali (India)' [ne-IN]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Nepali (India)' [ne-in]
     /// </summary>
     public class NepaliIndiaRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "ne-IN";
+        private const string LOCALE = "ne-in";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} वर्षमा" }, { PluralRulesValues.Other, "{0} वर्षमा" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0}सत्रमा" }, { PluralRulesValues.Other, "{0}सत्रमा" } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} महिनामा" }, { PluralRulesValues.Other, "{0} महिनामा" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} हप्तामा" }, { PluralRulesValues.Other, "{0} हप्तामा" } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} दिनमा" }, { PluralRulesValues.Other, "{0} दिनमा" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} आइतबारहरूमा" }, { PluralRulesValues.Other, "{0} आइतबारहरूमा" } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} सोमबारहरूमा" }, { PluralRulesValues.Other, "{0} सोमबारहरूमा" } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} मंगलबारमा" }, { PluralRulesValues.Other, "{0} मंगलबारहरूमा" } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} बुधबारमा" }, { PluralRulesValues.Other, "{0} बुधबारमाहरूमा" } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} बिहिबारमा" }, { PluralRulesValues.Other, "{0} बिहिबारहरूमा" } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} शुक्रबारमा" }, { PluralRulesValues.Other, "{0} शुक्रबारहरूमा" } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} शनिबारमा" }, { PluralRulesValues.Other, "{0} शनिबारहरूमा" } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} घण्टामा" }, { PluralRulesValues.Other, "{0} घण्टामा" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} मिनेटमा" }, { PluralRulesValues.Other, "{0} मिनेटमा" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} सेकेन्डमा" }, { PluralRulesValues.Other, "{0} सेकेन्डमा" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-IN]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Nepali (India)' [ne-in]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

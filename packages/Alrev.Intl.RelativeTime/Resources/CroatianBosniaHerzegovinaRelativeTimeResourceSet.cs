@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
     /// </summary>
     public class CroatianBosniaHerzegovinaRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "hr-BA";
+        private const string LOCALE = "hr-ba";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} g." }, { PluralRulesValues.Few, "za {0} g." }, { PluralRulesValues.Other, "za {0} g." } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} kv." }, { PluralRulesValues.Few, "za {0} kv." }, { PluralRulesValues.Other, "za {0} kv." } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} mj." }, { PluralRulesValues.Few, "za {0} mj." }, { PluralRulesValues.Other, "za {0} mj." } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} tj." }, { PluralRulesValues.Few, "za {0} tj." }, { PluralRulesValues.Other, "za {0} tj." } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} dan" }, { PluralRulesValues.Few, "za {0} dana" }, { PluralRulesValues.Other, "za {0} dana" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} nedjelju" }, { PluralRulesValues.Few, "za {0} nedjelje" }, { PluralRulesValues.Other, "za {0} nedjelja" } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} ponedjeljak" }, { PluralRulesValues.Few, "za {0} ponedjeljka" }, { PluralRulesValues.Other, "za {0} ponedjeljaka" } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} utorak" }, { PluralRulesValues.Few, "za {0} utorka" }, { PluralRulesValues.Other, "za {0} utoraka" } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} srijedu" }, { PluralRulesValues.Few, "za {0} srijede" }, { PluralRulesValues.Other, "za {0} srijeda" } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} četvrtak" }, { PluralRulesValues.Few, "za {0} četvrtka" }, { PluralRulesValues.Other, "za {0} četvrtaka" } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} petak" }, { PluralRulesValues.Few, "za {0} petka" }, { PluralRulesValues.Other, "za {0} petaka" } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} subotu" }, { PluralRulesValues.Few, "za {0} subote" }, { PluralRulesValues.Other, "za {0} subota" } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} h" }, { PluralRulesValues.Few, "za {0} h" }, { PluralRulesValues.Other, "za {0} h" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} min" }, { PluralRulesValues.Few, "za {0} min" }, { PluralRulesValues.Other, "za {0} min" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} s" }, { PluralRulesValues.Few, "za {0} s" }, { PluralRulesValues.Other, "za {0} s" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-BA]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Croatian (Bosnia &amp; Herzegovina)' [hr-ba]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

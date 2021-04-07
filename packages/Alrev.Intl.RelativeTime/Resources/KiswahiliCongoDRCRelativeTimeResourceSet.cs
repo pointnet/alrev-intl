@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
     /// </summary>
     public class KiswahiliCongoDRCRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "sw-CD";
+        private const string LOCALE = "sw-cd";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya mwaka {0}" }, { PluralRulesValues.Other, "baada ya miaka {0}" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya robo {0}" }, { PluralRulesValues.Other, "baada ya robo {0}" } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya mwezi {0}" }, { PluralRulesValues.Other, "baada ya miezi {0}" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya wiki {0}" }, { PluralRulesValues.Other, "baada ya wiki {0}" } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya siku {0}" }, { PluralRulesValues.Other, "baada ya siku {0}" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya Jumapili {0}" }, { PluralRulesValues.Other, "baada ya Jumapili {0}" } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya Jumatatu {0}" }, { PluralRulesValues.Other, "baada ya Jumatatu {0}" } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya Jumanne {0}" }, { PluralRulesValues.Other, "baada ya Jumanne {0}" } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya Jumatano {0}" }, { PluralRulesValues.Other, "baada ya Jumatano {0}" } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya Alhamisi {0}" }, { PluralRulesValues.Other, "baada ya Alhamisi {0}" } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya Ijumaa {0}" }, { PluralRulesValues.Other, "baada ya Ijumaa {0}" } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya Jumamosi {0}" }, { PluralRulesValues.Other, "baada ya Jumamosi {0}" } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya saa {0}" }, { PluralRulesValues.Other, "baada ya saa {0}" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya dakika {0}" }, { PluralRulesValues.Other, "baada ya dakika {0}" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "baada ya sekunde {0}" }, { PluralRulesValues.Other, "baada ya sekunde {0}" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-CD]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Kiswahili (Congo [DRC])' [sw-cd]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

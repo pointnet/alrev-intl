@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Russian (Kyrgyzstan)' [ru-kg]
     /// </summary>
     public class RussianKyrgyzstanRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "ru-KG";
+        private const string LOCALE = "ru-kg";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} г." }, { PluralRulesValues.Few, "через {0} г." }, { PluralRulesValues.Many, "через {0} л." }, { PluralRulesValues.Other, "через {0} г." } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} кв." }, { PluralRulesValues.Few, "через {0} кв." }, { PluralRulesValues.Many, "через {0} кв." }, { PluralRulesValues.Other, "через {0} кв." } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} мес." }, { PluralRulesValues.Few, "через {0} мес." }, { PluralRulesValues.Many, "через {0} мес." }, { PluralRulesValues.Other, "через {0} мес." } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} нед." }, { PluralRulesValues.Few, "через {0} нед." }, { PluralRulesValues.Many, "через {0} нед." }, { PluralRulesValues.Other, "через {0} нед." } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} дн." }, { PluralRulesValues.Few, "через {0} дн." }, { PluralRulesValues.Many, "через {0} дн." }, { PluralRulesValues.Other, "через {0} дн." } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} вс." }, { PluralRulesValues.Few, "через {0} вс." }, { PluralRulesValues.Many, "через {0} вс." }, { PluralRulesValues.Other, "через {0} вс." } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} пн." }, { PluralRulesValues.Few, "через {0} пн." }, { PluralRulesValues.Many, "через {0} пн." }, { PluralRulesValues.Other, "через {0} пн." } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} вт." }, { PluralRulesValues.Few, "через {0} вт." }, { PluralRulesValues.Many, "через {0} вт." }, { PluralRulesValues.Other, "через {0} вт." } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} ср." }, { PluralRulesValues.Few, "через {0} ср." }, { PluralRulesValues.Many, "через {0} ср." }, { PluralRulesValues.Other, "через {0} ср." } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} чт." }, { PluralRulesValues.Few, "через {0} чт." }, { PluralRulesValues.Many, "через {0} чт." }, { PluralRulesValues.Other, "через {0} чт." } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} пт." }, { PluralRulesValues.Few, "через {0} пт." }, { PluralRulesValues.Many, "через {0} пт." }, { PluralRulesValues.Other, "через {0} пт." } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} сб." }, { PluralRulesValues.Few, "через {0} сб." }, { PluralRulesValues.Many, "через {0} сб." }, { PluralRulesValues.Other, "через {0} сб." } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} ч" }, { PluralRulesValues.Few, "через {0} ч" }, { PluralRulesValues.Many, "через {0} ч" }, { PluralRulesValues.Other, "через {0} ч" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} мин." }, { PluralRulesValues.Few, "через {0} мин." }, { PluralRulesValues.Many, "через {0} мин." }, { PluralRulesValues.Other, "через {0} мин." } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "через {0} сек." }, { PluralRulesValues.Few, "через {0} сек." }, { PluralRulesValues.Many, "через {0} сек." }, { PluralRulesValues.Other, "через {0} сек." } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-KG]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Russian (Kyrgyzstan)' [ru-kg]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

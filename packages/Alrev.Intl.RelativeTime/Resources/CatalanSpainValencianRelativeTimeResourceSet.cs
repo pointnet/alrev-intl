@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
     /// </summary>
     public class CatalanSpainValencianRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "ca-ES-valencia";
+        private const string LOCALE = "ca-es-valencia";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} any" }, { PluralRulesValues.Other, "d’aquí a {0} anys" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} trim." }, { PluralRulesValues.Other, "d’aquí a {0} trim." } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} mes" }, { PluralRulesValues.Other, "d’aquí a {0} mesos" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} setm." }, { PluralRulesValues.Other, "d’aquí a {0} setm." } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} dia" }, { PluralRulesValues.Other, "d’aquí a {0} dies" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} dg." }, { PluralRulesValues.Other, "d’aquí a {0} dg." } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} dl." }, { PluralRulesValues.Other, "d’aquí a {0} dl." } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} dt." }, { PluralRulesValues.Other, "d’aquí a {0} dt." } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} dc." }, { PluralRulesValues.Other, "d’aquí a {0} dc." } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} dj." }, { PluralRulesValues.Other, "d’aquí a {0} dj." } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} dv." }, { PluralRulesValues.Other, "d’aquí a {0} dv." } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} ds." }, { PluralRulesValues.Other, "d’aquí a {0} ds." } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} h" }, { PluralRulesValues.Other, "d’aquí a {0} h" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} min" }, { PluralRulesValues.Other, "d’aquí a {0} min" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "d’aquí a {0} s" }, { PluralRulesValues.Other, "d’aquí a {0} s" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-ES-valencia]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Catalan (Spain, Valencian)' [ca-es-valencia]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

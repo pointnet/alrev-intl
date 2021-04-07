@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Italian (Switzerland)' [it-CH]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Italian (Switzerland)' [it-ch]
     /// </summary>
     public class ItalianSwitzerlandRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "it-CH";
+        private const string LOCALE = "it-ch";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} anno" }, { PluralRulesValues.Other, "tra {0} anni" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} trim." }, { PluralRulesValues.Other, "tra {0} trim." } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} mese" }, { PluralRulesValues.Other, "tra {0} mesi" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} sett." }, { PluralRulesValues.Other, "tra {0} sett." } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} g" }, { PluralRulesValues.Other, "tra {0} gg" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} dom." }, { PluralRulesValues.Other, "tra {0} dom." } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} lun." }, { PluralRulesValues.Other, "tra {0} lun." } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} mar." }, { PluralRulesValues.Other, "tra {0} mar." } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} mer." }, { PluralRulesValues.Other, "tra {0} mer." } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} gio." }, { PluralRulesValues.Other, "tra {0} gio." } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} ven." }, { PluralRulesValues.Other, "tra {0} ven." } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} sab." }, { PluralRulesValues.Other, "tra {0} sab." } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} h" }, { PluralRulesValues.Other, "tra {0} h" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} min" }, { PluralRulesValues.Other, "tra {0} min" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} sec." }, { PluralRulesValues.Other, "tra {0} sec." } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-CH]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Italian (Switzerland)' [it-ch]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

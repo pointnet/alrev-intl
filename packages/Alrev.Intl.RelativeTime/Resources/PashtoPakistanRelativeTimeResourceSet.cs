@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Pashto (Pakistan)' [ps-PK]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Pashto (Pakistan)' [ps-pk]
     /// </summary>
     public class PashtoPakistanRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "ps-PK";
+        private const string LOCALE = "ps-pk";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} کال کے" }, { PluralRulesValues.Other, "په {0} کالونو کے" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ربع کې" }, { PluralRulesValues.Other, "په {0} ربعو کې" } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} مياشت کې" }, { PluralRulesValues.Other, "په {0} مياشت کې" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} اونۍ کې" }, { PluralRulesValues.Other, "په {0} اونۍ کې" } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ورځ کې" }, { PluralRulesValues.Other, "په {0} ورځو کې" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} يکشنبه کې" }, { PluralRulesValues.Other, "په {0} يکشنبه کې" } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} دوشنبه کې" }, { PluralRulesValues.Other, "په {0} دوشنبه کې" } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} سه شنبه کې" }, { PluralRulesValues.Other, "په {0} سه شنبه کې" } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} چارشنبه کې" }, { PluralRulesValues.Other, "په {0} چارشنبه کې" } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} پنجشنبه کې" }, { PluralRulesValues.Other, "په {0} پنجشنبه کې" } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} جمعه کې" }, { PluralRulesValues.Other, "په {0} جمعه کې" } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} شنبه کې" }, { PluralRulesValues.Other, "په {0} شنبه کې" } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ساعت کې" }, { PluralRulesValues.Other, "په {0} ساعت کې" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} دقيقه کې" }, { PluralRulesValues.Other, "په {0} دقيقه کې" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "په {0} ثانيه کې" }, { PluralRulesValues.Other, "په {0} ثانيه کې" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-PK]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Pashto (Pakistan)' [ps-pk]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

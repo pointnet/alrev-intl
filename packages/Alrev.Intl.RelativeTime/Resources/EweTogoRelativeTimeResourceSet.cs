@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Ewe (Togo)' [ee-TG]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Ewe (Togo)' [ee-tg]
     /// </summary>
     public class EweTogoRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "ee-TG";
+        private const string LOCALE = "ee-tg";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "le ƒe {0} me" }, { PluralRulesValues.Other, "le ƒe {0} me" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "le kɔta {0} si gbɔ na me" }, { PluralRulesValues.Other, "le kɔta {0} si gbɔ na me" } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "le ɣleti {0} me" }, { PluralRulesValues.Other, "le ɣleti {0} wo me" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "le kɔsiɖa {0} me" }, { PluralRulesValues.Other, "le kɔsiɖa {0} wo me" } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "le ŋkeke {0} me" }, { PluralRulesValues.Other, "le ŋkeke {0} wo me" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Sundays" } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Mondays" } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Tuesdays" } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Wednesdays" } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Thursdays" } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Fridays" } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "+{0} Saturdays" } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "le gaƒoƒo {0} me" }, { PluralRulesValues.Other, "le gaƒoƒo {0} wo me" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "le aɖabaƒoƒo {0} me" }, { PluralRulesValues.Other, "le aɖabaƒoƒo {0} wo me" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "le sekend {0} me" }, { PluralRulesValues.Other, "le sekend {0} wo me" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-TG]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Ewe (Togo)' [ee-tg]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

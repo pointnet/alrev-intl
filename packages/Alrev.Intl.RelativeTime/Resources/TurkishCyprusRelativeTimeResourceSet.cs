@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Turkish (Cyprus)' [tr-CY]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Turkish (Cyprus)' [tr-cy]
     /// </summary>
     public class TurkishCyprusRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "tr-CY";
+        private const string LOCALE = "tr-cy";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} yıl sonra" }, { PluralRulesValues.Other, "{0} yıl sonra" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} çyr. sonra" }, { PluralRulesValues.Other, "{0} çyr. sonra" } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ay sonra" }, { PluralRulesValues.Other, "{0} ay sonra" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hf. sonra" }, { PluralRulesValues.Other, "{0} hf. sonra" } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} gün sonra" }, { PluralRulesValues.Other, "{0} gün sonra" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} paz. sonra" }, { PluralRulesValues.Other, "{0} paz. sonra" } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} pzt. sonra" }, { PluralRulesValues.Other, "{0} pzt. sonra" } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} salı sonra" }, { PluralRulesValues.Other, "{0} salı sonra" } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} çar. sonra" }, { PluralRulesValues.Other, "{0} çar. sonra" } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} per. sonra" }, { PluralRulesValues.Other, "{0} per. sonra" } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} cuma sonra" }, { PluralRulesValues.Other, "{0} cuma sonra" } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} cmt. sonra" }, { PluralRulesValues.Other, "{0} cmt. sonra" } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sa. sonra" }, { PluralRulesValues.Other, "{0} sa. sonra" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} dk. sonra" }, { PluralRulesValues.Other, "{0} dk. sonra" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sn. sonra" }, { PluralRulesValues.Other, "{0} sn. sonra" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-CY]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Turkish (Cyprus)' [tr-cy]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

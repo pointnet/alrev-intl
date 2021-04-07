@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Korean (North Korea)' [ko-KP]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Korean (North Korea)' [ko-kp]
     /// </summary>
     public class KoreanNorthKoreaRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "ko-KP";
+        private const string LOCALE = "ko-kp";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}년 후" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분기 후" } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}개월 후" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후" } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}일 후" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 일요일" } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 월요일" } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 화요일" } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 수요일" } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 목요일" } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 금요일" } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}주 후 토요일" } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}시간 후" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}분 후" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0}초 후" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-KP]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Korean (North Korea)' [ko-kp]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

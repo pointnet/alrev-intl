@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Spanish (Chile)' [es-CL]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Spanish (Chile)' [es-cl]
     /// </summary>
     public class SpanishChileRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "es-CL";
+        private const string LOCALE = "es-cl";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} a" }, { PluralRulesValues.Other, "dentro de {0} a" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} trim." }, { PluralRulesValues.Other, "dentro de {0} trim." } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} m" }, { PluralRulesValues.Other, "dentro de {0} m" } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} sem." }, { PluralRulesValues.Other, "dentro de {0} sem." } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} día" }, { PluralRulesValues.Other, "dentro de {0} días" } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} dom." }, { PluralRulesValues.Other, "dentro de {0} dom." } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} lun." }, { PluralRulesValues.Other, "dentro de {0} lun." } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} mar." }, { PluralRulesValues.Other, "dentro de {0} mar." } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} mié." }, { PluralRulesValues.Other, "dentro de {0} mié." } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} jue." }, { PluralRulesValues.Other, "dentro de {0} jue." } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} vie." }, { PluralRulesValues.Other, "dentro de {0} vie." } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} sáb." }, { PluralRulesValues.Other, "dentro de {0} sáb." } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} h" }, { PluralRulesValues.Other, "dentro de {0} h" } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} min" }, { PluralRulesValues.Other, "dentro de {0} min" } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "dentro de {0} s" }, { PluralRulesValues.Other, "dentro de {0} s" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-CL]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Spanish (Chile)' [es-cl]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,

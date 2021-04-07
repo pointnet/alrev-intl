@@ -16,11 +16,11 @@ using System.Collections.Generic;
 namespace Alrev.Intl.RelativeTime.Resources
 {
     /// <summary>
-    /// <see cref="IRelativeTimeResourceSet"/> for 'Faroese (Denmark)' [fo-DK]
+    /// <see cref="IRelativeTimeResourceSet"/> for 'Faroese (Denmark)' [fo-dk]
     /// </summary>
     public class FaroeseDenmarkRelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
-        private const string LOCALE = "fo-DK";
+        private const string LOCALE = "fo-dk";
 
         /// <summary>
         /// The <see cref="IRelativeTimeResourceSet"/> locale
@@ -28,7 +28,7 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -90,7 +90,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} ár" }, { PluralRulesValues.Other, "um {0} ár" } }));
 
         /// <summary>
-        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Quarter <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -121,7 +121,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} ársfj." }, { PluralRulesValues.Other, "um {0} ársfj." } }));
 
         /// <summary>
-        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Month <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -152,7 +152,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} mnð." }, { PluralRulesValues.Other, "um {0} mnð." } }));
 
         /// <summary>
-        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Week <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -183,7 +183,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} vi." }, { PluralRulesValues.Other, "um {0} vi." } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -214,7 +214,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -245,7 +245,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} da." }, { PluralRulesValues.Other, "um {0} da." } }));
 
         /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -276,7 +276,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -307,7 +307,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -338,7 +338,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -369,7 +369,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} sun." }, { PluralRulesValues.Other, "um {0} sun." } }));
 
         /// <summary>
-        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Monday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -400,7 +400,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} mán." }, { PluralRulesValues.Other, "um {0} mán." } }));
 
         /// <summary>
-        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Tuesday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -431,7 +431,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} týs." }, { PluralRulesValues.Other, "um {0} týs." } }));
 
         /// <summary>
-        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Wednesday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -462,7 +462,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} mik." }, { PluralRulesValues.Other, "um {0} mik." } }));
 
         /// <summary>
-        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Thursday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -493,7 +493,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} hós." }, { PluralRulesValues.Other, "um {0} hós." } }));
 
         /// <summary>
-        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Friday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -524,7 +524,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} frí." }, { PluralRulesValues.Other, "um {0} frí." } }));
 
         /// <summary>
-        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Saturday <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -555,7 +555,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} ley." }, { PluralRulesValues.Other, "um {0} ley." } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -586,7 +586,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 null));
 
         /// <summary>
-        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -617,7 +617,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} t." }, { PluralRulesValues.Other, "um {0} t." } }));
 
         /// <summary>
-        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Minute <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -648,7 +648,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} min." }, { PluralRulesValues.Other, "um {0} min." } }));
 
         /// <summary>
-        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Second <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
@@ -679,7 +679,7 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} sek." }, { PluralRulesValues.Other, "um {0} sek." } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-DK]
+        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Faroese (Denmark)' [fo-dk]
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
