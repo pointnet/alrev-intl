@@ -64,6 +64,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "relative-time", "relative-t
 	ProjectSection(SolutionItems) = preProject
 		scripts\handlebar\relative-time\relative-time-localizer-tests.hbs = scripts\handlebar\relative-time\relative-time-localizer-tests.hbs
 		scripts\handlebar\relative-time\relative-time-localizer.hbs = scripts\handlebar\relative-time\relative-time-localizer.hbs
+		scripts\handlebar\relative-time\relative-time-resource-set-tests.hbs = scripts\handlebar\relative-time\relative-time-resource-set-tests.hbs
 		scripts\handlebar\relative-time\relative-time-resource-set.hbs = scripts\handlebar\relative-time\relative-time-resource-set.hbs
 		scripts\handlebar\relative-time\relative-time-resource.hbs = scripts\handlebar\relative-time\relative-time-resource.hbs
 	EndProjectSection
