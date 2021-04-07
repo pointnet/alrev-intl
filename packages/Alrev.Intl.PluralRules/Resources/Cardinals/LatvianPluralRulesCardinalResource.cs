@@ -33,7 +33,7 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
         /// <summary>
         /// Evaluates a <see cref="IPluralRulesContext"/> against the 'Latvian' [lv] Cardinal <see cref="IPluralRulesResource"/>
         /// </summary>
-        /// <param name="context">A <see cref="IPluralRulesContext"/></param>
+        /// <param name="context">An <see cref="IPluralRulesContext"/></param>
         /// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
         /// <remarks>
         /// zero - n % 10 = 0 or n % 100 = 11..19 or v = 2 and f % 100 = 11..19

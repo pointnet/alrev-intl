@@ -33,7 +33,7 @@ namespace Alrev.Intl.PluralRules.Resources.Ordinals
         /// <summary>
         /// Evaluates a <see cref="IPluralRulesContext"/> against the 'Macedonian' [mk] Ordinal <see cref="IPluralRulesResource"/>
         /// </summary>
-        /// <param name="context">A <see cref="IPluralRulesContext"/></param>
+        /// <param name="context">An <see cref="IPluralRulesContext"/></param>
         /// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
         /// <remarks>
         /// one - i % 10 = 1 and i % 100 != 11

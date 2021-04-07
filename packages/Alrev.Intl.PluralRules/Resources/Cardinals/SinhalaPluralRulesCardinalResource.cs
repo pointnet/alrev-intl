@@ -33,7 +33,7 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
         /// <summary>
         /// Evaluates a <see cref="IPluralRulesContext"/> against the 'Sinhala' [si] Cardinal <see cref="IPluralRulesResource"/>
         /// </summary>
-        /// <param name="context">A <see cref="IPluralRulesContext"/></param>
+        /// <param name="context">An <see cref="IPluralRulesContext"/></param>
         /// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
         /// <remarks>
         /// one - n = 0,1 or i = 0 and f = 1

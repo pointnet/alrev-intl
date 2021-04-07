@@ -33,7 +33,7 @@ namespace Alrev.Intl.PluralRules.Resources.Ordinals
         /// <summary>
         /// Evaluates a <see cref="IPluralRulesContext"/> against the 'Kiswahili' [sw] Ordinal <see cref="IPluralRulesResource"/>
         /// </summary>
-        /// <param name="context">A <see cref="IPluralRulesContext"/></param>
+        /// <param name="context">An <see cref="IPluralRulesContext"/></param>
         /// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>
         /// <remarks>
         /// other - 
