@@ -32,23 +32,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Era,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Long,
                 "ዘመን",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Narrow,
                 "ዘመን",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Short,
                 "ዘመን",
                 null,
                 null,
@@ -59,23 +63,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Year,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Long,
                 "ዓመት",
                 new Dictionary<int, string> { { -1, "ዓሚ" }, { 0, "ሎሚ ዓመት" }, { 1, "ንዓመታ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ዓ" }, { PluralRulesValues.Other, "ቅድሚ {0} ዓ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ዓ" }, { PluralRulesValues.Other, "ኣብ {0} ዓ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Narrow,
                 "ዓመት",
                 new Dictionary<int, string> { { -1, "ዓሚ" }, { 0, "ሎሚ ዓመት" }, { 1, "ንዓመታ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ዓ" }, { PluralRulesValues.Other, "ቅድሚ {0} ዓ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ዓ" }, { PluralRulesValues.Other, "ኣብ {0} ዓ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Short,
                 "ዓመት",
                 new Dictionary<int, string> { { -1, "ዓሚ" }, { 0, "ሎሚ ዓመት" }, { 1, "ንዓመታ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ -{0} ዓ" }, { PluralRulesValues.Other, "ቅድሚ {0} ዓ" } },
@@ -86,23 +94,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Quarter,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Long,
                 "ርብዒ",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ርብዒ" }, { 0, "ህሉው ርብዒ" }, { 1, "ዝመጽእ ርብዒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ርብዒ" }, { PluralRulesValues.Other, "ቅድሚ {0} ርብዒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ርብዒ" }, { PluralRulesValues.Other, "ኣብ {0} ርብዒ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Narrow,
                 "ርብዒ",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ርብዒ" }, { 0, "ህሉው ርብዒ" }, { 1, "ዝመጽእ ርብዒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ርብዒ" }, { PluralRulesValues.Other, "ቅድሚ {0} ርብዒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ርብዒ" }, { PluralRulesValues.Other, "ኣብ {0} ርብዒ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Short,
                 "ርብዒ",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ርብዒ" }, { 0, "ህሉው ርብዒ" }, { 1, "ዝመጽእ ርብዒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ርብዒ" }, { PluralRulesValues.Other, "ቅድሚ {0} ርብዒ" } },
@@ -113,23 +125,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Month,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Long,
                 "ወርሒ",
                 new Dictionary<int, string> { { -1, "last month" }, { 0, "ህሉው ወርሒ" }, { 1, "ዝመጽእ ወርሒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ወርሒ" }, { PluralRulesValues.Other, "ቅድሚ {0} ወርሒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ወርሒ" }, { PluralRulesValues.Other, "ኣብ {0} ወርሒ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Narrow,
                 "ወርሒ",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ወርሒ" }, { 0, "ህሉው ወርሒ" }, { 1, "ዝመጽእ ወርሒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ወርሒ" }, { PluralRulesValues.Other, "ቅድሚ {0} ወርሒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ወርሒ" }, { PluralRulesValues.Other, "ኣብ {0} ወርሒ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Short,
                 "ወርሒ",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ወርሒ" }, { 0, "ህሉው ወርሒ" }, { 1, "ዝመጽእ ወርሒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ወርሒ" }, { PluralRulesValues.Other, "ቅድሚ {0} ወርሒ" } },
@@ -140,23 +156,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Week,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Long,
                 "Week",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰሙን" }, { 0, "ህሉው ሰሙን" }, { 1, "ዝመጽእ ሰሙን" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰሙን" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰሙን" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰሙን" }, { PluralRulesValues.Other, "ኣብ {0} ሰሙን" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Narrow,
                 "ሰሙን",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰሙን" }, { 0, "ህሉው ሰሙን" }, { 1, "ዝመጽእ ሰሙን" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰሙን" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰሙን" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰሙን" }, { PluralRulesValues.Other, "ኣብ {0} ሰሙን" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Short,
                 "ሰሙን",
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰሙን" }, { 0, "ህሉው ሰሙን" }, { 1, "ዝመጽእ ሰሙን" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰሙን" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰሙን" } },
@@ -167,23 +187,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Long,
                 "ሰሙን ናይ ወርሒ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "ሰሙ. ናይ ወር.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Short,
                 "ሰሙ. ናይ ወር.",
                 null,
                 null,
@@ -194,23 +218,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Day,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
                 "መዓልቲ",
                 new Dictionary<int, string> { { -1, "ትማሊ" }, { 0, "ሎሚ" }, { 1, "ጽባሕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} መዓልቲ" }, { PluralRulesValues.Other, "ኣብ {0} መዓልቲ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} መዓልቲ" }, { PluralRulesValues.Other, "ኣብ {0} መዓልቲ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Narrow,
                 "መዓልቲ",
                 new Dictionary<int, string> { { -1, "ትማሊ" }, { 0, "ሎሚ" }, { 1, "ጽባሕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} መዓልቲ" }, { PluralRulesValues.Other, "ቅድሚ {0} መዓልቲ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} መዓልቲ" }, { PluralRulesValues.Other, "ኣብ {0} መዓልቲ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Short,
                 "መዓልቲ",
                 new Dictionary<int, string> { { -1, "ትማሊ" }, { 0, "ሎሚ" }, { 1, "ጽባሕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} መዓልቲ" }, { PluralRulesValues.Other, "ቅድሚ {0} መዓልቲ" } },
@@ -221,23 +249,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayOfYear,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Long,
                 "መዓልቲ ናይ ዓመት",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Narrow,
                 "መዓልቲ ናይ ዓ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Short,
                 "መዓልቲ ናይ ዓ.",
                 null,
                 null,
@@ -248,23 +280,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Weekday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Long,
                 "መዓልቲ ናይ ሰሙን",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Narrow,
                 "መዓልቲ ናይ ሰ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Short,
                 "መዓልቲ ናይ ሰሙን",
                 null,
                 null,
@@ -275,23 +311,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekdayOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Long,
                 "መዓልታት ስራሕ ናይ ወርሒ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "መ.ስራሕ ናይ ወርሒ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Short,
                 "መዓልታት ስራሕ ናይ ወርሒ",
                 null,
                 null,
@@ -302,23 +342,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Sunday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰንበት" }, { 0, "ሎሚ ሰንበት" }, { 1, "ዝመጽእ ሰንበት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰንበት" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰንበት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰንበት" }, { PluralRulesValues.Other, "ኣብ {0} ሰንበት" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰንበት" }, { 0, "ሎሚ ሰንበት" }, { 1, "ዝመጽእ ሰንበት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰንበት" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰንበት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰንበት" }, { PluralRulesValues.Other, "ኣብ {0} ሰንበት" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰንበት" }, { 0, "ሎሚ ሰንበት" }, { 1, "ዝመጽእ ሰንበት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰንበት" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰንበት" } },
@@ -329,23 +373,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Monday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰኑይ" }, { 0, "ሎሚ ሰኑይ" }, { 1, "ዝመጽእ ሰኑይ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰኑይ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰኑይ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰኑይ" }, { PluralRulesValues.Other, "ኣብ {0} ሰኑይ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰኑይ" }, { 0, "ሎሚ ሰኑይ" }, { 1, "ዝመጽእ ሰኑይ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰኑይ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰኑይ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰኑይ" }, { PluralRulesValues.Other, "ኣብ {0} ሰኑይ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰኑይ" }, { 0, "ሎሚ ሰኑይ" }, { 1, "ዝመጽእ ሰኑይ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰኑይ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰኑይ" } },
@@ -356,23 +404,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Tuesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰሉስ" }, { 0, "ሎሚ ሰሉስ" }, { 1, "ዝመጽእ ሰሉስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰሉስ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰሉስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰሉስ" }, { PluralRulesValues.Other, "ኣብ {0} ሰሉስ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰሉስ" }, { 0, "ሎሚ ሰሉስ" }, { 1, "ዝመጽእ ሰሉስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰሉስ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰሉስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰሉስ" }, { PluralRulesValues.Other, "ኣብ {0} ሰሉስ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሰሉስ" }, { 0, "ሎሚ ሰሉስ" }, { 1, "ዝመጽእ ሰሉስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰሉስ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰሉስ" } },
@@ -383,23 +435,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Wednesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ረቡዕ" }, { 0, "ሎሚ ረቡዕ" }, { 1, "ዝመጽእ ረቡዕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ረቡዕ" }, { PluralRulesValues.Other, "ቅድሚ {0} ረቡዕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ረቡዕ" }, { PluralRulesValues.Other, "ኣብ {0} ረቡዕ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ረቡዕ" }, { 0, "ሎሚ ረቡዕ" }, { 1, "ዝመጽእ ረቡዕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ረቡዕ" }, { PluralRulesValues.Other, "ቅድሚ {0} ረቡዕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ረቡዕ" }, { PluralRulesValues.Other, "ኣብ {0} ረቡዕ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ረቡዕ" }, { 0, "ሎሚ ረቡዕ" }, { 1, "ዝመጽእ ረቡዕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ረቡዕ" }, { PluralRulesValues.Other, "ቅድሚ {0} ረቡዕ" } },
@@ -410,23 +466,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Thursday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሓሙስ" }, { 0, "ሎሚ ሓሙስ" }, { 1, "ዝመጽእ ሓሙስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሓሙስ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሓሙስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሓሙስ" }, { PluralRulesValues.Other, "ኣብ {0} ሓሙስ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሓሙስ" }, { 0, "ሎሚ ሓሙስ" }, { 1, "ዝመጽእ ሓሙስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሓሙስ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሓሙስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሓሙስ" }, { PluralRulesValues.Other, "ኣብ {0} ሓሙስ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ሓሙስ" }, { 0, "ሎሚ ሓሙስ" }, { 1, "ዝመጽእ ሓሙስ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሓሙስ" }, { PluralRulesValues.Other, "ቅድሚ {0} ሓሙስ" } },
@@ -437,23 +497,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Friday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ዓርቢ" }, { 0, "ሎሚ ዓርቢ" }, { 1, "ዝመጽእ ዓርቢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ዓርቢ" }, { PluralRulesValues.Other, "ቅድሚ {0} ዓርቢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ዓርቢ" }, { PluralRulesValues.Other, "ኣብ {0} ዓርቢ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ዓርቢ" }, { 0, "ሎሚ ዓርቢ" }, { 1, "ዝመጽእ ዓርቢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ዓርቢ" }, { PluralRulesValues.Other, "ቅድሚ {0} ዓርቢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ዓርቢ" }, { PluralRulesValues.Other, "ኣብ {0} ዓርቢ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ዓርቢ" }, { 0, "ሎሚ ዓርቢ" }, { 1, "ዝመጽእ ዓርቢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ዓርቢ" }, { PluralRulesValues.Other, "ቅድሚ {0} ዓርቢ" } },
@@ -464,23 +528,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Saturday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ቀዳም" }, { 0, "ሎሚ ቀዳም" }, { 1, "ዝመጽእ ቀዳም" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ቀዳም" }, { PluralRulesValues.Other, "ቅድሚ {0} ቀዳም" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ቀዳም" }, { PluralRulesValues.Other, "ኣብ {0} ቀዳም" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ቀዳም" }, { 0, "ሎሚ ቀዳም" }, { 1, "ዝመጽእ ቀዳም" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ቀዳም" }, { PluralRulesValues.Other, "ቅድሚ {0} ቀዳም" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ቀዳም" }, { PluralRulesValues.Other, "ኣብ {0} ቀዳም" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ዝሓለፈ ቀዳም" }, { 0, "ሎሚ ቀዳም" }, { 1, "ዝመጽእ ቀዳም" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ቀዳም" }, { PluralRulesValues.Other, "ቅድሚ {0} ቀዳም" } },
@@ -491,23 +559,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayPeriod,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Long,
                 "ቅድመ ፍርቂ-መዓልቲ/ድሕሪ ፍርቂ-መዓልቲ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Narrow,
                 "ቅድመ ፍርቂ-መዓልቲ/ድሕሪ ፍርቂ-መዓልቲ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Short,
                 "ቅድመ ፍርቂ-መዓልቲ/ድሕሪ ፍርቂ-መዓልቲ",
                 null,
                 null,
@@ -518,23 +590,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Hour,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Long,
                 "ሰዓት",
                 new Dictionary<int, string> { { 0, "ኣብዚ ሰዓት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰዓት" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰዓት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰዓት" }, { PluralRulesValues.Other, "ኣብ {0} ሰዓት" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Narrow,
                 "ሰዓት",
                 new Dictionary<int, string> { { 0, "ኣብዚ ሰዓት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰዓት" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰዓት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ሰዓት" }, { PluralRulesValues.Other, "ኣብ {0} ሰዓት" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Short,
                 "ሰዓት",
                 new Dictionary<int, string> { { 0, "ኣብዚ ሰዓት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ሰዓት" }, { PluralRulesValues.Other, "ቅድሚ {0} ሰዓት" } },
@@ -545,23 +621,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Minute,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Long,
                 "ደቒቕ",
                 new Dictionary<int, string> { { 0, "ኣብዚ ደቒቕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ደቒቕ" }, { PluralRulesValues.Other, "ቅድሚ {0} ደቒቕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ደቒቕ" }, { PluralRulesValues.Other, "ኣብ {0} ደቒቕ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Narrow,
                 "ደቒ.",
                 new Dictionary<int, string> { { 0, "ኣብዚ ደቒቕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ደቒቕ" }, { PluralRulesValues.Other, "ቅድሚ {0} ደቒቕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ደቒቕ" }, { PluralRulesValues.Other, "ኣብ {0} ደቒቕ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Short,
                 "ደቒቕ",
                 new Dictionary<int, string> { { 0, "ኣብዚ ደቒቕ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ደቒቕ" }, { PluralRulesValues.Other, "ቅድሚ {0} ደቒቕ" } },
@@ -572,23 +652,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Second,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Long,
                 "ካልኢት",
                 new Dictionary<int, string> { { 0, "ሕጂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ካልኢት" }, { PluralRulesValues.Other, "ቅድሚ {0} ካልኢት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ካልኢት" }, { PluralRulesValues.Other, "ኣብ {0} ካልኢት" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Narrow,
                 "ካልኢት",
                 new Dictionary<int, string> { { 0, "ሕጂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ካልኢት" }, { PluralRulesValues.Other, "ቅድሚ {0} ካልኢት" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ኣብ {0} ካልኢት" }, { PluralRulesValues.Other, "ኣብ {0} ካልኢት" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Short,
                 "ካልኢት",
                 new Dictionary<int, string> { { 0, "ሕጂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ቅድሚ {0} ካልኢት" }, { PluralRulesValues.Other, "ቅድሚ {0} ካልኢት" } },
@@ -599,26 +683,63 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Zone,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Long,
                 "ክልል",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Narrow,
                 "ክልል",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Short,
                 "ክልል",
                 null,
                 null,
                 null));
+
+        /// <summary>
+        /// Gets the Relative Time resource styles based on the unit specified
+        /// </summary>
+        /// <param name="relativeTimeUnit">The resource unit to get</param>
+        /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
+        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
+        {
+            RelativeTimeUnitValues.Era => this.Era,
+            RelativeTimeUnitValues.Year => this.Year,
+            RelativeTimeUnitValues.Quarter => this.Quarter,
+            RelativeTimeUnitValues.Month => this.Month,
+            RelativeTimeUnitValues.Week => this.Week,
+            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
+            RelativeTimeUnitValues.Day => this.Day,
+            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
+            RelativeTimeUnitValues.Weekday => this.Weekday,
+            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
+            RelativeTimeUnitValues.Sunday => this.Sunday,
+            RelativeTimeUnitValues.Monday => this.Monday,
+            RelativeTimeUnitValues.Tuesday => this.Tuesday,
+            RelativeTimeUnitValues.Wednesday => this.Wednesday,
+            RelativeTimeUnitValues.Thursday => this.Thursday,
+            RelativeTimeUnitValues.Friday => this.Friday,
+            RelativeTimeUnitValues.Saturday => this.Saturday,
+            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
+            RelativeTimeUnitValues.Hour => this.Hour,
+            RelativeTimeUnitValues.Minute => this.Minute,
+            RelativeTimeUnitValues.Second => this.Second,
+            RelativeTimeUnitValues.Zone => this.Zone,
+            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+        };
     }
 }

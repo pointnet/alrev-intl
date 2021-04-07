@@ -32,23 +32,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Era,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Long,
                 "ਸੰਮਤ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Narrow,
                 "ਸੰਮਤ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Short,
                 "ਸੰਮਤ",
                 null,
                 null,
@@ -59,23 +63,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Year,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Long,
                 "ਸਾਲ",
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਸਾਲ" }, { 0, "ਇਹ ਸਾਲ" }, { 1, "ਅਗਲਾ ਸਾਲ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸਾਲ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸਾਲ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸਾਲ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਸਾਲਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Narrow,
                 "ਸਾਲ",
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਸਾਲ" }, { 0, "ਇਹ ਸਾਲ" }, { 1, "ਅਗਲਾ ਸਾਲ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸਾਲ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸਾਲ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸਾਲ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਸਾਲਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Short,
                 "ਸਾਲ",
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਸਾਲ" }, { 0, "ਇਹ ਸਾਲ" }, { 1, "ਅਗਲਾ ਸਾਲ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸਾਲ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸਾਲ ਪਹਿਲਾਂ" } },
@@ -86,23 +94,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Quarter,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Long,
                 "ਤਿਮਾਹੀ",
                 new Dictionary<int, string> { { -1, "ਪਿਛਲੀ ਤਿਮਾਹੀ" }, { 0, "ਇਸ ਤਿਮਾਹੀ" }, { 1, "ਅਗਲੀ ਤਿਮਾਹੀ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਤਿਮਾਹੀ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਤਿਮਾਹੀਆਂ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਤਿਮਾਹੀ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਤਿਮਾਹੀਆਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Narrow,
                 "ਤਿਮਾਹੀ",
                 new Dictionary<int, string> { { -1, "ਪਿਛਲੀ ਤਿਮਾਹੀ" }, { 0, "ਇਹ ਤਿਮਾਹੀ" }, { 1, "ਅਗਲੀ ਤਿਮਾਹੀ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਤਿਮਾਹੀ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਤਿਮਾਹੀਆਂ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਤਿਮਾਹੀ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਤਿਮਾਹੀਆਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Short,
                 "ਤਿਮਾਹੀ",
                 new Dictionary<int, string> { { -1, "ਪਿਛਲੀ ਤਿਮਾਹੀ" }, { 0, "ਇਹ ਤਿਮਾਹੀ" }, { 1, "ਅਗਲੀ ਤਿਮਾਹੀ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਤਿਮਾਹੀ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਤਿਮਾਹੀਆਂ ਪਹਿਲਾਂ" } },
@@ -113,23 +125,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Month,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Long,
                 "ਮਹੀਨਾ",
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਮਹੀਨਾ" }, { 0, "ਇਹ ਮਹੀਨਾ" }, { 1, "ਅਗਲਾ ਮਹੀਨਾ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮਹੀਨਾ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਮਹੀਨੇ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮਹੀਨੇ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਮਹੀਨਿਆਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Narrow,
                 "ਮਹੀਨਾ",
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਮਹੀਨਾ" }, { 0, "ਇਹ ਮਹੀਨਾ" }, { 1, "ਅਗਲਾ ਮਹੀਨਾ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮਹੀਨਾ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਮਹੀਨੇ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮਹੀਨੇ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਮਹੀਨਿਆਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Short,
                 "ਮਹੀਨਾ",
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਮਹੀਨਾ" }, { 0, "ਇਹ ਮਹੀਨਾ" }, { 1, "ਅਗਲਾ ਮਹੀਨਾ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮਹੀਨਾ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਮਹੀਨੇ ਪਹਿਲਾਂ" } },
@@ -140,23 +156,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Week,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Long,
                 "ਹਫ਼ਤਾ",
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਹਫ਼ਤਾ" }, { 0, "ਇਹ ਹਫ਼ਤਾ" }, { 1, "ਅਗਲਾ ਹਫ਼ਤਾ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਹਫ਼ਤਾ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਹਫ਼ਤੇ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਹਫ਼ਤੇ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਹਫ਼ਤਿਆਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Narrow,
                 "ਹਫ਼ਤਾ",
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਹਫ਼ਤਾ" }, { 0, "ਇਹ ਹਫ਼ਤਾ" }, { 1, "ਅਗਲਾ ਹਫ਼ਤਾ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਹਫ਼ਤਾ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਹਫ਼ਤੇ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਹਫ਼ਤੇ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਹਫ਼ਤਿਆਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Short,
                 "ਹਫ਼ਤਾ",
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਹਫ਼ਤਾ" }, { 0, "ਇਹ ਹਫ਼ਤਾ" }, { 1, "ਅਗਲਾ ਹਫ਼ਤਾ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਹਫ਼ਤਾ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਹਫ਼ਤੇ ਪਹਿਲਾਂ" } },
@@ -167,23 +187,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Long,
                 "ਮਹੀਨੇ ਦਾ ਹਫ਼ਤਾ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "ਮਹੀਨੇ ਦਾ ਹਫ਼ਤਾ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Short,
                 "ਮਹੀਨੇ ਦਾ ਹਫ਼ਤਾ",
                 null,
                 null,
@@ -194,23 +218,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Day,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
                 "ਦਿਨ",
                 new Dictionary<int, string> { { -1, "ਬੀਤਿਆ ਕੱਲ੍ਹ" }, { 0, "ਅੱਜ" }, { 1, "ਭਲਕੇ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਦਿਨ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਦਿਨ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਦਿਨ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਦਿਨਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Narrow,
                 "ਦਿਨ",
                 new Dictionary<int, string> { { -1, "ਬੀਤਿਆ ਕੱਲ੍ਹ" }, { 0, "ਅੱਜ" }, { 1, "ਭਲਕੇ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਦਿਨ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਦਿਨ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਦਿਨ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਦਿਨਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Short,
                 "ਦਿਨ",
                 new Dictionary<int, string> { { -1, "ਬੀਤਿਆ ਕੱਲ੍ਹ" }, { 0, "ਅੱਜ" }, { 1, "ਭਲਕੇ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਦਿਨ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਦਿਨ ਪਹਿਲਾਂ" } },
@@ -221,23 +249,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayOfYear,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Long,
                 "ਸਾਲ ਦਾ ਦਿਨ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Narrow,
                 "ਸਾਲ ਦਾ ਦਿਨ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Short,
                 "ਸਾਲ ਦਾ ਦਿਨ",
                 null,
                 null,
@@ -248,23 +280,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Weekday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Long,
                 "ਹਫ਼ਤੇ ਦਾ ਦਿਨ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Narrow,
                 "ਹਫ਼ਤੇ ਦਾ ਦਿਨ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Short,
                 "ਹਫ਼ਤੇ ਦਾ ਦਿਨ",
                 null,
                 null,
@@ -275,23 +311,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekdayOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Long,
                 "ਮਹੀਨੇ ਦਾ ਹਫ਼ਤੇ ਦਾ ਦਿਨ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "ਮਹੀਨੇ ਦਾ ਹਫ਼ਤੇ ਦਾ ਦਿਨ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Short,
                 "ਮਹੀਨੇ ਦਾ ਹਫ਼ਤੇ ਦਾ ਦਿਨ",
                 null,
                 null,
@@ -302,23 +342,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Sunday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਐਤਵਾਰ" }, { 0, "ਇਸ ਐਤਵਾਰ" }, { 1, "ਅਗਲਾ ਐਤਵਾਰ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਐਤਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਐਤਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਐਤਵਾਰ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਐਤਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਐਤ" }, { 0, "ਇਹ ਐਤ" }, { 1, "ਅਗਲਾ ਐਤ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਐਤਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਐਤਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਐਤਵਾਰ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਐਤਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਐਤ" }, { 0, "ਇਹ ਐਤ" }, { 1, "ਅਗਲਾ ਐਤ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਐਤਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਐਤਵਾਰ ਪਹਿਲਾਂ" } },
@@ -329,23 +373,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Monday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਸੋਮਵਾਰ" }, { 0, "ਇਸ ਸੋਮਵਾਰ" }, { 1, "ਅਗਲਾ ਸੋਮਵਾਰ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸੋਮਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸੋਮਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸੋਮਵਾਰ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਸੋਮਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਸੋਮ" }, { 0, "ਇਸ ਸੋਮ" }, { 1, "ਅਗਲਾ ਸੋਮ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸੋਮਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸੋਮਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸੋਮਵਾਰ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਸੋਮਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਸੋਮ" }, { 0, "ਇਸ ਸੋਮ" }, { 1, "ਅਗਲਾ ਸੋਮ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸੋਮਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸੋਮਵਾਰ ਪਹਿਲਾਂ" } },
@@ -356,23 +404,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Tuesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਮੰਗਲਵਾਰ" }, { 0, "ਇਹ ਮੰਗਲਵਾਰ" }, { 1, "ਅਗਲਾ ਮੰਗਲਵਾਰ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮੰਗਲਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਮੰਗਲਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮੰਗਲਵਾਰ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਮੰਗਲਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਮੰਗਲ" }, { 0, "ਇਹ ਮੰਗਲ" }, { 1, "ਅਗਲਾ ਮੰਗਲ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮੰਗਲਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਮੰਗਲਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮੰਗਲਵਾਰ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਮੰਗਲਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਮੰਗਲ" }, { 0, "ਇਹ ਮੰਗਲ" }, { 1, "ਅਗਲਾ ਮੰਗਲ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮੰਗਲਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਮੰਗਲਵਾਰ ਪਹਿਲਾਂ" } },
@@ -383,23 +435,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Wednesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਬੁੱਧਵਾਰ" }, { 0, "ਇਹ ਬੁੱਧਵਾਰ" }, { 1, "ਅਗਲਾ ਬੁੱਧਵਾਰ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਬੁੱਧਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਬੁੱਧਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਬੁੱਧਵਾਰ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਬੁੱਧਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਬੁੱਧ" }, { 0, "ਇਹ ਬੁੱਧ" }, { 1, "ਅਗਲਾ ਬੁੱਧ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਬੁੱਧਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਬੁੱਧਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਬੁੱਧਵਾਰ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਬੁੱਧਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਬੁੱਧ" }, { 0, "ਇਹ ਬੁੱਧ" }, { 1, "ਅਗਲਾ ਬੁੱਧ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਬੁੱਧਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਬੁੱਧਵਾਰ ਪਹਿਲਾਂ" } },
@@ -410,23 +466,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Thursday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਵੀਰਵਾਰ" }, { 0, "ਇਹ ਵੀਰਵਾਰ" }, { 1, "ਅਗਲਾ ਵੀਰਵਾਰ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਵੀਰਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਵੀਰਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਵੀਰਵਾਰ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਵੀਰਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਵੀਰ" }, { 0, "ਇਹ ਵੀਰ" }, { 1, "ਅਗਲਾ ਵੀਰ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਵੀਰਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਵੀਰਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਵੀਰਵਾਰਾਂ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਵੀਰਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਵੀਰ" }, { 0, "ਇਹ ਵੀਰ" }, { 1, "ਅਗਲਾ ਵੀਰ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਵੀਰਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਵੀਰਵਾਰ ਪਹਿਲਾਂ" } },
@@ -437,23 +497,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Friday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਸ਼ੁੱਕਰਵਾਰ" }, { 0, "ਇਹ ਸ਼ੁੱਕਰਵਾਰ" }, { 1, "ਅਗਲਾ ਸ਼ੁੱਕਰਵਾਰ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸ਼ੁੱਕਰਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸ਼ੁੱਕਰਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸ਼ੁੱਕਰਵਾਰ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਸ਼ੁੱਕਰਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਸ਼ੁੱ" }, { 0, "ਇਹ ਸ਼ੁੱ" }, { 1, "ਅਗਲਾ ਸ਼ੁੱ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸ਼ੁੱਕਰਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸ਼ੁੱਕਰਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸ਼ੁੱਕਰਵਾਰਾਂ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਸ਼ੁੱਕਰਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਸ਼ੁੱਕਰ" }, { 0, "ਇਹ ਸ਼ੁੱਕਰ" }, { 1, "ਅਗਲਾ ਸ਼ੁੱਕਰ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸ਼ੁੱਕਰਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸ਼ੁੱਕਰਵਾਰ ਪਹਿਲਾਂ" } },
@@ -464,23 +528,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Saturday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਸ਼ਨਿੱਚਰਵਾਰ" }, { 0, "ਇਹ ਸ਼ਨਿੱਚਰਵਾਰ" }, { 1, "ਅਗਲਾ ਸ਼ਨਿੱਚਰਵਾਰ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸ਼ਨਿੱਚਰਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸ਼ਨਿੱਚਰਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸ਼ਨਿੱਚਰਵਾਰ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਸ਼ਨਿੱਚਰਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਸ਼ਨਿੱ" }, { 0, "ਇਹ ਸ਼ਨਿੱ" }, { 1, "ਅਗਲਾ ਸ਼ਨਿੱ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸ਼ਨਿੱਚਰਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸ਼ਨਿੱਚਰਵਾਰ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸ਼ਨਿੱਚਰਵਾਰਾਂ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਸ਼ਨਿੱਚਰਵਾਰਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ਪਿਛਲਾ ਸ਼ਨਿੱਚਰ" }, { 0, "ਇਹ ਸ਼ਨਿੱਚਰ" }, { 1, "ਅਗਲਾ ਸ਼ਨਿੱਚਰ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸ਼ਨਿੱਚਰਵਾਰ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸ਼ਨਿੱਚਰਵਾਰ ਪਹਿਲਾਂ" } },
@@ -491,23 +559,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayPeriod,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Long,
                 "ਪੂ.ਦੁ./ਬਾ.ਦੁ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Narrow,
                 "ਪੂ.ਦੁ./ਬਾ.ਦੁ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Short,
                 "ਪੂ.ਦੁ./ਬਾ.ਦੁ.",
                 null,
                 null,
@@ -518,23 +590,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Hour,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Long,
                 "ਘੰਟਾ",
                 new Dictionary<int, string> { { 0, "ਇਸ ਘੰਟੇ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਘੰਟਾ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਘੰਟੇ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਘੰਟੇ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਘੰਟਿਆਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Narrow,
                 "ਘੰ",
                 new Dictionary<int, string> { { 0, "ਇਸ ਘੰਟੇ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਘੰਟਾ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਘੰਟੇ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਘੰਟੇ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਘੰਟਿਆਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Short,
                 "ਘੰਟਾ",
                 new Dictionary<int, string> { { 0, "ਇਸ ਘੰਟੇ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਘੰਟਾ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਘੰਟੇ ਪਹਿਲਾਂ" } },
@@ -545,23 +621,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Minute,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Long,
                 "ਮਿੰਟ",
                 new Dictionary<int, string> { { 0, "ਇਸ ਮਿੰਟ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮਿੰਟ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਮਿੰਟ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮਿੰਟ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਮਿੰਟਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Narrow,
                 "ਮਿੰਟ",
                 new Dictionary<int, string> { { 0, "ਇਸ ਮਿੰਟ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮਿੰਟ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਮਿੰਟ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮਿੰਟ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਮਿੰਟਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Short,
                 "ਮਿੰਟ",
                 new Dictionary<int, string> { { 0, "ਇਸ ਮਿੰਟ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਮਿੰਟ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਮਿੰਟ ਪਹਿਲਾਂ" } },
@@ -572,23 +652,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Second,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Long,
                 "ਸਕਿੰਟ",
                 new Dictionary<int, string> { { 0, "ਹੁਣ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸਕਿੰਟ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸਕਿੰਟ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸਕਿੰਟ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਸਕਿੰਟਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Narrow,
                 "ਸਕਿੰਟ",
                 new Dictionary<int, string> { { 0, "ਹੁਣ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸਕਿੰਟ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸਕਿੰਟ ਪਹਿਲਾਂ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸਕਿੰਟ ਵਿੱਚ" }, { PluralRulesValues.Other, "{0} ਸਕਿੰਟਾਂ ਵਿੱਚ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Short,
                 "ਸਕਿੰਟ",
                 new Dictionary<int, string> { { 0, "ਹੁਣ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ਸਕਿੰਟ ਪਹਿਲਾਂ" }, { PluralRulesValues.Other, "{0} ਸਕਿੰਟ ਪਹਿਲਾਂ" } },
@@ -599,26 +683,63 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Zone,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Long,
                 "ਇਲਾਕਾਈ ਵੇਲਾ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Narrow,
                 "ਇਲਾਕਾਈ ਵੇਲਾ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Short,
                 "ਇਲਾਕਾਈ ਵੇਲਾ",
                 null,
                 null,
                 null));
+
+        /// <summary>
+        /// Gets the Relative Time resource styles based on the unit specified
+        /// </summary>
+        /// <param name="relativeTimeUnit">The resource unit to get</param>
+        /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
+        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
+        {
+            RelativeTimeUnitValues.Era => this.Era,
+            RelativeTimeUnitValues.Year => this.Year,
+            RelativeTimeUnitValues.Quarter => this.Quarter,
+            RelativeTimeUnitValues.Month => this.Month,
+            RelativeTimeUnitValues.Week => this.Week,
+            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
+            RelativeTimeUnitValues.Day => this.Day,
+            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
+            RelativeTimeUnitValues.Weekday => this.Weekday,
+            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
+            RelativeTimeUnitValues.Sunday => this.Sunday,
+            RelativeTimeUnitValues.Monday => this.Monday,
+            RelativeTimeUnitValues.Tuesday => this.Tuesday,
+            RelativeTimeUnitValues.Wednesday => this.Wednesday,
+            RelativeTimeUnitValues.Thursday => this.Thursday,
+            RelativeTimeUnitValues.Friday => this.Friday,
+            RelativeTimeUnitValues.Saturday => this.Saturday,
+            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
+            RelativeTimeUnitValues.Hour => this.Hour,
+            RelativeTimeUnitValues.Minute => this.Minute,
+            RelativeTimeUnitValues.Second => this.Second,
+            RelativeTimeUnitValues.Zone => this.Zone,
+            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+        };
     }
 }

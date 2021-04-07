@@ -32,23 +32,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Era,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Long,
                 "era",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Narrow,
                 "era",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Short,
                 "era",
                 null,
                 null,
@@ -59,23 +63,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Year,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Long,
                 "anno",
                 new Dictionary<int, string> { { -1, "anno scorso" }, { 0, "quest’anno" }, { 1, "anno prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} anno fa" }, { PluralRulesValues.Other, "{0} anni fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} anno" }, { PluralRulesValues.Other, "tra {0} anni" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Narrow,
                 "anno",
                 new Dictionary<int, string> { { -1, "anno scorso" }, { 0, "quest’anno" }, { 1, "anno prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} anno fa" }, { PluralRulesValues.Other, "{0} anni fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} anno" }, { PluralRulesValues.Other, "tra {0} anni" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Short,
                 "anno",
                 new Dictionary<int, string> { { -1, "anno scorso" }, { 0, "quest’anno" }, { 1, "anno prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} anno fa" }, { PluralRulesValues.Other, "{0} anni fa" } },
@@ -86,23 +94,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Quarter,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Long,
                 "trimestre",
                 new Dictionary<int, string> { { -1, "trimestre scorso" }, { 0, "questo trimestre" }, { 1, "trimestre prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} trimestre fa" }, { PluralRulesValues.Other, "{0} trimestri fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} trimestre" }, { PluralRulesValues.Other, "tra {0} trimestri" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Narrow,
                 "trim.",
                 new Dictionary<int, string> { { -1, "trim. scorso" }, { 0, "questo trim." }, { 1, "trim. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} trim. fa" }, { PluralRulesValues.Other, "{0} trim. fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} trim." }, { PluralRulesValues.Other, "tra {0} trim." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Short,
                 "trim.",
                 new Dictionary<int, string> { { -1, "trim. scorso" }, { 0, "questo trim." }, { 1, "trim. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} trim. fa" }, { PluralRulesValues.Other, "{0} trim. fa" } },
@@ -113,23 +125,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Month,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Long,
                 "mese",
                 new Dictionary<int, string> { { -1, "mese scorso" }, { 0, "questo mese" }, { 1, "mese prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mese fa" }, { PluralRulesValues.Other, "{0} mesi fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} mese" }, { PluralRulesValues.Other, "tra {0} mesi" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Narrow,
                 "mese",
                 new Dictionary<int, string> { { -1, "mese scorso" }, { 0, "questo mese" }, { 1, "mese prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mese fa" }, { PluralRulesValues.Other, "{0} mesi fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} mese" }, { PluralRulesValues.Other, "tra {0} mesi" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Short,
                 "mese",
                 new Dictionary<int, string> { { -1, "mese scorso" }, { 0, "questo mese" }, { 1, "mese prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mese fa" }, { PluralRulesValues.Other, "{0} mesi fa" } },
@@ -140,23 +156,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Week,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Long,
                 "settimana",
                 new Dictionary<int, string> { { -1, "settimana scorsa" }, { 0, "questa settimana" }, { 1, "settimana prossima" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} settimana fa" }, { PluralRulesValues.Other, "{0} settimane fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} settimana" }, { PluralRulesValues.Other, "tra {0} settimane" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Narrow,
                 "sett.",
                 new Dictionary<int, string> { { -1, "sett. scorsa" }, { 0, "questa sett." }, { 1, "sett. prossima" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sett. fa" }, { PluralRulesValues.Other, "{0} sett. fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} sett." }, { PluralRulesValues.Other, "tra {0} sett." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Short,
                 "sett.",
                 new Dictionary<int, string> { { -1, "sett. scorsa" }, { 0, "questa sett." }, { 1, "sett. prossima" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sett. fa" }, { PluralRulesValues.Other, "{0} sett. fa" } },
@@ -167,23 +187,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Long,
                 "settimana del mese",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "sett. mese",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Short,
                 "sett. mese",
                 null,
                 null,
@@ -194,23 +218,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Day,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
                 "giorno",
                 new Dictionary<int, string> { { -2, "l’altro ieri" }, { -1, "ieri" }, { 0, "oggi" }, { 1, "domani" }, { 2, "dopodomani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} giorno fa" }, { PluralRulesValues.Other, "{0} giorni fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} giorno" }, { PluralRulesValues.Other, "tra {0} giorni" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Narrow,
                 "g.",
                 new Dictionary<int, string> { { -2, "l’altro ieri" }, { -1, "ieri" }, { 0, "oggi" }, { 1, "domani" }, { 2, "dopodomani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} g fa" }, { PluralRulesValues.Other, "{0} gg fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} g" }, { PluralRulesValues.Other, "tra {0} gg" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Short,
                 "g.",
                 new Dictionary<int, string> { { -2, "l’altro ieri" }, { -1, "ieri" }, { 0, "oggi" }, { 1, "domani" }, { 2, "dopodomani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} g fa" }, { PluralRulesValues.Other, "{0} gg fa" } },
@@ -221,23 +249,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayOfYear,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Long,
                 "giorno dell’anno",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Narrow,
                 "giorno anno",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Short,
                 "giorno anno",
                 null,
                 null,
@@ -248,23 +280,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Weekday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Long,
                 "giorno della settimana",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Narrow,
                 "giorno sett.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Short,
                 "giorno settimana",
                 null,
                 null,
@@ -275,23 +311,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekdayOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Long,
                 "giorno del mese",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "giorno mese",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Short,
                 "giorno mese",
                 null,
                 null,
@@ -302,23 +342,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Sunday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "domenica scorsa" }, { 0, "questa domenica" }, { 1, "domenica prossima" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} domenica fa" }, { PluralRulesValues.Other, "{0} domeniche fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} domenica" }, { PluralRulesValues.Other, "tra {0} domeniche" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "dom. scorsa" }, { 0, "questa dom." }, { 1, "dom. prossima" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} dom. fa" }, { PluralRulesValues.Other, "{0} dom. fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} dom." }, { PluralRulesValues.Other, "tra {0} dom." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "dom. scorsa" }, { 0, "questa dom." }, { 1, "dom. prossima" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} dom. fa" }, { PluralRulesValues.Other, "{0} dom. fa" } },
@@ -329,23 +373,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Monday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "lunedì scorso" }, { 0, "questo lunedì" }, { 1, "lunedì prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} lunedì fa" }, { PluralRulesValues.Other, "{0} lunedì fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} lunedì" }, { PluralRulesValues.Other, "tra {0} lunedì" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "lun. scorso" }, { 0, "questo lun." }, { 1, "lun. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} lun. fa" }, { PluralRulesValues.Other, "{0} lun. fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} lun." }, { PluralRulesValues.Other, "tra {0} lun." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "lun. scorso" }, { 0, "questo lun." }, { 1, "lun. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} lun. fa" }, { PluralRulesValues.Other, "{0} lun. fa" } },
@@ -356,23 +404,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Tuesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "martedì scorso" }, { 0, "questo martedì" }, { 1, "martedì prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} martedì fa" }, { PluralRulesValues.Other, "{0} martedì fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} martedì" }, { PluralRulesValues.Other, "tra {0} martedì" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "mar. scorso" }, { 0, "questo mar." }, { 1, "mar. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mar. fa" }, { PluralRulesValues.Other, "{0} mar. fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} mar." }, { PluralRulesValues.Other, "tra {0} mar." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "mar. scorso" }, { 0, "questo mar." }, { 1, "mar. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mar. fa" }, { PluralRulesValues.Other, "{0} mar. fa" } },
@@ -383,23 +435,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Wednesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "mercoledì scorso" }, { 0, "questo mercoledì" }, { 1, "mercoledì prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mercoledì fa" }, { PluralRulesValues.Other, "{0} mercoledì fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} mercoledì" }, { PluralRulesValues.Other, "tra {0} mercoledì" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "mer. scorso" }, { 0, "questo mer." }, { 1, "mer. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mer. fa" }, { PluralRulesValues.Other, "{0} mer. fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} mer." }, { PluralRulesValues.Other, "tra {0} mer." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "mer. scorso" }, { 0, "questo mer." }, { 1, "mer. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mer. fa" }, { PluralRulesValues.Other, "{0} mer. fa" } },
@@ -410,23 +466,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Thursday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "giovedì scorso" }, { 0, "questo giovedì" }, { 1, "giovedì prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} giovedì fa" }, { PluralRulesValues.Other, "{0} giovedì fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} giovedì" }, { PluralRulesValues.Other, "tra {0} giovedì" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "gio. scorso" }, { 0, "questo gio." }, { 1, "gio. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} gio. fa" }, { PluralRulesValues.Other, "{0} gio. fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} gio." }, { PluralRulesValues.Other, "tra {0} gio." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "gio. scorso" }, { 0, "questo gio." }, { 1, "gio. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} gio. fa" }, { PluralRulesValues.Other, "{0} gio. fa" } },
@@ -437,23 +497,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Friday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "venerdì scorso" }, { 0, "questo venerdì" }, { 1, "venerdì prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} venerdì fa" }, { PluralRulesValues.Other, "{0} venerdì fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} venerdì" }, { PluralRulesValues.Other, "tra {0} venerdì" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ven. scorso" }, { 0, "questo ven." }, { 1, "ven. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ven. fa" }, { PluralRulesValues.Other, "{0} ven. fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} ven." }, { PluralRulesValues.Other, "tra {0} ven." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ven. scorso" }, { 0, "questo ven." }, { 1, "ven. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ven. fa" }, { PluralRulesValues.Other, "{0} ven. fa" } },
@@ -464,23 +528,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Saturday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "sabato scorso" }, { 0, "questo sabato" }, { 1, "sabato prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sabato fa" }, { PluralRulesValues.Other, "{0} sabati fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} sabato" }, { PluralRulesValues.Other, "tra {0} sabati" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "sab. scorso" }, { 0, "questo sab." }, { 1, "sab. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sab. fa" }, { PluralRulesValues.Other, "{0} sab. fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} sab." }, { PluralRulesValues.Other, "tra {0} sab." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "sab. scorso" }, { 0, "questo sab." }, { 1, "sab. prossimo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sab. fa" }, { PluralRulesValues.Other, "{0} sab. fa" } },
@@ -491,23 +559,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayPeriod,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Long,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Narrow,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Short,
                 "AM/PM",
                 null,
                 null,
@@ -518,23 +590,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Hour,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Long,
                 "ora",
                 new Dictionary<int, string> { { 0, "quest’ora" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ora fa" }, { PluralRulesValues.Other, "{0} ore fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} ora" }, { PluralRulesValues.Other, "tra {0} ore" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Narrow,
                 "h",
                 new Dictionary<int, string> { { 0, "quest’ora" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} h fa" }, { PluralRulesValues.Other, "{0} h fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} h" }, { PluralRulesValues.Other, "tra {0} h" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Short,
                 "h",
                 new Dictionary<int, string> { { 0, "quest’ora" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} h fa" }, { PluralRulesValues.Other, "{0} h fa" } },
@@ -545,23 +621,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Minute,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Long,
                 "minuto",
                 new Dictionary<int, string> { { 0, "questo minuto" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} minuto fa" }, { PluralRulesValues.Other, "{0} minuti fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} minuto" }, { PluralRulesValues.Other, "tra {0} minuti" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Narrow,
                 "min",
                 new Dictionary<int, string> { { 0, "questo minuto" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min fa" }, { PluralRulesValues.Other, "{0} min fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} min" }, { PluralRulesValues.Other, "tra {0} min" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Short,
                 "min",
                 new Dictionary<int, string> { { 0, "questo minuto" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min fa" }, { PluralRulesValues.Other, "{0} min fa" } },
@@ -572,23 +652,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Second,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Long,
                 "secondo",
                 new Dictionary<int, string> { { 0, "ora" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} secondo fa" }, { PluralRulesValues.Other, "{0} secondi fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} secondo" }, { PluralRulesValues.Other, "tra {0} secondi" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Narrow,
                 "s",
                 new Dictionary<int, string> { { 0, "ora" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} s fa" }, { PluralRulesValues.Other, "{0} s fa" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "tra {0} s" }, { PluralRulesValues.Other, "tra {0} s" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Short,
                 "s",
                 new Dictionary<int, string> { { 0, "ora" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sec. fa" }, { PluralRulesValues.Other, "{0} sec. fa" } },
@@ -599,26 +683,63 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Zone,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Long,
                 "fuso orario",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Narrow,
                 "fuso",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Short,
                 "fuso",
                 null,
                 null,
                 null));
+
+        /// <summary>
+        /// Gets the Relative Time resource styles based on the unit specified
+        /// </summary>
+        /// <param name="relativeTimeUnit">The resource unit to get</param>
+        /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
+        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
+        {
+            RelativeTimeUnitValues.Era => this.Era,
+            RelativeTimeUnitValues.Year => this.Year,
+            RelativeTimeUnitValues.Quarter => this.Quarter,
+            RelativeTimeUnitValues.Month => this.Month,
+            RelativeTimeUnitValues.Week => this.Week,
+            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
+            RelativeTimeUnitValues.Day => this.Day,
+            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
+            RelativeTimeUnitValues.Weekday => this.Weekday,
+            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
+            RelativeTimeUnitValues.Sunday => this.Sunday,
+            RelativeTimeUnitValues.Monday => this.Monday,
+            RelativeTimeUnitValues.Tuesday => this.Tuesday,
+            RelativeTimeUnitValues.Wednesday => this.Wednesday,
+            RelativeTimeUnitValues.Thursday => this.Thursday,
+            RelativeTimeUnitValues.Friday => this.Friday,
+            RelativeTimeUnitValues.Saturday => this.Saturday,
+            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
+            RelativeTimeUnitValues.Hour => this.Hour,
+            RelativeTimeUnitValues.Minute => this.Minute,
+            RelativeTimeUnitValues.Second => this.Second,
+            RelativeTimeUnitValues.Zone => this.Zone,
+            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+        };
     }
 }

@@ -32,23 +32,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Era,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Long,
                 "tíðarrokning",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Narrow,
                 "tíðarrokning",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Short,
                 "tíðarrokning",
                 null,
                 null,
@@ -59,23 +63,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Year,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Long,
                 "ár",
                 new Dictionary<int, string> { { -1, "í fjør" }, { 0, "í ár" }, { 1, "næsta ár" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ár síðan" }, { PluralRulesValues.Other, "{0} ár síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} ár" }, { PluralRulesValues.Other, "um {0} ár" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Narrow,
                 "ár",
                 new Dictionary<int, string> { { -1, "í fjør" }, { 0, "í ár" }, { 1, "næsta ár" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ár síðan" }, { PluralRulesValues.Other, "{0} ár síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} ár" }, { PluralRulesValues.Other, "um {0} ár" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Short,
                 "ár",
                 new Dictionary<int, string> { { -1, "í fjør" }, { 0, "í ár" }, { 1, "næsta ár" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ár síðan" }, { PluralRulesValues.Other, "{0} ár síðan" } },
@@ -86,23 +94,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Quarter,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Long,
                 "ársfjórðingur",
                 new Dictionary<int, string> { { -1, "seinasta ársfjórðing" }, { 0, "hendan ársfjórðingin" }, { 1, "næsta ársfjórðing" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ársfjórðing síðan" }, { PluralRulesValues.Other, "{0} ársfjórðingar síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} ársfjórðing" }, { PluralRulesValues.Other, "um {0} ársfjórðingar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Narrow,
                 "ársfj.",
                 new Dictionary<int, string> { { -1, "seinasta ársfjórðing" }, { 0, "hendan ársfjórðingin" }, { 1, "næsta ársfjórðing" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ársfj. síðan" }, { PluralRulesValues.Other, "{0} ársfj. síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} ársfj." }, { PluralRulesValues.Other, "um {0} ársfj." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Short,
                 "ársfj.",
                 new Dictionary<int, string> { { -1, "seinasta ársfjórðing" }, { 0, "hendan ársfjórðingin" }, { 1, "næsta ársfjórðing" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ársfj. síðan" }, { PluralRulesValues.Other, "{0} ársfj. síðan" } },
@@ -113,23 +125,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Month,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Long,
                 "mánaður",
                 new Dictionary<int, string> { { -1, "seinasta mánað" }, { 0, "henda mánaðin" }, { 1, "næsta mánað" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mánað síðan" }, { PluralRulesValues.Other, "{0} mánaðir síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} mánað" }, { PluralRulesValues.Other, "um {0} mánaðir" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Narrow,
                 "mnð.",
                 new Dictionary<int, string> { { -1, "seinasta mnð." }, { 0, "henda mnð." }, { 1, "næsta mnð." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mnð. síðan" }, { PluralRulesValues.Other, "{0} mnð. síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} mnð." }, { PluralRulesValues.Other, "um {0} mnð." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Short,
                 "mnð.",
                 new Dictionary<int, string> { { -1, "seinasta mnð." }, { 0, "henda mnð." }, { 1, "næsta mnð." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mnð. síðan" }, { PluralRulesValues.Other, "{0} mnð. síðan" } },
@@ -140,23 +156,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Week,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Long,
                 "vika",
                 new Dictionary<int, string> { { -1, "seinastu viku" }, { 0, "hesu viku" }, { 1, "næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vika síðan" }, { PluralRulesValues.Other, "{0} vikur síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} viku" }, { PluralRulesValues.Other, "um {0} vikur" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Narrow,
                 "v.",
                 new Dictionary<int, string> { { -1, "seinastu v." }, { 0, "hesu v." }, { 1, "næstu v." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} v. síðan" }, { PluralRulesValues.Other, "{0} v. síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} v." }, { PluralRulesValues.Other, "um {0} v." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Short,
                 "vi.",
                 new Dictionary<int, string> { { -1, "seinastu vi." }, { 0, "hesu vi." }, { 1, "næstu vi." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vi. síðan" }, { PluralRulesValues.Other, "{0} vi. síðan" } },
@@ -167,23 +187,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Long,
                 "vika í mánaðinum",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "vi. í mnð.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Short,
                 "vi. í mnð.",
                 null,
                 null,
@@ -194,23 +218,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Day,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
                 "dagur",
                 new Dictionary<int, string> { { -2, "fyrradagin" }, { -1, "í gjár" }, { 0, "í dag" }, { 1, "í morgin" }, { 2, "í ovurmorgin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} dagur síðan" }, { PluralRulesValues.Other, "{0} dagar síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} dag" }, { PluralRulesValues.Other, "um {0} dagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Narrow,
                 "d.",
                 new Dictionary<int, string> { { -2, "fyrradagin" }, { -1, "í gjár" }, { 0, "í dag" }, { 1, "í morgin" }, { 2, "í ovurmorgin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} d. síðan" }, { PluralRulesValues.Other, "{0} d. síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} d." }, { PluralRulesValues.Other, "um {0} d." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Short,
                 "da.",
                 new Dictionary<int, string> { { -2, "fyrradagin" }, { -1, "í gjár" }, { 0, "í dag" }, { 1, "í morgin" }, { 2, "í ovurmorgin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} da. síðan" }, { PluralRulesValues.Other, "{0} da. síðan" } },
@@ -221,23 +249,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayOfYear,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Long,
                 "dagur í árinum",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Narrow,
                 "dagur í ár.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Short,
                 "dagur í ár.",
                 null,
                 null,
@@ -248,23 +280,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Weekday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Long,
                 "vikudagur",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Narrow,
                 "vikudagur",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Short,
                 "vikudagur",
                 null,
                 null,
@@ -275,23 +311,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekdayOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Long,
                 "vikudagur í mánaðinum",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "vikudagur í mnð.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Short,
                 "vikudagur í mnð.",
                 null,
                 null,
@@ -302,23 +342,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Sunday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta sunnudag" }, { 0, "næsta sunnudag" }, { 1, "sunnudagin í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sunnudag síðani" }, { PluralRulesValues.Other, "{0} sunnudagar síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} sunnudag" }, { PluralRulesValues.Other, "um {0} sunnudagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta su." }, { 0, "næsta su." }, { 1, "su. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} su. síðani" }, { PluralRulesValues.Other, "{0} su. síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} su." }, { PluralRulesValues.Other, "um {0} su." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta sun." }, { 0, "næsta sun." }, { 1, "sun. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sun. síðani" }, { PluralRulesValues.Other, "{0} sun. síðani" } },
@@ -329,23 +373,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Monday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta mánadag" }, { 0, "næsta mánadag" }, { 1, "mánadagin í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mánadag síðani" }, { PluralRulesValues.Other, "{0} mánadagar síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} mánadag" }, { PluralRulesValues.Other, "um {0} mánadagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta má." }, { 0, "næsta má." }, { 1, "má. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} má. síðani" }, { PluralRulesValues.Other, "{0} má. síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} má." }, { PluralRulesValues.Other, "um {0} má." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta mán." }, { 0, "næsta mán." }, { 1, "mán. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mán. síðani" }, { PluralRulesValues.Other, "{0} mán. síðani" } },
@@ -356,23 +404,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Tuesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta týsdag" }, { 0, "næsta týsdag" }, { 1, "týsdagin í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} týsdag síðani" }, { PluralRulesValues.Other, "{0} týsdagar síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} týsdag" }, { PluralRulesValues.Other, "um {0} týsdagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta tý." }, { 0, "næsta tý." }, { 1, "tý. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} tý. síðani" }, { PluralRulesValues.Other, "{0} tý. síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} tý." }, { PluralRulesValues.Other, "um {0} tý." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta týs." }, { 0, "næsta týs." }, { 1, "týs. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} týs. síðani" }, { PluralRulesValues.Other, "{0} týs. síðani" } },
@@ -383,23 +435,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Wednesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta mikudag" }, { 0, "næsta mikudag" }, { 1, "mikudagin í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mikudag síðani" }, { PluralRulesValues.Other, "{0} mikudagar síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} mikudag" }, { PluralRulesValues.Other, "um {0} mikudagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta mi." }, { 0, "næsta mi." }, { 1, "mi. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mi. síðani" }, { PluralRulesValues.Other, "{0} mi. síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} mi." }, { PluralRulesValues.Other, "um {0} mi." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta mik." }, { 0, "næsta mik." }, { 1, "mik. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mik. síðani" }, { PluralRulesValues.Other, "{0} mik. síðani" } },
@@ -410,23 +466,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Thursday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta hósdag" }, { 0, "næsta hósdag" }, { 1, "hósdagin í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hósdag síðani" }, { PluralRulesValues.Other, "{0} hósdagar síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} hósdag" }, { PluralRulesValues.Other, "um {0} hósdagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta hó." }, { 0, "næsta hó." }, { 1, "hó. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hó. síðani" }, { PluralRulesValues.Other, "{0} hó. síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} hó." }, { PluralRulesValues.Other, "um {0} hó." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta hós." }, { 0, "næsta hós." }, { 1, "hós. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hós. síðani" }, { PluralRulesValues.Other, "{0} hós. síðani" } },
@@ -437,23 +497,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Friday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta fríggjadag" }, { 0, "næsta fríggjadag" }, { 1, "fríggjadagin í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} fríggjadag síðani" }, { PluralRulesValues.Other, "{0} fríggjadagar síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} fríggjadag" }, { PluralRulesValues.Other, "um {0} fríggjadagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta fr." }, { 0, "næsta fr." }, { 1, "fr. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} fr. síðani" }, { PluralRulesValues.Other, "{0} fr. síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} fr." }, { PluralRulesValues.Other, "um {0} fr." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta frí." }, { 0, "næsta frí." }, { 1, "frí. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} frí. síðani" }, { PluralRulesValues.Other, "{0} frí. síðani" } },
@@ -464,23 +528,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Saturday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta leygardag" }, { 0, "næsta leygardag" }, { 1, "leygardagin í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} leygardag síðani" }, { PluralRulesValues.Other, "{0} leygardagar síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} leygardag" }, { PluralRulesValues.Other, "um {0} leygardagar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta le." }, { 0, "næsta le." }, { 1, "le. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} le. síðani" }, { PluralRulesValues.Other, "{0} le. síðani" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} le." }, { PluralRulesValues.Other, "um {0} le." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "seinasta ley." }, { 0, "næsta ley." }, { 1, "ley. í næstu viku" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ley. síðani" }, { PluralRulesValues.Other, "{0} ley. síðani" } },
@@ -491,23 +559,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayPeriod,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Long,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Narrow,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Short,
                 "AM/PM",
                 null,
                 null,
@@ -518,23 +590,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Hour,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Long,
                 "tími",
                 new Dictionary<int, string> { { 0, "hendan tíman" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} tími síðan" }, { PluralRulesValues.Other, "{0} tímar síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} tíma" }, { PluralRulesValues.Other, "um {0} tímar" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Narrow,
                 "t.",
                 new Dictionary<int, string> { { 0, "hendan tíman" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} t. síðan" }, { PluralRulesValues.Other, "{0} t. síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} t." }, { PluralRulesValues.Other, "um {0} t." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Short,
                 "t.",
                 new Dictionary<int, string> { { 0, "hendan tíman" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} t. síðan" }, { PluralRulesValues.Other, "{0} t. síðan" } },
@@ -545,23 +621,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Minute,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Long,
                 "minuttur",
                 new Dictionary<int, string> { { 0, "hendan minuttin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} minutt síðan" }, { PluralRulesValues.Other, "{0} minuttir síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} minutt" }, { PluralRulesValues.Other, "um {0} minuttir" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Narrow,
                 "m.",
                 new Dictionary<int, string> { { 0, "hendan minuttin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} m. síðan" }, { PluralRulesValues.Other, "{0} m. síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} m." }, { PluralRulesValues.Other, "um {0} m." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Short,
                 "min.",
                 new Dictionary<int, string> { { 0, "hendan minuttin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} min. síðan" }, { PluralRulesValues.Other, "{0} min. síðan" } },
@@ -572,23 +652,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Second,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Long,
                 "sekund",
                 new Dictionary<int, string> { { 0, "nú" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sekund síðan" }, { PluralRulesValues.Other, "{0} sekund síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} sekund" }, { PluralRulesValues.Other, "um {0} sekund" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Narrow,
                 "s.",
                 new Dictionary<int, string> { { 0, "nú" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} s. síðan" }, { PluralRulesValues.Other, "{0} s. síðan" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "um {0} s." }, { PluralRulesValues.Other, "um {0} s." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Short,
                 "sek.",
                 new Dictionary<int, string> { { 0, "nú" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} sek. síðan" }, { PluralRulesValues.Other, "{0} sek. síðan" } },
@@ -599,26 +683,63 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Zone,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Long,
                 "tíðarøki",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Narrow,
                 "tíðarøki",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Short,
                 "tíðarøki",
                 null,
                 null,
                 null));
+
+        /// <summary>
+        /// Gets the Relative Time resource styles based on the unit specified
+        /// </summary>
+        /// <param name="relativeTimeUnit">The resource unit to get</param>
+        /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
+        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
+        {
+            RelativeTimeUnitValues.Era => this.Era,
+            RelativeTimeUnitValues.Year => this.Year,
+            RelativeTimeUnitValues.Quarter => this.Quarter,
+            RelativeTimeUnitValues.Month => this.Month,
+            RelativeTimeUnitValues.Week => this.Week,
+            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
+            RelativeTimeUnitValues.Day => this.Day,
+            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
+            RelativeTimeUnitValues.Weekday => this.Weekday,
+            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
+            RelativeTimeUnitValues.Sunday => this.Sunday,
+            RelativeTimeUnitValues.Monday => this.Monday,
+            RelativeTimeUnitValues.Tuesday => this.Tuesday,
+            RelativeTimeUnitValues.Wednesday => this.Wednesday,
+            RelativeTimeUnitValues.Thursday => this.Thursday,
+            RelativeTimeUnitValues.Friday => this.Friday,
+            RelativeTimeUnitValues.Saturday => this.Saturday,
+            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
+            RelativeTimeUnitValues.Hour => this.Hour,
+            RelativeTimeUnitValues.Minute => this.Minute,
+            RelativeTimeUnitValues.Second => this.Second,
+            RelativeTimeUnitValues.Zone => this.Zone,
+            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+        };
     }
 }

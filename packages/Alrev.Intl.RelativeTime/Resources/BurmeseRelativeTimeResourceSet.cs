@@ -32,23 +32,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Era,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Long,
                 "ခေတ်",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Narrow,
                 "ခေတ်",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Short,
                 "ခေတ်",
                 null,
                 null,
@@ -59,23 +63,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Year,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Long,
                 "နှစ်",
                 new Dictionary<int, string> { { -1, "ယမန်နှစ်" }, { 0, "ယခုနှစ်" }, { 1, "လာမည့်နှစ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} နှစ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} နှစ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Narrow,
                 "နှစ်",
                 new Dictionary<int, string> { { -1, "ယမန်နှစ်" }, { 0, "ယခုနှစ်" }, { 1, "လာမည့်နှစ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} နှစ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} နှစ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Short,
                 "နှစ်",
                 new Dictionary<int, string> { { -1, "ယမန်နှစ်" }, { 0, "ယခုနှစ်" }, { 1, "လာမည့်နှစ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} နှစ်" } },
@@ -86,23 +94,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Quarter,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Long,
                 "သုံးလပတ်",
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် သုံးလပတ်" }, { 0, "ယခု သုံးလပတ်" }, { 1, "လာမည့် သုံးလပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် သုံးလပတ်ကာလ {0} ခုအတွင်း" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "သုံးလပတ်ကာလ {0} အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Narrow,
                 "သုံးလပတ်",
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သောသုံးလပတ်" }, { 0, "ယခုသုံးလပတ်" }, { 1, "နောက်လာမည့်သုံးလပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် သုံးလပတ်ကာလ {0} ခုအတွင်း" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "သုံးလပတ်ကာလ {0} ခုအတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Short,
                 "သုံးလပတ်",
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သောသုံးလပတ်" }, { 0, "ယခုသုံးလပတ်" }, { 1, "နောက်လာမည့်သုံးလပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် သုံးလပတ်ကာလ {0} ခုအတွင်း" } },
@@ -113,23 +125,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Month,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Long,
                 "လ",
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့်လ" }, { 0, "ယခုလ" }, { 1, "လာမည့်လ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} လ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} လအတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Narrow,
                 "လ",
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့်လ" }, { 0, "ယခုလ" }, { 1, "လာမည့်လ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} လ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} လအတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Short,
                 "လ",
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့်လ" }, { 0, "ယခုလ" }, { 1, "လာမည့်လ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} လ" } },
@@ -140,23 +156,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Week,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Long,
                 "ပတ်",
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် သီတင်းပတ်" }, { 0, "ယခု သီတင်းပတ်" }, { 1, "လာမည့် သီတင်းပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} ပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Narrow,
                 "ပတ်",
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် သီတင်းပတ်" }, { 0, "ယခု သီတင်းပတ်" }, { 1, "လာမည့် သီတင်းပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} ပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Short,
                 "ပတ်",
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် သီတင်းပတ်" }, { 0, "ယခု သီတင်းပတ်" }, { 1, "လာမည့် သီတင်းပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} ပတ်" } },
@@ -167,23 +187,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Long,
                 "တစ်လအတွင်းရှိသီတင်းပတ်",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "တစ်လအတွင်းရှိသီတင်းပတ်",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Short,
                 "တစ်လအတွင်းရှိသီတင်းပတ်",
                 null,
                 null,
@@ -194,23 +218,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Day,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
                 "ရက်",
                 new Dictionary<int, string> { { -2, "တစ်နေ့က" }, { -1, "မနေ့က" }, { 0, "ယနေ့" }, { 1, "မနက်ဖြန်" }, { 2, "သန်ဘက်ခါ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} ရက်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ရက်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Narrow,
                 "ရက်",
                 new Dictionary<int, string> { { -2, "တစ်နေ့က" }, { -1, "မနေ့က" }, { 0, "ယနေ့" }, { 1, "မနက်ဖြန်" }, { 2, "သန်ဘက်ခါ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} ရက်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} ရက်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Short,
                 "ရက်",
                 new Dictionary<int, string> { { -2, "တစ်နေ့က" }, { -1, "မနေ့က" }, { 0, "ယနေ့" }, { 1, "မနက်ဖြန်" }, { 2, "သန်ဘက်ခါ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} ရက်" } },
@@ -221,23 +249,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayOfYear,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Long,
                 "တစ်နှစ်အတွင်း ရက်ရေတွက်ပုံ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Narrow,
                 "တစ်နှစ်အတွင်း ရက်ရေတွက်ပုံ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Short,
                 "တစ်နှစ်အတွင်း ရက်ရေတွက်ပုံ",
                 null,
                 null,
@@ -248,23 +280,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Weekday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Long,
                 "နေ့",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Narrow,
                 "နေ့",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Short,
                 "နေ့",
                 null,
                 null,
@@ -275,23 +311,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekdayOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Long,
                 "တစ်လအတွင်းရှိအလုပ်ရက်",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "တစ်လအတွင်းရှိအလုပ်ရက်",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Short,
                 "တစ်လအတွင်းရှိအလုပ်ရက်",
                 null,
                 null,
@@ -302,23 +342,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Sunday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် တနင်္ဂနွေနေ့" }, { 0, "ဤတနင်္ဂနွေနေ့" }, { 1, "လာမည့် တနင်္ဂနွေနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် တနင်္ဂနွေ {0} ပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "တနင်္ဂနွေ {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် တနင်္ဂနွေနေ့" }, { 0, "ဤတနင်္ဂနွေနေ့" }, { 1, "လာမည့် တနင်္ဂနွေနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် တနင်္ဂနွေ {0} ပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "တနင်္ဂနွေ {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် တနင်္ဂနွေနေ့" }, { 0, "ဤတနင်္ဂနွေနေ့" }, { 1, "လာမည့် တနင်္ဂနွေနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် တနင်္ဂနွေ {0} ပတ်" } },
@@ -329,23 +373,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Monday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် တနင်္လာနေ့" }, { 0, "ဤတနင်္လာနေ့" }, { 1, "လာမည့် တနင်္လာနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် တနင်္လာ {0} ပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "တနင်္လာ {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် တနင်္လာနေ့" }, { 0, "ဤတနင်္လာနေ့" }, { 1, "လာမည့် တနင်္လာနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် တနင်္လာ {0} ပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "တနင်္လာ {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် တနင်္လာနေ့" }, { 0, "ဤတနင်္လာနေ့" }, { 1, "လာမည့် တနင်္လာနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် တနင်္လာ {0} ပတ်" } },
@@ -356,23 +404,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Tuesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် အင်္ဂါနေ့" }, { 0, "ဤအင်္ဂါနေ့" }, { 1, "လာမည့် အင်္ဂါနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် အင်္ဂါ {0} ပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "အင်္ဂါ {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် အင်္ဂါနေ့" }, { 0, "ဤအင်္ဂါနေ့" }, { 1, "လာမည့် အင်္ဂါနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် အင်္ဂါ {0} ပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "အင်္ဂါ {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် အင်္ဂါနေ့" }, { 0, "ဤအင်္ဂါနေ့" }, { 1, "လာမည့် အင်္ဂါနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် အင်္ဂါ {0} ပတ်" } },
@@ -383,23 +435,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Wednesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် ဗုဒ္ဓဟူးနေ့" }, { 0, "ဤဗုဒ္ဓဟူးနေ့" }, { 1, "လာမည့် ဗုဒ္ဓဟူးနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် ဗုဒ္ဓဟူး {0} ပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ဗုဒ္ဓဟူး {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် ဗုဒ္ဓဟူးနေ့" }, { 0, "ဤဗုဒ္ဓဟူးနေ့" }, { 1, "လာမည့် ဗုဒ္ဓဟူးနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် ဗုဒ္ဓဟူး {0} ပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ဗုဒ္ဓဟူး {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် ဗုဒ္ဓဟူးနေ့" }, { 0, "ဤဗုဒ္ဓဟူးနေ့" }, { 1, "လာမည့် ဗုဒ္ဓဟူးနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် ဗုဒ္ဓဟူး {0} ပတ်" } },
@@ -410,23 +466,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Thursday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် ကြာသပတေးနေ့" }, { 0, "ဤကြာသပတေးနေ့" }, { 1, "လာမည့် ကြာသပတေးနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် ကြာသပတေး {0} ပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ကြာသပတေး {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် ကြာသပတေးနေ့" }, { 0, "ဤကြာသပတေးနေ့" }, { 1, "လာမည့် ကြာသပတေးနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် ကြာသပတေး {0} ပတ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ကြာသပတေး {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် ကြာသပတေးနေ့" }, { 0, "ဤကြာသပတေးနေ့" }, { 1, "လာမည့် ကြာသပတေးနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် ကြာသပတေး {0} ပတ်" } },
@@ -437,23 +497,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Friday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် သောကြာနေ့" }, { 0, "ဤသောကြာနေ့" }, { 1, "လာမည့် သောကြာနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် သောကြာ {0} ပတ်အတွင်း" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "သောကြာ {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် သောကြာနေ့" }, { 0, "ဤသောကြာနေ့" }, { 1, "လာမည့် သောကြာနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် သောကြာ {0} ပတ်အတွင်း" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "သောကြာ {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် သောကြာနေ့" }, { 0, "ဤသောကြာနေ့" }, { 1, "လာမည့် သောကြာနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် သောကြာ {0} ပတ်အတွင်း" } },
@@ -464,23 +528,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Saturday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် စနေနေ့" }, { 0, "ဤစနေနေ့" }, { 1, "လာမည့် စနေနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် စနေ {0} ပတ်အတွင်း" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "စနေ {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် စနေနေ့" }, { 0, "ဤစနေနေ့" }, { 1, "လာမည့် စနေနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် စနေ {0} ပတ်အတွင်း" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "စနေ {0} ပတ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ပြီးခဲ့သည့် စနေနေ့" }, { 0, "ဤစနေနေ့" }, { 1, "လာမည့် စနေနေ့" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် စနေ {0} ပတ်အတွင်း" } },
@@ -491,23 +559,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayPeriod,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Long,
                 "နံနက်/ညနေ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Narrow,
                 "နံနက်/ညနေ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Short,
                 "နံနက်/ညနေ",
                 null,
                 null,
@@ -518,23 +590,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Hour,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Long,
                 "နာရီ",
                 new Dictionary<int, string> { { 0, "ဤအချိန်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} နာရီ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} နာရီအတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Narrow,
                 "နာရီ",
                 new Dictionary<int, string> { { 0, "ဤအချိန်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} နာရီ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} နာရီအတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Short,
                 "နာရီ",
                 new Dictionary<int, string> { { 0, "ဤအချိန်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} နာရီ" } },
@@ -545,23 +621,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Minute,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Long,
                 "မိနစ်",
                 new Dictionary<int, string> { { 0, "ဤမိနစ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} မိနစ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} မိနစ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Narrow,
                 "မိနစ်",
                 new Dictionary<int, string> { { 0, "ဤမိနစ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} မိနစ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} မိနစ်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Short,
                 "မိနစ်",
                 new Dictionary<int, string> { { 0, "ဤမိနစ်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} မိနစ်" } },
@@ -572,23 +652,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Second,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Long,
                 "စက္ကန့်",
                 new Dictionary<int, string> { { 0, "ယခု" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} စက္ကန့်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} စက္ကန့်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Narrow,
                 "စက္ကန့်",
                 new Dictionary<int, string> { { 0, "ယခု" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} စက္ကန့်" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "{0} စက္ကန့်အတွင်း" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Short,
                 "စက္ကန့်",
                 new Dictionary<int, string> { { 0, "ယခု" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Other, "ပြီးခဲ့သည့် {0} စက္ကန့်" } },
@@ -599,26 +683,63 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Zone,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Long,
                 "ဇုန်",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Narrow,
                 "ဇုန်",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Short,
                 "ဇုန်",
                 null,
                 null,
                 null));
+
+        /// <summary>
+        /// Gets the Relative Time resource styles based on the unit specified
+        /// </summary>
+        /// <param name="relativeTimeUnit">The resource unit to get</param>
+        /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
+        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
+        {
+            RelativeTimeUnitValues.Era => this.Era,
+            RelativeTimeUnitValues.Year => this.Year,
+            RelativeTimeUnitValues.Quarter => this.Quarter,
+            RelativeTimeUnitValues.Month => this.Month,
+            RelativeTimeUnitValues.Week => this.Week,
+            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
+            RelativeTimeUnitValues.Day => this.Day,
+            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
+            RelativeTimeUnitValues.Weekday => this.Weekday,
+            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
+            RelativeTimeUnitValues.Sunday => this.Sunday,
+            RelativeTimeUnitValues.Monday => this.Monday,
+            RelativeTimeUnitValues.Tuesday => this.Tuesday,
+            RelativeTimeUnitValues.Wednesday => this.Wednesday,
+            RelativeTimeUnitValues.Thursday => this.Thursday,
+            RelativeTimeUnitValues.Friday => this.Friday,
+            RelativeTimeUnitValues.Saturday => this.Saturday,
+            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
+            RelativeTimeUnitValues.Hour => this.Hour,
+            RelativeTimeUnitValues.Minute => this.Minute,
+            RelativeTimeUnitValues.Second => this.Second,
+            RelativeTimeUnitValues.Zone => this.Zone,
+            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+        };
     }
 }

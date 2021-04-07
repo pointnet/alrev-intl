@@ -32,23 +32,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Era,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Long,
                 "era",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Narrow,
                 "era",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Short,
                 "era",
                 null,
                 null,
@@ -59,23 +63,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Year,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Long,
                 "godina",
                 new Dictionary<int, string> { { -1, "prošle godine" }, { 0, "ove godine" }, { 1, "sljedeće godine" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} godinu" }, { PluralRulesValues.Few, "prije {0} godine" }, { PluralRulesValues.Other, "prije {0} godina" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} godinu" }, { PluralRulesValues.Few, "za {0} godine" }, { PluralRulesValues.Other, "za {0} godina" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Narrow,
                 "g.",
                 new Dictionary<int, string> { { -1, "prošle godine" }, { 0, "ove godine" }, { 1, "sljedeće godine" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} g." }, { PluralRulesValues.Few, "prije {0} g." }, { PluralRulesValues.Other, "prije {0} g." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} g." }, { PluralRulesValues.Few, "za {0} g." }, { PluralRulesValues.Other, "za {0} g." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Short,
                 "god.",
                 new Dictionary<int, string> { { -1, "prošle godine" }, { 0, "ove godine" }, { 1, "sljedeće godine" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} god." }, { PluralRulesValues.Few, "prije {0} god." }, { PluralRulesValues.Other, "prije {0} god." } },
@@ -86,23 +94,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Quarter,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Long,
                 "kvartal",
                 new Dictionary<int, string> { { -1, "posljednji kvartal" }, { 0, "ovaj kvartal" }, { 1, "sljedeći kvartal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} kvartal" }, { PluralRulesValues.Few, "prije {0} kvartala" }, { PluralRulesValues.Other, "prije {0} kvartala" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} kvartal" }, { PluralRulesValues.Few, "za {0} kvartala" }, { PluralRulesValues.Other, "za {0} kvartala" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Narrow,
                 "kv.",
                 new Dictionary<int, string> { { -1, "posljednji kvartal" }, { 0, "ovaj kvartal" }, { 1, "sljedeći kvartal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} kv." }, { PluralRulesValues.Few, "prije {0} kv." }, { PluralRulesValues.Other, "prije {0} kv." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} kv." }, { PluralRulesValues.Few, "za {0} kv." }, { PluralRulesValues.Other, "za {0} kv." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Short,
                 "kv.",
                 new Dictionary<int, string> { { -1, "posljednji kvartal" }, { 0, "ovaj kvartal" }, { 1, "sljedeći kvartal" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} kv." }, { PluralRulesValues.Few, "prije {0} kv." }, { PluralRulesValues.Other, "prije {0} kv." } },
@@ -113,23 +125,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Month,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Long,
                 "mjesec",
                 new Dictionary<int, string> { { -1, "prošli mjesec" }, { 0, "ovaj mjesec" }, { 1, "sljedeći mjesec" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} mjesec" }, { PluralRulesValues.Few, "prije {0} mjeseca" }, { PluralRulesValues.Other, "prije {0} mjeseci" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} mjesec" }, { PluralRulesValues.Few, "za {0} mjeseca" }, { PluralRulesValues.Other, "za {0} mjeseci" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Narrow,
                 "mj.",
                 new Dictionary<int, string> { { -1, "prošli mjesec" }, { 0, "ovaj mjesec" }, { 1, "sljedeći mjesec" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} mj." }, { PluralRulesValues.Few, "prije {0} mj." }, { PluralRulesValues.Other, "prije {0} mj." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} mj." }, { PluralRulesValues.Few, "za {0} mj." }, { PluralRulesValues.Other, "za {0} mj." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Short,
                 "mj.",
                 new Dictionary<int, string> { { -1, "prošli mjesec" }, { 0, "ovaj mjesec" }, { 1, "sljedeći mjesec" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} mj." }, { PluralRulesValues.Few, "prije {0} mj." }, { PluralRulesValues.Other, "prije {0} mj." } },
@@ -140,23 +156,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Week,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Long,
                 "sedmica",
                 new Dictionary<int, string> { { -1, "prošle sedmice" }, { 0, "ove sedmice" }, { 1, "sljedeće sedmice" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} sedmicu" }, { PluralRulesValues.Few, "prije {0} sedmice" }, { PluralRulesValues.Other, "prije {0} sedmica" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sedmicu" }, { PluralRulesValues.Few, "za {0} sedmice" }, { PluralRulesValues.Other, "za {0} sedmica" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Narrow,
                 "sed.",
                 new Dictionary<int, string> { { -1, "prošle sedmice" }, { 0, "ove sedmice" }, { 1, "sljedeće sedmice" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} sed." }, { PluralRulesValues.Few, "prije {0} sed." }, { PluralRulesValues.Other, "prije {0} sed." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sed." }, { PluralRulesValues.Few, "za {0} sed." }, { PluralRulesValues.Other, "za {0} sed." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Short,
                 "sed.",
                 new Dictionary<int, string> { { -1, "prošle sedmice" }, { 0, "ove sedmice" }, { 1, "sljedeće sedmice" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} sed." }, { PluralRulesValues.Few, "prije {0} sed." }, { PluralRulesValues.Other, "prije {0} sed." } },
@@ -167,23 +187,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Long,
                 "sedmica u mjesecu",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "s. u mj.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Short,
                 "sed. u mj.",
                 null,
                 null,
@@ -194,23 +218,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Day,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
                 "dan",
                 new Dictionary<int, string> { { -2, "prekjučer" }, { -1, "jučer" }, { 0, "danas" }, { 1, "sutra" }, { 2, "prekosutra" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} dan" }, { PluralRulesValues.Few, "prije {0} dana" }, { PluralRulesValues.Other, "prije {0} dana" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} dan" }, { PluralRulesValues.Few, "za {0} dana" }, { PluralRulesValues.Other, "za {0} dana" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Narrow,
                 "dan",
                 new Dictionary<int, string> { { -2, "prekjučer" }, { -1, "jučer" }, { 0, "danas" }, { 1, "sutra" }, { 2, "prekosutra" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} d." }, { PluralRulesValues.Few, "prije {0} d." }, { PluralRulesValues.Other, "prije {0} d." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} d." }, { PluralRulesValues.Few, "za {0} d." }, { PluralRulesValues.Other, "za {0} d." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Short,
                 "dan",
                 new Dictionary<int, string> { { -2, "prekjučer" }, { -1, "jučer" }, { 0, "danas" }, { 1, "sutra" }, { 2, "prekosutra" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} d." }, { PluralRulesValues.Few, "prije {0} d." }, { PluralRulesValues.Other, "prije {0} d." } },
@@ -221,23 +249,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayOfYear,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Long,
                 "dan u godini",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Narrow,
                 "dan u g.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Short,
                 "dan u god.",
                 null,
                 null,
@@ -248,23 +280,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Weekday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Long,
                 "dan u sedmici",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Narrow,
                 "dan u sed.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Short,
                 "dan u sed.",
                 null,
                 null,
@@ -275,23 +311,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekdayOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Long,
                 "dan u mjesecu",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "d. u mj.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Short,
                 "dan u mj.",
                 null,
                 null,
@@ -302,23 +342,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Sunday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "prošla nedjelja" }, { 0, "ova nedjelja" }, { 1, "sljedeća nedjelja" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} nedjelju" }, { PluralRulesValues.Few, "prije {0} nedjelje" }, { PluralRulesValues.Other, "prije {0} nedjelja" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} nedjelju" }, { PluralRulesValues.Few, "za {0} nedjelje" }, { PluralRulesValues.Other, "za {0} nedjelja" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "prošla ned." }, { 0, "ova ned." }, { 1, "sljedeća ned." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} nedjelju" }, { PluralRulesValues.Few, "prije {0} nedjelje" }, { PluralRulesValues.Other, "prije {0} nedjelja" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} nedjelju" }, { PluralRulesValues.Few, "za {0} nedjelje" }, { PluralRulesValues.Other, "za {0} nedjelja" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "prošla ned." }, { 0, "ova ned." }, { 1, "sljedeća ned." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} nedjelju" }, { PluralRulesValues.Few, "prije {0} nedjelje" }, { PluralRulesValues.Other, "prije {0} nedjelja" } },
@@ -329,23 +373,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Monday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "prošli ponedjeljak" }, { 0, "ovaj ponedjeljak" }, { 1, "sljedeći ponedjeljak" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} ponedjeljak" }, { PluralRulesValues.Few, "prije {0} ponedjeljka" }, { PluralRulesValues.Other, "prije {0} ponedjeljaka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} ponedjeljak" }, { PluralRulesValues.Few, "za {0} ponedjeljka" }, { PluralRulesValues.Other, "za {0} ponedjeljaka" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "prošli pon." }, { 0, "ovaj pon." }, { 1, "sljedeći pon." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} ponedjeljak" }, { PluralRulesValues.Few, "prije {0} ponedjeljka" }, { PluralRulesValues.Other, "prije {0} ponedjeljaka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} ponedjeljak" }, { PluralRulesValues.Few, "za {0} ponedjeljka" }, { PluralRulesValues.Other, "za {0} ponedjeljaka" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "prošli pon." }, { 0, "ovaj pon." }, { 1, "sljedeći pon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} ponedjeljak" }, { PluralRulesValues.Few, "prije {0} ponedjeljka" }, { PluralRulesValues.Other, "prije {0} ponedjeljaka" } },
@@ -356,23 +404,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Tuesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "prošli utorak" }, { 0, "ovaj utorak" }, { 1, "sljedeći utorak" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} utorak" }, { PluralRulesValues.Few, "prije {0} utorka" }, { PluralRulesValues.Other, "prije {0} utoraka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} utorak" }, { PluralRulesValues.Few, "za {0} utorka" }, { PluralRulesValues.Other, "za {0} utoraka" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "prošli uto." }, { 0, "ovaj uto." }, { 1, "sljedeći uto." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} utorak" }, { PluralRulesValues.Few, "prije {0} utorka" }, { PluralRulesValues.Other, "prije {0} utoraka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} utorak" }, { PluralRulesValues.Few, "za {0} utorka" }, { PluralRulesValues.Other, "za {0} utoraka" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "prošli uto." }, { 0, "ovaj uto." }, { 1, "sljedeći uto." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} utorak" }, { PluralRulesValues.Few, "prije {0} utorka" }, { PluralRulesValues.Other, "prije {0} utoraka" } },
@@ -383,23 +435,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Wednesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "prošla srijeda" }, { 0, "ova srijeda" }, { 1, "sljedeća srijeda" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} srijedu" }, { PluralRulesValues.Few, "prije {0} srijede" }, { PluralRulesValues.Other, "prije {0} srijeda" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} srijedu" }, { PluralRulesValues.Few, "za {0} srijede" }, { PluralRulesValues.Other, "za {0} srijeda" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "prošla sri." }, { 0, "ova sri." }, { 1, "sljedeća sri." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} srijedu" }, { PluralRulesValues.Few, "prije {0} srijede" }, { PluralRulesValues.Other, "prije {0} srijeda" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} srijedu" }, { PluralRulesValues.Few, "za {0} srijede" }, { PluralRulesValues.Other, "za {0} srijeda" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "prošla sri." }, { 0, "ova sri." }, { 1, "sljedeća sri." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} srijedu" }, { PluralRulesValues.Few, "prije {0} srijede" }, { PluralRulesValues.Other, "prije {0} srijeda" } },
@@ -410,23 +466,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Thursday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "prošli četvrtak" }, { 0, "ovaj četvrtak" }, { 1, "sljedeći četvrtak" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} četvrtak" }, { PluralRulesValues.Few, "prije {0} četvrtka" }, { PluralRulesValues.Other, "prije {0} četvrtaka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} četvrtak" }, { PluralRulesValues.Few, "za {0} četvrtka" }, { PluralRulesValues.Other, "za {0} četvrtaka" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "prošli čet." }, { 0, "ovaj čet." }, { 1, "sljedeći čet." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} četvrtak" }, { PluralRulesValues.Few, "prije {0} četvrtka" }, { PluralRulesValues.Other, "prije {0} četvrtaka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} četvrtak" }, { PluralRulesValues.Few, "za {0} četvrtka" }, { PluralRulesValues.Other, "za {0} četvrtaka" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "prošli čet." }, { 0, "ovaj čet." }, { 1, "sljedeći čet." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} četvrtak" }, { PluralRulesValues.Few, "prije {0} četvrtka" }, { PluralRulesValues.Other, "prije {0} četvrtaka" } },
@@ -437,23 +497,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Friday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "prošli petak" }, { 0, "ovaj petak" }, { 1, "sljedeći petak" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} petak" }, { PluralRulesValues.Few, "prije {0} petka" }, { PluralRulesValues.Other, "prije {0} petaka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} petak" }, { PluralRulesValues.Few, "za {0} petka" }, { PluralRulesValues.Other, "za {0} petaka" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "prošli pet." }, { 0, "ovaj pet." }, { 1, "sljedeći pet." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} petak" }, { PluralRulesValues.Few, "prije {0} petka" }, { PluralRulesValues.Other, "prije {0} petaka" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} petak" }, { PluralRulesValues.Few, "za {0} petka" }, { PluralRulesValues.Other, "za {0} petaka" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "prošli pet." }, { 0, "ovaj pet." }, { 1, "sljedeći pet." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} petak" }, { PluralRulesValues.Few, "prije {0} petka" }, { PluralRulesValues.Other, "prije {0} petaka" } },
@@ -464,23 +528,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Saturday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "prošla subota" }, { 0, "ova subota" }, { 1, "sljedeća subota" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} subotu" }, { PluralRulesValues.Few, "prije {0} subote" }, { PluralRulesValues.Other, "prije {0} subota" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} subotu" }, { PluralRulesValues.Few, "za {0} subote" }, { PluralRulesValues.Other, "za {0} subota" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "prošla sub." }, { 0, "ova sub." }, { 1, "sljedeća sub." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} subotu" }, { PluralRulesValues.Few, "prije {0} subote" }, { PluralRulesValues.Other, "prije {0} subota" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} subotu" }, { PluralRulesValues.Few, "za {0} subote" }, { PluralRulesValues.Other, "za {0} subota" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "prošla sub." }, { 0, "ova sub." }, { 1, "sljedeća sub." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} subotu" }, { PluralRulesValues.Few, "prije {0} subote" }, { PluralRulesValues.Other, "prije {0} subota" } },
@@ -491,23 +559,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayPeriod,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Long,
                 "prijepodne/poslijepodne",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Narrow,
                 "prijepodne/poslijepodne",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Short,
                 "prijepodne/poslijepodne",
                 null,
                 null,
@@ -518,23 +590,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Hour,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Long,
                 "sat",
                 new Dictionary<int, string> { { 0, "ovaj sat" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} sat" }, { PluralRulesValues.Few, "prije {0} sata" }, { PluralRulesValues.Other, "prije {0} sati" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sat" }, { PluralRulesValues.Few, "za {0} sata" }, { PluralRulesValues.Other, "za {0} sati" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Narrow,
                 "h",
                 new Dictionary<int, string> { { 0, "ovaj sat" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} sat" }, { PluralRulesValues.Few, "prije {0} sata" }, { PluralRulesValues.Other, "prije {0} sati" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sat" }, { PluralRulesValues.Few, "za {0} sata" }, { PluralRulesValues.Other, "za {0} sati" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Short,
                 "h",
                 new Dictionary<int, string> { { 0, "ovaj sat" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} sat" }, { PluralRulesValues.Few, "prije {0} sata" }, { PluralRulesValues.Other, "prije {0} sati" } },
@@ -545,23 +621,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Minute,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Long,
                 "minuta",
                 new Dictionary<int, string> { { 0, "ova minuta" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} minutu" }, { PluralRulesValues.Few, "prije {0} minute" }, { PluralRulesValues.Other, "prije {0} minuta" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} minutu" }, { PluralRulesValues.Few, "za {0} minute" }, { PluralRulesValues.Other, "za {0} minuta" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Narrow,
                 "min.",
                 new Dictionary<int, string> { { 0, "ova minuta" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} min." }, { PluralRulesValues.Few, "prije {0} min." }, { PluralRulesValues.Other, "prije {0} min." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} min." }, { PluralRulesValues.Few, "za {0} min." }, { PluralRulesValues.Other, "za {0} min." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Short,
                 "min.",
                 new Dictionary<int, string> { { 0, "ova minuta" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} min." }, { PluralRulesValues.Few, "prije {0} min." }, { PluralRulesValues.Other, "prije {0} min." } },
@@ -572,23 +652,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Second,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Long,
                 "sekunda",
                 new Dictionary<int, string> { { 0, "sada" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} sekundu" }, { PluralRulesValues.Few, "prije {0} sekunde" }, { PluralRulesValues.Other, "prije {0} sekundi" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sekundu" }, { PluralRulesValues.Few, "za {0} sekunde" }, { PluralRulesValues.Other, "za {0} sekundi" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Narrow,
                 "s",
                 new Dictionary<int, string> { { 0, "sada" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} sek." }, { PluralRulesValues.Few, "prije {0} sek." }, { PluralRulesValues.Other, "prije {0} sek." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "za {0} sek." }, { PluralRulesValues.Few, "za {0} sek." }, { PluralRulesValues.Other, "za {0} sek." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Short,
                 "sek.",
                 new Dictionary<int, string> { { 0, "sada" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "prije {0} sek." }, { PluralRulesValues.Few, "prije {0} sek." }, { PluralRulesValues.Other, "prije {0} sek." } },
@@ -599,26 +683,63 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Zone,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Long,
                 "vremenska zona",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Narrow,
                 "zona",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Short,
                 "zona",
                 null,
                 null,
                 null));
+
+        /// <summary>
+        /// Gets the Relative Time resource styles based on the unit specified
+        /// </summary>
+        /// <param name="relativeTimeUnit">The resource unit to get</param>
+        /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
+        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
+        {
+            RelativeTimeUnitValues.Era => this.Era,
+            RelativeTimeUnitValues.Year => this.Year,
+            RelativeTimeUnitValues.Quarter => this.Quarter,
+            RelativeTimeUnitValues.Month => this.Month,
+            RelativeTimeUnitValues.Week => this.Week,
+            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
+            RelativeTimeUnitValues.Day => this.Day,
+            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
+            RelativeTimeUnitValues.Weekday => this.Weekday,
+            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
+            RelativeTimeUnitValues.Sunday => this.Sunday,
+            RelativeTimeUnitValues.Monday => this.Monday,
+            RelativeTimeUnitValues.Tuesday => this.Tuesday,
+            RelativeTimeUnitValues.Wednesday => this.Wednesday,
+            RelativeTimeUnitValues.Thursday => this.Thursday,
+            RelativeTimeUnitValues.Friday => this.Friday,
+            RelativeTimeUnitValues.Saturday => this.Saturday,
+            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
+            RelativeTimeUnitValues.Hour => this.Hour,
+            RelativeTimeUnitValues.Minute => this.Minute,
+            RelativeTimeUnitValues.Second => this.Second,
+            RelativeTimeUnitValues.Zone => this.Zone,
+            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+        };
     }
 }

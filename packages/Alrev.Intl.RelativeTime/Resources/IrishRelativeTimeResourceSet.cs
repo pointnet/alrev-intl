@@ -32,23 +32,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Era,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Long,
                 "Ré",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Narrow,
                 "ré",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Short,
                 "ré",
                 null,
                 null,
@@ -59,23 +63,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Year,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Long,
                 "Bliain",
                 new Dictionary<int, string> { { -1, "anuraidh" }, { 0, "i mbliana" }, { 1, "an bhliain seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} bhliain ó shin" }, { PluralRulesValues.Two, "{0} bhliain ó shin" }, { PluralRulesValues.Few, "{0} bliana ó shin" }, { PluralRulesValues.Many, "{0} mbliana ó shin" }, { PluralRulesValues.Other, "{0} bliain ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "i gceann {0} bhliain" }, { PluralRulesValues.Two, "i gceann {0} bhliain" }, { PluralRulesValues.Few, "i gceann {0} bliana" }, { PluralRulesValues.Many, "i gceann {0} mbliana" }, { PluralRulesValues.Other, "i gceann {0} bliain" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Narrow,
                 "bl.",
                 new Dictionary<int, string> { { -1, "anuraidh" }, { 0, "i mbl." }, { 1, "an bhl. seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "-{0} bhl." }, { PluralRulesValues.Two, "-{0} bhl." }, { PluralRulesValues.Few, "-{0} bl." }, { PluralRulesValues.Many, "-{0} mbl." }, { PluralRulesValues.Other, "-{0} bl." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} bhl." }, { PluralRulesValues.Two, "+{0} bhl." }, { PluralRulesValues.Few, "+{0} bl." }, { PluralRulesValues.Many, "+{0} mbl." }, { PluralRulesValues.Other, "+{0} bl." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Short,
                 "bl.",
                 new Dictionary<int, string> { { -1, "anuraidh" }, { 0, "i mbl." }, { 1, "an bhl. seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} bhl. ó shin" }, { PluralRulesValues.Two, "{0} bhl. ó shin" }, { PluralRulesValues.Few, "{0} bl. ó shin" }, { PluralRulesValues.Many, "{0} mbl. ó shin" }, { PluralRulesValues.Other, "{0} bl. ó shin" } },
@@ -86,23 +94,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Quarter,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Long,
                 "Ráithe",
                 new Dictionary<int, string> { { -1, "an ráithe seo caite" }, { 0, "an ráithe seo" }, { 1, "an ráithe seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ráithe ó shin" }, { PluralRulesValues.Two, "{0} ráithe ó shin" }, { PluralRulesValues.Few, "{0} ráithe ó shin" }, { PluralRulesValues.Many, "{0} ráithe ó shin" }, { PluralRulesValues.Other, "{0} ráithe ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "i gceann {0} ráithe" }, { PluralRulesValues.Two, "i gceann {0} ráithe" }, { PluralRulesValues.Few, "i gceann {0} ráithe" }, { PluralRulesValues.Many, "i gceann {0} ráithe" }, { PluralRulesValues.Other, "i gceann {0} ráithe" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Narrow,
                 "ráithe",
                 new Dictionary<int, string> { { -1, "an ráithe seo caite" }, { 0, "an ráithe seo" }, { 1, "an ráithe seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "-{0} R" }, { PluralRulesValues.Two, "-{0} R" }, { PluralRulesValues.Few, "-{0} R" }, { PluralRulesValues.Many, "-{0} R" }, { PluralRulesValues.Other, "-{0} R" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} R" }, { PluralRulesValues.Two, "+{0} R" }, { PluralRulesValues.Few, "+{0} R" }, { PluralRulesValues.Many, "+{0} R" }, { PluralRulesValues.Other, "+{0} R" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Short,
                 "ráithe",
                 new Dictionary<int, string> { { -1, "an ráithe seo caite" }, { 0, "an ráithe seo" }, { 1, "an ráithe seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ráithe ó shin" }, { PluralRulesValues.Two, "{0} ráithe ó shin" }, { PluralRulesValues.Few, "{0} ráithe ó shin" }, { PluralRulesValues.Many, "{0} ráithe ó shin" }, { PluralRulesValues.Other, "{0} ráithe ó shin" } },
@@ -113,23 +125,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Month,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Long,
                 "Mí",
                 new Dictionary<int, string> { { -1, "an mhí seo caite" }, { 0, "an mhí seo" }, { 1, "an mhí seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mhí ó shin" }, { PluralRulesValues.Two, "{0} mhí ó shin" }, { PluralRulesValues.Few, "{0} mhí ó shin" }, { PluralRulesValues.Many, "{0} mí ó shin" }, { PluralRulesValues.Other, "{0} mí ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "i gceann {0} mhí" }, { PluralRulesValues.Two, "i gceann {0} mhí" }, { PluralRulesValues.Few, "i gceann {0} mhí" }, { PluralRulesValues.Many, "i gceann {0} mí" }, { PluralRulesValues.Other, "i gceann {0} mí" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Narrow,
                 "mí",
                 new Dictionary<int, string> { { -1, "an mhí seo caite" }, { 0, "an mhí seo" }, { 1, "an mhí seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "-{0} mhí" }, { PluralRulesValues.Two, "-{0} mhí" }, { PluralRulesValues.Few, "-{0} mhí" }, { PluralRulesValues.Many, "-{0} mí" }, { PluralRulesValues.Other, "-{0} mí" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} mhí" }, { PluralRulesValues.Two, "+{0} mhí" }, { PluralRulesValues.Few, "+{0} mhí" }, { PluralRulesValues.Many, "+{0} mí" }, { PluralRulesValues.Other, "+{0} mí" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Short,
                 "mí",
                 new Dictionary<int, string> { { -1, "an mhí seo caite" }, { 0, "an mhí seo" }, { 1, "an mhí seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} mhí ó shin" }, { PluralRulesValues.Two, "{0} mhí ó shin" }, { PluralRulesValues.Few, "{0} mhí ó shin" }, { PluralRulesValues.Many, "{0} mí ó shin" }, { PluralRulesValues.Other, "{0} mí ó shin" } },
@@ -140,23 +156,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Week,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Long,
                 "Seachtain",
                 new Dictionary<int, string> { { -1, "an tseachtain seo caite" }, { 0, "an tseachtain seo" }, { 1, "an tseachtain seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} seachtain ó shin" }, { PluralRulesValues.Two, "{0} sheachtain ó shin" }, { PluralRulesValues.Few, "{0} seachtaine ó shin" }, { PluralRulesValues.Many, "{0} seachtaine ó shin" }, { PluralRulesValues.Other, "{0} seachtain ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "i gceann {0} seachtain" }, { PluralRulesValues.Two, "i gceann {0} sheachtain" }, { PluralRulesValues.Few, "i gceann {0} seachtaine" }, { PluralRulesValues.Many, "i gceann {0} seachtaine" }, { PluralRulesValues.Other, "i gceann {0} seachtain" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Narrow,
                 "scht.",
                 new Dictionary<int, string> { { -1, "an tscht. seo caite" }, { 0, "an tscht. seo" }, { 1, "an tscht. seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "-{0} scht." }, { PluralRulesValues.Two, "-{0} scht." }, { PluralRulesValues.Few, "-{0} scht." }, { PluralRulesValues.Many, "-{0} scht." }, { PluralRulesValues.Other, "-{0} scht." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} scht." }, { PluralRulesValues.Two, "+{0} scht." }, { PluralRulesValues.Few, "+{0} scht." }, { PluralRulesValues.Many, "+{0} scht." }, { PluralRulesValues.Other, "+{0} scht." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Short,
                 "scht.",
                 new Dictionary<int, string> { { -1, "an tscht. seo caite" }, { 0, "an tscht. seo" }, { 1, "an tscht. seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} scht. ó shin" }, { PluralRulesValues.Two, "{0} scht. ó shin" }, { PluralRulesValues.Few, "{0} scht. ó shin" }, { PluralRulesValues.Many, "{0} scht. ó shin" }, { PluralRulesValues.Other, "{0} scht. ó shin" } },
@@ -167,23 +187,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Long,
                 "Seachtain den mhí",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "7n den mhí",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Short,
                 "7n den mhí",
                 null,
                 null,
@@ -194,23 +218,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Day,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
                 "Lá",
                 new Dictionary<int, string> { { -2, "arú inné" }, { -1, "inné" }, { 0, "inniu" }, { 1, "amárach" }, { 2, "arú amárach" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} lá ó shin" }, { PluralRulesValues.Two, "{0} lá ó shin" }, { PluralRulesValues.Few, "{0} lá ó shin" }, { PluralRulesValues.Many, "{0} lá ó shin" }, { PluralRulesValues.Other, "{0} lá ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "i gceann {0} lá" }, { PluralRulesValues.Two, "i gceann {0} lá" }, { PluralRulesValues.Few, "i gceann {0} lá" }, { PluralRulesValues.Many, "i gceann {0} lá" }, { PluralRulesValues.Other, "i gceann {0} lá" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Narrow,
                 "Lá",
                 new Dictionary<int, string> { { -2, "arú inné" }, { -1, "inné" }, { 0, "inniu" }, { 1, "amárach" }, { 2, "arú amárach" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "-{0} lá" }, { PluralRulesValues.Two, "-{0} lá" }, { PluralRulesValues.Few, "-{0} lá" }, { PluralRulesValues.Many, "-{0} lá" }, { PluralRulesValues.Other, "-{0} lá" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} lá" }, { PluralRulesValues.Two, "+{0} lá" }, { PluralRulesValues.Few, "+{0} lá" }, { PluralRulesValues.Many, "+{0} lá" }, { PluralRulesValues.Other, "+{0} lá" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Short,
                 "Lá",
                 new Dictionary<int, string> { { -2, "arú inné" }, { -1, "inné" }, { 0, "inniu" }, { 1, "amárach" }, { 2, "arú amárach" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} lá ó shin" }, { PluralRulesValues.Two, "{0} lá ó shin" }, { PluralRulesValues.Few, "{0} lá ó shin" }, { PluralRulesValues.Many, "{0} lá ó shin" }, { PluralRulesValues.Other, "{0} lá ó shin" } },
@@ -221,23 +249,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayOfYear,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Long,
                 "Lá den bhliain",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Narrow,
                 "lá den bhl.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Short,
                 "lá den bhl.",
                 null,
                 null,
@@ -248,23 +280,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Weekday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Long,
                 "Lá na seachtaine",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Narrow,
                 "lá den t7n",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Short,
                 "lá den t7n",
                 null,
                 null,
@@ -275,23 +311,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekdayOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Long,
                 "Lá oibre den mhí",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "lá oib. den mhí",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Short,
                 "lá oib. den mhí",
                 null,
                 null,
@@ -302,23 +342,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Sunday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "an Domhnach seo caite" }, { 0, "an Domhnach seo" }, { 1, "an Domhnach seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Dé Domhnaigh {0} seachtain ó shin" }, { PluralRulesValues.Two, "Dé Domhnaigh {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Dé Domhnaigh {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Dé Domhnaigh {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Dé Domhnaigh {0} seachtain ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} seachtain ón Domhnach" }, { PluralRulesValues.Two, "{0} sheachtain ón Domhnach" }, { PluralRulesValues.Few, "{0} seachtaine ón Domhnach" }, { PluralRulesValues.Many, "{0} seachtaine ón Domhnach" }, { PluralRulesValues.Other, "{0} seachtain ón Domhnach" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "an Domh seo caite" }, { 0, "an Domh seo" }, { 1, "an Domh seo chug." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Domh. ó shin" }, { PluralRulesValues.Two, "{0} Dhomh. ó shin" }, { PluralRulesValues.Few, "{0} Dhomh. ó shin" }, { PluralRulesValues.Many, "{0} nDomh. ó shin" }, { PluralRulesValues.Other, "{0} Domh. ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} Domh." }, { PluralRulesValues.Two, "+{0} Dhomh." }, { PluralRulesValues.Few, "+{0} Dhomh." }, { PluralRulesValues.Many, "+{0} nDomh." }, { PluralRulesValues.Other, "+{0} Domh." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "an Domh. seo caite" }, { 0, "an Domh. seo" }, { 1, "an Domh. seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Dé Domh. {0} seachtain ó shin" }, { PluralRulesValues.Two, "Dé Domh. {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Dé Domh. {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Dé Domh. {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Dé Domh. {0} seachtain ó shin" } },
@@ -329,23 +373,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Monday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "an Luan seo caite" }, { 0, "an Luan seo" }, { 1, "an Luan seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Dé Luain {0} seachtain ó shin" }, { PluralRulesValues.Two, "Dé Luain {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Dé Luain {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Dé Luain {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Dé Luain {0} seachtain ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} seachtain ón Luan" }, { PluralRulesValues.Two, "{0} sheachtain ón Luan" }, { PluralRulesValues.Few, "{0} seachtaine ón Luan" }, { PluralRulesValues.Many, "{0} seachtaine ón Luan" }, { PluralRulesValues.Other, "{0} seachtain ón Luan" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "an Luan seo caite" }, { 0, "an Luan seo" }, { 1, "an Luan seo chug." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Luan ó shin" }, { PluralRulesValues.Two, "{0} Luan ó shin" }, { PluralRulesValues.Few, "{0} Luan ó shin" }, { PluralRulesValues.Many, "{0} Luan ó shin" }, { PluralRulesValues.Other, "{0} Luan ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} Luan" }, { PluralRulesValues.Two, "+{0} Luan" }, { PluralRulesValues.Few, "+{0} Luan" }, { PluralRulesValues.Many, "+{0} Luan" }, { PluralRulesValues.Other, "+{0} Luan" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "an Luan seo caite" }, { 0, "an Luan seo" }, { 1, "an Luan seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Dé Luain {0} seachtain ó shin" }, { PluralRulesValues.Two, "Dé Luain {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Dé Luain {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Dé Luain {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Dé Luain {0} seachtain ó shin" } },
@@ -356,23 +404,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Tuesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "an Mháirt seo caite" }, { 0, "an Mháirt seo" }, { 1, "an Mháirt seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Dé Máirt {0} seachtain ó shin" }, { PluralRulesValues.Two, "Dé Máirt {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Dé Máirt {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Dé Máirt {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Dé Máirt {0} seachtain ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} seachtain ón Máirt" }, { PluralRulesValues.Two, "{0} sheachtain ón Máirt" }, { PluralRulesValues.Few, "{0} seachtaine ón Máirt" }, { PluralRulesValues.Many, "{0} seachtaine ón Máirt" }, { PluralRulesValues.Other, "{0} seachtain ón Máirt" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "an Mháirt seo caite" }, { 0, "an Mháirt seo" }, { 1, "an Mháirt seo chug." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Mháirt ó shin" }, { PluralRulesValues.Two, "{0} Mháirt ó shin" }, { PluralRulesValues.Few, "{0} Mháirt ó shin" }, { PluralRulesValues.Many, "{0} Máirt ó shin" }, { PluralRulesValues.Other, "{0} Máirt ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} Mháirt" }, { PluralRulesValues.Two, "+{0} Mháirt" }, { PluralRulesValues.Few, "+{0} Mháirt" }, { PluralRulesValues.Many, "+{0} Máirt" }, { PluralRulesValues.Other, "+{0} Máirt" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "an Mháirt seo caite" }, { 0, "an Mháirt seo" }, { 1, "an Mháirt seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Dé Máirt {0} seachtain ó shin" }, { PluralRulesValues.Two, "Dé Máirt {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Dé Máirt {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Dé Máirt {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Dé Máirt {0} seachtain ó shin" } },
@@ -383,23 +435,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Wednesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "an Chéadaoin seo caite" }, { 0, "an Chéadaoin seo" }, { 1, "an Chéadaoin seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Dé Céadaoin {0} seachtain ó shin" }, { PluralRulesValues.Two, "Dé Céadaoin {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Dé Céadaoin {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Dé Céadaoin {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Dé Céadaoin {0} seachtain ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} seachtain ón Chéadaoin" }, { PluralRulesValues.Two, "{0} sheachtain ón Chéadaoin" }, { PluralRulesValues.Few, "{0} seachtaine ón Chéadaoin" }, { PluralRulesValues.Many, "{0} seachtaine ón Chéadaoin" }, { PluralRulesValues.Other, "{0} seachtain ón Chéadaoin" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "an Chéad. seo caite" }, { 0, "an Chéad. seo" }, { 1, "an Chéad seo chug." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Chéadaoin ó shin" }, { PluralRulesValues.Two, "{0} Chéadaoin ó shin" }, { PluralRulesValues.Few, "{0} Chéadaoin ó shin" }, { PluralRulesValues.Many, "{0} gCéadaoin ó shin" }, { PluralRulesValues.Other, "{0} Céadaoin ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} Chéadaoin" }, { PluralRulesValues.Two, "+{0} Chéadaoin" }, { PluralRulesValues.Few, "+{0} Chéadaoin" }, { PluralRulesValues.Many, "+{0} gCéadaoin" }, { PluralRulesValues.Other, "+{0} Céadaoin" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "an Chéad. seo caite" }, { 0, "an Chéad. seo" }, { 1, "an Chéad. seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Dé Céadaoin {0} seachtain ó shin" }, { PluralRulesValues.Two, "Dé Céadaoin {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Dé Céadaoin {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Dé Céadaoin {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Dé Céadaoin {0} seachtain ó shin" } },
@@ -410,23 +466,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Thursday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "an Déardaoin seo caite" }, { 0, "an Déardaoin seo" }, { 1, "an Déardaoin seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Déardaoin {0} seachtain ó shin" }, { PluralRulesValues.Two, "Déardaoin {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Déardaoin {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Déardaoin {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Déardaoin {0} seachtain ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} seachtain ón Déardaoin" }, { PluralRulesValues.Two, "{0} sheachtain ón Déardaoin" }, { PluralRulesValues.Few, "{0} seachtaine ón Déardaoin" }, { PluralRulesValues.Many, "{0} seachtaine ón Déardaoin" }, { PluralRulesValues.Other, "{0} seachtain ón Déardaoin" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "an Déar. seo caite" }, { 0, "an Déar. seo" }, { 1, "an Déar. seo chug." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Déardaoin ó shin" }, { PluralRulesValues.Two, "{0} Dhéardaoin ó shin" }, { PluralRulesValues.Few, "{0} Dhéardaoin ó shin" }, { PluralRulesValues.Many, "{0} nDéardaoin ó shin" }, { PluralRulesValues.Other, "{0} Déardaoin ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} Déardaoin" }, { PluralRulesValues.Two, "+{0} Dhéardaoin" }, { PluralRulesValues.Few, "+{0} Dhéardaoin" }, { PluralRulesValues.Many, "+{0} nDéardaoin" }, { PluralRulesValues.Other, "+{0} Déardaoin" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "an Déar. seo caite" }, { 0, "an Déar. seo" }, { 1, "an Déar. seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Déardaoin {0} seachtain ó shin" }, { PluralRulesValues.Two, "Déardaoin {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Déardaoin {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Déardaoin {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Déardaoin {0} seachtain ó shin" } },
@@ -437,23 +497,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Friday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "an Aoine seo caite" }, { 0, "an Aoine seo" }, { 1, "an Aoine seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Dé hAoine {0} seachtain ó shin" }, { PluralRulesValues.Two, "Dé hAoine {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Dé hAoine {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Dé hAoine {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Dé hAoine {0} seachtain ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} seachtain ón Aoine" }, { PluralRulesValues.Two, "{0} sheachtain ón Aoine" }, { PluralRulesValues.Few, "{0} seachtaine ón Aoine" }, { PluralRulesValues.Many, "{0} seachtaine ón Aoine" }, { PluralRulesValues.Other, "{0} seachtain ón Aoine" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "an Aoine seo caite" }, { 0, "an Aoine seo" }, { 1, "an Aoine seo chug." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Aoine ó shin" }, { PluralRulesValues.Two, "{0} Aoine ó shin" }, { PluralRulesValues.Few, "{0} Aoine ó shin" }, { PluralRulesValues.Many, "{0} Aoine ó shin" }, { PluralRulesValues.Other, "{0} Aoine ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} Aoine" }, { PluralRulesValues.Two, "+{0} Aoine" }, { PluralRulesValues.Few, "+{0} Aoine" }, { PluralRulesValues.Many, "+{0} Aoine" }, { PluralRulesValues.Other, "+{0} Aoine" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "an Aoine seo caite" }, { 0, "an Aoine seo" }, { 1, "an Aoine seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Dé hAoine {0} seachtain ó shin" }, { PluralRulesValues.Two, "Dé hAoine {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Dé hAoine {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Dé hAoine {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Dé hAoine {0} seachtain ó shin" } },
@@ -464,23 +528,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Saturday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "an Satharn seo caite" }, { 0, "an Satharn seo" }, { 1, "an Satharn seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Dé Sathairn {0} seachtain ó shin" }, { PluralRulesValues.Two, "Dé Sathairn {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Dé Sathairn {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Dé Sathairn {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Dé Sathairn {0} seachtain ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} seachtain ón Satharn" }, { PluralRulesValues.Two, "{0} sheachtain ón Satharn" }, { PluralRulesValues.Few, "{0} seachtaine ón Satharn" }, { PluralRulesValues.Many, "{0} seachtaine ón Satharn" }, { PluralRulesValues.Other, "{0} seachtain ón Satharn" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "an Sath seo caite" }, { 0, "an Sath seo" }, { 1, "an Sath seo chug." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Satharn ó shin" }, { PluralRulesValues.Two, "{0} Shatharn ó shin" }, { PluralRulesValues.Few, "{0} Shatharn ó shin" }, { PluralRulesValues.Many, "{0} Satharn ó shin" }, { PluralRulesValues.Other, "{0} Satharn ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} Satharn" }, { PluralRulesValues.Two, "+{0} Shatharn" }, { PluralRulesValues.Few, "+{0} Shatharn" }, { PluralRulesValues.Many, "+{0} Satharn" }, { PluralRulesValues.Other, "+{0} Satharn" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "an Sath. seo caite" }, { 0, "an Sath. seo" }, { 1, "an Sath. seo chugainn" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "Dé Sathairn {0} seachtain ó shin" }, { PluralRulesValues.Two, "Dé Sathairn {0} sheachtain ó shin" }, { PluralRulesValues.Few, "Dé Sathairn {0} seachtaine ó shin" }, { PluralRulesValues.Many, "Dé Sathairn {0} seachtaine ó shin" }, { PluralRulesValues.Other, "Dé Sathairn {0} seachtain ó shin" } },
@@ -491,23 +559,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayPeriod,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Long,
                 "a.m./p.m.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Narrow,
                 "a.m./p.m.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Short,
                 "a.m./p.m.",
                 null,
                 null,
@@ -518,23 +590,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Hour,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Long,
                 "Uair",
                 new Dictionary<int, string> { { 0, "an uair seo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} uair an chloig ó shin" }, { PluralRulesValues.Two, "{0} uair an chloig ó shin" }, { PluralRulesValues.Few, "{0} uair an chloig ó shin" }, { PluralRulesValues.Many, "{0} n-uaire an chloig ó shin" }, { PluralRulesValues.Other, "{0} uair an chloig ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "i gceann {0} uair an chloig" }, { PluralRulesValues.Two, "i gceann {0} uair an chloig" }, { PluralRulesValues.Few, "i gceann {0} uair an chloig" }, { PluralRulesValues.Many, "i gceann {0} n-uaire an chloig" }, { PluralRulesValues.Other, "i gceann {0} uair an chloig" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Narrow,
                 "u",
                 new Dictionary<int, string> { { 0, "an uair seo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "-{0} u" }, { PluralRulesValues.Two, "-{0} u" }, { PluralRulesValues.Few, "-{0} u" }, { PluralRulesValues.Many, "-{0} u" }, { PluralRulesValues.Other, "-{0} u" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} u" }, { PluralRulesValues.Two, "+{0} u" }, { PluralRulesValues.Few, "+{0} u" }, { PluralRulesValues.Many, "+{0} u" }, { PluralRulesValues.Other, "+{0} u" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Short,
                 "uair",
                 new Dictionary<int, string> { { 0, "an uair seo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} uair ó shin" }, { PluralRulesValues.Two, "{0} uair ó shin" }, { PluralRulesValues.Few, "{0} huaire ó shin" }, { PluralRulesValues.Many, "{0} n-uaire ó shin" }, { PluralRulesValues.Other, "{0} uair ó shin" } },
@@ -545,23 +621,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Minute,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Long,
                 "Nóiméad",
                 new Dictionary<int, string> { { 0, "an nóiméad seo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} nóiméad ó shin" }, { PluralRulesValues.Two, "{0} nóiméad ó shin" }, { PluralRulesValues.Few, "{0} nóiméad ó shin" }, { PluralRulesValues.Many, "{0} nóiméad ó shin" }, { PluralRulesValues.Other, "{0} nóiméad ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "i gceann {0} nóiméad" }, { PluralRulesValues.Two, "i gceann {0} nóiméad" }, { PluralRulesValues.Few, "i gceann {0} nóiméad" }, { PluralRulesValues.Many, "i gceann {0} nóiméad" }, { PluralRulesValues.Other, "i gceann {0} nóiméad" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Narrow,
                 "n",
                 new Dictionary<int, string> { { 0, "an nóiméad seo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "-{0} n" }, { PluralRulesValues.Two, "-{0} n" }, { PluralRulesValues.Few, "-{0} n" }, { PluralRulesValues.Many, "-{0} n" }, { PluralRulesValues.Other, "-{0} n" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} n" }, { PluralRulesValues.Two, "+{0} n" }, { PluralRulesValues.Few, "+{0} n" }, { PluralRulesValues.Many, "+{0} n" }, { PluralRulesValues.Other, "+{0} n" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Short,
                 "nóim.",
                 new Dictionary<int, string> { { 0, "an nóiméad seo" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} nóim. ó shin" }, { PluralRulesValues.Two, "{0} nóim. ó shin" }, { PluralRulesValues.Few, "{0} nóim. ó shin" }, { PluralRulesValues.Many, "{0} nóim. ó shin" }, { PluralRulesValues.Other, "{0} nóim. ó shin" } },
@@ -572,23 +652,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Second,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Long,
                 "Soicind",
                 new Dictionary<int, string> { { 0, "anois" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} soicind ó shin" }, { PluralRulesValues.Two, "{0} shoicind ó shin" }, { PluralRulesValues.Few, "{0} shoicind ó shin" }, { PluralRulesValues.Many, "{0} soicind ó shin" }, { PluralRulesValues.Other, "{0} soicind ó shin" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "i gceann {0} soicind" }, { PluralRulesValues.Two, "i gceann {0} shoicind" }, { PluralRulesValues.Few, "i gceann {0} shoicind" }, { PluralRulesValues.Many, "i gceann {0} soicind" }, { PluralRulesValues.Other, "i gceann {0} soicind" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Narrow,
                 "s",
                 new Dictionary<int, string> { { 0, "anois" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "-{0} s" }, { PluralRulesValues.Two, "-{0} s" }, { PluralRulesValues.Few, "-{0} s" }, { PluralRulesValues.Many, "-{0} s" }, { PluralRulesValues.Other, "-{0} s" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "+{0} s" }, { PluralRulesValues.Two, "+{0} s" }, { PluralRulesValues.Few, "+{0} s" }, { PluralRulesValues.Many, "+{0} s" }, { PluralRulesValues.Other, "+{0} s" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Short,
                 "soic.",
                 new Dictionary<int, string> { { 0, "anois" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} soic. ó shin" }, { PluralRulesValues.Two, "{0} shoic. ó shin" }, { PluralRulesValues.Few, "{0} shoic. ó shin" }, { PluralRulesValues.Many, "{0} soic. ó shin" }, { PluralRulesValues.Other, "{0} soic. ó shin" } },
@@ -599,26 +683,63 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Zone,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Long,
                 "Crios Ama",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Narrow,
                 "crios",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Short,
                 "crios",
                 null,
                 null,
                 null));
+
+        /// <summary>
+        /// Gets the Relative Time resource styles based on the unit specified
+        /// </summary>
+        /// <param name="relativeTimeUnit">The resource unit to get</param>
+        /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
+        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
+        {
+            RelativeTimeUnitValues.Era => this.Era,
+            RelativeTimeUnitValues.Year => this.Year,
+            RelativeTimeUnitValues.Quarter => this.Quarter,
+            RelativeTimeUnitValues.Month => this.Month,
+            RelativeTimeUnitValues.Week => this.Week,
+            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
+            RelativeTimeUnitValues.Day => this.Day,
+            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
+            RelativeTimeUnitValues.Weekday => this.Weekday,
+            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
+            RelativeTimeUnitValues.Sunday => this.Sunday,
+            RelativeTimeUnitValues.Monday => this.Monday,
+            RelativeTimeUnitValues.Tuesday => this.Tuesday,
+            RelativeTimeUnitValues.Wednesday => this.Wednesday,
+            RelativeTimeUnitValues.Thursday => this.Thursday,
+            RelativeTimeUnitValues.Friday => this.Friday,
+            RelativeTimeUnitValues.Saturday => this.Saturday,
+            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
+            RelativeTimeUnitValues.Hour => this.Hour,
+            RelativeTimeUnitValues.Minute => this.Minute,
+            RelativeTimeUnitValues.Second => this.Second,
+            RelativeTimeUnitValues.Zone => this.Zone,
+            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+        };
     }
 }

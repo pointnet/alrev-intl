@@ -32,23 +32,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Era,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Long,
                 "תקופה",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Narrow,
                 "תקופה",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Short,
                 "תקופה",
                 null,
                 null,
@@ -59,23 +63,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Year,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Long,
                 "שנה",
                 new Dictionary<int, string> { { -1, "השנה שעברה" }, { 0, "השנה" }, { 1, "השנה הבאה" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שנה" }, { PluralRulesValues.Two, "לפני שנתיים" }, { PluralRulesValues.Many, "לפני {0} שנה" }, { PluralRulesValues.Other, "לפני {0} שנים" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד שנה" }, { PluralRulesValues.Two, "בעוד שנתיים" }, { PluralRulesValues.Many, "בעוד {0} שנה" }, { PluralRulesValues.Other, "בעוד {0} שנים" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Narrow,
                 "שנ׳",
                 new Dictionary<int, string> { { -1, "השנה שעברה" }, { 0, "השנה" }, { 1, "השנה הבאה" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שנה" }, { PluralRulesValues.Two, "לפני שנתיים" }, { PluralRulesValues.Many, "לפני {0} שנה" }, { PluralRulesValues.Other, "לפני {0} שנים" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד שנה" }, { PluralRulesValues.Two, "בעוד שנתיים" }, { PluralRulesValues.Many, "בעוד {0} שנה" }, { PluralRulesValues.Other, "בעוד {0} שנים" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Short,
                 "שנ׳",
                 new Dictionary<int, string> { { -1, "השנה שעברה" }, { 0, "השנה" }, { 1, "השנה הבאה" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שנה" }, { PluralRulesValues.Two, "לפני שנתיים" }, { PluralRulesValues.Many, "לפני {0} שנה" }, { PluralRulesValues.Other, "לפני {0} שנים" } },
@@ -86,23 +94,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Quarter,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Long,
                 "רבעון",
                 new Dictionary<int, string> { { -1, "הרבעון הקודם" }, { 0, "רבעון זה" }, { 1, "הרבעון הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ברבעון הקודם" }, { PluralRulesValues.Two, "לפני שני רבעונים" }, { PluralRulesValues.Many, "לפני {0} רבעונים" }, { PluralRulesValues.Other, "לפני {0} רבעונים" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ברבעון הבא" }, { PluralRulesValues.Two, "בעוד שני רבעונים" }, { PluralRulesValues.Many, "בעוד {0} רבעונים" }, { PluralRulesValues.Other, "בעוד {0} רבעונים" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Narrow,
                 "רבע׳",
                 new Dictionary<int, string> { { -1, "הרבעון הקודם" }, { 0, "רבעון זה" }, { 1, "הרבעון הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ברבע׳ הקודם" }, { PluralRulesValues.Two, "לפני שני רבע׳" }, { PluralRulesValues.Many, "לפני {0} רבע׳" }, { PluralRulesValues.Other, "לפני {0} רבע׳" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ברבע׳ הבא" }, { PluralRulesValues.Two, "בעוד שני רבע׳" }, { PluralRulesValues.Many, "בעוד {0} רבע׳" }, { PluralRulesValues.Other, "בעוד {0} רבע׳" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Short,
                 "רבע׳",
                 new Dictionary<int, string> { { -1, "הרבעון הקודם" }, { 0, "רבעון זה" }, { 1, "הרבעון הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ברבע׳ הקודם" }, { PluralRulesValues.Two, "לפני שני רבע׳" }, { PluralRulesValues.Many, "לפני {0} רבע׳" }, { PluralRulesValues.Other, "לפני {0} רבע׳" } },
@@ -113,23 +125,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Month,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Long,
                 "חודש",
                 new Dictionary<int, string> { { -1, "החודש שעבר" }, { 0, "החודש" }, { 1, "החודש הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני חודש" }, { PluralRulesValues.Two, "לפני חודשיים" }, { PluralRulesValues.Many, "לפני {0} חודשים" }, { PluralRulesValues.Other, "לפני {0} חודשים" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד חודש" }, { PluralRulesValues.Two, "בעוד חודשיים" }, { PluralRulesValues.Many, "בעוד {0} חודשים" }, { PluralRulesValues.Other, "בעוד {0} חודשים" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Narrow,
                 "חו׳",
                 new Dictionary<int, string> { { -1, "החודש שעבר" }, { 0, "החודש" }, { 1, "החודש הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני חו׳" }, { PluralRulesValues.Two, "לפני חודשיים" }, { PluralRulesValues.Many, "לפני {0} חו׳" }, { PluralRulesValues.Other, "לפני {0} חו׳" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד חו׳" }, { PluralRulesValues.Two, "בעוד חודשיים" }, { PluralRulesValues.Many, "בעוד {0} חו׳" }, { PluralRulesValues.Other, "בעוד {0} חו׳" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Short,
                 "חו׳",
                 new Dictionary<int, string> { { -1, "החודש שעבר" }, { 0, "החודש" }, { 1, "החודש הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני חודש" }, { PluralRulesValues.Two, "לפני חודשיים" }, { PluralRulesValues.Many, "לפני {0} חודשים" }, { PluralRulesValues.Other, "לפני {0} חודשים" } },
@@ -140,23 +156,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Week,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Long,
                 "שבוע",
                 new Dictionary<int, string> { { -1, "השבוע שעבר" }, { 0, "השבוע" }, { 1, "השבוע הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שבוע" }, { PluralRulesValues.Two, "לפני שבועיים" }, { PluralRulesValues.Many, "לפני {0} שבועות" }, { PluralRulesValues.Other, "לפני {0} שבועות" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד שבוע" }, { PluralRulesValues.Two, "בעוד שבועיים" }, { PluralRulesValues.Many, "בעוד {0} שבועות" }, { PluralRulesValues.Other, "בעוד {0} שבועות" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Narrow,
                 "שב׳",
                 new Dictionary<int, string> { { -1, "השבוע שעבר" }, { 0, "השבוע" }, { 1, "השבוע הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שבוע" }, { PluralRulesValues.Two, "לפני שבועיים" }, { PluralRulesValues.Many, "לפני {0} שב׳" }, { PluralRulesValues.Other, "לפני {0} שב׳" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד שב׳" }, { PluralRulesValues.Two, "בעוד שבועיים" }, { PluralRulesValues.Many, "בעוד {0} שב׳" }, { PluralRulesValues.Other, "בעוד {0} שב׳" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Short,
                 "שב׳",
                 new Dictionary<int, string> { { -1, "השבוע שעבר" }, { 0, "השבוע" }, { 1, "השבוע הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שב׳" }, { PluralRulesValues.Two, "לפני שבועיים" }, { PluralRulesValues.Many, "לפני {0} שב׳" }, { PluralRulesValues.Other, "לפני {0} שב׳" } },
@@ -167,23 +187,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Long,
                 "השבוע בחודש",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "השבוע בחודש",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Short,
                 "השבוע בחודש",
                 null,
                 null,
@@ -194,23 +218,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Day,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
                 "יום",
                 new Dictionary<int, string> { { -2, "שלשום" }, { -1, "אתמול" }, { 0, "היום" }, { 1, "מחר" }, { 2, "מחרתיים" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום {0}" }, { PluralRulesValues.Two, "לפני יומיים" }, { PluralRulesValues.Many, "לפני {0} ימים" }, { PluralRulesValues.Other, "לפני {0} ימים" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום {0}" }, { PluralRulesValues.Two, "בעוד יומיים" }, { PluralRulesValues.Many, "בעוד {0} ימים" }, { PluralRulesValues.Other, "בעוד {0} ימים" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Narrow,
                 "יום",
                 new Dictionary<int, string> { { -2, "שלשום" }, { -1, "אתמול" }, { 0, "היום" }, { 1, "מחר" }, { 2, "מחרתיים" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "אתמול" }, { PluralRulesValues.Two, "לפני יומיים" }, { PluralRulesValues.Many, "לפני {0} ימים" }, { PluralRulesValues.Other, "לפני {0} ימים" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "מחר" }, { PluralRulesValues.Two, "בעוד יומיים" }, { PluralRulesValues.Many, "בעוד {0} ימים" }, { PluralRulesValues.Other, "בעוד {0} ימים" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Short,
                 "יום",
                 new Dictionary<int, string> { { -2, "שלשום" }, { -1, "אתמול" }, { 0, "היום" }, { 1, "מחר" }, { 2, "מחרתיים" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "אתמול" }, { PluralRulesValues.Two, "לפני יומיים" }, { PluralRulesValues.Many, "לפני {0} ימים" }, { PluralRulesValues.Other, "לפני {0} ימים" } },
@@ -221,23 +249,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayOfYear,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Long,
                 "יום בשנה",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Narrow,
                 "יום בשנה",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Short,
                 "יום בשנה",
                 null,
                 null,
@@ -248,23 +280,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Weekday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Long,
                 "יום בשבוע",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Narrow,
                 "יום בשבוע",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Short,
                 "יום בשבוע",
                 null,
                 null,
@@ -275,23 +311,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekdayOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Long,
                 "יום חול בחודש",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "יום בחודש",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Short,
                 "יום בחודש",
                 null,
                 null,
@@ -302,23 +342,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Sunday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ביום ראשון שעבר" }, { 0, "ביום ראשון הזה" }, { 1, "ביום ראשון הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום ראשון {0}" }, { PluralRulesValues.Two, "לפני {0} ימי ראשון" }, { PluralRulesValues.Many, "לפני {0} ימי ראשון" }, { PluralRulesValues.Other, "לפני {0} ימי ראשון" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום ראשון {0}" }, { PluralRulesValues.Two, "בעוד {0} ימי ראשון" }, { PluralRulesValues.Many, "בעוד {0} ימי ראשון" }, { PluralRulesValues.Other, "בעוד {0} ימי ראשון" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "יום א׳ שעבר" }, { 0, "יום א׳" }, { 1, "יום א׳ הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום ראשון {0}" }, { PluralRulesValues.Two, "לפני {0} ימי ראשון" }, { PluralRulesValues.Many, "לפני {0} ימי ראשון" }, { PluralRulesValues.Other, "לפני {0} ימי ראשון" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום ראשון {0}" }, { PluralRulesValues.Two, "בעוד {0} ימי ראשון" }, { PluralRulesValues.Many, "בעוד {0} ימי ראשון" }, { PluralRulesValues.Other, "בעוד {0} ימי ראשון" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "יום א׳ שעבר" }, { 0, "יום א׳" }, { 1, "יום א׳ הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום ראשון {0}" }, { PluralRulesValues.Two, "לפני {0} ימי ראשון" }, { PluralRulesValues.Many, "לפני {0} ימי ראשון" }, { PluralRulesValues.Other, "לפני {0} ימי ראשון" } },
@@ -329,23 +373,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Monday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "יום שני שעבר" }, { 0, "יום שני" }, { 1, "יום שני הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום שני {0}" }, { PluralRulesValues.Two, "לפני {0} ימי שני" }, { PluralRulesValues.Many, "לפני {0} ימי שני" }, { PluralRulesValues.Other, "לפני {0} ימי שני" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום שני {0}" }, { PluralRulesValues.Two, "בעוד {0} ימי שני" }, { PluralRulesValues.Many, "בעוד {0} ימי שני" }, { PluralRulesValues.Other, "בעוד {0} ימי שני" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "יום ב׳ שעבר" }, { 0, "יום ב׳" }, { 1, "יום ב׳ הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום שני {0}" }, { PluralRulesValues.Two, "לפני {0} ימי שני" }, { PluralRulesValues.Many, "לפני {0} ימי שני" }, { PluralRulesValues.Other, "לפני {0} ימי שני" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום שני {0}" }, { PluralRulesValues.Two, "בעוד {0} ימי שני" }, { PluralRulesValues.Many, "בעוד {0} ימי שני" }, { PluralRulesValues.Other, "בעוד {0} ימי שני" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "יום ב׳ שעבר" }, { 0, "יום ב׳" }, { 1, "יום ב׳ הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום שני {0}" }, { PluralRulesValues.Two, "לפני {0} ימי שני" }, { PluralRulesValues.Many, "לפני {0} ימי שני" }, { PluralRulesValues.Other, "לפני {0} ימי שני" } },
@@ -356,23 +404,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Tuesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "יום שלישי שעבר" }, { 0, "יום שלישי" }, { 1, "יום שלישי הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום שלישי {0}" }, { PluralRulesValues.Two, "לפני {0} ימי שלישי" }, { PluralRulesValues.Many, "לפני {0} ימי שלישי" }, { PluralRulesValues.Other, "לפני {0} ימי שלישי" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום שלישי {0}" }, { PluralRulesValues.Two, "בעוד {0} ימי שלישי" }, { PluralRulesValues.Many, "בעוד {0} ימי שלישי" }, { PluralRulesValues.Other, "בעוד {0} ימי שלישי" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "יום ג׳ שעבר" }, { 0, "יום ג׳" }, { 1, "יום ג׳ הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום שלישי {0}" }, { PluralRulesValues.Two, "לפני {0} ימי שלישי" }, { PluralRulesValues.Many, "לפני {0} ימי שלישי" }, { PluralRulesValues.Other, "לפני {0} ימי שלישי" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום שלישי {0}" }, { PluralRulesValues.Two, "בעוד {0} ימי שלישי" }, { PluralRulesValues.Many, "בעוד {0} ימי שלישי" }, { PluralRulesValues.Other, "בעוד {0} ימי שלישי" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "יום ג׳ שעבר" }, { 0, "יום ג׳" }, { 1, "יום ג׳ הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום שלישי {0}" }, { PluralRulesValues.Two, "לפני {0} ימי שלישי" }, { PluralRulesValues.Many, "לפני {0} ימי שלישי" }, { PluralRulesValues.Other, "לפני {0} ימי שלישי" } },
@@ -383,23 +435,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Wednesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "יום רביעי שעבר" }, { 0, "יום רביעי" }, { 1, "יום רביעי הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום רביעי {0}" }, { PluralRulesValues.Two, "לפני {0} ימי רביעי" }, { PluralRulesValues.Many, "לפני {0} ימי רביעי" }, { PluralRulesValues.Other, "לפני {0} ימי רביעי" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום רביעי {0}" }, { PluralRulesValues.Two, "בעוד {0} ימי רביעי" }, { PluralRulesValues.Many, "בעוד {0} ימי רביעי" }, { PluralRulesValues.Other, "בעוד {0} ימי רביעי" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "יום ד׳ שעבר" }, { 0, "יום ד׳" }, { 1, "יום ד׳ הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום רביעי {0}" }, { PluralRulesValues.Two, "לפני {0} ימי רביעי" }, { PluralRulesValues.Many, "לפני {0} ימי רביעי" }, { PluralRulesValues.Other, "לפני {0} ימי רביעי" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום רביעי {0}" }, { PluralRulesValues.Two, "בעוד {0} ימי רביעי" }, { PluralRulesValues.Many, "בעוד {0} ימי רביעי" }, { PluralRulesValues.Other, "בעוד {0} ימי רביעי" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "יום ד׳ שעבר" }, { 0, "יום ד׳" }, { 1, "יום ד׳ הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום רביעי {0}" }, { PluralRulesValues.Two, "לפני {0} ימי רביעי" }, { PluralRulesValues.Many, "לפני {0} ימי רביעי" }, { PluralRulesValues.Other, "לפני {0} ימי רביעי" } },
@@ -410,23 +466,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Thursday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "יום חמישי שעבר" }, { 0, "יום חמישי" }, { 1, "יום חמישי הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום חמישי {0}" }, { PluralRulesValues.Two, "לפני {0} ימי חמישי" }, { PluralRulesValues.Many, "לפני {0} ימי חמישי" }, { PluralRulesValues.Other, "לפני {0} ימי חמישי" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום חמישי {0}" }, { PluralRulesValues.Two, "בעוד {0} ימי חמישי" }, { PluralRulesValues.Many, "בעוד {0} ימי חמישי" }, { PluralRulesValues.Other, "בעוד {0} ימי חמישי" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "יום ה׳ שעבר" }, { 0, "יום ה׳" }, { 1, "יום ה׳ הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום חמישי {0}" }, { PluralRulesValues.Two, "לפני {0} ימי חמישי" }, { PluralRulesValues.Many, "לפני {0} ימי חמישי" }, { PluralRulesValues.Other, "לפני {0} ימי חמישי" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום חמישי {0}" }, { PluralRulesValues.Two, "בעוד {0} ימי חמישי" }, { PluralRulesValues.Many, "בעוד {0} ימי חמישי" }, { PluralRulesValues.Other, "בעוד {0} ימי חמישי" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "יום ה׳ שעבר" }, { 0, "יום ה׳" }, { 1, "יום ה׳ הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום חמישי {0}" }, { PluralRulesValues.Two, "לפני {0} ימי חמישי" }, { PluralRulesValues.Many, "לפני {0} ימי חמישי" }, { PluralRulesValues.Other, "לפני {0} ימי חמישי" } },
@@ -437,23 +497,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Friday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "יום שישי שעבר" }, { 0, "יום שישי" }, { 1, "יום שישי הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום שישי {0}" }, { PluralRulesValues.Two, "לפני {0} ימי שישי" }, { PluralRulesValues.Many, "לפני {0} ימי שישי" }, { PluralRulesValues.Other, "לפני {0} ימי שישי" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום שישי {0}" }, { PluralRulesValues.Two, "בעוד {0} ימי שישי" }, { PluralRulesValues.Many, "בעוד {0} ימי שישי" }, { PluralRulesValues.Other, "בעוד {0} ימי שישי" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "יום ו׳ שעבר" }, { 0, "יום ו׳" }, { 1, "יום ו׳ הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום שישי {0}" }, { PluralRulesValues.Two, "לפני {0} ימי שישי" }, { PluralRulesValues.Many, "לפני {0} ימי שישי" }, { PluralRulesValues.Other, "לפני {0} ימי שישי" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד יום שישי {0}" }, { PluralRulesValues.Two, "בעוד {0} ימי שישי" }, { PluralRulesValues.Many, "בעוד {0} ימי שישי" }, { PluralRulesValues.Other, "בעוד {0} ימי שישי" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "יום ו׳ שעבר" }, { 0, "יום ו׳" }, { 1, "יום ו׳ הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני יום שישי {0}" }, { PluralRulesValues.Two, "לפני {0} ימי שישי" }, { PluralRulesValues.Many, "לפני {0} ימי שישי" }, { PluralRulesValues.Other, "לפני {0} ימי שישי" } },
@@ -464,23 +528,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Saturday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "יום שבת שעבר" }, { 0, "יום שבת" }, { 1, "יום שבת הבא" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שבת {0}" }, { PluralRulesValues.Two, "לפני {0} שבתות" }, { PluralRulesValues.Many, "לפני {0} שבתות" }, { PluralRulesValues.Other, "לפני {0} שבתות" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד שבת {0}" }, { PluralRulesValues.Two, "בעוד {0} שבתות" }, { PluralRulesValues.Many, "בעוד {0} שבתות" }, { PluralRulesValues.Other, "בעוד {0} שבתות" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "שבת שעברה" }, { 0, "שבת" }, { 1, "שבת הבאה" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שבת {0}" }, { PluralRulesValues.Two, "לפני {0} שבתות" }, { PluralRulesValues.Many, "לפני {0} שבתות" }, { PluralRulesValues.Other, "לפני {0} שבתות" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד שבת {0}" }, { PluralRulesValues.Two, "בעוד {0} שבתות" }, { PluralRulesValues.Many, "בעוד {0} שבתות" }, { PluralRulesValues.Other, "בעוד {0} שבתות" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "שבת שעברה" }, { 0, "שבת" }, { 1, "שבת הבאה" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שבת {0}" }, { PluralRulesValues.Two, "לפני {0} שבתות" }, { PluralRulesValues.Many, "לפני {0} שבתות" }, { PluralRulesValues.Other, "לפני {0} שבתות" } },
@@ -491,23 +559,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayPeriod,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Long,
                 "לפנה״צ/אחה״צ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Narrow,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Short,
                 "AM/PM",
                 null,
                 null,
@@ -518,23 +590,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Hour,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Long,
                 "שעה",
                 new Dictionary<int, string> { { 0, "בשעה זו" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שעה" }, { PluralRulesValues.Two, "לפני שעתיים" }, { PluralRulesValues.Many, "לפני {0} שעות" }, { PluralRulesValues.Other, "לפני {0} שעות" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד שעה" }, { PluralRulesValues.Two, "בעוד שעתיים" }, { PluralRulesValues.Many, "בעוד {0} שעות" }, { PluralRulesValues.Other, "בעוד {0} שעות" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Narrow,
                 "שע׳",
                 new Dictionary<int, string> { { 0, "בשעה זו" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שעה" }, { PluralRulesValues.Two, "לפני שעתיים" }, { PluralRulesValues.Many, "לפני {0} שע׳" }, { PluralRulesValues.Other, "לפני {0} שע׳" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד שעה" }, { PluralRulesValues.Two, "בעוד שעתיים" }, { PluralRulesValues.Many, "בעוד {0} שע׳" }, { PluralRulesValues.Other, "בעוד {0} שע׳" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Short,
                 "שעה",
                 new Dictionary<int, string> { { 0, "בשעה זו" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שעה" }, { PluralRulesValues.Two, "לפני שעתיים" }, { PluralRulesValues.Many, "לפני {0} שע׳" }, { PluralRulesValues.Other, "לפני {0} שע׳" } },
@@ -545,23 +621,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Minute,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Long,
                 "דקה",
                 new Dictionary<int, string> { { 0, "בדקה זו" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני דקה" }, { PluralRulesValues.Two, "לפני שתי דקות" }, { PluralRulesValues.Many, "לפני {0} דקות" }, { PluralRulesValues.Other, "לפני {0} דקות" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד דקה" }, { PluralRulesValues.Two, "בעוד שתי דקות" }, { PluralRulesValues.Many, "בעוד {0} דקות" }, { PluralRulesValues.Other, "בעוד {0} דקות" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Narrow,
                 "דק׳",
                 new Dictionary<int, string> { { 0, "בדקה זו" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני דקה" }, { PluralRulesValues.Two, "לפני שתי דק׳" }, { PluralRulesValues.Many, "לפני {0} דק׳" }, { PluralRulesValues.Other, "לפני {0} דק׳" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד דקה" }, { PluralRulesValues.Two, "בעוד שתי דק׳" }, { PluralRulesValues.Many, "בעוד {0} דק׳" }, { PluralRulesValues.Other, "בעוד {0} דק׳" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Short,
                 "דק׳",
                 new Dictionary<int, string> { { 0, "בדקה זו" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני דקה" }, { PluralRulesValues.Two, "לפני {0} דק׳" }, { PluralRulesValues.Many, "לפני {0} דק׳" }, { PluralRulesValues.Other, "לפני {0} דק׳" } },
@@ -572,23 +652,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Second,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Long,
                 "שנייה",
                 new Dictionary<int, string> { { 0, "עכשיו" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שנייה" }, { PluralRulesValues.Two, "לפני שתי שניות" }, { PluralRulesValues.Many, "לפני {0} שניות" }, { PluralRulesValues.Other, "לפני {0} שניות" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד שנייה" }, { PluralRulesValues.Two, "בעוד שתי שניות" }, { PluralRulesValues.Many, "בעוד {0} שניות" }, { PluralRulesValues.Other, "בעוד {0} שניות" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Narrow,
                 "שנ׳",
                 new Dictionary<int, string> { { 0, "עכשיו" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שנ׳" }, { PluralRulesValues.Two, "לפני שתי שנ׳" }, { PluralRulesValues.Many, "לפני {0} שנ׳" }, { PluralRulesValues.Other, "לפני {0} שנ׳" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "בעוד שנ׳" }, { PluralRulesValues.Two, "בעוד שתי שנ׳" }, { PluralRulesValues.Many, "בעוד {0} שנ׳" }, { PluralRulesValues.Other, "בעוד {0} שנ׳" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Short,
                 "שנ׳",
                 new Dictionary<int, string> { { 0, "עכשיו" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "לפני שנ׳" }, { PluralRulesValues.Two, "לפני שתי שנ׳" }, { PluralRulesValues.Many, "לפני {0} שנ׳" }, { PluralRulesValues.Other, "לפני {0} שנ׳" } },
@@ -599,26 +683,63 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Zone,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Long,
                 "אזור זמן",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Narrow,
                 "אזור",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Short,
                 "אזור",
                 null,
                 null,
                 null));
+
+        /// <summary>
+        /// Gets the Relative Time resource styles based on the unit specified
+        /// </summary>
+        /// <param name="relativeTimeUnit">The resource unit to get</param>
+        /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
+        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
+        {
+            RelativeTimeUnitValues.Era => this.Era,
+            RelativeTimeUnitValues.Year => this.Year,
+            RelativeTimeUnitValues.Quarter => this.Quarter,
+            RelativeTimeUnitValues.Month => this.Month,
+            RelativeTimeUnitValues.Week => this.Week,
+            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
+            RelativeTimeUnitValues.Day => this.Day,
+            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
+            RelativeTimeUnitValues.Weekday => this.Weekday,
+            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
+            RelativeTimeUnitValues.Sunday => this.Sunday,
+            RelativeTimeUnitValues.Monday => this.Monday,
+            RelativeTimeUnitValues.Tuesday => this.Tuesday,
+            RelativeTimeUnitValues.Wednesday => this.Wednesday,
+            RelativeTimeUnitValues.Thursday => this.Thursday,
+            RelativeTimeUnitValues.Friday => this.Friday,
+            RelativeTimeUnitValues.Saturday => this.Saturday,
+            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
+            RelativeTimeUnitValues.Hour => this.Hour,
+            RelativeTimeUnitValues.Minute => this.Minute,
+            RelativeTimeUnitValues.Second => this.Second,
+            RelativeTimeUnitValues.Zone => this.Zone,
+            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+        };
     }
 }

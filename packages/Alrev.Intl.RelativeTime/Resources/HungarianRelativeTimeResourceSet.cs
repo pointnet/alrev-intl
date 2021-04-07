@@ -32,23 +32,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Era,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Long,
                 "éra",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Narrow,
                 "éra",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Short,
                 "éra",
                 null,
                 null,
@@ -59,23 +63,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Year,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Long,
                 "év",
                 new Dictionary<int, string> { { -1, "előző év" }, { 0, "ez az év" }, { 1, "következő év" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} évvel ezelőtt" }, { PluralRulesValues.Other, "{0} évvel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} év múlva" }, { PluralRulesValues.Other, "{0} év múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Narrow,
                 "év",
                 new Dictionary<int, string> { { -1, "előző év" }, { 0, "ez az év" }, { 1, "következő év" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} évvel ezelőtt" }, { PluralRulesValues.Other, "{0} évvel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} év múlva" }, { PluralRulesValues.Other, "{0} év múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Short,
                 "év",
                 new Dictionary<int, string> { { -1, "előző év" }, { 0, "ez az év" }, { 1, "következő év" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} évvel ezelőtt" }, { PluralRulesValues.Other, "{0} évvel ezelőtt" } },
@@ -86,23 +94,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Quarter,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Long,
                 "negyedév",
                 new Dictionary<int, string> { { -1, "előző negyedév" }, { 0, "ez a negyedév" }, { 1, "következő negyedév" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} negyedévvel ezelőtt" }, { PluralRulesValues.Other, "{0} negyedévvel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} negyedév múlva" }, { PluralRulesValues.Other, "{0} negyedév múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Narrow,
                 "n.év",
                 new Dictionary<int, string> { { -1, "előző negyedév" }, { 0, "ez a negyedév" }, { 1, "következő negyedév" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} negyedévvel ezelőtt" }, { PluralRulesValues.Other, "{0} negyedévvel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} n.év múlva" }, { PluralRulesValues.Other, "{0} n.év múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Short,
                 "n.év",
                 new Dictionary<int, string> { { -1, "előző negyedév" }, { 0, "ez a negyedév" }, { 1, "következő negyedév" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} negyedévvel ezelőtt" }, { PluralRulesValues.Other, "{0} negyedévvel ezelőtt" } },
@@ -113,23 +125,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Month,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Long,
                 "hónap",
                 new Dictionary<int, string> { { -1, "előző hónap" }, { 0, "ez a hónap" }, { 1, "következő hónap" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hónappal ezelőtt" }, { PluralRulesValues.Other, "{0} hónappal ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hónap múlva" }, { PluralRulesValues.Other, "{0} hónap múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Narrow,
                 "hónap",
                 new Dictionary<int, string> { { -1, "előző hónap" }, { 0, "ez a hónap" }, { 1, "következő hónap" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hónappal ezelőtt" }, { PluralRulesValues.Other, "{0} hónappal ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hónap múlva" }, { PluralRulesValues.Other, "{0} hónap múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Short,
                 "hónap",
                 new Dictionary<int, string> { { -1, "előző hónap" }, { 0, "ez a hónap" }, { 1, "következő hónap" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hónappal ezelőtt" }, { PluralRulesValues.Other, "{0} hónappal ezelőtt" } },
@@ -140,23 +156,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Week,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Long,
                 "hét",
                 new Dictionary<int, string> { { -1, "előző hét" }, { 0, "ez a hét" }, { 1, "következő hét" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} héttel ezelőtt" }, { PluralRulesValues.Other, "{0} héttel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hét múlva" }, { PluralRulesValues.Other, "{0} hét múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Narrow,
                 "hét",
                 new Dictionary<int, string> { { -1, "előző hét" }, { 0, "ez a hét" }, { 1, "következő hét" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} héttel ezelőtt" }, { PluralRulesValues.Other, "{0} héttel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hét múlva" }, { PluralRulesValues.Other, "{0} hét múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Short,
                 "hét",
                 new Dictionary<int, string> { { -1, "előző hét" }, { 0, "ez a hét" }, { 1, "következő hét" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} héttel ezelőtt" }, { PluralRulesValues.Other, "{0} héttel ezelőtt" } },
@@ -167,23 +187,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Long,
                 "hónap hete",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "hónap hete",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Short,
                 "hónap hete",
                 null,
                 null,
@@ -194,23 +218,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Day,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
                 "nap",
                 new Dictionary<int, string> { { -2, "tegnapelőtt" }, { -1, "tegnap" }, { 0, "ma" }, { 1, "holnap" }, { 2, "holnapután" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} nappal ezelőtt" }, { PluralRulesValues.Other, "{0} nappal ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} nap múlva" }, { PluralRulesValues.Other, "{0} nap múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Narrow,
                 "nap",
                 new Dictionary<int, string> { { -2, "tegnapelőtt" }, { -1, "tegnap" }, { 0, "ma" }, { 1, "holnap" }, { 2, "holnapután" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} napja" }, { PluralRulesValues.Other, "{0} napja" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} nap múlva" }, { PluralRulesValues.Other, "{0} nap múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Short,
                 "nap",
                 new Dictionary<int, string> { { -2, "tegnapelőtt" }, { -1, "tegnap" }, { 0, "ma" }, { 1, "holnap" }, { 2, "holnapután" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} napja" }, { PluralRulesValues.Other, "{0} napja" } },
@@ -221,23 +249,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayOfYear,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Long,
                 "év napja",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Narrow,
                 "év napja",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Short,
                 "év napja",
                 null,
                 null,
@@ -248,23 +280,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Weekday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Long,
                 "hét napja",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Narrow,
                 "hét napja",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Short,
                 "hét napja",
                 null,
                 null,
@@ -275,23 +311,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekdayOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Long,
                 "hónap hétköznapja",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "hónap hétköznapja",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Short,
                 "hónap hétköznapja",
                 null,
                 null,
@@ -302,23 +342,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Sunday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "előző vasárnap" }, { 0, "ez a vasárnap" }, { 1, "következő vasárnap" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vasárnappal ezelőtt" }, { PluralRulesValues.Other, "{0} vasárnappal ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vasárnap múlva" }, { PluralRulesValues.Other, "{0} vasárnap múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "előző vasárnap" }, { 0, "ez a vasárnap" }, { 1, "következő vasárnap" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vasárnappal ezelőtt" }, { PluralRulesValues.Other, "{0} vasárnappal ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vasárnap múlva" }, { PluralRulesValues.Other, "{0} vasárnap múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "előző vasárnap" }, { 0, "ez a vasárnap" }, { 1, "következő vasárnap" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} vasárnappal ezelőtt" }, { PluralRulesValues.Other, "{0} vasárnappal ezelőtt" } },
@@ -329,23 +373,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Monday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "előző hétfő" }, { 0, "ez a hétfő" }, { 1, "következő hétfő" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hétfővel ezelőtt" }, { PluralRulesValues.Other, "{0} hétfővel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hétfő múlva" }, { PluralRulesValues.Other, "{0} hétfő múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "előző hétfő" }, { 0, "ez a hétfő" }, { 1, "következő hétfő" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hétfővel ezelőtt" }, { PluralRulesValues.Other, "{0} hétfővel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hétfő múlva" }, { PluralRulesValues.Other, "{0} hétfő múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "előző hétfő" }, { 0, "ez a hétfő" }, { 1, "következő hétfő" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} hétfővel ezelőtt" }, { PluralRulesValues.Other, "{0} hétfővel ezelőtt" } },
@@ -356,23 +404,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Tuesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "előző kedd" }, { 0, "ez a kedd" }, { 1, "következő kedd" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} keddel ezelőtt" }, { PluralRulesValues.Other, "{0} keddel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} kedd múlva" }, { PluralRulesValues.Other, "{0} kedd múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "előző kedd" }, { 0, "ez a kedd" }, { 1, "következő kedd" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} keddel ezelőtt" }, { PluralRulesValues.Other, "{0} keddel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} kedd múlva" }, { PluralRulesValues.Other, "{0} kedd múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "előző kedd" }, { 0, "ez a kedd" }, { 1, "következő kedd" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} keddel ezelőtt" }, { PluralRulesValues.Other, "{0} keddel ezelőtt" } },
@@ -383,23 +435,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Wednesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "előző szerda" }, { 0, "ez a szerda" }, { 1, "következő szerda" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} szerdával ezelőtt" }, { PluralRulesValues.Other, "{0} szerdával ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} szerda múlva" }, { PluralRulesValues.Other, "{0} szerda múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "előző szerda" }, { 0, "ez a szerda" }, { 1, "következő szerda" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} szerdával ezelőtt" }, { PluralRulesValues.Other, "{0} szerdával ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} szerda múlva" }, { PluralRulesValues.Other, "{0} szerda múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "előző szerda" }, { 0, "ez a szerda" }, { 1, "következő szerda" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} szerdával ezelőtt" }, { PluralRulesValues.Other, "{0} szerdával ezelőtt" } },
@@ -410,23 +466,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Thursday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "előző csütörtök" }, { 0, "ez a csütörtök" }, { 1, "következő csütörtök" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} csütörtökkel ezelőtt" }, { PluralRulesValues.Other, "{0} csütörtökkel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} csütörtök múlva" }, { PluralRulesValues.Other, "{0} csütörtök múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "előző csütörtök" }, { 0, "ez a csütörtök" }, { 1, "következő csütörtök" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} csütörtökkel ezelőtt" }, { PluralRulesValues.Other, "{0} csütörtökkel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} csütörtök múlva" }, { PluralRulesValues.Other, "{0} csütörtök múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "előző csütörtök" }, { 0, "ez a csütörtök" }, { 1, "következő csütörtök" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} csütörtökkel ezelőtt" }, { PluralRulesValues.Other, "{0} csütörtökkel ezelőtt" } },
@@ -437,23 +497,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Friday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "előző péntek" }, { 0, "ez a péntek" }, { 1, "következő péntek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} péntekkel ezelőtt" }, { PluralRulesValues.Other, "{0} péntekkel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} péntek múlva" }, { PluralRulesValues.Other, "{0} péntek múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "előző péntek" }, { 0, "ez a péntek" }, { 1, "következő péntek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} péntekkel ezelőtt" }, { PluralRulesValues.Other, "{0} péntekkel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} péntek múlva" }, { PluralRulesValues.Other, "{0} péntek múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "előző péntek" }, { 0, "ez a péntek" }, { 1, "következő péntek" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} péntekkel ezelőtt" }, { PluralRulesValues.Other, "{0} péntekkel ezelőtt" } },
@@ -464,23 +528,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Saturday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "előző szombat" }, { 0, "ez a szombat" }, { 1, "következő szombat" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} szombattal ezelőtt" }, { PluralRulesValues.Other, "{0} szombattal ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} szombat múlva" }, { PluralRulesValues.Other, "{0} szombat múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "előző szombat" }, { 0, "ez a szombat" }, { 1, "következő szombat" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} szombattal ezelőtt" }, { PluralRulesValues.Other, "{0} szombattal ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} szombat múlva" }, { PluralRulesValues.Other, "{0} szombat múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "előző szombat" }, { 0, "ez a szombat" }, { 1, "következő szombat" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} szombattal ezelőtt" }, { PluralRulesValues.Other, "{0} szombattal ezelőtt" } },
@@ -491,23 +559,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayPeriod,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Long,
                 "napszak",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Narrow,
                 "napszak",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Short,
                 "napszak",
                 null,
                 null,
@@ -518,23 +590,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Hour,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Long,
                 "óra",
                 new Dictionary<int, string> { { 0, "ebben az órában" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} órával ezelőtt" }, { PluralRulesValues.Other, "{0} órával ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} óra múlva" }, { PluralRulesValues.Other, "{0} óra múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Narrow,
                 "ó",
                 new Dictionary<int, string> { { 0, "ebben az órában" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} órával ezelőtt" }, { PluralRulesValues.Other, "{0} órával ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} óra múlva" }, { PluralRulesValues.Other, "{0} óra múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Short,
                 "óra",
                 new Dictionary<int, string> { { 0, "ebben az órában" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} órával ezelőtt" }, { PluralRulesValues.Other, "{0} órával ezelőtt" } },
@@ -545,23 +621,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Minute,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Long,
                 "perc",
                 new Dictionary<int, string> { { 0, "ebben a percben" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} perccel ezelőtt" }, { PluralRulesValues.Other, "{0} perccel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} perc múlva" }, { PluralRulesValues.Other, "{0} perc múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Narrow,
                 "p",
                 new Dictionary<int, string> { { 0, "ebben a percben" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} perccel ezelőtt" }, { PluralRulesValues.Other, "{0} perccel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} perc múlva" }, { PluralRulesValues.Other, "{0} perc múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Short,
                 "perc",
                 new Dictionary<int, string> { { 0, "ebben a percben" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} perccel ezelőtt" }, { PluralRulesValues.Other, "{0} perccel ezelőtt" } },
@@ -572,23 +652,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Second,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Long,
                 "másodperc",
                 new Dictionary<int, string> { { 0, "most" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} másodperccel ezelőtt" }, { PluralRulesValues.Other, "{0} másodperccel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} másodperc múlva" }, { PluralRulesValues.Other, "{0} másodperc múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Narrow,
                 "mp",
                 new Dictionary<int, string> { { 0, "most" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} másodperccel ezelőtt" }, { PluralRulesValues.Other, "{0} másodperccel ezelőtt" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} másodperc múlva" }, { PluralRulesValues.Other, "{0} másodperc múlva" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Short,
                 "másodperc",
                 new Dictionary<int, string> { { 0, "most" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} másodperccel ezelőtt" }, { PluralRulesValues.Other, "{0} másodperccel ezelőtt" } },
@@ -599,26 +683,63 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Zone,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Long,
                 "időzóna",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Narrow,
                 "időzóna",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Short,
                 "időzóna",
                 null,
                 null,
                 null));
+
+        /// <summary>
+        /// Gets the Relative Time resource styles based on the unit specified
+        /// </summary>
+        /// <param name="relativeTimeUnit">The resource unit to get</param>
+        /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
+        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
+        {
+            RelativeTimeUnitValues.Era => this.Era,
+            RelativeTimeUnitValues.Year => this.Year,
+            RelativeTimeUnitValues.Quarter => this.Quarter,
+            RelativeTimeUnitValues.Month => this.Month,
+            RelativeTimeUnitValues.Week => this.Week,
+            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
+            RelativeTimeUnitValues.Day => this.Day,
+            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
+            RelativeTimeUnitValues.Weekday => this.Weekday,
+            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
+            RelativeTimeUnitValues.Sunday => this.Sunday,
+            RelativeTimeUnitValues.Monday => this.Monday,
+            RelativeTimeUnitValues.Tuesday => this.Tuesday,
+            RelativeTimeUnitValues.Wednesday => this.Wednesday,
+            RelativeTimeUnitValues.Thursday => this.Thursday,
+            RelativeTimeUnitValues.Friday => this.Friday,
+            RelativeTimeUnitValues.Saturday => this.Saturday,
+            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
+            RelativeTimeUnitValues.Hour => this.Hour,
+            RelativeTimeUnitValues.Minute => this.Minute,
+            RelativeTimeUnitValues.Second => this.Second,
+            RelativeTimeUnitValues.Zone => this.Zone,
+            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+        };
     }
 }

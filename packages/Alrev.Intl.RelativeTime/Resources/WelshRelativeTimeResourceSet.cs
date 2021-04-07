@@ -32,23 +32,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Era,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Long,
                 "oes",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Narrow,
                 "oes",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Short,
                 "oes",
                 null,
                 null,
@@ -59,23 +63,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Year,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Long,
                 "blwyddyn",
                 new Dictionary<int, string> { { -1, "llynedd" }, { 0, "eleni" }, { 1, "blwyddyn nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} o flynyddoedd yn ôl" }, { PluralRulesValues.One, "blwyddyn yn ôl" }, { PluralRulesValues.Two, "{0} flynedd yn ôl" }, { PluralRulesValues.Few, "{0} blynedd yn ôl" }, { PluralRulesValues.Many, "{0} blynedd yn ôl" }, { PluralRulesValues.Other, "{0} o flynyddoedd yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} mlynedd" }, { PluralRulesValues.One, "ymhen blwyddyn" }, { PluralRulesValues.Two, "ymhen {0} flynedd" }, { PluralRulesValues.Few, "ymhen {0} blynedd" }, { PluralRulesValues.Many, "ymhen {0} blynedd" }, { PluralRulesValues.Other, "ymhen {0} mlynedd" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Narrow,
                 "bl.",
                 new Dictionary<int, string> { { -1, "llynedd" }, { 0, "eleni" }, { 1, "bl. nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} o flynyddoedd yn ôl" }, { PluralRulesValues.One, "blwyddyn yn ôl" }, { PluralRulesValues.Two, "{0} flynedd yn ôl" }, { PluralRulesValues.Few, "{0} blynedd yn ôl" }, { PluralRulesValues.Many, "{0} blynedd yn ôl" }, { PluralRulesValues.Other, "{0} bl. yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} mlynedd" }, { PluralRulesValues.One, "ymhen bl." }, { PluralRulesValues.Two, "ymhen {0} flynedd" }, { PluralRulesValues.Few, "ymhen {0} blynedd" }, { PluralRulesValues.Many, "ymhen {0} blynedd" }, { PluralRulesValues.Other, "ymhen {0} mlynedd" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Short,
                 "bl.",
                 new Dictionary<int, string> { { -1, "llynedd" }, { 0, "eleni" }, { 1, "blwyddyn nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} o flynyddoedd yn ôl" }, { PluralRulesValues.One, "{0} bl. yn ôl" }, { PluralRulesValues.Two, "{0} flynedd yn ôl" }, { PluralRulesValues.Few, "{0} blynedd yn ôl" }, { PluralRulesValues.Many, "{0} blynedd yn ôl" }, { PluralRulesValues.Other, "{0} bl. yn ôl" } },
@@ -86,23 +94,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Quarter,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Long,
                 "chwarter",
                 new Dictionary<int, string> { { -1, "chwarter olaf" }, { 0, "chwarter hwn" }, { 1, "chwarter nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} o chwarteri yn ôl" }, { PluralRulesValues.One, "{0} chwarter yn ôl" }, { PluralRulesValues.Two, "{0} chwarter yn ôl" }, { PluralRulesValues.Few, "{0} chwarter yn ôl" }, { PluralRulesValues.Many, "{0} chwarter yn ôl" }, { PluralRulesValues.Other, "{0} o chwarteri yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} chwarter" }, { PluralRulesValues.One, "ymhen {0} chwarter" }, { PluralRulesValues.Two, "ymhen {0} chwarter" }, { PluralRulesValues.Few, "ymhen {0} chwarter" }, { PluralRulesValues.Many, "ymhen {0} chwarter" }, { PluralRulesValues.Other, "ymhen {0} chwarter" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Narrow,
                 "chw.",
                 new Dictionary<int, string> { { -1, "chwarter olaf" }, { 0, "chwarter hwn" }, { 1, "chwarter nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} o chwarteri yn ôl" }, { PluralRulesValues.One, "{0} chw. yn ôl" }, { PluralRulesValues.Two, "{0} chwarter yn ôl" }, { PluralRulesValues.Few, "{0} chwarter yn ôl" }, { PluralRulesValues.Many, "{0} chwarter yn ôl" }, { PluralRulesValues.Other, "{0} chw. yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} chwarter" }, { PluralRulesValues.One, "ymhen {0} chw." }, { PluralRulesValues.Two, "ymhen {0} chwarter" }, { PluralRulesValues.Few, "ymhen {0} chwarter" }, { PluralRulesValues.Many, "ymhen {0} chwarter" }, { PluralRulesValues.Other, "ymhen {0} chw." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Short,
                 "chw.",
                 new Dictionary<int, string> { { -1, "chwarter olaf" }, { 0, "chwarter hwn" }, { 1, "chwarter nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} o chwarteri yn ôl" }, { PluralRulesValues.One, "{0} chw. yn ôl" }, { PluralRulesValues.Two, "{0} chwarter yn ôl" }, { PluralRulesValues.Few, "{0} chwarter yn ôl" }, { PluralRulesValues.Many, "{0} chwarter yn ôl" }, { PluralRulesValues.Other, "{0} chw. yn ôl" } },
@@ -113,23 +125,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Month,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Long,
                 "mis",
                 new Dictionary<int, string> { { -1, "mis diwethaf" }, { 0, "y mis hwn" }, { 1, "mis nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} mis yn ôl" }, { PluralRulesValues.One, "{0} mis yn ôl" }, { PluralRulesValues.Two, "{0} fis yn ôl" }, { PluralRulesValues.Few, "{0} mis yn ôl" }, { PluralRulesValues.Many, "{0} mis yn ôl" }, { PluralRulesValues.Other, "{0} mis yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} mis" }, { PluralRulesValues.One, "ymhen mis" }, { PluralRulesValues.Two, "ymhen deufis" }, { PluralRulesValues.Few, "ymhen {0} mis" }, { PluralRulesValues.Many, "ymhen {0} mis" }, { PluralRulesValues.Other, "ymhen {0} mis" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Narrow,
                 "mis",
                 new Dictionary<int, string> { { -1, "mis diwethaf" }, { 0, "y mis hwn" }, { 1, "mis nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} mis yn ôl" }, { PluralRulesValues.One, "{0} mis yn ôl" }, { PluralRulesValues.Two, "{0} fis yn ôl" }, { PluralRulesValues.Few, "{0} mis yn ôl" }, { PluralRulesValues.Many, "{0} mis yn ôl" }, { PluralRulesValues.Other, "{0} mis yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} mis" }, { PluralRulesValues.One, "ymhen mis" }, { PluralRulesValues.Two, "ymhen deufis" }, { PluralRulesValues.Few, "ymhen {0} mis" }, { PluralRulesValues.Many, "ymhen {0} mis" }, { PluralRulesValues.Other, "ymhen {0} mis" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Short,
                 "mis",
                 new Dictionary<int, string> { { -1, "mis diwethaf" }, { 0, "y mis hwn" }, { 1, "mis nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} mis yn ôl" }, { PluralRulesValues.One, "{0} mis yn ôl" }, { PluralRulesValues.Two, "deufis yn ôl" }, { PluralRulesValues.Few, "{0} mis yn ôl" }, { PluralRulesValues.Many, "{0} mis yn ôl" }, { PluralRulesValues.Other, "{0} mis yn ôl" } },
@@ -140,23 +156,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Week,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Long,
                 "wythnos",
                 new Dictionary<int, string> { { -1, "wythnos ddiwethaf" }, { 0, "yr wythnos hon" }, { 1, "wythnos nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} wythnos yn ôl" }, { PluralRulesValues.One, "{0} wythnos yn ôl" }, { PluralRulesValues.Two, "{0} wythnos yn ôl" }, { PluralRulesValues.Few, "{0} wythnos yn ôl" }, { PluralRulesValues.Many, "{0} wythnos yn ôl" }, { PluralRulesValues.Other, "{0} wythnos yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} wythnos" }, { PluralRulesValues.One, "ymhen wythnos" }, { PluralRulesValues.Two, "ymhen pythefnos" }, { PluralRulesValues.Few, "ymhen {0} wythnos" }, { PluralRulesValues.Many, "ymhen {0} wythnos" }, { PluralRulesValues.Other, "ymhen {0} wythnos" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Narrow,
                 "wythnos",
                 new Dictionary<int, string> { { -1, "ws. ddiwethaf" }, { 0, "yr ws. hon" }, { 1, "ws. nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} wythnos yn ôl" }, { PluralRulesValues.One, "{0} ws. yn ôl" }, { PluralRulesValues.Two, "pythefnos yn ôl" }, { PluralRulesValues.Few, "{0} wythnos yn ôl" }, { PluralRulesValues.Many, "{0} wythnos yn ôl" }, { PluralRulesValues.Other, "{0} ws. yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} wythnos" }, { PluralRulesValues.One, "ymhen {0} ws." }, { PluralRulesValues.Two, "ymhen {0} wythnos" }, { PluralRulesValues.Few, "ymhen {0} wythnos" }, { PluralRulesValues.Many, "ymhen {0} wythnos" }, { PluralRulesValues.Other, "ymhen {0} ws." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Short,
                 "wythnos",
                 new Dictionary<int, string> { { -1, "ws. ddiwethaf" }, { 0, "yr ws. hon" }, { 1, "ws. nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} wythnos yn ôl" }, { PluralRulesValues.One, "{0} ws. yn ôl" }, { PluralRulesValues.Two, "pythefnos yn ôl" }, { PluralRulesValues.Few, "{0} wythnos yn ôl" }, { PluralRulesValues.Many, "{0} wythnos yn ôl" }, { PluralRulesValues.Other, "{0} ws yn ôl." } },
@@ -167,23 +187,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Long,
                 "rhif wythnos yn y mis",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "wythnos y mis",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Short,
                 "wythnos y mis",
                 null,
                 null,
@@ -194,23 +218,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Day,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
                 "diwrnod",
                 new Dictionary<int, string> { { -2, "echdoe" }, { -1, "ddoe" }, { 0, "heddiw" }, { 1, "yfory" }, { 2, "drennydd" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} diwrnod yn ôl" }, { PluralRulesValues.One, "{0} diwrnod yn ôl" }, { PluralRulesValues.Two, "{0} ddiwrnod yn ôl" }, { PluralRulesValues.Few, "{0} diwrnod yn ôl" }, { PluralRulesValues.Many, "{0} diwrnod yn ôl" }, { PluralRulesValues.Other, "{0} diwrnod yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} diwrnod" }, { PluralRulesValues.One, "ymhen diwrnod" }, { PluralRulesValues.Two, "ymhen deuddydd" }, { PluralRulesValues.Few, "ymhen {0} diwrnod" }, { PluralRulesValues.Many, "ymhen {0} diwrnod" }, { PluralRulesValues.Other, "ymhen {0} diwrnod" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Narrow,
                 "diwrnod",
                 new Dictionary<int, string> { { -2, "echdoe" }, { -1, "ddoe" }, { 0, "heddiw" }, { 1, "yfory" }, { 2, "drennydd" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} diwrnod yn ôl" }, { PluralRulesValues.One, "{0} diwrnod yn ôl" }, { PluralRulesValues.Two, "{0} ddiwrnod yn ôl" }, { PluralRulesValues.Few, "{0} diwrnod yn ôl" }, { PluralRulesValues.Many, "{0} diwrnod yn ôl" }, { PluralRulesValues.Other, "{0} diwrnod yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} diwrnod" }, { PluralRulesValues.One, "ymhen {0} diwrnod" }, { PluralRulesValues.Two, "ymhen {0} diwrnod" }, { PluralRulesValues.Few, "ymhen {0} diwrnod" }, { PluralRulesValues.Many, "ymhen {0} diwrnod" }, { PluralRulesValues.Other, "ymhen {0} diwrnod" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Short,
                 "diwrnod",
                 new Dictionary<int, string> { { -2, "echdoe" }, { -1, "ddoe" }, { 0, "heddiw" }, { 1, "yfory" }, { 2, "drennydd" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} diwrnod yn ôl" }, { PluralRulesValues.One, "{0} diwrnod yn ôl" }, { PluralRulesValues.Two, "{0} ddiwrnod yn ôl" }, { PluralRulesValues.Few, "{0} diwrnod yn ôl" }, { PluralRulesValues.Many, "{0} diwrnod yn ôl" }, { PluralRulesValues.Other, "{0} diwrnod yn ôl" } },
@@ -221,23 +249,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayOfYear,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Long,
                 "rhif y dydd yn y flwyddyn",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Narrow,
                 "dydd y fl.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Short,
                 "rhif y dydd yn y fl.",
                 null,
                 null,
@@ -248,23 +280,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Weekday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Long,
                 "diwrnod o’r wythnos",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Narrow,
                 "diwrnod o’r wythnos",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Short,
                 "diwrnod o’r wythnos",
                 null,
                 null,
@@ -275,23 +311,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekdayOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Long,
                 "diwrnod yn y mis",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "diwrnod yn y mis",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Short,
                 "diwrnod yn y mis",
                 null,
                 null,
@@ -302,23 +342,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Sunday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "dydd Sul diwethaf" }, { 0, "dydd Sul yma" }, { 1, "dydd Sul nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.One, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.Two, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.Few, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.Many, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.Other, "{0} Dydd Sul yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} Dydd Sul" }, { PluralRulesValues.One, "ymhen {0} Dydd Sul" }, { PluralRulesValues.Two, "ymhen {0} Dydd Sul" }, { PluralRulesValues.Few, "ymhen {0} Dydd Sul" }, { PluralRulesValues.Many, "ymhen {0} Dydd Sul" }, { PluralRulesValues.Other, "ymhen {0} Dydd Sul" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Sul diwethaf" }, { 0, "Sul yma" }, { 1, "Sul nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.One, "{0} Sul yn ôl" }, { PluralRulesValues.Two, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.Few, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.Many, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.Other, "{0} Sul yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} Dydd Sul" }, { PluralRulesValues.One, "ymhen {0} Sul" }, { PluralRulesValues.Two, "ymhen {0} Dydd Sul" }, { PluralRulesValues.Few, "ymhen {0} Dydd Sul" }, { PluralRulesValues.Many, "ymhen {0} Dydd Sul" }, { PluralRulesValues.Other, "ymhen {0} Sul" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Sul diwethaf" }, { 0, "Sul yma" }, { 1, "Sul nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.One, "{0} Sul yn ôl" }, { PluralRulesValues.Two, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.Few, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.Many, "{0} Dydd Sul yn ôl" }, { PluralRulesValues.Other, "{0} Sul yn ôl" } },
@@ -329,23 +373,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Monday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "dydd Llun diwethaf" }, { 0, "dydd Llun yma" }, { 1, "dydd Llun nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Llun yn ôl" }, { PluralRulesValues.One, "{0} dydd Llun yn ôl" }, { PluralRulesValues.Two, "{0} dydd Llun yn ôl" }, { PluralRulesValues.Few, "{0} dydd Llun yn ôl" }, { PluralRulesValues.Many, "{0} dydd Llun yn ôl" }, { PluralRulesValues.Other, "{0} dydd Llun yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} Dydd Llun" }, { PluralRulesValues.One, "ymhen {0} Dydd Llun" }, { PluralRulesValues.Two, "ymhen {0} Dydd Llun" }, { PluralRulesValues.Few, "ymhen {0} Dydd Llun" }, { PluralRulesValues.Many, "ymhen {0} Dydd Llun" }, { PluralRulesValues.Other, "ymhen {0} Dydd Llun" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Llun diwethaf" }, { 0, "Llun yma" }, { 1, "Llun nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Llun yn ôl" }, { PluralRulesValues.One, "{0} Ll yn ôl" }, { PluralRulesValues.Two, "{0} dydd Llun yn ôl" }, { PluralRulesValues.Few, "{0} dydd Llun yn ôl" }, { PluralRulesValues.Many, "{0} dydd Llun yn ôl" }, { PluralRulesValues.Other, "{0} Ll yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} Dydd Llun" }, { PluralRulesValues.One, "ymhen {0} Ll" }, { PluralRulesValues.Two, "ymhen {0} Dydd Llun" }, { PluralRulesValues.Few, "ymhen {0} Dydd Llun" }, { PluralRulesValues.Many, "ymhen {0} Dydd Llun" }, { PluralRulesValues.Other, "ymhen {0} Ll" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Llun diwethaf" }, { 0, "Llun yma" }, { 1, "Llun nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Llun yn ôl" }, { PluralRulesValues.One, "{0} Llun yn ôl" }, { PluralRulesValues.Two, "{0} dydd Llun yn ôl" }, { PluralRulesValues.Few, "{0} dydd Llun yn ôl" }, { PluralRulesValues.Many, "{0} dydd Llun yn ôl" }, { PluralRulesValues.Other, "{0} Llun yn ôl" } },
@@ -356,23 +404,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Tuesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "dydd Mawrth diwethaf" }, { 0, "dydd Mawrth yma" }, { 1, "dydd Mawrth nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.One, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.Two, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.Few, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.Many, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.Other, "{0} dydd Mawrth yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} dydd Mawrth" }, { PluralRulesValues.One, "ymhen {0} dydd Mawrth" }, { PluralRulesValues.Two, "ymhen {0} dydd Mawrth" }, { PluralRulesValues.Few, "ymhen {0} dydd Mawrth" }, { PluralRulesValues.Many, "ymhen {0} dydd Mawrth" }, { PluralRulesValues.Other, "ymhen {0} dydd Mawrth" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Maw. diwethaf" }, { 0, "Maw. yma" }, { 1, "Maw. nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.One, "{0} Maw. yn ôl" }, { PluralRulesValues.Two, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.Few, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.Many, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.Other, "{0} Maw. yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} dydd Mawrth" }, { PluralRulesValues.One, "ymhen {0} Maw." }, { PluralRulesValues.Two, "ymhen {0} dydd Mawrth" }, { PluralRulesValues.Few, "ymhen {0} dydd Mawrth" }, { PluralRulesValues.Many, "ymhen {0} dydd Mawrth" }, { PluralRulesValues.Other, "ymhen {0} Maw." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Maw. diwethaf" }, { 0, "Maw. yma" }, { 1, "Maw. nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.One, "{0} Maw. yn ôl" }, { PluralRulesValues.Two, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.Few, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.Many, "{0} dydd Mawrth yn ôl" }, { PluralRulesValues.Other, "{0} Maw. yn ôl" } },
@@ -383,23 +435,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Wednesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "dydd Mercher diwethaf" }, { 0, "dydd Mercher yma" }, { 1, "dydd Mercher nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.One, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.Two, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.Few, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.Many, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.Other, "{0} dydd Mercher yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} dydd Mercher" }, { PluralRulesValues.One, "ymhen {0} dydd Mercher" }, { PluralRulesValues.Two, "ymhen {0} dydd Mercher" }, { PluralRulesValues.Few, "ymhen {0} dydd Mercher" }, { PluralRulesValues.Many, "ymhen {0} dydd Mercher" }, { PluralRulesValues.Other, "ymhen {0} dydd Mercher" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Me. diwethaf" }, { 0, "Me. yma" }, { 1, "Me. nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.One, "{0} Me. yn ôl" }, { PluralRulesValues.Two, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.Few, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.Many, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.Other, "{0} Me. yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} dydd Mercher" }, { PluralRulesValues.One, "ymhen {0} Me." }, { PluralRulesValues.Two, "ymhen {0} dydd Mercher" }, { PluralRulesValues.Few, "ymhen {0} dydd Mercher" }, { PluralRulesValues.Many, "ymhen {0} dydd Mercher" }, { PluralRulesValues.Other, "ymhen {0} Me." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Mer. diwethaf" }, { 0, "Mer. yma" }, { 1, "Mer. nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.One, "{0} Mer. yn ôl" }, { PluralRulesValues.Two, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.Few, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.Many, "{0} dydd Mercher yn ôl" }, { PluralRulesValues.Other, "{0} Mer. yn ôl" } },
@@ -410,23 +466,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Thursday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "dydd Iau diwethaf" }, { 0, "dydd Iau yma" }, { 1, "dydd Iau nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Iau yn ôl" }, { PluralRulesValues.One, "{0} dydd Iau yn ôl" }, { PluralRulesValues.Two, "{0} dydd Iau yn ôl" }, { PluralRulesValues.Few, "{0} dydd Iau yn ôl" }, { PluralRulesValues.Many, "{0} dydd Iau yn ôl" }, { PluralRulesValues.Other, "{0} dydd Iau yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} dydd Iau" }, { PluralRulesValues.One, "ymhen {0} dydd Iau" }, { PluralRulesValues.Two, "ymhen {0} dydd Iau" }, { PluralRulesValues.Few, "ymhen {0} dydd Iau" }, { PluralRulesValues.Many, "ymhen {0} dydd Iau" }, { PluralRulesValues.Other, "ymhen {0} dydd Iau" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Iau diwethaf" }, { 0, "Iau yma" }, { 1, "Iau nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Iau yn ôl" }, { PluralRulesValues.One, "{0} Iau yn ôl" }, { PluralRulesValues.Two, "{0} dydd Iau yn ôl" }, { PluralRulesValues.Few, "{0} dydd Iau yn ôl" }, { PluralRulesValues.Many, "{0} dydd Iau yn ôl" }, { PluralRulesValues.Other, "{0} Iau yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} dydd Iau" }, { PluralRulesValues.One, "ymhen {0} Iau" }, { PluralRulesValues.Two, "ymhen {0} dydd Iau" }, { PluralRulesValues.Few, "ymhen {0} dydd Iau" }, { PluralRulesValues.Many, "ymhen {0} dydd Iau" }, { PluralRulesValues.Other, "ymhen {0} Iau" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Iau diwethaf" }, { 0, "Iau yma" }, { 1, "Iau nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Iau yn ôl" }, { PluralRulesValues.One, "{0} Iau yn ôl" }, { PluralRulesValues.Two, "{0} dydd Iau yn ôl" }, { PluralRulesValues.Few, "{0} dydd Iau yn ôl" }, { PluralRulesValues.Many, "{0} dydd Iau yn ôl" }, { PluralRulesValues.Other, "{0} Iau yn ôl" } },
@@ -437,23 +497,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Friday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "dydd Gwener diwethaf" }, { 0, "dydd Gwener yma" }, { 1, "dydd Gwener nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.One, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.Two, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.Few, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.Many, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.Other, "{0} dydd Gwener yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} dydd Gwener" }, { PluralRulesValues.One, "ymhen {0} dydd Gwener" }, { PluralRulesValues.Two, "ymhen {0} dydd Gwener" }, { PluralRulesValues.Few, "ymhen {0} dydd Gwener" }, { PluralRulesValues.Many, "ymhen {0} dydd Gwener" }, { PluralRulesValues.Other, "ymhen {0} dydd Gwener" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Gwener diwethaf" }, { 0, "Gwener yma" }, { 1, "Gwen. nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.One, "{0} G yn ôl" }, { PluralRulesValues.Two, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.Few, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.Many, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.Other, "{0} G yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} dydd Gwener" }, { PluralRulesValues.One, "ymhen {0} G" }, { PluralRulesValues.Two, "ymhen {0} dydd Gwener" }, { PluralRulesValues.Few, "ymhen {0} dydd Gwener" }, { PluralRulesValues.Many, "ymhen {0} dydd Gwener" }, { PluralRulesValues.Other, "ymhen {0} G" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Gwener diwethaf" }, { 0, "Gwen. yma" }, { 1, "Gwen. nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.One, "{0} Gwen. yn ôl" }, { PluralRulesValues.Two, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.Few, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.Many, "{0} dydd Gwener yn ôl" }, { PluralRulesValues.Other, "{0} Gwen. yn ôl" } },
@@ -464,23 +528,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Saturday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "dydd Sadwrn diwethaf" }, { 0, "dydd Sadwrn yma" }, { 1, "dydd Sadwrn nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.One, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.Two, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.Few, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.Many, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.Other, "{0} dydd Sadwrn yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} dydd Sadwrn" }, { PluralRulesValues.One, "ymhen {0} dydd Sadwrn" }, { PluralRulesValues.Two, "ymhen {0} dydd Sadwrn" }, { PluralRulesValues.Few, "ymhen {0} dydd Sadwrn" }, { PluralRulesValues.Many, "ymhen {0} dydd Sadwrn" }, { PluralRulesValues.Other, "ymhen {0} dydd Sadwrn" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Sad. diwethaf" }, { 0, "Sad. yma" }, { 1, "Sad. nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.One, "{0} Sad. yn ôl" }, { PluralRulesValues.Two, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.Few, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.Many, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.Other, "{0} Sad. yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} dydd Sadwrn" }, { PluralRulesValues.One, "ymhen {0} Sad." }, { PluralRulesValues.Two, "ymhen {0} dydd Sadwrn" }, { PluralRulesValues.Few, "ymhen {0} dydd Sadwrn" }, { PluralRulesValues.Many, "ymhen {0} dydd Sadwrn" }, { PluralRulesValues.Other, "ymhen {0} Sad." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "Sad. diwethaf" }, { 0, "Sad. yma" }, { 1, "Sad. nesaf" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.One, "{0} Sad. yn ôl" }, { PluralRulesValues.Two, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.Few, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.Many, "{0} dydd Sadwrn yn ôl" }, { PluralRulesValues.Other, "{0} Sad. yn ôl" } },
@@ -491,23 +559,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayPeriod,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Long,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Narrow,
                 "AM/PM",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Short,
                 "AM/PM",
                 null,
                 null,
@@ -518,23 +590,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Hour,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Long,
                 "awr",
                 new Dictionary<int, string> { { 0, "yr awr hon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} awr yn ôl" }, { PluralRulesValues.One, "{0} awr yn ôl" }, { PluralRulesValues.Two, "{0} awr yn ôl" }, { PluralRulesValues.Few, "{0} awr yn ôl" }, { PluralRulesValues.Many, "{0} awr yn ôl" }, { PluralRulesValues.Other, "{0} awr yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} awr" }, { PluralRulesValues.One, "ymhen awr" }, { PluralRulesValues.Two, "ymhen {0} awr" }, { PluralRulesValues.Few, "ymhen {0} awr" }, { PluralRulesValues.Many, "ymhen {0} awr" }, { PluralRulesValues.Other, "ymhen {0} awr" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Narrow,
                 "awr",
                 new Dictionary<int, string> { { 0, "yr awr hon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} awr yn ôl" }, { PluralRulesValues.One, "{0} awr yn ôl" }, { PluralRulesValues.Two, "{0} awr yn ôl" }, { PluralRulesValues.Few, "{0} awr yn ôl" }, { PluralRulesValues.Many, "{0} awr yn ôl" }, { PluralRulesValues.Other, "{0} awr yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} awr" }, { PluralRulesValues.One, "ymhen {0} awr" }, { PluralRulesValues.Two, "ymhen {0} awr" }, { PluralRulesValues.Few, "ymhen {0} awr" }, { PluralRulesValues.Many, "ymhen {0} awr" }, { PluralRulesValues.Other, "ymhen {0} awr" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Short,
                 "awr",
                 new Dictionary<int, string> { { 0, "yr awr hon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} awr yn ôl" }, { PluralRulesValues.One, "awr yn ôl" }, { PluralRulesValues.Two, "{0} awr yn ôl" }, { PluralRulesValues.Few, "{0} awr yn ôl" }, { PluralRulesValues.Many, "{0} awr yn ôl" }, { PluralRulesValues.Other, "{0} awr yn ôl" } },
@@ -545,23 +621,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Minute,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Long,
                 "munud",
                 new Dictionary<int, string> { { 0, "y funud hon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} munud yn ôl" }, { PluralRulesValues.One, "{0} munud yn ôl" }, { PluralRulesValues.Two, "{0} munud yn ôl" }, { PluralRulesValues.Few, "{0} munud yn ôl" }, { PluralRulesValues.Many, "{0} munud yn ôl" }, { PluralRulesValues.Other, "{0} munud yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} munud" }, { PluralRulesValues.One, "ymhen {0} munud" }, { PluralRulesValues.Two, "ymhen {0} munud" }, { PluralRulesValues.Few, "ymhen {0} munud" }, { PluralRulesValues.Many, "ymhen {0} munud" }, { PluralRulesValues.Other, "ymhen {0} munud" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Narrow,
                 "mun.",
                 new Dictionary<int, string> { { 0, "y funud hon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} munud yn ôl" }, { PluralRulesValues.One, "{0} mun. yn ôl" }, { PluralRulesValues.Two, "{0} mun. yn ôl" }, { PluralRulesValues.Few, "{0} mun. yn ôl" }, { PluralRulesValues.Many, "{0} munud yn ôl" }, { PluralRulesValues.Other, "{0} mun. yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} munud" }, { PluralRulesValues.One, "ymhen {0} mun." }, { PluralRulesValues.Two, "ymhen {0} mun." }, { PluralRulesValues.Few, "ymhen {0} munud" }, { PluralRulesValues.Many, "ymhen {0} munud" }, { PluralRulesValues.Other, "ymhen {0} mun." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Short,
                 "mun.",
                 new Dictionary<int, string> { { 0, "y funud hon" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} munud yn ôl" }, { PluralRulesValues.One, "{0} mun. yn ôl" }, { PluralRulesValues.Two, "{0} funud yn ôl" }, { PluralRulesValues.Few, "{0} munud yn ôl" }, { PluralRulesValues.Many, "{0} munud yn ôl" }, { PluralRulesValues.Other, "{0} mun. yn ôl" } },
@@ -572,23 +652,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Second,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Long,
                 "eiliad",
                 new Dictionary<int, string> { { 0, "nawr" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} eiliad yn ôl" }, { PluralRulesValues.One, "{0} eiliad yn ôl" }, { PluralRulesValues.Two, "{0} eiliad yn ôl" }, { PluralRulesValues.Few, "{0} eiliad yn ôl" }, { PluralRulesValues.Many, "{0} eiliad yn ôl" }, { PluralRulesValues.Other, "{0} eiliad yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} eiliad" }, { PluralRulesValues.One, "ymhen {0} eiliad" }, { PluralRulesValues.Two, "ymhen {0} eiliad" }, { PluralRulesValues.Few, "ymhen {0} eiliad" }, { PluralRulesValues.Many, "ymhen {0} eiliad" }, { PluralRulesValues.Other, "ymhen {0} eiliad" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Narrow,
                 "eiliad",
                 new Dictionary<int, string> { { 0, "nawr" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} eiliad yn ôl" }, { PluralRulesValues.One, "{0} eiliad yn ôl" }, { PluralRulesValues.Two, "{0} eiliad yn ôl" }, { PluralRulesValues.Few, "{0} eiliad yn ôl" }, { PluralRulesValues.Many, "{0} eiliad yn ôl" }, { PluralRulesValues.Other, "{0} eiliad yn ôl" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "ymhen {0} eiliad" }, { PluralRulesValues.One, "ymhen {0} eiliad" }, { PluralRulesValues.Two, "ymhen {0} eiliad" }, { PluralRulesValues.Few, "ymhen {0} eiliad" }, { PluralRulesValues.Many, "ymhen {0} eiliad" }, { PluralRulesValues.Other, "ymhen {0} eiliad" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Short,
                 "eiliad",
                 new Dictionary<int, string> { { 0, "nawr" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "{0} eiliad yn ôl" }, { PluralRulesValues.One, "{0} eil. yn ôl" }, { PluralRulesValues.Two, "{0} eiliad yn ôl" }, { PluralRulesValues.Few, "{0} eiliad yn ôl" }, { PluralRulesValues.Many, "{0} eiliad yn ôl" }, { PluralRulesValues.Other, "{0} eil. yn ôl" } },
@@ -599,26 +683,63 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Zone,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Long,
                 "cylchfa amser",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Narrow,
                 "cylchfa",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Short,
                 "cylchfa amser",
                 null,
                 null,
                 null));
+
+        /// <summary>
+        /// Gets the Relative Time resource styles based on the unit specified
+        /// </summary>
+        /// <param name="relativeTimeUnit">The resource unit to get</param>
+        /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
+        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
+        {
+            RelativeTimeUnitValues.Era => this.Era,
+            RelativeTimeUnitValues.Year => this.Year,
+            RelativeTimeUnitValues.Quarter => this.Quarter,
+            RelativeTimeUnitValues.Month => this.Month,
+            RelativeTimeUnitValues.Week => this.Week,
+            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
+            RelativeTimeUnitValues.Day => this.Day,
+            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
+            RelativeTimeUnitValues.Weekday => this.Weekday,
+            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
+            RelativeTimeUnitValues.Sunday => this.Sunday,
+            RelativeTimeUnitValues.Monday => this.Monday,
+            RelativeTimeUnitValues.Tuesday => this.Tuesday,
+            RelativeTimeUnitValues.Wednesday => this.Wednesday,
+            RelativeTimeUnitValues.Thursday => this.Thursday,
+            RelativeTimeUnitValues.Friday => this.Friday,
+            RelativeTimeUnitValues.Saturday => this.Saturday,
+            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
+            RelativeTimeUnitValues.Hour => this.Hour,
+            RelativeTimeUnitValues.Minute => this.Minute,
+            RelativeTimeUnitValues.Second => this.Second,
+            RelativeTimeUnitValues.Zone => this.Zone,
+            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+        };
     }
 }

@@ -32,23 +32,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Era,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Long,
                 "ᏗᏓᎴᏂᏍᎬ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Narrow,
                 "ᏗᏓᎴᏂᏍᎬ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Era,
+                RelativeTimeStyleValues.Short,
                 "ᏗᏓᎴᏂᏍᎬ",
                 null,
                 null,
@@ -59,23 +63,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Year,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Long,
                 "ᎤᏕᏘᏴᏌᏗᏒᎢ",
                 new Dictionary<int, string> { { -1, "ᎡᏘ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏧᏕᏘᏴᏒᏘ" }, { 1, "ᎡᏘᏴᎢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎤᏕᏘᏴᏌᏗᏒᎢ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎢᏧᏕᏘᏴᏌᏗᏒᎢ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎤᏕᏘᏴᏌᏗᏒᎢ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎢᏧᏕᏘᏴᏌᏗᏒᎢ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Narrow,
                 "ᎤᏕ.",
                 new Dictionary<int, string> { { -1, "ᎡᏘ. ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏧᏕᏘᏴᏒᏘ." }, { 1, "ᎡᏘᏴᎢ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎤᏕ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎤᏕ. ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎤᏕ." }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎤᏕ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Year,
+                RelativeTimeStyleValues.Short,
                 "ᎤᏕ.",
                 new Dictionary<int, string> { { -1, "ᎡᏘ. ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏧᏕᏘᏴᏒᏘ." }, { 1, "ᎡᏘᏴᎢ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎤᏕ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎤᏕ. ᏥᎨᏒ" } },
@@ -86,23 +94,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Quarter { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Quarter,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Long,
                 "ᎩᏄᏙᏗ",
                 new Dictionary<int, string> { { -1, "ᎩᏄᏙᏗ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᎩᏄᏙᏗ" }, { 1, "ᏔᎵᏁ ᎩᏄᏙᏗ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎩᏄᏙᏗ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎩᏄᏙᏗ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎩᏄᏙᏗ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎩᏄᏙᏗ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Narrow,
                 "ᎩᏄᏘ.",
                 new Dictionary<int, string> { { -1, "ᎩᏄᏙᏗ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᎩᏄᏙᏗ" }, { 1, "ᏔᎵᏁ ᎩᏄᏙᏗ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎩᏄᏘ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎩᏄᏘ. ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎩᏄᏘ." }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎩᏄᏘ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Quarter,
+                RelativeTimeStyleValues.Short,
                 "ᎩᏄᏘ.",
                 new Dictionary<int, string> { { -1, "ᎩᏄᏙᏗ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᎩᏄᏙᏗ" }, { 1, "ᏔᎵᏁ ᎩᏄᏙᏗ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎩᏄᏘ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎩᏄᏘ. ᏥᎨᏒ" } },
@@ -113,23 +125,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Month { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Month,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Long,
                 "ᎧᎸᎢ",
                 new Dictionary<int, string> { { -1, "ᎧᎸᎢ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᎧᎸᎢ" }, { 1, "ᏔᎵᏁ ᎧᎸᎢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎧᎸᎢ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏗᎧᎸᎢ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎧᎸᎢ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᏗᎧᎸᎢ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Narrow,
                 "ᎧᎸ.",
                 new Dictionary<int, string> { { -1, "ᎧᎸ. ᏥᎨᏒ" }, { 0, "ᎯᎠ ᎧᎸ." }, { 1, "ᏔᎵᏁ ᎧᎸ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎧᎸ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎧᎸ. ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎧᎸ." }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎧᎸ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Month,
+                RelativeTimeStyleValues.Short,
                 "ᎧᎸ.",
                 new Dictionary<int, string> { { -1, "ᎧᎸ. ᏥᎨᏒ" }, { 0, "ᎯᎠ ᎧᎸ." }, { 1, "ᎯᎠ ᎧᎸ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎧᎸ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎧᎸ. ᏥᎨᏒ" } },
@@ -140,23 +156,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Week { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Week,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Long,
                 "ᏒᎾᏙᏓᏆᏍᏗ",
                 new Dictionary<int, string> { { -1, "ᏥᏛᎵᏱᎵᏒᎢ" }, { 0, "ᎯᎠ ᎠᎵᎵᏌ" }, { 1, "ᏐᏆᎴᏅᎲ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏒᎾᏙᏓᏆᏍᏗ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎢᏳᎾᏙᏓᏆᏍᏗ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᏒᎾᏙᏓᏆᏍᏗ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎢᏳᎾᏙᏓᏆᏍᏗ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Narrow,
                 "ᏒᎾ.",
                 new Dictionary<int, string> { { -1, "ᏥᏛᎵᏱᎵᏒᎢ." }, { 0, "ᎯᎠ ᎠᎵᎵᏌ." }, { 1, "ᏐᏆᎴᏅᎲ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏒᎾ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏒᎾ. ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᏒᎾ." }, { PluralRulesValues.Other, "ᎾᎿ {0} ᏒᎾ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Week,
+                RelativeTimeStyleValues.Short,
                 "ᏒᎾ.",
                 new Dictionary<int, string> { { -1, "ᏥᏛᎵᏱᎵᏒᎢ." }, { 0, "ᎯᎠ ᎠᎵᎵᏌ." }, { 1, "ᏐᏆᎴᏅᎲ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏒᎾ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏒᎾ. ᏥᎨᏒ" } },
@@ -167,23 +187,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Long,
                 "ᏒᎾᏙᏓᏆᏍᏗ ᎧᎸᎢ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "ᎡᎾ. ᎧᎸ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekOfMonth,
+                RelativeTimeStyleValues.Short,
                 "ᎡᎾ. ᎧᎸ.",
                 null,
                 null,
@@ -194,23 +218,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Day,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
                 "ᎢᎦ",
                 new Dictionary<int, string> { { -1, "ᏒᎯ" }, { 0, "ᎪᎯ ᎢᎦ" }, { 1, "ᏌᎾᎴᎢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎢᎦ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎯᎸᏍᎩ ᏧᏒᎯᏛ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎢᎦ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎯᎸᏍᎩ ᏧᏒᎯᏛ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Narrow,
                 "ᎢᎦ",
                 new Dictionary<int, string> { { -1, "ᏒᎯ" }, { 0, "ᎪᎯ ᎢᎦ" }, { 1, "ᏌᎾᎴᎢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎢᎦ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎯᎸᏍᎩ ᏧᏒᎯᏛ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎢᎦ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎯᎸᏍᎩ ᏧᏒᎯᏛ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Short,
                 "ᎢᎦ",
                 new Dictionary<int, string> { { -1, "ᏒᎯ" }, { 0, "ᎪᎯ ᎢᎦ" }, { 1, "ᏌᎾᎴᎢ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎢᎦ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎯᎸᏍᎩ ᏧᏒᎯᏛ ᏥᎨᏒ" } },
@@ -221,23 +249,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayOfYear,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Long,
                 "ᎢᎦ ᎤᏕᏘᏴᏌᏗᏒᎢ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Narrow,
                 "ᎢᎦ ᎤᏕ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayOfYear,
+                RelativeTimeStyleValues.Short,
                 "ᎢᎦ ᎤᏕ.",
                 null,
                 null,
@@ -248,23 +280,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Weekday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Long,
                 "ᎢᎦ ᏕᎨᏌᏗᏒ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Narrow,
                 "ᎢᎦ ᏕᎨ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Weekday,
+                RelativeTimeStyleValues.Short,
                 "ᎢᎦ ᏕᎨ.",
                 null,
                 null,
@@ -275,23 +311,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.WeekdayOfMonth,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Long,
                 "ᏒᎾᏙᏓᏆᏍᏗ ᎢᎦ ᎧᎸᎢ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Narrow,
                 "ᏒᎾ. ᎢᎦ ᎧᎸ.",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.WeekdayOfMonth,
+                RelativeTimeStyleValues.Short,
                 "ᏒᎾ. ᎢᎦ ᎧᎸ.",
                 null,
                 null,
@@ -302,23 +342,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Sunday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Sunday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ᎤᎾᏙᏓᏆᏍᎬ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᎤᎾᏙᏓᏆᏍᎬ" }, { 1, "ᏔᎵᏁ ᎤᎾᏙᏓᏆᏍᎬ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎤᎾᏙᏓᏆᏍᎬ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎤᎾᏙᏓᏆᏍᎬ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎤᎾᏙᏓᏆᏍᎬ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎤᎾᏙᏓᏆᏍᎬ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ᏍᎬ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏍᎬ" }, { 1, "ᏔᎵᏁ ᏍᎬ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏍᎬ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏍᎬ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᏍᎬ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᏍᎬ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Sunday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ᏆᏍᎬ. ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏆᏍᎬ." }, { 1, "ᏔᎵᏁ ᏆᏍᎬ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏆᏍᎬ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏆᏍᎬ. ᏥᎨᏒ" } },
@@ -329,23 +373,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Monday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Monday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ᎤᎾᏙᏓᏉᏅᎯ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᎤᎾᏙᏓᏉᏅᎯ" }, { 1, "ᏔᎵᏁ ᎤᎾᏙᏓᏉᏅᎯ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎤᎾᏙᏓᏉᏅᎯ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎤᎾᏙᏓᏉᏅᎯ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎤᎾᏙᏓᏉᏅᎯ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎤᎾᏙᏓᏉᏅᎯ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Ꮙ ᏥᎨᏒ" }, { 0, "ᎯᎠ Ꮙ" }, { 1, "ᏔᎵᏁ Ꮙ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Ꮙ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} Ꮙ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} Ꮙ" }, { PluralRulesValues.Other, "ᎾᎿ {0} Ꮙ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Monday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ᏉᏅᎯ. ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏉᏅᎯ." }, { 1, "ᏔᎵᏁ ᏉᏅᎯ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏉᏅᎯ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏉᏅᎯ. ᏥᎨᏒ" } },
@@ -356,23 +404,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Tuesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Tuesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ᏔᎵᏁ ᎢᎦ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏔᎵᏁ ᎢᎦ" }, { 1, "ᏔᎵᏁ ᏔᎵᏁ ᎢᎦ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏔᎵᏁ ᎢᎦ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏔᎵᏁ ᎢᎦ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᏔᎵᏁ ᎢᎦ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᏔᎵᏁ ᎢᎦ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ᏔᎵ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏔᎵ" }, { 1, "ᏔᎵᏁ ᏔᎵ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏔᎵ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏔᎵ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᏔᎵ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᏔᎵ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Tuesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ᏔᎵᏁ. ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏔᎵᏁ." }, { 1, "ᏔᎵᏁ ᏔᎵᏁ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏔᎵᏁ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏔᎵᏁ. ᏥᎨᏒ" } },
@@ -383,23 +435,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Wednesday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Wednesday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ᏦᎢᏁ ᎢᎦ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏦᎢᏁ ᎢᎦ" }, { 1, "ᏔᎵᏁ ᏦᎢᏁ ᎢᎦ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏦᎢᏁ ᎢᎦ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏦᎢᏁ ᎢᎦ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᏦᎢᏁ ᎢᎦ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᏦᎢᏁ ᎢᎦ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Ꮶ ᏥᎨᏒ" }, { 0, "ᎯᎠ Ꮶ" }, { 1, "ᏔᎵᏁ Ꮶ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Ꮶ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} Ꮶ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} Ꮶ" }, { PluralRulesValues.Other, "ᎾᎿ {0} Ꮶ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Wednesday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ᏦᎢᏁ. ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏦᎢᏁ." }, { 1, "ᏔᎵᏁ ᏦᎢᏁ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏦᎢᏁ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏦᎢᏁ. ᏥᎨᏒ" } },
@@ -410,23 +466,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Thursday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Thursday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ᏅᎩᏁ ᎢᎦ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏅᎩᏁ ᎢᎦ" }, { 1, "ᏔᎵᏁ ᏅᎩᏁ ᎢᎦ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏅᎩᏁ ᎢᎦ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏅᎩᏁ ᎢᎦ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᏅᎩᏁ ᎢᎦ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᏅᎩᏁ ᎢᎦ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ᏅᎩ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏅᎩ" }, { 1, "ᏔᎵᏁ ᏅᎩ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏅᎩ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏅᎩ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᏅᎩ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᏅᎩ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Thursday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ᏅᎩᏁ. ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏅᎩᏁ." }, { 1, "ᏔᎵᏁ ᏅᎩᏁ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏅᎩᏁ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏅᎩᏁ. ᏥᎨᏒ" } },
@@ -437,23 +497,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Friday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Friday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ᏧᎾᎩᎶᏍᏗ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏧᎾᎩᎶᏍᏗ" }, { 1, "ᏔᎵᏁ ᏧᎾᎩᎶᏍᏗ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏧᎾᎩᎶᏍᏗ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏧᎾᎩᎶᏍᏗ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᏧᎾᎩᎶᏍᏗ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᏧᎾᎩᎶᏍᏗ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "Ꮷ ᏥᎨᏒ" }, { 0, "ᎯᎠ Ꮷ" }, { 1, "ᏔᎵᏁ Ꮷ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} Ꮷ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} Ꮷ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} Ꮷ" }, { PluralRulesValues.Other, "ᎾᎿ {0} Ꮷ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Friday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ᏧᎾᎩ. ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏧᎾᎩ." }, { 1, "ᏔᎵᏁ ᏧᎾᎩ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏧᎾᎩ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏧᎾᎩ. ᏥᎨᏒ" } },
@@ -464,23 +528,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Saturday { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Saturday,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Long,
                 null,
                 new Dictionary<int, string> { { -1, "ᎤᎾᏙᏓᏈᏕᎾ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᎤᎾᏙᏓᏈᏕᎾ" }, { 1, "ᏔᎵᏁ ᎤᎾᏙᏓᏈᏕᎾ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎤᎾᏙᏓᏈᏕᎾ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎤᎾᏙᏓᏈᏕᎾ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎤᎾᏙᏓᏈᏕᎾ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎤᎾᏙᏓᏈᏕᎾ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Narrow,
                 null,
                 new Dictionary<int, string> { { -1, "ᏕᎾ ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏕᎾ" }, { 1, "ᏔᎵᏁ ᏕᎾ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏕᎾ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏕᎾ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᏕᎾ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᏕᎾ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Saturday,
+                RelativeTimeStyleValues.Short,
                 null,
                 new Dictionary<int, string> { { -1, "ᏈᏕᎾ. ᏥᎨᏒ" }, { 0, "ᎯᎠ ᏈᏕᎾ." }, { 1, "ᏔᎵᏁ ᏈᏕᎾ." } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏈᏕᎾ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏈᏕᎾ. ᏥᎨᏒ" } },
@@ -491,23 +559,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.DayPeriod,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Long,
                 "ᏌᎾᎴ/ᏒᎯᏱ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Narrow,
                 "ᏌᎾᎴ/ᏒᎯᏱ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.DayPeriod,
+                RelativeTimeStyleValues.Short,
                 "ᏌᎾᎴ/ᏒᎯᏱ",
                 null,
                 null,
@@ -518,23 +590,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Hour,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Long,
                 "ᏑᏟᎶᏓ",
                 new Dictionary<int, string> { { 0, "ᎯᎠ ᏑᏟᎶᏓ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏑᏟᎶᏓ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎢᏳᏟᎶᏓ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᏑᏟᎶᏓ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎢᏳᏟᎶᏓ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Narrow,
                 "ᏑᏟ.",
                 new Dictionary<int, string> { { 0, "ᎯᎠ ᏑᏟᎶᏓ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏑᏟ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏑᏟ. ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᏑᏟ." }, { PluralRulesValues.Other, "ᎾᎿ {0} ᏑᏟ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Hour,
+                RelativeTimeStyleValues.Short,
                 "ᏑᏟ.",
                 new Dictionary<int, string> { { 0, "ᎯᎠ ᏑᏟᎶᏓ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᏑᏟ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏑᏟ. ᏥᎨᏒ" } },
@@ -545,23 +621,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Minute { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Minute,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Long,
                 "ᎢᏯᏔᏬᏍᏔᏅ",
                 new Dictionary<int, string> { { 0, "ᎯᎠ ᎢᏯᏔᏬᏍᏔᏅ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎢᏯᏔᏬᏍᏔᏅ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎢᏯᏔᏬᏍᏔᏅ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎢᏯᏔᏬᏍᏔᏅ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎢᏯᏔᏬᏍᏔᏅ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Narrow,
                 "ᎢᏯᏔ.",
                 new Dictionary<int, string> { { 0, "ᎯᎠ ᎢᏯᏔᏬᏍᏔᏅ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎢᏯᏔ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎢᏯᏔ. ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎢᏯᏔ." }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎢᏯᏔ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Minute,
+                RelativeTimeStyleValues.Short,
                 "ᎢᏯᏔ.",
                 new Dictionary<int, string> { { 0, "ᎯᎠ ᎢᏯᏔᏬᏍᏔᏅ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎢᏯᏔ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎢᏯᏔ. ᏥᎨᏒ" } },
@@ -572,23 +652,27 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Second { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Second,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Long,
                 "ᎠᏎᏢ",
                 new Dictionary<int, string> { { 0, "ᏃᏊ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎠᏎᏢ ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᏓᏓᎾᏩᏍᎬ ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎠᏎᏢ" }, { PluralRulesValues.Other, "ᎾᎿ {0} ᏓᏓᎾᏩᏍᎬ ᏥᎨᏒ" } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Narrow,
                 "ᎠᏎ.",
                 new Dictionary<int, string> { { 0, "ᏃᏊ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎠᏎ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎠᏎ. ᏥᎨᏒ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "ᎾᎿ {0} ᎠᏎ." }, { PluralRulesValues.Other, "ᎾᎿ {0} ᎠᏎ." } }),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Second,
+                RelativeTimeStyleValues.Short,
                 "ᎠᏎ.",
                 new Dictionary<int, string> { { 0, "ᏃᏊ" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "{0} ᎠᏎ. ᏥᎨᏒ" }, { PluralRulesValues.Other, "{0} ᎠᏎ. ᏥᎨᏒ" } },
@@ -599,26 +683,63 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// </summary>
         public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
             LOCALE,
+            RelativeTimeUnitValues.Zone,
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Long,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Long,
                 "ᏂᎬᎾᏛ ᏧᏓᎴᏅᏓ ᏓᏟᎢᎵᏍᏒᎢ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Narrow,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Narrow,
                 "ᏂᎬᎾᏛ ᏧᏓᎴᏅᏓ",
                 null,
                 null,
                 null),
             new RelativeTimeResource(
                 LOCALE,
-                RelativeTimeStylesValues.Short,
+                RelativeTimeUnitValues.Zone,
+                RelativeTimeStyleValues.Short,
                 "ᏂᎬᎾᏛ ᏧᏓᎴᏅᏓ",
                 null,
                 null,
                 null));
+
+        /// <summary>
+        /// Gets the Relative Time resource styles based on the unit specified
+        /// </summary>
+        /// <param name="relativeTimeUnit">The resource unit to get</param>
+        /// <returns>An <see cref="IRelativeTimeStylesResource"/></returns>
+        /// <exception cref="RelativeTimeUnitNotFoundException"></exception>
+        public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
+        {
+            RelativeTimeUnitValues.Era => this.Era,
+            RelativeTimeUnitValues.Year => this.Year,
+            RelativeTimeUnitValues.Quarter => this.Quarter,
+            RelativeTimeUnitValues.Month => this.Month,
+            RelativeTimeUnitValues.Week => this.Week,
+            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
+            RelativeTimeUnitValues.Day => this.Day,
+            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
+            RelativeTimeUnitValues.Weekday => this.Weekday,
+            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
+            RelativeTimeUnitValues.Sunday => this.Sunday,
+            RelativeTimeUnitValues.Monday => this.Monday,
+            RelativeTimeUnitValues.Tuesday => this.Tuesday,
+            RelativeTimeUnitValues.Wednesday => this.Wednesday,
+            RelativeTimeUnitValues.Thursday => this.Thursday,
+            RelativeTimeUnitValues.Friday => this.Friday,
+            RelativeTimeUnitValues.Saturday => this.Saturday,
+            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
+            RelativeTimeUnitValues.Hour => this.Hour,
+            RelativeTimeUnitValues.Minute => this.Minute,
+            RelativeTimeUnitValues.Second => this.Second,
+            RelativeTimeUnitValues.Zone => this.Zone,
+            _ => throw new RelativeTimeUnitNotFoundException("Relative time unit does not exists", nameof(relativeTimeUnit))
+        };
     }
 }
