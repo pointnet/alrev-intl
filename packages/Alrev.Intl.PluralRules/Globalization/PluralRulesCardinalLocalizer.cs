@@ -228,7 +228,7 @@ namespace Alrev.Intl.PluralRules.Globalization
         {
             null => throw new ArgumentNullException(nameof(culture), "CultureInfo must not be null"),
             CultureInfo c when string.IsNullOrEmpty(c.Name) => throw new ArgumentException("CultureInfo.InvariantCulture is not supported", nameof(culture)),
-            _ => this.GetValueOrDefault(culture.Name.ToLowerInvariant(), null) ?? this.GetValueOrDefault(culture.Parent?.Name?.ToLowerInvariant(), null)
+            _ => this.GetValueOrDefault(culture.Name.ToLowerInvariant(), null) ?? this.GetValueOrDefault(culture.Parent.Name.ToLowerInvariant(), null)
         };
     }
 }
