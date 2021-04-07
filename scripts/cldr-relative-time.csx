@@ -56,6 +56,7 @@ public class CldrRelativeTime : BaseCommand
 
     private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-resource-set.hbs"));
     private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-localizer.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-localizer-tests.hbs"));
 
     public void OnExecute()
     {
@@ -64,6 +65,8 @@ public class CldrRelativeTime : BaseCommand
         if (!this.EnsureNodeModulesPackage("cldr-dates-full")) return;
         this.CreateOrEmptyDirectory("Resources");
         this.CreateOrEmptyDirectory("Globalization");
+        this.CreateOrEmptyDirectory("..", "..", "tests", $"{this.Namespace}.Tests", "Resources");
+        this.CreateOrEmptyDirectory("..", "..", "tests", $"{this.Namespace}.Tests", "Globalization");
         this.ProcessCultures();
     }
 
@@ -186,6 +189,13 @@ public class CldrRelativeTime : BaseCommand
             cultures = cultures
         });
         File.WriteAllText(Path.Combine(this.OutputPath, "Globalization", "RelativeTimeLocalizer.cs"), csharp);
+        string tests = this.LocalizerTestsTemplate(new
+        {
+            script = SCRIPT,
+            @namespace = this.Namespace,
+            cultures = cultures
+        });
+        File.WriteAllText(Path.Combine(this.OutputPath, "..", "..", "tests", $"{this.Namespace}.Tests", "Globalization", "RelativeTimeLocalizerTests.cs"), tests);
     }
 }
 
