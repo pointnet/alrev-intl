@@ -113,9 +113,9 @@ public class CldrRelativeTime : BaseCommand
                     _ => "long"
                 }, this.ProcessRelativeTime(key, suffix switch
                 {
-                    "-narrow" => "RelativeTimeTypeValues.Narrow",
-                    "-short" => "RelativeTimeTypeValues.Short",
-                    _ => "RelativeTimeTypeValues.Long"
+                    "-narrow" => "RelativeTimeStylesValues.Narrow",
+                    "-short" => "RelativeTimeStylesValues.Short",
+                    _ => "RelativeTimeStylesValues.Long"
                 }, field));
             }
             relativeTimes.Add(prefix switch
@@ -165,6 +165,7 @@ public class CldrRelativeTime : BaseCommand
         {
             script = SCRIPT,
             locale = culture.Name,
+            englishName = culture.EnglishName,
             @namespace = $"{this.Namespace}.Resources",
             classPrefix = culture.EnglishName.ToValidClassName(),
             relativeTimes = relativeTimes

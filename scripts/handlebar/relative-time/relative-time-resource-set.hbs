@@ -15,12 +15,22 @@ using System.Collections.Generic;
 
 namespace {{namespace}}
 {
+    /// <summary>
+    /// <see cref="IRelativeTimeResourceSet"/> for '{{englishName}}' [{{locale}}]
+    /// </summary>
     public class {{classPrefix}}RelativeTimeResourceSet : IRelativeTimeResourceSet, IResource
     {
         private const string LOCALE = "{{locale}}";
+
+        /// <summary>
+        /// The <see cref="IRelativeTimeResourceSet"/> locale
+        /// </summary>
         public string Locale { get; } = LOCALE;
 {{#each relativeTimes}}
 
+        /// <summary>
+        /// Gets {{@key}} <see cref="IRelativeTimeStylesResource"/> for '{{../englishName}}' [{{../locale}}]
+        /// </summary>
         public IRelativeTimeStylesResource {{@key}} { get; } = new RelativeTimeStylesResource(
             LOCALE,
 {{#with this/long}}{{> resource}}{{/with}},
