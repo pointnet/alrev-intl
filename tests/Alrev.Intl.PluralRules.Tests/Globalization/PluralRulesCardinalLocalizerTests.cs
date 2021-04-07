@@ -12,7 +12,6 @@ using Alrev.Intl.Abstractions.PluralRules;
 using Alrev.Intl.PluralRules.Globalization;
 using System;
 using System.Globalization;
-using System.Threading;
 using Xunit;
 
 namespace Alrev.Intl.PluralRules.Tests.Globalization
