@@ -59,7 +59,7 @@ namespace Alrev.Intl.RelativeTime
             IDictionary<int, string> dictionary,
             IDictionary<PluralRulesValues, string> past,
             IDictionary<PluralRulesValues, string> future)
-            : base(dictionary)
+            : base(dictionary ?? new Dictionary<int, string>())
         {
             this.Locale = locale;
             this.RelativeTimeUnit = relativeTimeUnit;
