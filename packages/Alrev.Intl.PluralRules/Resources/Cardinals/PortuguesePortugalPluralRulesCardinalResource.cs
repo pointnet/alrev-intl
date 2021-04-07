@@ -15,15 +15,15 @@ using System.Linq;
 namespace Alrev.Intl.PluralRules.Resources.Cardinals
 {
     /// <summary>
-    /// Cardinal <see cref="IPluralRulesResource"/> for 'Portuguese (Portugal)' [pt-PT]
+    /// Cardinal <see cref="IPluralRulesResource"/> for 'Portuguese (Portugal)' [pt-pt]
     /// </summary>
-    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#pt-PT"/>
+    /// <seealso href="https://unicode-org.github.io/cldr-staging/charts/39/supplemental/language_plural_rules.html#pt-pt"/>
     public class PortuguesePortugalPluralRulesCardinalResource : IPluralRulesResource, IResource
     {
         /// <summary>
         /// The <see cref="IPluralRulesResource"/> locale
         /// </summary>
-        public string Locale { get; } = "pt-PT";
+        public string Locale { get; } = "pt-pt";
 
         /// <summary>
         /// The <see cref="IPluralRulesResource"/> type
@@ -31,7 +31,7 @@ namespace Alrev.Intl.PluralRules.Resources.Cardinals
         public PluralRulesTypeValues PluralRulesType => PluralRulesTypeValues.Cardinal;
 
         /// <summary>
-        /// Evaluates a <see cref="IPluralRulesContext"/> against the 'Portuguese (Portugal)' [pt-PT] Cardinal <see cref="IPluralRulesResource"/>
+        /// Evaluates a <see cref="IPluralRulesContext"/> against the 'Portuguese (Portugal)' [pt-pt] Cardinal <see cref="IPluralRulesResource"/>
         /// </summary>
         /// <param name="context">An <see cref="IPluralRulesContext"/></param>
         /// <returns>The <see cref="PluralRulesValues"/> of the <see cref="IPluralRulesContext"/></returns>

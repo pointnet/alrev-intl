@@ -27,7 +27,7 @@ namespace Alrev.Intl.PluralRules.Tests.Resources.Cardinals
         [Fact]
         public void PluralRulesType_ShouldReturn_PluralRulesValuesCardinal()
         {
-            CultureInfo culture = new CultureInfo("pt-PT");
+            CultureInfo culture = new CultureInfo("pt-pt");
             IPluralRulesResource resource = this.fixture.CardinalLocalizer.GetLocalizer(culture);
             Assert.Equal(PluralRulesTypeValues.Cardinal, resource.PluralRulesType);
         }
@@ -35,7 +35,7 @@ namespace Alrev.Intl.PluralRules.Tests.Resources.Cardinals
         [Fact]
         public void EvaluateWithNullPluralRulesContext_ShouldThrow_ArgumentNullExpection()
         {
-            CultureInfo culture = new CultureInfo("pt-PT");
+            CultureInfo culture = new CultureInfo("pt-pt");
             IPluralRulesResource resource = this.fixture.CardinalLocalizer.GetLocalizer(culture);
             Exception ex = Record.Exception(() => resource.Evaluate(null));
             Assert.IsType<ArgumentNullException>(ex);
@@ -74,7 +74,7 @@ namespace Alrev.Intl.PluralRules.Tests.Resources.Cardinals
         [InlineData("1000000.0", PluralRulesValues.Other)]
         public void Evaluate_ShouldReturn_ExpectedPluralRulesValues(string input, PluralRulesValues expected)
         {
-            CultureInfo culture = new CultureInfo("pt-PT");
+            CultureInfo culture = new CultureInfo("pt-pt");
             IPluralRulesResource resource = this.fixture.CardinalLocalizer.GetLocalizer(culture);
             PluralRulesValues result = resource.Evaluate(PluralRulesContext.Create(input));
             Assert.Equal(expected, result);

@@ -152,7 +152,7 @@ namespace Alrev.Intl.PluralRules.Globalization
             { "prg", new PrussianPluralRulesCardinalResource() },
             { "ps", new PashtoPluralRulesCardinalResource() },
             { "pt", new PortuguesePluralRulesCardinalResource() },
-            { "pt-PT", new PortuguesePortugalPluralRulesCardinalResource() },
+            { "pt-pt", new PortuguesePortugalPluralRulesCardinalResource() },
             { "rm", new RomanshPluralRulesCardinalResource() },
             { "ro", new RomanianPluralRulesCardinalResource() },
             { "rof", new RomboPluralRulesCardinalResource() },
@@ -228,7 +228,7 @@ namespace Alrev.Intl.PluralRules.Globalization
         {
             null => throw new ArgumentNullException(nameof(culture), "CultureInfo must not be null"),
             CultureInfo c when string.IsNullOrEmpty(c.Name) => throw new ArgumentException("CultureInfo.InvariantCulture is not supported", nameof(culture)),
-            _ => this.GetValueOrDefault(culture.Name, null) ?? this.GetValueOrDefault(culture.Parent.Name, null)
+            _ => this.GetValueOrDefault(culture.Name.ToLowerInvariant(), null) ?? this.GetValueOrDefault(culture.Parent?.Name?.ToLowerInvariant(), null)
         };
     }
 }
