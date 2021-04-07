@@ -22,13 +22,19 @@
     "url": "https://github.com/pointnet/alrev-intl/issues"
   },
   "scripts": {
-    "local-test": "dotnet test --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=\"json%2copencover\" /p:CoverletOutput=\"../\" /p:MergeWith=\"../coverage.json\"",
-    "postlocal-test": "dotnet tool run reportgenerator -reports:.\\tests\\coverage.net5.0.opencover.xml -targetdir:.\\tests\\coveragereport -reporttypes:Html",
+    "pretest": "rimraf .\\.coverage",
+    "test": "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=\"opencover\"",
+    "posttest": "npm run reportgenerator-net50 && npm run reportgenerator-netcoreapp31",
+    "reportgenerator-net50": "dotnet tool run reportgenerator -reports:.\\tests\\**\\*.net5.0.opencover.xml -targetdir:.\\.coverage\\net50 -reporttypes:Html;lcov && rimraf .\\tests\\**\\*.net5.0.opencover.xml",
+    "reportgenerator-netcoreapp31": "dotnet tool run reportgenerator -reports:.\\tests\\**\\*.netcoreapp3.1.opencover.xml -targetdir:.\\.coverage\\netcoreapp31 -reporttypes:Html;lcov && rimraf .\\tests\\**\\*.netcoreapp3.1.opencover.xml",
     "cldr-plural-rules": "cd scripts && dotnet tool run dotnet-script .\\cldr-plural-rules.csx ..\\packages\\Alrev.Intl.PluralRules\\ -nm ..\\node_modules\\ -na Alrev.Intl.PluralRules",
     "cldr-relative-time": "cd scripts && dotnet tool run dotnet-script .\\cldr-relative-time.csx ..\\packages\\Alrev.Intl.RelativeTime\\ -nm ..\\node_modules\\ -na Alrev.Intl.RelativeTime"
   },
   "dependencies": {
     "cldr-core": "^38.1.0",
     "cldr-dates-full": "^38.1.0"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
   }
 }

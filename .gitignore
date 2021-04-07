@@ -336,4 +336,4 @@ ASALocalRun/
 
 .storage/
 
-tests/coverage*
+tests/**/coverage*
