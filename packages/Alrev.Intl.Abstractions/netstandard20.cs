@@ -4,12 +4,9 @@ using System.Collections.ObjectModel;
 namespace Alrev.Intl.Abstractions
 {
     /// <summary>
-    /// Provides extension methods for ReadOnlyDictionary.
+    /// Provides extension methods for netstandard2.0
     /// </summary>
-    /// <remarks>
-    /// Only used by netstandard2.0
-    /// </remarks>
-    public static class ReadOnlyDictionaryExtensions
+    public static class Netstandard20
     {
         /// <summary>
         /// Tries to get the value associated with the specified key in the dictionary
