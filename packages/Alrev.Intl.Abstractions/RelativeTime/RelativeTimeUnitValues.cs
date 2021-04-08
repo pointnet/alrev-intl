@@ -10,10 +10,6 @@
         /// </summary>
         Unknown,
         /// <summary>
-        /// Era unit
-        /// </summary>
-        Era,
-        /// <summary>
         /// Year unit
         /// </summary>
         Year,
@@ -30,25 +26,9 @@
         /// </summary>
         Week,
         /// <summary>
-        /// WeekOfMonth unit
-        /// </summary>
-        WeekOfMonth,
-        /// <summary>
         /// Day unit
         /// </summary>
         Day,
-        /// <summary>
-        /// DayOfYear unit
-        /// </summary>
-        DayOfYear,
-        /// <summary>
-        /// Weekday unit
-        /// </summary>
-        Weekday,
-        /// <summary>
-        /// WeekdayOfMonth unit
-        /// </summary>
-        WeekdayOfMonth,
         /// <summary>
         /// Sunday unit
         /// </summary>
@@ -78,10 +58,6 @@
         /// </summary>
         Saturday,
         /// <summary>
-        /// DayPeriod unit
-        /// </summary>
-        DayPeriod,
-        /// <summary>
         /// Hour unit
         /// </summary>
         Hour,
@@ -92,10 +68,6 @@
         /// <summary>
         /// Second unit
         /// </summary>
-        Second,
-        /// <summary>
-        /// Zone unit
-        /// </summary>
-        Zone
+        Second
     }
 }

@@ -8,11 +8,6 @@ namespace Alrev.Intl.Abstractions.RelativeTime
     public interface IRelativeTimeResourceSet
     {
         /// <summary>
-        /// Gets Era relative time styles resource
-        /// </summary>
-        IRelativeTimeStylesResource Era { get; }
-
-        /// <summary>
         /// Gets Year relative time styles resource
         /// </summary>
         IRelativeTimeStylesResource Year { get; }
@@ -33,29 +28,9 @@ namespace Alrev.Intl.Abstractions.RelativeTime
         IRelativeTimeStylesResource Week { get; }
 
         /// <summary>
-        /// Gets WeekOfMonth relative time styles resource
-        /// </summary>
-        IRelativeTimeStylesResource WeekOfMonth { get; }
-
-        /// <summary>
         /// Gets Day relative time styles resource
         /// </summary>
         IRelativeTimeStylesResource Day { get; }
-
-        /// <summary>
-        /// Gets DayOfYear relative time styles resource
-        /// </summary>
-        IRelativeTimeStylesResource DayOfYear { get; }
-
-        /// <summary>
-        /// Gets Weekday relative time styles resource
-        /// </summary>
-        IRelativeTimeStylesResource Weekday { get; }
-
-        /// <summary>
-        /// Gets WeekdayOfMonth relative time styles resource
-        /// </summary>
-        IRelativeTimeStylesResource WeekdayOfMonth { get; }
 
         /// <summary>
         /// Gets Sunday relative time styles resource
@@ -93,11 +68,6 @@ namespace Alrev.Intl.Abstractions.RelativeTime
         IRelativeTimeStylesResource Saturday { get; }
 
         /// <summary>
-        /// Gets DayPeriod relative time styles resource
-        /// </summary>
-        IRelativeTimeStylesResource DayPeriod { get; }
-
-        /// <summary>
         /// Gets Hour relative time styles resource
         /// </summary>
         IRelativeTimeStylesResource Hour { get; }
@@ -111,11 +81,6 @@ namespace Alrev.Intl.Abstractions.RelativeTime
         /// Gets Second relative time styles resource
         /// </summary>
         IRelativeTimeStylesResource Second { get; }
-
-        /// <summary>
-        /// Gets Zone relative time styles resource
-        /// </summary>
-        IRelativeTimeStylesResource Zone { get; }
 
         /// <summary>
         /// Gets the Relative Time resource styles based on the unit specified

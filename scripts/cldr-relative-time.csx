@@ -112,7 +112,7 @@ public class CldrRelativeTime : BaseCommand
         {
             return false;
         }
-        string[] prefixes = new string[] { "era", "year", "quarter", "month", "week", "weekOfMonth", "day", "dayOfYear", "weekday", "weekdayOfMonth", "sun", "mon", "tue", "wed", "thu", "fri", "sat", "dayperiod", "hour", "minute", "second", "zone" };
+        string[] prefixes = new string[] { "year", "quarter", "month", "week", "day", "sun", "mon", "tue", "wed", "thu", "fri", "sat", "hour", "minute", "second" };
         string[] suffixes = new string[] { "", "-short", "-narrow" };
         Dictionary<string, Dictionary<string, RelativeTime>> relativeTimes = new Dictionary<string, Dictionary<string, RelativeTime>>();
         using System.Text.Json.JsonDocument resource = this.LoadJsonResource("cldr-dates-full", "main", culture.Name, "dateFields.json");
@@ -121,9 +121,6 @@ public class CldrRelativeTime : BaseCommand
         {
             string titleCasePrefix = prefix switch
             {
-                "weekOfMonth" => "WeekOfMonth",
-                "dayOfYear" => "DayOfYear",
-                "weekdayOfMonth" => "WeekdayOfMonth",
                 "sun" => "Sunday",
                 "mon" => "Monday",
                 "tue" => "Tuesday",
@@ -131,7 +128,6 @@ public class CldrRelativeTime : BaseCommand
                 "thu" => "Thursday",
                 "fri" => "Friday",
                 "sat" => "Saturday",
-                "dayperiod" => "DayPeriod",
                 _ => CultureInfo.InvariantCulture.TextInfo.ToTitleCase(prefix)
             };
             Dictionary<string, RelativeTime> styles = new();
