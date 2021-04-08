@@ -31,10 +31,10 @@ namespace Alrev.Intl.RelativeTime.Tests
         [InlineData(1, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "demain")]
         [InlineData(2, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "après-demain")]
         [InlineData(3, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "dans 3 jours")]
-        [InlineData(1000000, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "1 000 000")]
-        [InlineData(-1000000, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "-1 000 000")]
-        [InlineData(1000001, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "dans 1 000 001 jours")]
-        [InlineData(-1000001, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "il y a 1 000 001 jours")]
+        [InlineData(1000000, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "1 000 000")]
+        [InlineData(-1000000, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "-1 000 000")]
+        [InlineData(1000001, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "dans 1 000 001 jours")]
+        [InlineData(-1000001, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "il y a 1 000 001 jours")]
         public void SpecificCulture_ShouldReturn_LocalizedResource(
             double value,
             RelativeTimeUnitValues unit,
