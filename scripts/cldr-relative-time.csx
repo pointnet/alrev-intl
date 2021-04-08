@@ -17,6 +17,24 @@ public record RelativeTime(
     Dictionary<string, string> Future);
 
 HandlebarsDotNet.Handlebars.RegisterTemplate("resource", File.ReadAllText("./handlebar/relative-time/relative-time-resource.hbs"));
+HandlebarsDotNet.Handlebars.RegisterHelper("formatDictionaryCount", (writer, context, args) =>
+{
+    if (args[0] is null)
+    {
+        writer.Write("0");
+        return;
+    }
+    if (args[0] is Dictionary<int, string>)
+    {
+        Dictionary<int, string> content = args[0] as Dictionary<int, string>;
+        writer.Write(content.Count);
+    }
+    else if (args[0] is Dictionary<string, string>)
+    {
+        Dictionary<string, string> content = args[0] as Dictionary<string, string>;
+        writer.Write(content.Count);
+    }
+});
 HandlebarsDotNet.Handlebars.RegisterHelper("formatDictionary", (writer, context, args) =>
 {
     if (args[0] is null)

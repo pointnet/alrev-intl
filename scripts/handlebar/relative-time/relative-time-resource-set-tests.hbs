@@ -7,6 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.RelativeTime;
 using System;
 using System.Globalization;
@@ -37,11 +38,38 @@ namespace {{namespace}}.Tests.Resources
 {{#each relativeTimes}}
         [InlineData(RelativeTimeUnitValues.{{@key}})]
 {{/each}}
-        public void SpecificRelativeTimeUnit_ShouldReturn_IRelativeTimeResourceSet(RelativeTimeUnitValues expected)
+        public void UnknownRelativeTimeStyle_ShouldThrow_NotImplementedException(RelativeTimeUnitValues unit)
         {
             IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("{{locale}}"));
-            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(expected);
-            Assert.Equal(expected, resourceStyles.RelativeTimeUnit);
+            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(unit);
+            Exception ex = Record.Exception(() => resourceStyles.GetRelativeTimeResource(RelativeTimeStyleValues.Unknown));
+            Assert.IsType<NotImplementedException>(ex);
+        }
+
+        [Theory]
+{{#each relativeTimes}}
+    {{#with this/long}}
+        [InlineData(RelativeTimeUnitValues.{{@key}}, {{Type}}, {{#if DisplayName}}"{{{DisplayName}}}"{{else}}null{{/if}}, {{{formatDictionaryCount Current}}}, {{{formatDictionaryCount Past}}}, {{{formatDictionaryCount Future}}})]
+    {{/with}}
+    {{#with this/narrow}}
+        [InlineData(RelativeTimeUnitValues.{{@key}}, {{Type}}, {{#if DisplayName}}"{{{DisplayName}}}"{{else}}null{{/if}}, {{{formatDictionaryCount Current}}}, {{{formatDictionaryCount Past}}}, {{{formatDictionaryCount Future}}})]
+    {{/with}}
+    {{#with this/short}}
+        [InlineData(RelativeTimeUnitValues.{{@key}}, {{Type}}, {{#if DisplayName}}"{{{DisplayName}}}"{{else}}null{{/if}}, {{{formatDictionaryCount Current}}}, {{{formatDictionaryCount Past}}}, {{{formatDictionaryCount Future}}})]
+    {{/with}}
+{{/each}}
+        public void SpecificUnitAndStyle_ShouldReturn_ExpectedDisplayName(RelativeTimeUnitValues unit, RelativeTimeStyleValues style, string displayName, int current, int past, int future)
+        {
+            IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("{{locale}}"));
+            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(unit);
+            IRelativeTimeResource resource = resourceStyles.GetRelativeTimeResource(style);
+            Assert.Equal("{{locale}}", (resource as IResource).Locale);
+            Assert.Equal(unit, resource.RelativeTimeUnit);
+            Assert.Equal(style, resource.RelativeTimeStyle);
+            Assert.Equal(displayName, resource.DisplayName);
+            Assert.Equal(current, resource.Count);
+            Assert.Equal(past, resource.Past.Count);
+            Assert.Equal(future, resource.Future.Count);
         }
     }
 }
