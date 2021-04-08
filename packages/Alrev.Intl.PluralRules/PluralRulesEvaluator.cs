@@ -23,6 +23,7 @@ namespace Alrev.Intl.PluralRules
         /// <returns>A <see cref="PluralRulesValues"/> corresponding to the specified value</returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="CultureNotFoundException"></exception>
         public PluralRulesValues Evaluate(int value, PluralRulesTypeValues rulesType, CultureInfo culture)
             => this.Evaluate(PluralRulesContext.Create(value.ToString(CultureInfo.InvariantCulture)), rulesType, culture);
 
@@ -35,6 +36,7 @@ namespace Alrev.Intl.PluralRules
         /// <returns>A <see cref="PluralRulesValues"/> corresponding to the specified value</returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="CultureNotFoundException"></exception>
         public PluralRulesValues Evaluate(double value, PluralRulesTypeValues rulesType, CultureInfo culture)
             => this.Evaluate(PluralRulesContext.Create(value.ToString(CultureInfo.InvariantCulture)), rulesType, culture);
 
@@ -47,6 +49,7 @@ namespace Alrev.Intl.PluralRules
         /// <returns>A <see cref="PluralRulesValues"/> corresponding to the specified value</returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="CultureNotFoundException"></exception>
         public PluralRulesValues Evaluate(string value, PluralRulesTypeValues rulesType, CultureInfo culture)
             => this.Evaluate(PluralRulesContext.Create(value), rulesType, culture);
 

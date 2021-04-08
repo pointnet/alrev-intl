@@ -17,6 +17,7 @@ namespace Alrev.Intl.Abstractions.PluralRules
         /// <returns>A <see cref="PluralRulesValues"/> corresponding to the specified value</returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="CultureNotFoundException"></exception>
         PluralRulesValues Evaluate(double value, PluralRulesTypeValues rulesType, CultureInfo culture);
 
         /// <summary>
@@ -28,6 +29,7 @@ namespace Alrev.Intl.Abstractions.PluralRules
         /// <returns>A <see cref="PluralRulesValues"/> corresponding to the specified value</returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="CultureNotFoundException"></exception>
         PluralRulesValues Evaluate(int value, PluralRulesTypeValues rulesType, CultureInfo culture);
 
         /// <summary>
@@ -39,6 +41,7 @@ namespace Alrev.Intl.Abstractions.PluralRules
         /// <returns>A <see cref="PluralRulesValues"/> corresponding to the specified value</returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="CultureNotFoundException"></exception>
         PluralRulesValues Evaluate(string value, PluralRulesTypeValues rulesType, CultureInfo culture);
     }
 }
