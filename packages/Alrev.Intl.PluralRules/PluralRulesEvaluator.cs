@@ -11,8 +11,27 @@ namespace Alrev.Intl.PluralRules
     /// </summary>
     public class PluralRulesEvaluator : IPluralRulesEvaluator
     {
-        private IResourceSetLocalizer<IPluralRulesResource> CardinalLocalizer { get; } = new PluralRulesCardinalLocalizer();
-        private IResourceSetLocalizer<IPluralRulesResource> OrdinalLocalizer { get; } = new PluralRulesOrdinalLocalizer();
+        private IResourceSetLocalizer<IPluralRulesResource> CardinalLocalizer { get; }
+        private IResourceSetLocalizer<IPluralRulesResource> OrdinalLocalizer { get; }
+
+        /// <summary>
+        /// The class constructor
+        /// </summary>
+        public PluralRulesEvaluator() : this(null, null)
+        {
+
+        }
+
+        /// <summary>
+        /// The class constructor
+        /// </summary>
+        /// <param name="cardinalLocalizer">A Cardinal Plural Rules Localizer</param>
+        /// <param name="ordinalLocalizer">An Ordinal Plural Rules Localizer</param>
+        public PluralRulesEvaluator(IResourceSetLocalizer<IPluralRulesResource> cardinalLocalizer, IResourceSetLocalizer<IPluralRulesResource> ordinalLocalizer)
+        {
+            this.CardinalLocalizer = cardinalLocalizer ?? new PluralRulesCardinalLocalizer();
+            this.OrdinalLocalizer = ordinalLocalizer ?? new PluralRulesOrdinalLocalizer();
+        }
 
         /// <summary>
         /// Evaluate <see cref="PluralRulesValues"/> for the specific <see cref="CultureInfo"/>

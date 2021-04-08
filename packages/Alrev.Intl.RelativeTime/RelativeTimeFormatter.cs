@@ -13,8 +13,24 @@ namespace Alrev.Intl.RelativeTime
     /// </summary>
     public class RelativeTimeFormatter : IRelativeTimeFormatter
     {
-        private IResourceSetLocalizer<IRelativeTimeResourceSet> Localizer { get; } = new RelativeTimeLocalizer();
-        private IPluralRulesEvaluator PluralRules { get; } = new PluralRulesEvaluator();
+        private IResourceSetLocalizer<IRelativeTimeResourceSet> Localizer { get; }
+        private IPluralRulesEvaluator PluralRules { get; }
+
+        /// <summary>
+        /// The class constructor
+        /// </summary>
+        public RelativeTimeFormatter() : this(null, null) { }
+
+        /// <summary>
+        /// The class constructor
+        /// </summary>
+        /// <param name="localizer">A Relative Time ResourceSet Localizer</param>
+        /// <param name="pluralRules">A Plural Rules Evaluator</param>
+        public RelativeTimeFormatter(IResourceSetLocalizer<IRelativeTimeResourceSet> localizer, IPluralRulesEvaluator pluralRules)
+        {
+            this.Localizer = localizer ?? new RelativeTimeLocalizer();
+            this.PluralRules = pluralRules ?? new PluralRulesEvaluator();
+        }
 
         /// <summary>
         /// Format the current value to a localized relative time using <see cref="CultureInfo.CurrentCulture"/>
