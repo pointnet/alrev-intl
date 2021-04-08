@@ -28,37 +28,6 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Macedonian' [mk]
-        /// </summary>
-        public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.Era,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Era,
-                RelativeTimeStyleValues.Long,
-                "ера",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Era,
-                RelativeTimeStyleValues.Narrow,
-                "ера",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Era,
-                RelativeTimeStyleValues.Short,
-                "ера",
-                null,
-                null,
-                null));
-
-        /// <summary>
         /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Macedonian' [mk]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
@@ -183,37 +152,6 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "за {0} седмица" }, { PluralRulesValues.Other, "за {0} седмици" } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Macedonian' [mk]
-        /// </summary>
-        public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.WeekOfMonth,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.WeekOfMonth,
-                RelativeTimeStyleValues.Long,
-                "седмица од месецот",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.WeekOfMonth,
-                RelativeTimeStyleValues.Narrow,
-                "седмица од месецот",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.WeekOfMonth,
-                RelativeTimeStyleValues.Short,
-                "седмица од месецот",
-                null,
-                null,
-                null));
-
-        /// <summary>
         /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Macedonian' [mk]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
@@ -243,99 +181,6 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<int, string> { { -2, "завчера" }, { -1, "вчера" }, { 0, "денес" }, { 1, "утре" }, { 2, "задутре" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "пред {0} ден" }, { PluralRulesValues.Other, "пред {0} дена" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "за {0} ден" }, { PluralRulesValues.Other, "за {0} дена" } }));
-
-        /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Macedonian' [mk]
-        /// </summary>
-        public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.DayOfYear,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.DayOfYear,
-                RelativeTimeStyleValues.Long,
-                "ден од годината",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.DayOfYear,
-                RelativeTimeStyleValues.Narrow,
-                "ден од год.",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.DayOfYear,
-                RelativeTimeStyleValues.Short,
-                "ден од год.",
-                null,
-                null,
-                null));
-
-        /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Macedonian' [mk]
-        /// </summary>
-        public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.Weekday,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Weekday,
-                RelativeTimeStyleValues.Long,
-                "ден од неделата",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Weekday,
-                RelativeTimeStyleValues.Narrow,
-                "ден во неделата",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Weekday,
-                RelativeTimeStyleValues.Short,
-                "ден во неделата",
-                null,
-                null,
-                null));
-
-        /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Macedonian' [mk]
-        /// </summary>
-        public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.WeekdayOfMonth,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.WeekdayOfMonth,
-                RelativeTimeStyleValues.Long,
-                "ден од месецот",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.WeekdayOfMonth,
-                RelativeTimeStyleValues.Narrow,
-                "ден од мес.",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.WeekdayOfMonth,
-                RelativeTimeStyleValues.Short,
-                "ден од мес.",
-                null,
-                null,
-                null));
 
         /// <summary>
         /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Macedonian' [mk]
@@ -555,37 +400,6 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "за {0} саб." }, { PluralRulesValues.Other, "за {0} саб." } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Macedonian' [mk]
-        /// </summary>
-        public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.DayPeriod,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.DayPeriod,
-                RelativeTimeStyleValues.Long,
-                "претпладне/попладне",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.DayPeriod,
-                RelativeTimeStyleValues.Narrow,
-                "претпладне/попладне",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.DayPeriod,
-                RelativeTimeStyleValues.Short,
-                "претпладне/попладне",
-                null,
-                null,
-                null));
-
-        /// <summary>
         /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Macedonian' [mk]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
@@ -679,37 +493,6 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.One, "за {0} сек." }, { PluralRulesValues.Other, "за {0} сек." } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Macedonian' [mk]
-        /// </summary>
-        public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.Zone,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Zone,
-                RelativeTimeStyleValues.Long,
-                "временска зона",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Zone,
-                RelativeTimeStyleValues.Narrow,
-                "зона",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Zone,
-                RelativeTimeStyleValues.Short,
-                "зона",
-                null,
-                null,
-                null));
-
-        /// <summary>
         /// Gets the Relative Time resource styles based on the unit specified
         /// </summary>
         /// <param name="relativeTimeUnit">The resource unit to get</param>
@@ -717,16 +500,11 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// <exception cref="NotImplementedException"></exception>
         public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
         {
-            RelativeTimeUnitValues.Era => this.Era,
             RelativeTimeUnitValues.Year => this.Year,
             RelativeTimeUnitValues.Quarter => this.Quarter,
             RelativeTimeUnitValues.Month => this.Month,
             RelativeTimeUnitValues.Week => this.Week,
-            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
             RelativeTimeUnitValues.Day => this.Day,
-            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
-            RelativeTimeUnitValues.Weekday => this.Weekday,
-            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
             RelativeTimeUnitValues.Sunday => this.Sunday,
             RelativeTimeUnitValues.Monday => this.Monday,
             RelativeTimeUnitValues.Tuesday => this.Tuesday,
@@ -734,11 +512,9 @@ namespace Alrev.Intl.RelativeTime.Resources
             RelativeTimeUnitValues.Thursday => this.Thursday,
             RelativeTimeUnitValues.Friday => this.Friday,
             RelativeTimeUnitValues.Saturday => this.Saturday,
-            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
             RelativeTimeUnitValues.Hour => this.Hour,
             RelativeTimeUnitValues.Minute => this.Minute,
             RelativeTimeUnitValues.Second => this.Second,
-            RelativeTimeUnitValues.Zone => this.Zone,
             _ => throw new NotImplementedException($"Relative time unit '{relativeTimeUnit}' is not supported")
         };
     }

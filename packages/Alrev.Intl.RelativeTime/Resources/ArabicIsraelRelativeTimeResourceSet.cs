@@ -28,37 +28,6 @@ namespace Alrev.Intl.RelativeTime.Resources
         public string Locale { get; } = LOCALE;
 
         /// <summary>
-        /// Gets Era <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Israel)' [ar-il]
-        /// </summary>
-        public IRelativeTimeStylesResource Era { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.Era,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Era,
-                RelativeTimeStyleValues.Long,
-                "العصر",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Era,
-                RelativeTimeStyleValues.Narrow,
-                "العصر",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Era,
-                RelativeTimeStyleValues.Short,
-                "العصر",
-                null,
-                null,
-                null));
-
-        /// <summary>
         /// Gets Year <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Israel)' [ar-il]
         /// </summary>
         public IRelativeTimeStylesResource Year { get; } = new RelativeTimeStylesResource(
@@ -183,37 +152,6 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} أسبوع" }, { PluralRulesValues.One, "خلال أسبوع واحد" }, { PluralRulesValues.Two, "خلال {0} أسبوعين" }, { PluralRulesValues.Few, "خلال {0} أسابيع" }, { PluralRulesValues.Many, "خلال {0} أسبوعًا" }, { PluralRulesValues.Other, "خلال {0} أسبوع" } }));
 
         /// <summary>
-        /// Gets WeekOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Israel)' [ar-il]
-        /// </summary>
-        public IRelativeTimeStylesResource WeekOfMonth { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.WeekOfMonth,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.WeekOfMonth,
-                RelativeTimeStyleValues.Long,
-                "الأسبوع من الشهر",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.WeekOfMonth,
-                RelativeTimeStyleValues.Narrow,
-                "أسبوع/شهر",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.WeekOfMonth,
-                RelativeTimeStyleValues.Short,
-                "أسبوع من شهر",
-                null,
-                null,
-                null));
-
-        /// <summary>
         /// Gets Day <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Israel)' [ar-il]
         /// </summary>
         public IRelativeTimeStylesResource Day { get; } = new RelativeTimeStylesResource(
@@ -243,99 +181,6 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<int, string> { { -2, "أول أمس" }, { -1, "أمس" }, { 0, "اليوم" }, { 1, "غدًا" }, { 2, "بعد الغد" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "قبل {0} يوم" }, { PluralRulesValues.One, "قبل يوم واحد" }, { PluralRulesValues.Two, "قبل يومين" }, { PluralRulesValues.Few, "قبل {0} أيام" }, { PluralRulesValues.Many, "قبل {0} يومًا" }, { PluralRulesValues.Other, "قبل {0} يوم" } },
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} يوم" }, { PluralRulesValues.One, "خلال يوم واحد" }, { PluralRulesValues.Two, "خلال يومين" }, { PluralRulesValues.Few, "خلال {0} أيام" }, { PluralRulesValues.Many, "خلال {0} يومًا" }, { PluralRulesValues.Other, "خلال {0} يوم" } }));
-
-        /// <summary>
-        /// Gets DayOfYear <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Israel)' [ar-il]
-        /// </summary>
-        public IRelativeTimeStylesResource DayOfYear { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.DayOfYear,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.DayOfYear,
-                RelativeTimeStyleValues.Long,
-                "يوم من السنة",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.DayOfYear,
-                RelativeTimeStyleValues.Narrow,
-                "يوم/سنة",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.DayOfYear,
-                RelativeTimeStyleValues.Short,
-                "يوم من سنة",
-                null,
-                null,
-                null));
-
-        /// <summary>
-        /// Gets Weekday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Israel)' [ar-il]
-        /// </summary>
-        public IRelativeTimeStylesResource Weekday { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.Weekday,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Weekday,
-                RelativeTimeStyleValues.Long,
-                "اليوم",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Weekday,
-                RelativeTimeStyleValues.Narrow,
-                "اليوم",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Weekday,
-                RelativeTimeStyleValues.Short,
-                "اليوم",
-                null,
-                null,
-                null));
-
-        /// <summary>
-        /// Gets WeekdayOfMonth <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Israel)' [ar-il]
-        /// </summary>
-        public IRelativeTimeStylesResource WeekdayOfMonth { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.WeekdayOfMonth,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.WeekdayOfMonth,
-                RelativeTimeStyleValues.Long,
-                "يوم عمل من الشهر",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.WeekdayOfMonth,
-                RelativeTimeStyleValues.Narrow,
-                "يوم عمل/شهر",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.WeekdayOfMonth,
-                RelativeTimeStyleValues.Short,
-                "يوم عمل من شهر",
-                null,
-                null,
-                null));
 
         /// <summary>
         /// Gets Sunday <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Israel)' [ar-il]
@@ -555,37 +400,6 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} سبت" }, { PluralRulesValues.One, "سبت قادم" }, { PluralRulesValues.Two, "سبت بعد القادم" }, { PluralRulesValues.Few, "خلال {0} سبت" }, { PluralRulesValues.Many, "خلال {0} سبت" }, { PluralRulesValues.Other, "خلال {0} سبت" } }));
 
         /// <summary>
-        /// Gets DayPeriod <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Israel)' [ar-il]
-        /// </summary>
-        public IRelativeTimeStylesResource DayPeriod { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.DayPeriod,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.DayPeriod,
-                RelativeTimeStyleValues.Long,
-                "ص/م",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.DayPeriod,
-                RelativeTimeStyleValues.Narrow,
-                "ص/م",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.DayPeriod,
-                RelativeTimeStyleValues.Short,
-                "ص/م",
-                null,
-                null,
-                null));
-
-        /// <summary>
         /// Gets Hour <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Israel)' [ar-il]
         /// </summary>
         public IRelativeTimeStylesResource Hour { get; } = new RelativeTimeStylesResource(
@@ -679,37 +493,6 @@ namespace Alrev.Intl.RelativeTime.Resources
                 new Dictionary<PluralRulesValues, string> { { PluralRulesValues.Zero, "خلال {0} ثانية" }, { PluralRulesValues.One, "خلال ثانية واحدة" }, { PluralRulesValues.Two, "خلال ثانيتين" }, { PluralRulesValues.Few, "خلال {0} ثوانٍ" }, { PluralRulesValues.Many, "خلال {0} ثانية" }, { PluralRulesValues.Other, "خلال {0} ثانية" } }));
 
         /// <summary>
-        /// Gets Zone <see cref="IRelativeTimeStylesResource"/> for 'Arabic (Israel)' [ar-il]
-        /// </summary>
-        public IRelativeTimeStylesResource Zone { get; } = new RelativeTimeStylesResource(
-            LOCALE,
-            RelativeTimeUnitValues.Zone,
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Zone,
-                RelativeTimeStyleValues.Long,
-                "التوقيت",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Zone,
-                RelativeTimeStyleValues.Narrow,
-                "توقيت",
-                null,
-                null,
-                null),
-            new RelativeTimeResource(
-                LOCALE,
-                RelativeTimeUnitValues.Zone,
-                RelativeTimeStyleValues.Short,
-                "توقيت",
-                null,
-                null,
-                null));
-
-        /// <summary>
         /// Gets the Relative Time resource styles based on the unit specified
         /// </summary>
         /// <param name="relativeTimeUnit">The resource unit to get</param>
@@ -717,16 +500,11 @@ namespace Alrev.Intl.RelativeTime.Resources
         /// <exception cref="NotImplementedException"></exception>
         public IRelativeTimeStylesResource GetRelativeTimeStylesResource(RelativeTimeUnitValues relativeTimeUnit) => relativeTimeUnit switch
         {
-            RelativeTimeUnitValues.Era => this.Era,
             RelativeTimeUnitValues.Year => this.Year,
             RelativeTimeUnitValues.Quarter => this.Quarter,
             RelativeTimeUnitValues.Month => this.Month,
             RelativeTimeUnitValues.Week => this.Week,
-            RelativeTimeUnitValues.WeekOfMonth => this.WeekOfMonth,
             RelativeTimeUnitValues.Day => this.Day,
-            RelativeTimeUnitValues.DayOfYear => this.DayOfYear,
-            RelativeTimeUnitValues.Weekday => this.Weekday,
-            RelativeTimeUnitValues.WeekdayOfMonth => this.WeekdayOfMonth,
             RelativeTimeUnitValues.Sunday => this.Sunday,
             RelativeTimeUnitValues.Monday => this.Monday,
             RelativeTimeUnitValues.Tuesday => this.Tuesday,
@@ -734,11 +512,9 @@ namespace Alrev.Intl.RelativeTime.Resources
             RelativeTimeUnitValues.Thursday => this.Thursday,
             RelativeTimeUnitValues.Friday => this.Friday,
             RelativeTimeUnitValues.Saturday => this.Saturday,
-            RelativeTimeUnitValues.DayPeriod => this.DayPeriod,
             RelativeTimeUnitValues.Hour => this.Hour,
             RelativeTimeUnitValues.Minute => this.Minute,
             RelativeTimeUnitValues.Second => this.Second,
-            RelativeTimeUnitValues.Zone => this.Zone,
             _ => throw new NotImplementedException($"Relative time unit '{relativeTimeUnit}' is not supported")
         };
     }

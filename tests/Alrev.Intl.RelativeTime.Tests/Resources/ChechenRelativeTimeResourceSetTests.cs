@@ -35,16 +35,11 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         }
 
         [Theory]
-        [InlineData(RelativeTimeUnitValues.Era)]
         [InlineData(RelativeTimeUnitValues.Year)]
         [InlineData(RelativeTimeUnitValues.Quarter)]
         [InlineData(RelativeTimeUnitValues.Month)]
         [InlineData(RelativeTimeUnitValues.Week)]
-        [InlineData(RelativeTimeUnitValues.WeekOfMonth)]
         [InlineData(RelativeTimeUnitValues.Day)]
-        [InlineData(RelativeTimeUnitValues.DayOfYear)]
-        [InlineData(RelativeTimeUnitValues.Weekday)]
-        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth)]
         [InlineData(RelativeTimeUnitValues.Sunday)]
         [InlineData(RelativeTimeUnitValues.Monday)]
         [InlineData(RelativeTimeUnitValues.Tuesday)]
@@ -52,11 +47,9 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Thursday)]
         [InlineData(RelativeTimeUnitValues.Friday)]
         [InlineData(RelativeTimeUnitValues.Saturday)]
-        [InlineData(RelativeTimeUnitValues.DayPeriod)]
         [InlineData(RelativeTimeUnitValues.Hour)]
         [InlineData(RelativeTimeUnitValues.Minute)]
         [InlineData(RelativeTimeUnitValues.Second)]
-        [InlineData(RelativeTimeUnitValues.Zone)]
         public void UnknownRelativeTimeStyle_ShouldThrow_NotImplementedException(RelativeTimeUnitValues unit)
         {
             IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("ce"));
@@ -66,9 +59,6 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         }
 
         [Theory]
-        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Long, "мур", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Narrow, "мур", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Short, "мур", 0, 0, 0)]
         [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Long, "шо", 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Narrow, "ш.", 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Short, "ш.", 3, 2, 2)]
@@ -81,21 +71,9 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Long, "кӀира", 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Narrow, "кӀир.", 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Short, "кӀир.", 3, 2, 2)]
-        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Long, "беттан кӀира", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Narrow, "беттан кӀира", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Short, "беттан кӀира", 0, 0, 0)]
         [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, "де", 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow, "де", 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Short, "де", 3, 2, 2)]
-        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Long, "шеран де", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Narrow, "шеран де", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Short, "шеран де", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Long, "кӀиранан де", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Narrow, "кӀиранан де", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Short, "кӀиранан де", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Long, "кӀиранан де", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Narrow, "кӀиранан де", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Short, "кӀиранан де", 0, 0, 0)]
         [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
@@ -117,9 +95,6 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
-        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Long, "делкъал тӀехьа", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Narrow, "делкъал тӀехьа", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Short, "делкъал тӀехьа", 0, 0, 0)]
         [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Long, "сахьт", 1, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Narrow, "сахь.", 1, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Short, "сахь.", 1, 2, 2)]
@@ -129,9 +104,6 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Long, "секунд", 1, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Narrow, "сек.", 1, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Short, "сек.", 1, 2, 2)]
-        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Long, "сахьтан аса", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Narrow, "сахьтан аса", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Short, "сахьтан аса", 0, 0, 0)]
         public void SpecificUnitAndStyle_ShouldReturn_ExpectedDisplayName(RelativeTimeUnitValues unit, RelativeTimeStyleValues style, string displayName, int current, int past, int future)
         {
             IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("ce"));

@@ -35,16 +35,11 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         }
 
         [Theory]
-        [InlineData(RelativeTimeUnitValues.Era)]
         [InlineData(RelativeTimeUnitValues.Year)]
         [InlineData(RelativeTimeUnitValues.Quarter)]
         [InlineData(RelativeTimeUnitValues.Month)]
         [InlineData(RelativeTimeUnitValues.Week)]
-        [InlineData(RelativeTimeUnitValues.WeekOfMonth)]
         [InlineData(RelativeTimeUnitValues.Day)]
-        [InlineData(RelativeTimeUnitValues.DayOfYear)]
-        [InlineData(RelativeTimeUnitValues.Weekday)]
-        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth)]
         [InlineData(RelativeTimeUnitValues.Sunday)]
         [InlineData(RelativeTimeUnitValues.Monday)]
         [InlineData(RelativeTimeUnitValues.Tuesday)]
@@ -52,11 +47,9 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Thursday)]
         [InlineData(RelativeTimeUnitValues.Friday)]
         [InlineData(RelativeTimeUnitValues.Saturday)]
-        [InlineData(RelativeTimeUnitValues.DayPeriod)]
         [InlineData(RelativeTimeUnitValues.Hour)]
         [InlineData(RelativeTimeUnitValues.Minute)]
         [InlineData(RelativeTimeUnitValues.Second)]
-        [InlineData(RelativeTimeUnitValues.Zone)]
         public void UnknownRelativeTimeStyle_ShouldThrow_NotImplementedException(RelativeTimeUnitValues unit)
         {
             IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("el"));
@@ -66,9 +59,6 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         }
 
         [Theory]
-        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Long, "περίοδος", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Narrow, "περ.", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Short, "περ.", 0, 0, 0)]
         [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Long, "έτος", 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Narrow, "έτ.", 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Short, "έτ.", 3, 2, 2)]
@@ -81,21 +71,9 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Long, "εβδομάδα", 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Narrow, "εβδ.", 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Short, "εβδ.", 3, 2, 2)]
-        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Long, "εβδομάδα μήνα", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Narrow, "εβδ. μήνα", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Short, "εβδ. μήνα", 0, 0, 0)]
         [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, "ημέρα", 5, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow, "ημ.", 5, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Short, "ημ.", 5, 2, 2)]
-        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Long, "ημέρα έτους", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Narrow, "ημ. έτους", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Short, "ημ. έτους", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Long, "καθημερινή", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Narrow, "καθημερ.", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Short, "καθημερ.", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Long, "καθημερινή μήνα", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Narrow, "καθημερ. μήνα", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Short, "καθημερ. μήνα", 0, 0, 0)]
         [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
@@ -117,9 +95,6 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
-        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Long, "π.μ./μ.μ.", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Narrow, "πμ/μμ", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Short, "πμ/μμ", 0, 0, 0)]
         [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Long, "ώρα", 1, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Narrow, "ώ.", 1, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Short, "ώ.", 1, 2, 2)]
@@ -129,9 +104,6 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Long, "δευτερόλεπτο", 1, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Narrow, "δ.", 1, 2, 2)]
         [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Short, "δευτ.", 1, 2, 2)]
-        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Long, "ζώνη ώρας", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Narrow, "ζώνη", 0, 0, 0)]
-        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Short, "ζώνη", 0, 0, 0)]
         public void SpecificUnitAndStyle_ShouldReturn_ExpectedDisplayName(RelativeTimeUnitValues unit, RelativeTimeStyleValues style, string displayName, int current, int past, int future)
         {
             IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("el"));
