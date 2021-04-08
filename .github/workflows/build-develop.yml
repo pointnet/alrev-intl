@@ -3,10 +3,10 @@ name: build-develop
 on:
   push:
     branches: [ develop ]
-    paths: [ .github/**, packages/**, tests/** ]
+    paths: [ packages/**, tests/** ]
   pull_request:
     branches: [ develop ]
-    paths: [ .github/**, packages/**, tests/** ]
+    paths: [ packages/**, tests/** ]
 
 jobs:
   build:
