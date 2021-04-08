@@ -50,6 +50,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{C705
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{4AB697CC-905C-4C67-9EB5-7CCBE7066A49}"
 	ProjectSection(SolutionItems) = preProject
+		.github\workflows\alrev-intl-abstractions.yml = .github\workflows\alrev-intl-abstractions.yml
 		.github\workflows\build-develop.yml = .github\workflows\build-develop.yml
 	EndProjectSection
 EndProject
