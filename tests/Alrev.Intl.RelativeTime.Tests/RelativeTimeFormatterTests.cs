@@ -31,10 +31,6 @@ namespace Alrev.Intl.RelativeTime.Tests
         [InlineData(1, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "demain")]
         [InlineData(2, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "après-demain")]
         [InlineData(3, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "dans 3 jours")]
-        [InlineData(1000000, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "1 000 000")]
-        [InlineData(-1000000, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "-1 000 000")]
-        [InlineData(1000001, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "dans 1 000 001 jours")]
-        [InlineData(-1000001, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, RelativeTimeNumericValues.Auto, "il y a 1 000 001 jours")]
         public void SpecificCulture_ShouldReturn_LocalizedResource(
             double value,
             RelativeTimeUnitValues unit,
@@ -49,6 +45,34 @@ namespace Alrev.Intl.RelativeTime.Tests
                 style,
                 numericFormat);
             Assert.Equal(expected, localized);
+        }
+
+        [Fact]
+        public void SpecificFrenchMillion_ShouldReturn_LocalizedValue()
+        {
+            string localized = this.fixture.Formatter.Format(
+                1000000,
+                new CultureInfo("fr"),
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
+                RelativeTimeNumericValues.Auto);
+            Assert.StartsWith("1", localized);
+            Assert.EndsWith("0", localized);
+            Assert.Equal(9, localized.Length);
+        }
+
+        [Fact]
+        public void SpecificFrenchNegativeMillion_ShouldReturn_LocalizedValue()
+        {
+            string localized = this.fixture.Formatter.Format(
+                -1000000,
+                new CultureInfo("fr"),
+                RelativeTimeUnitValues.Day,
+                RelativeTimeStyleValues.Long,
+                RelativeTimeNumericValues.Auto);
+            Assert.StartsWith("-", localized);
+            Assert.EndsWith("0", localized);
+            Assert.Equal(10, localized.Length);
         }
 
         [Theory]
