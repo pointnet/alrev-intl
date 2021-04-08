@@ -1,5 +1,6 @@
 ﻿using Alrev.Intl.Abstractions.RelativeTime;
 using System.Globalization;
+using System.Threading;
 using Xunit;
 
 namespace Alrev.Intl.RelativeTime.Tests
@@ -75,6 +76,7 @@ namespace Alrev.Intl.RelativeTime.Tests
             RelativeTimeNumericValues numericFormat,
             string expected)
         {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en");
             string localized = this.fixture.Formatter.Format(
                 value,
                 unit,
