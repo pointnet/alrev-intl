@@ -7,6 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.RelativeTime;
 using System;
 using System.Globalization;
@@ -56,11 +57,93 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Minute)]
         [InlineData(RelativeTimeUnitValues.Second)]
         [InlineData(RelativeTimeUnitValues.Zone)]
-        public void SpecificRelativeTimeUnit_ShouldReturn_IRelativeTimeResourceSet(RelativeTimeUnitValues expected)
+        public void UnknownRelativeTimeStyle_ShouldThrow_NotImplementedException(RelativeTimeUnitValues unit)
         {
             IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("ky"));
-            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(expected);
-            Assert.Equal(expected, resourceStyles.RelativeTimeUnit);
+            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(unit);
+            Exception ex = Record.Exception(() => resourceStyles.GetRelativeTimeResource(RelativeTimeStyleValues.Unknown));
+            Assert.IsType<NotImplementedException>(ex);
+        }
+
+        [Theory]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Long, "заман", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Narrow, "заман", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Short, "заман", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Long, "жыл", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Narrow, "ж.", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Short, "ж.", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Long, "чейрек", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Narrow, "чейр.", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Short, "чейр.", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Long, "ай", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Narrow, "ай", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Short, "ай", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Long, "апта", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Narrow, "апт", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Short, "апт", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Long, "айдын жумасы", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Narrow, "айдын жумасы", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Short, "айдын жумасы", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, "күн", 5, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow, "күн", 5, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Short, "күн", 5, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Long, "жылдын күнү", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Narrow, "жылдын күнү", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Short, "жылдын күнү", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Long, "аптанын күнү", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Narrow, "аптанын күнү", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Short, "аптанын күнү", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Long, "айдын жумуш күнү", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Narrow, "айдын жумуш күнү", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Short, "айдын жумуш күнү", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Long, "ТЧ/ТК", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Narrow, "тң/тк", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Short, "тң/тк", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Long, "саат", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Narrow, "ст", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Short, "ст", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Long, "мүнөт", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Narrow, "м.", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Short, "мүн.", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Long, "секунд", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Narrow, "сек.", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Short, "сек.", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Long, "убакыт алкагы", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Narrow, "убакыт алкагы", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Short, "убакыт алкагы", 0, 0, 0)]
+        public void SpecificUnitAndStyle_ShouldReturn_ExpectedDisplayName(RelativeTimeUnitValues unit, RelativeTimeStyleValues style, string displayName, int current, int past, int future)
+        {
+            IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("ky"));
+            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(unit);
+            IRelativeTimeResource resource = resourceStyles.GetRelativeTimeResource(style);
+            Assert.Equal("ky", (resource as IResource).Locale);
+            Assert.Equal(unit, resource.RelativeTimeUnit);
+            Assert.Equal(style, resource.RelativeTimeStyle);
+            Assert.Equal(displayName, resource.DisplayName);
+            Assert.Equal(current, resource.Count);
+            Assert.Equal(past, resource.Past.Count);
+            Assert.Equal(future, resource.Future.Count);
         }
     }
 }

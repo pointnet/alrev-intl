@@ -7,6 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.RelativeTime;
 using System;
 using System.Globalization;
@@ -56,11 +57,93 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Minute)]
         [InlineData(RelativeTimeUnitValues.Second)]
         [InlineData(RelativeTimeUnitValues.Zone)]
-        public void SpecificRelativeTimeUnit_ShouldReturn_IRelativeTimeResourceSet(RelativeTimeUnitValues expected)
+        public void UnknownRelativeTimeStyle_ShouldThrow_NotImplementedException(RelativeTimeUnitValues unit)
         {
             IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("te"));
-            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(expected);
-            Assert.Equal(expected, resourceStyles.RelativeTimeUnit);
+            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(unit);
+            Exception ex = Record.Exception(() => resourceStyles.GetRelativeTimeResource(RelativeTimeStyleValues.Unknown));
+            Assert.IsType<NotImplementedException>(ex);
+        }
+
+        [Theory]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Long, "యుగం", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Narrow, "యుగం", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Short, "యుగం", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Long, "సంవత్సరం", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Narrow, "సం.", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Short, "సం.", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Long, "త్రైమాసికం", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Narrow, "త్రై.", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Short, "త్రై.", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Long, "నెల", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Narrow, "నె", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Short, "నెల", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Long, "వారము", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Narrow, "వా", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Short, "వా", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Long, "నెలలో వారం", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Narrow, "నెలలో వారం", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Short, "నెలలో వారం", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, "దినం", 5, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow, "రోజు", 5, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Short, "దినం", 5, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Long, "సంవత్సరంలో దినం", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Narrow, "సంవత్సరంలో దినం", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Short, "సంవత్సరంలో దినం", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Long, "వారంలో రోజు", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Narrow, "వారంలో రోజు", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Short, "వారంలో రోజు", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Long, "నెలలో పనిదినం", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Narrow, "నెలలో పనిదినం", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Short, "నెలలో పనిదినం", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Long, "AM/PM", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Narrow, "AM/PM", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Short, "AM/PM", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Long, "గంట", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Narrow, "గం", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Short, "గం.", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Long, "నిమిషము", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Narrow, "నిమి.", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Short, "నిమి.", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Long, "సెకను", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Narrow, "సెక.", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Short, "సెక.", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Long, "సమయ మండలి", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Narrow, "సమయ మండలి", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Short, "సమయ మండలి", 0, 0, 0)]
+        public void SpecificUnitAndStyle_ShouldReturn_ExpectedDisplayName(RelativeTimeUnitValues unit, RelativeTimeStyleValues style, string displayName, int current, int past, int future)
+        {
+            IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("te"));
+            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(unit);
+            IRelativeTimeResource resource = resourceStyles.GetRelativeTimeResource(style);
+            Assert.Equal("te", (resource as IResource).Locale);
+            Assert.Equal(unit, resource.RelativeTimeUnit);
+            Assert.Equal(style, resource.RelativeTimeStyle);
+            Assert.Equal(displayName, resource.DisplayName);
+            Assert.Equal(current, resource.Count);
+            Assert.Equal(past, resource.Past.Count);
+            Assert.Equal(future, resource.Future.Count);
         }
     }
 }

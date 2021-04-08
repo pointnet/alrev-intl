@@ -7,6 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.RelativeTime;
 using System;
 using System.Globalization;
@@ -56,11 +57,93 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Minute)]
         [InlineData(RelativeTimeUnitValues.Second)]
         [InlineData(RelativeTimeUnitValues.Zone)]
-        public void SpecificRelativeTimeUnit_ShouldReturn_IRelativeTimeResourceSet(RelativeTimeUnitValues expected)
+        public void UnknownRelativeTimeStyle_ShouldThrow_NotImplementedException(RelativeTimeUnitValues unit)
         {
             IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("kea"));
-            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(expected);
-            Assert.Equal(expected, resourceStyles.RelativeTimeUnit);
+            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(unit);
+            Exception ex = Record.Exception(() => resourceStyles.GetRelativeTimeResource(RelativeTimeStyleValues.Unknown));
+            Assert.IsType<NotImplementedException>(ex);
+        }
+
+        [Theory]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Long, "era", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Narrow, "era", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Short, "era", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Long, "anu", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Narrow, "anu", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Short, "anu", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Long, "trimestri", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Narrow, "trim.", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Short, "trim.", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Long, "mes", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Narrow, "mes", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Short, "mes", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Long, "simana", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Narrow, "sim.", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Short, "sim.", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Long, "simana di mes", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Narrow, "sim. di mes", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Short, "sim. di mes", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, "dia", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow, "dia", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Short, "dia", 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Long, "dia di anu", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Narrow, "dia di anu", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Short, "dia di anu", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Long, "dia di simana", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Narrow, "dia di sim.", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Short, "dia di sim.", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Long, "dia di simana di mes", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Narrow, "dia di sim. di mes", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Short, "dia di sim. di mes", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Long, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Narrow, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Short, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Long, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Narrow, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Short, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Long, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Narrow, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Short, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Long, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Narrow, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Short, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Long, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Narrow, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Short, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Long, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Narrow, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Short, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Long, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Narrow, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Short, null, 3, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Long, "am/pm", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Narrow, "am/pm", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Short, "am/pm", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Long, "ora", 1, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Narrow, "h", 1, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Short, "ora", 1, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Long, "minutu", 1, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Narrow, "m", 1, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Short, "min", 1, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Long, "sigundu", 1, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Narrow, "s", 1, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Short, "sig", 1, 1, 1)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Long, "ora lokal", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Narrow, "ora lokal", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Short, "ora lokal", 0, 0, 0)]
+        public void SpecificUnitAndStyle_ShouldReturn_ExpectedDisplayName(RelativeTimeUnitValues unit, RelativeTimeStyleValues style, string displayName, int current, int past, int future)
+        {
+            IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("kea"));
+            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(unit);
+            IRelativeTimeResource resource = resourceStyles.GetRelativeTimeResource(style);
+            Assert.Equal("kea", (resource as IResource).Locale);
+            Assert.Equal(unit, resource.RelativeTimeUnit);
+            Assert.Equal(style, resource.RelativeTimeStyle);
+            Assert.Equal(displayName, resource.DisplayName);
+            Assert.Equal(current, resource.Count);
+            Assert.Equal(past, resource.Past.Count);
+            Assert.Equal(future, resource.Future.Count);
         }
     }
 }

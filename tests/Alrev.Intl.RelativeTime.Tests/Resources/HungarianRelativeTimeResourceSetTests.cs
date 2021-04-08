@@ -7,6 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.RelativeTime;
 using System;
 using System.Globalization;
@@ -56,11 +57,93 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Minute)]
         [InlineData(RelativeTimeUnitValues.Second)]
         [InlineData(RelativeTimeUnitValues.Zone)]
-        public void SpecificRelativeTimeUnit_ShouldReturn_IRelativeTimeResourceSet(RelativeTimeUnitValues expected)
+        public void UnknownRelativeTimeStyle_ShouldThrow_NotImplementedException(RelativeTimeUnitValues unit)
         {
             IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("hu"));
-            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(expected);
-            Assert.Equal(expected, resourceStyles.RelativeTimeUnit);
+            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(unit);
+            Exception ex = Record.Exception(() => resourceStyles.GetRelativeTimeResource(RelativeTimeStyleValues.Unknown));
+            Assert.IsType<NotImplementedException>(ex);
+        }
+
+        [Theory]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Long, "éra", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Narrow, "éra", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Short, "éra", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Long, "év", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Narrow, "év", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Short, "év", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Long, "negyedév", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Narrow, "n.év", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Short, "n.év", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Long, "hónap", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Narrow, "hónap", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Short, "hónap", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Long, "hét", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Narrow, "hét", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Short, "hét", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Long, "hónap hete", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Narrow, "hónap hete", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Short, "hónap hete", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, "nap", 5, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow, "nap", 5, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Short, "nap", 5, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Long, "év napja", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Narrow, "év napja", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Short, "év napja", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Long, "hét napja", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Narrow, "hét napja", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Short, "hét napja", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Long, "hónap hétköznapja", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Narrow, "hónap hétköznapja", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Short, "hónap hétköznapja", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Long, "napszak", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Narrow, "napszak", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Short, "napszak", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Long, "óra", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Narrow, "ó", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Short, "óra", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Long, "perc", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Narrow, "p", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Short, "perc", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Long, "másodperc", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Narrow, "mp", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Short, "másodperc", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Long, "időzóna", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Narrow, "időzóna", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Short, "időzóna", 0, 0, 0)]
+        public void SpecificUnitAndStyle_ShouldReturn_ExpectedDisplayName(RelativeTimeUnitValues unit, RelativeTimeStyleValues style, string displayName, int current, int past, int future)
+        {
+            IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("hu"));
+            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(unit);
+            IRelativeTimeResource resource = resourceStyles.GetRelativeTimeResource(style);
+            Assert.Equal("hu", (resource as IResource).Locale);
+            Assert.Equal(unit, resource.RelativeTimeUnit);
+            Assert.Equal(style, resource.RelativeTimeStyle);
+            Assert.Equal(displayName, resource.DisplayName);
+            Assert.Equal(current, resource.Count);
+            Assert.Equal(past, resource.Past.Count);
+            Assert.Equal(future, resource.Future.Count);
         }
     }
 }

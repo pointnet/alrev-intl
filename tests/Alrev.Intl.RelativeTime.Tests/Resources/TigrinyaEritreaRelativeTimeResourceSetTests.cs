@@ -7,6 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.RelativeTime;
 using System;
 using System.Globalization;
@@ -56,11 +57,93 @@ namespace Alrev.Intl.RelativeTime.Tests.Resources.Tests.Resources
         [InlineData(RelativeTimeUnitValues.Minute)]
         [InlineData(RelativeTimeUnitValues.Second)]
         [InlineData(RelativeTimeUnitValues.Zone)]
-        public void SpecificRelativeTimeUnit_ShouldReturn_IRelativeTimeResourceSet(RelativeTimeUnitValues expected)
+        public void UnknownRelativeTimeStyle_ShouldThrow_NotImplementedException(RelativeTimeUnitValues unit)
         {
             IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("ti-er"));
-            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(expected);
-            Assert.Equal(expected, resourceStyles.RelativeTimeUnit);
+            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(unit);
+            Exception ex = Record.Exception(() => resourceStyles.GetRelativeTimeResource(RelativeTimeStyleValues.Unknown));
+            Assert.IsType<NotImplementedException>(ex);
+        }
+
+        [Theory]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Long, "ዘመን", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Narrow, "ዘመን", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Era, RelativeTimeStyleValues.Short, "ዘመን", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Long, "ዓመት", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Narrow, "ዓመት", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Year, RelativeTimeStyleValues.Short, "ዓመት", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Long, "ርብዒ", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Narrow, "ርብዒ", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Quarter, RelativeTimeStyleValues.Short, "ርብዒ", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Long, "ወርሒ", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Narrow, "ወርሒ", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Month, RelativeTimeStyleValues.Short, "ወርሒ", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Long, "Week", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Narrow, "ሰሙን", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Week, RelativeTimeStyleValues.Short, "ሰሙን", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Long, "ሰሙን ናይ ወርሒ", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Narrow, "ሰሙ. ናይ ወር.", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekOfMonth, RelativeTimeStyleValues.Short, "ሰሙ. ናይ ወር.", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, "መዓልቲ", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow, "መዓልቲ", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Short, "መዓልቲ", 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Long, "መዓልቲ ናይ ዓመት", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Narrow, "መዓልቲ ናይ ዓ.", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayOfYear, RelativeTimeStyleValues.Short, "መዓልቲ ናይ ዓ.", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Long, "መዓልቲ ናይ ሰሙን", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Narrow, "መዓልቲ ናይ ሰ.", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Weekday, RelativeTimeStyleValues.Short, "መዓልቲ ናይ ሰሙን", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Long, "መዓልታት ስራሕ ናይ ወርሒ", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Narrow, "መ.ስራሕ ናይ ወርሒ", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.WeekdayOfMonth, RelativeTimeStyleValues.Short, "መዓልታት ስራሕ ናይ ወርሒ", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Sunday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Monday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Tuesday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Wednesday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Thursday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Friday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Long, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Narrow, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Saturday, RelativeTimeStyleValues.Short, null, 3, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Long, "ቅድመ ፍርቂ-መዓልቲ/ድሕሪ ፍርቂ-መዓልቲ", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Narrow, "ቅድመ ፍርቂ-መዓልቲ/ድሕሪ ፍርቂ-መዓልቲ", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.DayPeriod, RelativeTimeStyleValues.Short, "ቅድመ ፍርቂ-መዓልቲ/ድሕሪ ፍርቂ-መዓልቲ", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Long, "ሰዓት", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Narrow, "ሰዓት", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Hour, RelativeTimeStyleValues.Short, "ሰዓት", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Long, "ደቒቕ", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Narrow, "ደቒ.", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Minute, RelativeTimeStyleValues.Short, "ደቒቕ", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Long, "ካልኢት", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Narrow, "ካልኢት", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Second, RelativeTimeStyleValues.Short, "ካልኢት", 1, 2, 2)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Long, "ክልል", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Narrow, "ክልል", 0, 0, 0)]
+        [InlineData(RelativeTimeUnitValues.Zone, RelativeTimeStyleValues.Short, "ክልል", 0, 0, 0)]
+        public void SpecificUnitAndStyle_ShouldReturn_ExpectedDisplayName(RelativeTimeUnitValues unit, RelativeTimeStyleValues style, string displayName, int current, int past, int future)
+        {
+            IRelativeTimeResourceSet resourceSet = this.fixture.Localizer.GetLocalizer(new CultureInfo("ti-er"));
+            IRelativeTimeStylesResource resourceStyles = resourceSet.GetRelativeTimeStylesResource(unit);
+            IRelativeTimeResource resource = resourceStyles.GetRelativeTimeResource(style);
+            Assert.Equal("ti-er", (resource as IResource).Locale);
+            Assert.Equal(unit, resource.RelativeTimeUnit);
+            Assert.Equal(style, resource.RelativeTimeStyle);
+            Assert.Equal(displayName, resource.DisplayName);
+            Assert.Equal(current, resource.Count);
+            Assert.Equal(past, resource.Past.Count);
+            Assert.Equal(future, resource.Future.Count);
         }
     }
 }
