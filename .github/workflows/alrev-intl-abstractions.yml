@@ -3,7 +3,7 @@ name: alrev-intl-abstractions
 on:
   push:
     branches: [ develop ]
-    tags: [ Alrev.Intl.Abstractions* ]
+    tags: [ 'Alrev.Intl.Abstractions*' ]
 
 jobs:
   build:
