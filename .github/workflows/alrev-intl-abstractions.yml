@@ -10,7 +10,13 @@ jobs:
 
     steps:
       - name: Tag name
-        id: tag_name
+        id: tag-name
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
-      - name: Echo
-        run: echo ${{github.event.client_payload.value}}
+      - name: Setting payload
+        id: get-payload
+        uses: actions/github-script@0.9.0
+        with:
+          script: |
+            const payload = context.payload
+            core.setOutput('payload', JSON.stringify(payload))
+      - run: echo "${{steps.get-payload.outputs.payload}}"
