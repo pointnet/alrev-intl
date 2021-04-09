@@ -1,11 +1,11 @@
-name: build-develop
+name: build-master
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ master ]
     paths: [ packages/**, tests/** ]
   pull_request:
-    branches: [ develop ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -21,14 +21,16 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.x
-      - name: Restore dependencies
-        run: dotnet restore
       - name: Restore dotnet tool
         run: dotnet tool restore
+      - name: Switch to packages
+        run: dotnet tool run dnt switch-to-packages
+      - name: Restore dependencies
+        run: dotnet restore
       - name: Build
-        run: dotnet build --no-restore
+        run: dotnet build --configuration Release --no-restore
       - name: Test
-        run: dotnet test --no-restore --no-build /p:CollectCoverage=true /p:CoverletOutputFormat="opencover"
+        run: dotnet test --configuration Release --no-restore --no-build /p:CollectCoverage=true /p:CoverletOutputFormat="opencover"
       - name: Aggregate net5.0 coverage
         run: dotnet tool run reportgenerator "-reports:tests/**/*.net5.0.opencover.xml" "-targetdir:.coverage/net50" "-reporttypes:Html;lcov"
       - name: Aggregate netcoreapp3.1 coverage
