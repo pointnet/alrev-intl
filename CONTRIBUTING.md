@@ -19,7 +19,9 @@ Before submitting a pull request, please make sure the following is done:
 ## Git Commit Messages
 
 Commits should start with a Capital letter and should be written in present tense (e.g. __:tada: Add cool new feature__ instead of __:tada: Added cool new feature__).
+
 You should also start your commit message with **one** applicable emoji. This does not only look great but also makes you rethink what to add to a commit. Make many but small commits!
+
 Commits should also contains the name of the package impacted. (e.g. :memo: [Alrev.Intl] - Update README)
 
 | Emoji | Description |
