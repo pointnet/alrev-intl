@@ -17,8 +17,9 @@ jobs:
           script: |
             const matches = context.payload.ref.match(/([^/\d]+)\.(\d.+)/)
             core.setOutput('ref', context.payload.ref)
-            core.setOutput('package', matches[1] + '.' + matches[2])
+            core.setOutput('package', matches[0])
             core.setOutput('project', matches[1])
+            core.setOutput('version', matches[2])
             core.setOutput('owner', context.payload.repository.owner.name)
       - uses: actions/checkout@v2
         with:
