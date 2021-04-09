@@ -13,6 +13,12 @@
       "commands": [
         "reportgenerator"
       ]
+    },
+    "dnt": {
+      "version": "1.6.2",
+      "commands": [
+        "dnt"
+      ]
     }
   }
 }
