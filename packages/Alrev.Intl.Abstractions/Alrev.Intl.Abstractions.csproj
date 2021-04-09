@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
     <LangVersion>9.0</LangVersion>
@@ -22,13 +21,10 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
-
   <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
     <Item Include="*.cs" Exclude="netstandard20.cs" />
   </ItemGroup>
-
   <ItemGroup>
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
-
 </Project>
