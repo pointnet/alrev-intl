@@ -53,6 +53,15 @@ jobs:
          repo-owner: ${{steps.get-payload.outputs.owner}}
          gh-user: ${{steps.get-payload.outputs.owner}}
          token: ${{secrets.GITHUB_TOKEN}}
+      - name: Create Github dynamic badge
+        uses: schneegans/dynamic-badges-action@v1.0.0
+        with:
+          auth: ${{secrets.GIST_TOKEN}}
+          gistID: 3151ce8c36600206670a562dab4c3bf7
+          filename: ${{steps.get-payload.outputs.package}}.json
+          label: github
+          message: v${{steps.get-payload.outputs.version}}
+          color: blue
       - name: Upload nupkg as artifact
         uses: actions/upload-artifact@v2
         with:
