@@ -8,6 +8,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		alrev-intl.snk = alrev-intl.snk
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
+		CONTRIBUTING.md = CONTRIBUTING.md
 		icon.png = icon.png
 		LICENSE = LICENSE
 		package.json = package.json
@@ -43,6 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\alrev-intl-abstractions.yml = .github\workflows\alrev-intl-abstractions.yml
 		.github\workflows\build-develop.yml = .github\workflows\build-develop.yml
+		.github\workflows\codeql-analysis.yml = .github\workflows\codeql-analysis.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "plural-rules", "plural-rules", "{F15DAE28-D26B-4F57-8347-CB60C8ACB925}"
@@ -66,11 +69,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alrev.Intl.RelativeTime.Tes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{1C7E5512-C051-4BC0-9B7F-0E994E5EB099}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alrev.Intl.Abstractions", "packages\Alrev.Intl.Abstractions\Alrev.Intl.Abstractions.csproj", "{E7D1589E-1339-4188-859F-9ABBDDB34978}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alrev.Intl.Abstractions", "packages\Alrev.Intl.Abstractions\Alrev.Intl.Abstractions.csproj", "{E7D1589E-1339-4188-859F-9ABBDDB34978}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alrev.Intl.PluralRules", "packages\Alrev.Intl.PluralRules\Alrev.Intl.PluralRules.csproj", "{88C0A00C-47DE-4DFE-BED6-27EF398C4939}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alrev.Intl.PluralRules", "packages\Alrev.Intl.PluralRules\Alrev.Intl.PluralRules.csproj", "{88C0A00C-47DE-4DFE-BED6-27EF398C4939}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alrev.Intl.RelativeTime", "packages\Alrev.Intl.RelativeTime\Alrev.Intl.RelativeTime.csproj", "{83CBAF59-8E1C-4F91-BCC0-3F4063516747}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alrev.Intl.RelativeTime", "packages\Alrev.Intl.RelativeTime\Alrev.Intl.RelativeTime.csproj", "{83CBAF59-8E1C-4F91-BCC0-3F4063516747}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEMPLATE", "{A074844E-6AC9-4CE9-8FF0-69B7AE420C1A}"
+	ProjectSection(SolutionItems) = preProject
+		.github\ISSUE_TEMPLATE\bug_report.md = .github\ISSUE_TEMPLATE\bug_report.md
+		.github\ISSUE_TEMPLATE\feature_request.md = .github\ISSUE_TEMPLATE\feature_request.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -157,6 +166,7 @@ Global
 		{E7D1589E-1339-4188-859F-9ABBDDB34978} = {1C7E5512-C051-4BC0-9B7F-0E994E5EB099}
 		{88C0A00C-47DE-4DFE-BED6-27EF398C4939} = {1C7E5512-C051-4BC0-9B7F-0E994E5EB099}
 		{83CBAF59-8E1C-4F91-BCC0-3F4063516747} = {1C7E5512-C051-4BC0-9B7F-0E994E5EB099}
+		{A074844E-6AC9-4CE9-8FF0-69B7AE420C1A} = {C705CF88-78B8-4261-961C-A58D605D0C24}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF48C5D9-9116-4870-9836-9715330D7DD5}
