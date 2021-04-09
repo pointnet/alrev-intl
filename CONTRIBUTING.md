@@ -4,6 +4,7 @@ Before submitting your contribution though, please make sure to take a moment an
 
 - [Issue Reporting Guidelines](#issue-reporting-guidelines)
 - [Pull Request Guidelines](#pull-request-guidelines)
+- [Git Commit Messages](#git-commit-messages)
 - [Development Setup](#development-setup)
 
 ## Issue Reporting Guidelines
