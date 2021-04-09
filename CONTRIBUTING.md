@@ -22,7 +22,7 @@ Commits should start with a Capital letter and should be written in present tens
 
 You should also start your commit message with **one** applicable emoji. This does not only look great but also makes you rethink what to add to a commit. Make many but small commits!
 
-Commits should also contains the name of the package impacted. (e.g. __:memo: [Alrev.Intl] - Update README__)
+Commits should also contains the name of the package impacted. (e.g. __:memo: [Alrev.Intl.Abstractions] - Update README__)
 
 | Emoji | Description |
 | ------|------------ |
