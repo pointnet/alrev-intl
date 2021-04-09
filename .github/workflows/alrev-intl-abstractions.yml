@@ -17,6 +17,7 @@ jobs:
         uses: actions/github-script@0.9.0
         with:
           script: |
-            const payload = context.payload
-            core.setOutput('payload', JSON.stringify(payload))
-      - run: echo "${{steps.get-payload.outputs.payload}}"
+            const matches = context.payload.ref.match(/([^/\d]+)\.(\d.+)/)
+            core.setOutput('package', matches[1])
+            core.setOutput('version', matches[2])
+      - run: echo "${{steps.get-payload.outputs.package}} - ${{steps.get-payload.outputs.version}}"
