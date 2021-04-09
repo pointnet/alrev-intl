@@ -9,7 +9,6 @@
     <AssemblyName>Alrev.Intl.Abstractions</AssemblyName>
     <PackageId>Alrev.Intl.Abstractions</PackageId>
     <PackageVersion>1.0.0</PackageVersion>
-    <Version>1.0.0</Version>
     <Authors>pointnet</Authors>
     <Company>Alrev.Intl</Company>
     <Description>Core abstractions library of Alrev.Intel</Description>
