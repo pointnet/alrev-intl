@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>alrev-intl.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alrev.Intl.Abstractions\Alrev.Intl.Abstractions.csproj" />
+  </ItemGroup>
+</Project>

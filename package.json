@@ -1,0 +1,40 @@
+{
+  "name": "alrev-intl",
+  "version": "1.0.0",
+  "private": false,
+  "author": "pointnet",
+  "description": "This repository is the home of Alrev.Intl and related packages.",
+  "keywords": [
+    "cldr",
+    "icu",
+    "globalization",
+    "localization",
+    "resx",
+    "resources"
+  ],
+  "license": "MIT",
+  "homepage": "https://pointnet.github.io/alrev-intl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pointnet/alrev-intl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pointnet/alrev-intl/issues"
+  },
+  "scripts": {
+    "pretest": "rimraf .\\.coverage",
+    "test": "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=\"opencover\"",
+    "posttest": "npm run reportgenerator-net50 && npm run reportgenerator-netcoreapp31",
+    "reportgenerator-net50": "dotnet tool run reportgenerator -reports:.\\tests\\**\\*.net5.0.opencover.xml -targetdir:.\\.coverage\\net50 -reporttypes:Html;lcov && rimraf .\\tests\\**\\*.net5.0.opencover.xml",
+    "reportgenerator-netcoreapp31": "dotnet tool run reportgenerator -reports:.\\tests\\**\\*.netcoreapp3.1.opencover.xml -targetdir:.\\.coverage\\netcoreapp31 -reporttypes:Html;lcov && rimraf .\\tests\\**\\*.netcoreapp3.1.opencover.xml",
+    "cldr-plural-rules": "cd scripts && dotnet tool run dotnet-script .\\cldr-plural-rules.csx ..\\packages\\Alrev.Intl.PluralRules\\ -nm ..\\node_modules\\ -na Alrev.Intl.PluralRules",
+    "cldr-relative-time": "cd scripts && dotnet tool run dotnet-script .\\cldr-relative-time.csx ..\\packages\\Alrev.Intl.RelativeTime\\ -nm ..\\node_modules\\ -na Alrev.Intl.RelativeTime"
+  },
+  "dependencies": {
+    "cldr-core": "^38.1.0",
+    "cldr-dates-full": "^38.1.0"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "dotnet-script": {
+      "version": "1.0.1",
+      "commands": [
+        "dotnet-script"
+      ]
+    },
+    "dotnet-reportgenerator-globaltool": {
+      "version": "4.8.7",
+      "commands": [
+        "reportgenerator"
+      ]
+    },
+    "dnt": {
+      "version": "1.6.2",
+      "commands": [
+        "dnt"
+      ]
+    }
+  }
+}

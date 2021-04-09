@@ -3,8 +3,10 @@ name: build-develop
 on:
   push:
     branches: [ develop ]
+    paths: [ packages/**, tests/** ]
   pull_request:
     branches: [ develop ]
+    paths: [ packages/**, tests/** ]
 
 jobs:
   build:
@@ -12,47 +14,28 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Setup .NET
+      - name: Setup .NET Core 3.1
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.x
+      - name: Setup .NET 5.0
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.x
       - name: Restore dependencies
         run: dotnet restore
+      - name: Restore dotnet tool
+        run: dotnet tool restore
       - name: Build
         run: dotnet build --no-restore
-      - name: Set PR Build Number (if PR)
-        id: PRNUMBER
-        if: ${{ github.event_name == 'pull_request' }}
-        uses: kkak10/pr-number-action@v1.3
-      - name: Set Test Title
-        run: | 
-              if ${{ github.event_name == 'pull_request' }}
-              then
-                echo "TITLE=Test Run for PR #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})" >> $GITHUB_ENV
-                echo "FILE_NAME=TestReport.${{steps.PRNUMBER.outputs.pr}}.${{github.run_number}}.md" >> $GITHUB_ENV
-              else
-                echo "TITLE=Test Run ${{github.run_number}}" >> $GITHUB_ENV
-                echo "FILE_NAME=TestReport.${{github.run_number}}.md" >> $GITHUB_ENV
-              fi
       - name: Test
-        run: dotnet test --no-restore --no-build --verbosity normal --logger:'liquid.md;LogFileName=${{github.workspace}}/${{env.FILE_NAME}};Title=${{env.TITLE}};' /p:CollectCoverage=true /p:CoverletOutputFormat='json%2copencover' /p:CoverletOutput='../' /p:MergeWith='../coverage.json'
-      - name: Upload Test results as a Build Artifact
-        uses: actions/upload-artifact@v2
-        if: ${{always()}}
+        run: dotnet test --no-restore --no-build /p:CollectCoverage=true /p:CoverletOutputFormat="opencover"
+      - name: Aggregate net5.0 coverage
+        run: dotnet tool run reportgenerator "-reports:tests/**/*.net5.0.opencover.xml" "-targetdir:.coverage/net50" "-reporttypes:Html;lcov"
+      - name: Aggregate netcoreapp3.1 coverage
+        run: dotnet tool run reportgenerator "-reports:tests/**/*.netcoreapp3.1.opencover.xml" "-targetdir:.coverage/netcoreapp31" "-reporttypes:Html;lcov"
+      - name: Publish net5.0 coverage report to Coveralls.io
+        uses: coverallsapp/github-action@master
         with:
-          name: 'Test Results'
-          path: ${{github.workspace}}/${{env.FILE_NAME}}
-      - name: Comment PR (if PR)
-        uses: machine-learning-apps/pr-comment@master
-        if: ${{ github.event_name == 'pull_request' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          path: ${{env.FILE_NAME}}
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
-        with:
-          files: ./tests/coverage.opencover.xml
-          flags: unittests
-          name: codecov-opencover
-          verbose: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./.coverage/net50/lcov.info 

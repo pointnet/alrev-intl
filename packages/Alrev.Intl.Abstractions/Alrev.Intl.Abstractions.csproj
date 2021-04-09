@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>alrev-intl.snk</AssemblyOriginatorKeyFile>
+    <AssemblyName>Alrev.Intl.Abstractions</AssemblyName>
+    <PackageId>Alrev.Intl.Abstractions</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>pointnet</Authors>
+    <Company>Alrev.Intl</Company>
+    <Description>Core abstractions library of Alrev.Intel</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/pointnet/alrev-intl</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl>icon.png</PackageIconUrl>
+    <PackageTags>intl;cldr;icu;internationalization;globalization;localization</PackageTags>
+    <RepositoryUrl>https://github.com/pointnet/alrev-intl.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
+    <Item Include="*.cs" Exclude="netstandard20.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>

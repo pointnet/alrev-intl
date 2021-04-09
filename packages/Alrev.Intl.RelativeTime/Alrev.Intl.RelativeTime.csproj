@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>alrev-intl.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alrev.Intl.Abstractions\Alrev.Intl.Abstractions.csproj" />
+    <ProjectReference Include="..\Alrev.Intl.PluralRules\Alrev.Intl.PluralRules.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
+    <Item Include="*.cs" Exclude="netstandard20.cs" />
+  </ItemGroup>
+</Project>
