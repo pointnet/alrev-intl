@@ -36,7 +36,7 @@ jobs:
       - name: Pack
         run: dotnet pack --no-restore --no-build --configuration Release --output ./packages ./packages/${{steps.get-payload.outputs.package}}/${{steps.get-payload.outputs.package}}.csproj
       - name: Push to nuget
-        run: dotnet nuget push ./packages/${{steps.get-payload.outputs.package}}.${{steps.get-payload.outputs.version}}.nupkg --no-symbols --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push ./packages/${{steps.get-payload.outputs.package}}.${{steps.get-payload.outputs.version}}.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{secrets.NUGET_API_KEY}} 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
