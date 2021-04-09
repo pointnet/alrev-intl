@@ -10,10 +10,10 @@ Inspired by [@FormatJS](https://github.com/formatjs/formatjs) work.
 
 ## Packages
 
-| [Alrev.Intl.Abstractions](packages/Alrev.Intl.Abstractions/) | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.Abstractions)](https://www.nuget.org/packages/Alrev.Intl.Abstractions/) |
-| :--- | :---: |
-| __[Alrev.Intl.PluralRules](packages/Alrev.Intl.PluralRules)__ | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.PluralRules)](https://www.nuget.org/packages/Alrev.Intl.PluralRules/) |
-| __[Alrev.Intl.RelativeTime](packages/Alrev.Intl.RelativeTime)__ | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.RelativeTime)](https://www.nuget.org/packages/Alrev.Intl.RelativeTime/) |
+| [Alrev.Intl.Abstractions](packages/Alrev.Intl.Abstractions/) | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.Abstractions)](https://www.nuget.org/packages/Alrev.Intl.Abstractions/) | [CHANGELOG](packages/Alrev.Intl.Abstractions/CHANGELOG.md) |
+| :--- | :---: | :---: |
+| __[Alrev.Intl.PluralRules](packages/Alrev.Intl.PluralRules)__ | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.PluralRules)](https://www.nuget.org/packages/Alrev.Intl.PluralRules/) | [CHANGELOG](packages/Alrev.Intl.PluralRules/CHANGELOG.md) |
+| __[Alrev.Intl.RelativeTime](packages/Alrev.Intl.RelativeTime)__ | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.RelativeTime)](https://www.nuget.org/packages/Alrev.Intl.RelativeTime/) | [CHANGELOG](packages/Alrev.Intl.RelativeTime/CHANGELOG.md) |
 
 ## Development
 
