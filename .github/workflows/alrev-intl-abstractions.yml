@@ -18,7 +18,7 @@ jobs:
             core.setOutput('ref', context.payload.ref)
             core.setOutput('package', matches[1])
             core.setOutput('version', matches[2])
-            core.setOutput('owner', ref.payload.repository.owner.name)
+            core.setOutput('owner', context.payload.repository.owner.name)
       - uses: actions/checkout@v2
         with:
           ref: ${{steps.get-payload.outputs.ref}}
