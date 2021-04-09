@@ -1,0 +1,8 @@
+{
+  "solution": "alrev-intl.sln",
+  "mappings": {
+    "Alrev.Intl.Abstractions": "../Alrev.Intl.Abstractions/Alrev.Intl.Abstractions.csproj",
+    "Alrev.Intl.PluralRules": "../Alrev.Intl.PluralRules/Alrev.Intl.PluralRules.csproj",
+    "Alrev.Intl.RelativeTime": "../Alrev.Intl.RelativeTime/Alrev.Intl.RelativeTime.csproj"
+  }
+}
