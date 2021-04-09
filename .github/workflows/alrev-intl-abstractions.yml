@@ -18,6 +18,7 @@ jobs:
             core.setOutput('ref', context.payload.ref)
             core.setOutput('package', matches[1])
             core.setOutput('version', matches[2])
+            core.setOutput('owner', ref.payload.repository.owner.name)
       - uses: actions/checkout@v2
         with:
           ref: ${{steps.get-payload.outputs.ref}}
@@ -37,6 +38,13 @@ jobs:
         run: dotnet pack --no-restore --no-build --configuration Release --output ./packages ./packages/${{steps.get-payload.outputs.package}}/${{steps.get-payload.outputs.package}}.csproj
       - name: Push to nuget
         run: dotnet nuget push ./packages/${{steps.get-payload.outputs.package}}.${{steps.get-payload.outputs.version}}.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{secrets.NUGET_API_KEY}} 
+      - name: Push to github
+        uses: tanaka-takayoshi/nuget-publish-to-github-packages-action@v2.1
+        with:
+         nupkg-path: ./packages/${{steps.get-payload.outputs.package}}.${{steps.get-payload.outputs.version}}.nupkg
+         repo-owner: ${{steps.get-payload.outputs.owner}}
+         gh-user: ${{steps.get-payload.outputs.owner}}
+         token: ${{secrets.GITHUB_TOKEN}}
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
