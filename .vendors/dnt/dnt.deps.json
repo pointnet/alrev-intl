@@ -9,23 +9,23 @@
       "dnt/1.6.3": {
         "dependencies": {
           "DNT.Commands": "1.6.3",
-          "Microsoft.Build": "16.9.0",
-          "Microsoft.Build.Locator": "1.4.1",
-          "Microsoft.Build.Utilities.Core": "16.9.0",
+          "Microsoft.Build": "16.7.0",
+          "Microsoft.Build.Locator": "1.2.6",
+          "Microsoft.Build.Utilities.Core": "16.7.0",
           "NConsole": "3.12.6605.26941",
-          "Newtonsoft.Json": "13.0.1",
+          "Newtonsoft.Json": "12.0.3",
           "System.Collections.Immutable": "5.0.0"
         },
         "runtime": {
           "dnt.dll": {}
         }
       },
-      "Microsoft.Build/16.9.0": {
+      "Microsoft.Build/16.7.0": {
         "dependencies": {
-          "Microsoft.Build.Framework": "16.9.0",
+          "Microsoft.Build.Framework": "16.7.0",
           "Microsoft.Win32.Registry": "4.3.0",
           "System.Collections.Immutable": "5.0.0",
-          "System.Memory": "4.5.4",
+          "System.Memory": "4.5.3",
           "System.Reflection.Metadata": "1.6.0",
           "System.Security.Principal.Windows": "4.7.0",
           "System.Text.Encoding.CodePages": "4.0.1",
@@ -33,22 +33,22 @@
           "System.Threading.Tasks.Dataflow": "4.9.0"
         }
       },
-      "Microsoft.Build.Framework/16.9.0": {
+      "Microsoft.Build.Framework/16.7.0": {
         "dependencies": {
           "System.Security.Permissions": "4.7.0"
         }
       },
-      "Microsoft.Build.Locator/1.4.1": {
+      "Microsoft.Build.Locator/1.2.6": {
         "runtime": {
           "lib/netcoreapp2.0/Microsoft.Build.Locator.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.4.1.10311"
+            "fileVersion": "1.2.6.49918"
           }
         }
       },
-      "Microsoft.Build.Utilities.Core/16.9.0": {
+      "Microsoft.Build.Utilities.Core/16.7.0": {
         "dependencies": {
-          "Microsoft.Build.Framework": "16.9.0",
+          "Microsoft.Build.Framework": "16.7.0",
           "Microsoft.Win32.Registry": "4.3.0",
           "System.Collections.Immutable": "5.0.0",
           "System.Security.Permissions": "4.7.0",
@@ -137,11 +137,11 @@
           "System.Xml.XDocument": "4.0.11"
         }
       },
-      "Newtonsoft.Json/13.0.1": {
+      "Newtonsoft.Json/12.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "assemblyVersion": "13.0.0.0",
-            "fileVersion": "13.0.1.25517"
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
           }
         }
       },
@@ -271,7 +271,7 @@
       "NuGet.Protocol.Core.v3/4.2.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "Newtonsoft.Json": "13.0.1",
+          "Newtonsoft.Json": "12.0.3",
           "NuGet.Common": "4.2.0",
           "NuGet.Packaging": "4.2.0",
           "NuGet.Protocol.Core.Types": "4.2.0",
@@ -299,7 +299,7 @@
       "NuGet.RuntimeModel/4.2.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "Newtonsoft.Json": "13.0.1",
+          "Newtonsoft.Json": "12.0.3",
           "NuGet.Frameworks": "4.2.0",
           "NuGet.Versioning": "4.2.0",
           "System.Dynamic.Runtime": "4.0.11",
@@ -584,7 +584,7 @@
           "System.Threading": "4.0.11"
         }
       },
-      "System.Memory/4.5.4": {},
+      "System.Memory/4.5.3": {},
       "System.Net.Http/4.1.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -1036,11 +1036,11 @@
       },
       "DNT.Commands/1.6.3": {
         "dependencies": {
-          "Microsoft.Build": "16.9.0",
-          "Microsoft.Build.Locator": "1.4.1",
-          "Microsoft.Build.Utilities.Core": "16.9.0",
+          "Microsoft.Build": "16.7.0",
+          "Microsoft.Build.Locator": "1.2.6",
+          "Microsoft.Build.Utilities.Core": "16.7.0",
           "NConsole": "3.12.6605.26941",
-          "Newtonsoft.Json": "13.0.1",
+          "Newtonsoft.Json": "12.0.3",
           "NuGet.Client": "4.2.0",
           "NuGet.Protocol.Core.v3": "4.2.0",
           "System.Collections.Immutable": "5.0.0"
@@ -1057,33 +1057,33 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Build/16.9.0": {
+    "Microsoft.Build/16.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lTwFuDn2qnb7RJcjnxSBlwR+XDtr0/Tcx2WW8jr3ThP95XCilxWCiKXIWP8EeQ7qK/OEbAc6b+yfg3lzmCpvRA==",
-      "path": "microsoft.build/16.9.0",
-      "hashPath": "microsoft.build.16.9.0.nupkg.sha512"
+      "sha512": "sha512-FVXiam33J+jhkAuRabqvyxrYFInqvUBUJPAxz3HDw5OuQ9WXFvjsQ5Et01DtJqI0DLRLyGJKlTCJULPXw1JGSQ==",
+      "path": "microsoft.build/16.7.0",
+      "hashPath": "microsoft.build.16.7.0.nupkg.sha512"
     },
-    "Microsoft.Build.Framework/16.9.0": {
+    "Microsoft.Build.Framework/16.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vY9ftq43is1TlHgUz0RBnTwF36QerDJ87/GXUd6G02h6QpfrB+jWD9vEFs7B7ZsyJ4vIFwGy+g3RcgYQrQWxpA==",
-      "path": "microsoft.build.framework/16.9.0",
-      "hashPath": "microsoft.build.framework.16.9.0.nupkg.sha512"
+      "sha512": "sha512-avlq0aLZC32SJjsNzP1FSA+NonsQ+0wx2tuTGTNbOHSzM+CkNbjJaFsA1dUYcPUPeDSRMj4fQ97RL+mX9Q3vZw==",
+      "path": "microsoft.build.framework/16.7.0",
+      "hashPath": "microsoft.build.framework.16.7.0.nupkg.sha512"
     },
-    "Microsoft.Build.Locator/1.4.1": {
+    "Microsoft.Build.Locator/1.2.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UfyGaxNTjw/r3uWMX/Cv1CPKELo7TCrR5VIahaSKL0WyqmbDT6og9pyjwuhyyUkxC9gk2ElB7oOEySL1OzTZ1g==",
-      "path": "microsoft.build.locator/1.4.1",
-      "hashPath": "microsoft.build.locator.1.4.1.nupkg.sha512"
+      "sha512": "sha512-L1TurtjOIb6o6Hy0jh927/pQ2V6040axJN/CgyGG4jcdAeAvrH7urqoOCDETfb8ROhMamgrlabnJtbrMiKXddQ==",
+      "path": "microsoft.build.locator/1.2.6",
+      "hashPath": "microsoft.build.locator.1.2.6.nupkg.sha512"
     },
-    "Microsoft.Build.Utilities.Core/16.9.0": {
+    "Microsoft.Build.Utilities.Core/16.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rpxfQlBo2hkFODFJZKPYxMsl5QGIqQ6GlSYnQGKhl+Fu65cvJDk4jRi/R9i+X5/+lSeHhRlQbo+UUhg6cqMkRw==",
-      "path": "microsoft.build.utilities.core/16.9.0",
-      "hashPath": "microsoft.build.utilities.core.16.9.0.nupkg.sha512"
+      "sha512": "sha512-SL83v3HuN4J0dtqp1B/zKskyOZtd9xGaQ9uR3wGX3e3tyHJFzM2CSfOqcGsbLnC/6Z7wsdHLnAyAt5xofBTdcQ==",
+      "path": "microsoft.build.utilities.core/16.7.0",
+      "hashPath": "microsoft.build.utilities.core.16.7.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",
@@ -1134,12 +1134,12 @@
       "path": "netstandard.library/1.6.0",
       "hashPath": "netstandard.library.1.6.0.nupkg.sha512"
     },
-    "Newtonsoft.Json/13.0.1": {
+    "Newtonsoft.Json/12.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
-      "path": "newtonsoft.json/13.0.1",
-      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
     "NuGet.Client/4.2.0": {
       "type": "package",
@@ -1421,12 +1421,12 @@
       "path": "system.linq.expressions/4.1.0",
       "hashPath": "system.linq.expressions.4.1.0.nupkg.sha512"
     },
-    "System.Memory/4.5.4": {
+    "System.Memory/4.5.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
-      "path": "system.memory/4.5.4",
-      "hashPath": "system.memory.4.5.4.nupkg.sha512"
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
     },
     "System.Net.Http/4.1.0": {
       "type": "package",
