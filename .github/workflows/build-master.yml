@@ -31,6 +31,8 @@ jobs:
         run: pwd
       - name: Find
         run: find $HOME -type d -name ".nuget"
+      - name: LS
+        run: ls ../../../.nuget/packages/dnt/1.6.2/tools/net5.0/any/
       #- name: Patch DNT
       #  uses: canastro/copy-file-action@master
       #  with:
