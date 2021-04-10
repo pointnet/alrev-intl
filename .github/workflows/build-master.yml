@@ -21,14 +21,16 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.x
+      - name: Restore dependencies
+        run: dotnet restore
       - name: DNT (patched) Switch to packages
         run: ./.vendors/dnt/dnt.exe switch-to-packages
+      - name: DNT (patched) Update Alrev* dependencies
+        run: ./.vendors/dnt/dnt.exe update-packages Alrev*
 #      - name: Restore dotnet tool
 #        run: dotnet tool restore
 #      - name: Switch to packages
 #        run: dotnet tool run dnt switch-to-packages
-      - name: Restore dependencies
-        run: dotnet restore
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Test
