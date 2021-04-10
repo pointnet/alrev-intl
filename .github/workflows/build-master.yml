@@ -33,12 +33,12 @@ jobs:
         run: find $HOME -type d -name ".nuget"
       - name: LS
         run: ls ../../../.nuget/packages/dnt/1.6.2/tools/net5.0/any/
-      #- name: Patch DNT
-      #  uses: canastro/copy-file-action@master
-      #  with:
-      #    source: ./.vendors/dnt/.
-      #    target: /home/runner/.nuget/packages/dnt/1.6.2/tools/net5.0/any/
-      #    flags: '-r'
+      - name: Patch DNT
+        uses: canastro/copy-file-action@master
+        with:
+          source: ./.vendors/dnt/.
+          target: ../../../.nuget/packages/dnt/1.6.2/tools/net5.0/any/
+          flags: '-r'
       #- name: Switch to packages
       #  run: dotnet tool run dnt switch-to-packages
       #- name: Restore dependencies
