@@ -1,8 +1,9 @@
-name: alrev-intl-abstractions
+name: alrev-intl-package
 
 on:
   push:
-    tags: [ '*Alrev.Intl.Abstractions*' ]
+    branches: [ master ]
+    tags: [ '*Alrev.*' ]
 
 jobs:
   build:
@@ -31,10 +32,18 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.x
+      - name: Restore dotnet tool
+        run: dotnet tool restore
+      - name: Patch DNT
+        run: cp -TRv ./.vendors/dnt/ ../../../.nuget/packages/dnt/1.6.2/tools/net5.0/any/
+      - name: Switch to packages
+        run: dotnet tool run dnt switch-to-packages
       - name: Restore dependencies
         run: dotnet restore
       - name: Build
-        run: dotnet build --no-restore --configuration Release ./packages/${{steps.get-payload.outputs.project}}/${{steps.get-payload.outputs.project}}.csproj
+        run: dotnet build --configuration Release --no-restore
+      - name: Test
+        run: dotnet test --configuration Release --no-restore --no-build /p:CollectCoverage=false
       - name: Pack Nuget package
         run: dotnet pack --no-restore --no-build --configuration Release --output ./packages ./packages/${{steps.get-payload.outputs.project}}/${{steps.get-payload.outputs.project}}.csproj
       - name: Push Nuget package
@@ -46,6 +55,15 @@ jobs:
          repo-owner: ${{steps.get-payload.outputs.owner}}
          gh-user: ${{steps.get-payload.outputs.owner}}
          token: ${{secrets.GITHUB_TOKEN}}
+      - name: Create Github dynamic badge
+        uses: schneegans/dynamic-badges-action@v1.0.0
+        with:
+          auth: ${{secrets.GIST_TOKEN}}
+          gistID: 3151ce8c36600206670a562dab4c3bf7
+          filename: ${{steps.get-payload.outputs.package}}.json
+          label: github
+          message: v${{steps.get-payload.outputs.version}}
+          color: blue
       - name: Upload nupkg as artifact
         uses: actions/upload-artifact@v2
         with:
