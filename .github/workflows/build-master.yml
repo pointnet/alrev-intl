@@ -34,11 +34,7 @@ jobs:
       - name: LS
         run: ls ../../../.nuget/packages/dnt/1.6.2/tools/net5.0/any/
       - name: Patch DNT
-        uses: canastro/copy-file-action@master
-        with:
-          source: ./.vendors/dnt/.
-          target: ../../../.nuget/packages/dnt/1.6.2/tools/net5.0/any/
-          flags: '-r'
+        run: cp -TRv ./.vendors/dnt/ ../../../.nuget/packages/dnt/1.6.2/tools/net5.0/any/
       #- name: Switch to packages
       #  run: dotnet tool run dnt switch-to-packages
       #- name: Restore dependencies
