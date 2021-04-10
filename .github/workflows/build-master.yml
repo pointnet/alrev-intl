@@ -21,34 +21,24 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.x
-      #- name: DNT (patched) Switch to packages
-      #  run: ./.vendors/dnt/dnt.exe switch-to-packages
-      #- name: DNT (patched) Update Alrev* dependencies
-      #  run: ./.vendors/dnt/dnt.exe update-packages Alrev*
       - name: Restore dotnet tool
         run: dotnet tool restore
-      - name: Pwd
-        run: pwd
-      - name: Find
-        run: find $HOME -type d -name ".nuget"
-      - name: LS
-        run: ls ../../../.nuget/packages/dnt/1.6.2/tools/net5.0/any/
       - name: Patch DNT
         run: cp -TRv ./.vendors/dnt/ ../../../.nuget/packages/dnt/1.6.2/tools/net5.0/any/
-      #- name: Switch to packages
-      #  run: dotnet tool run dnt switch-to-packages
-      #- name: Restore dependencies
-      #  run: dotnet restore
-      #- name: Build
-      #  run: dotnet build --configuration Release --no-restore
-      #- name: Test
-      #  run: dotnet test --configuration Release --no-restore --no-build /p:CollectCoverage=true /p:CoverletOutputFormat="opencover"
-      #- name: Aggregate net5.0 coverage
-      #  run: dotnet tool run reportgenerator "-reports:tests/**/*.net5.0.opencover.xml" "-targetdir:.coverage/net50" "-reporttypes:Html;lcov"
-      #- name: Aggregate netcoreapp3.1 coverage
-      #  run: dotnet tool run reportgenerator "-reports:tests/**/*.netcoreapp3.1.opencover.xml" "-targetdir:.coverage/netcoreapp31" "-reporttypes:Html;lcov"
-      #- name: Publish net5.0 coverage report to Coveralls.io
-      #  uses: coverallsapp/github-action@master
-      #  with:
-      #    github-token: ${{ secrets.GITHUB_TOKEN }}
-      #    path-to-lcov: ./.coverage/net50/lcov.info 
+      - name: Switch to packages
+        run: dotnet tool run dnt switch-to-packages
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Test
+        run: dotnet test --configuration Release --no-restore --no-build /p:CollectCoverage=true /p:CoverletOutputFormat="opencover"
+      - name: Aggregate net5.0 coverage
+        run: dotnet tool run reportgenerator "-reports:tests/**/*.net5.0.opencover.xml" "-targetdir:.coverage/net50" "-reporttypes:Html;lcov"
+      - name: Aggregate netcoreapp3.1 coverage
+        run: dotnet tool run reportgenerator "-reports:tests/**/*.netcoreapp3.1.opencover.xml" "-targetdir:.coverage/netcoreapp31" "-reporttypes:Html;lcov"
+      - name: Publish net5.0 coverage report to Coveralls.io
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./.coverage/net50/lcov.info 
