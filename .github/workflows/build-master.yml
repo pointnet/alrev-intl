@@ -27,14 +27,18 @@ jobs:
       #  run: ./.vendors/dnt/dnt.exe update-packages Alrev*
       - name: Restore dotnet tool
         run: dotnet tool restore
-      - name: Patch DNT
-        uses: canastro/copy-file-action@master
-        with:
-          source: ./.vendors/dnt/.
-          target: /home/runner/.nuget/packages/dnt/1.6.2/tools/net5.0/any/
-          flags: '-r'
-      - name: Switch to packages
-        run: dotnet tool run dnt switch-to-packages
+      - name: Pwd
+        run: pwd
+      - name: Find
+        run: find $HOME -type d -name ".nuget"
+      #- name: Patch DNT
+      #  uses: canastro/copy-file-action@master
+      #  with:
+      #    source: ./.vendors/dnt/.
+      #    target: /home/runner/.nuget/packages/dnt/1.6.2/tools/net5.0/any/
+      #    flags: '-r'
+      #- name: Switch to packages
+      #  run: dotnet tool run dnt switch-to-packages
       #- name: Restore dependencies
       #  run: dotnet restore
       #- name: Build
