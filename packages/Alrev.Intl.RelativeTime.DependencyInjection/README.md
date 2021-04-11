@@ -8,13 +8,13 @@ Relative Time Dependency Injection library of [Alrev.Intel](../../../../)
 
 ## Installation
 
-> .NET CLI
+> **.NET CLI**
 
 ```shell
 > dotnet add package Alrev.Intl.RelativeTime.DependencyInjection
 ```
 
-> Package Manager
+> **Package Manager**
 
 ```shell
 PM> Install-Package Alrev.Intl.RelativeTime.DependencyInjection
@@ -22,7 +22,7 @@ PM> Install-Package Alrev.Intl.RelativeTime.DependencyInjection
 
 ## Usage
 
-> ~/Views/_ViewImports.cshtml
+> **~/Views/_ViewImports.cshtml**
 
 ```html
 @*<added>*@
@@ -34,7 +34,7 @@ PM> Install-Package Alrev.Intl.RelativeTime.DependencyInjection
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-> ~/Views/Home/Index.cshtml
+> **~/Views/Home/Index.cshtml**
 
 ```html
 @*<added>*@
@@ -61,7 +61,7 @@ PM> Install-Package Alrev.Intl.RelativeTime.DependencyInjection
 </div>
 ```
 
-> Startup.cs
+> **Startup.cs**
 
 ```csharp
 using Alrev.Intl.RelativeTime.DependencyInjection;
