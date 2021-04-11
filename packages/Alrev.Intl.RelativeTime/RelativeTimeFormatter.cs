@@ -2,7 +2,6 @@
 using Alrev.Intl.Abstractions.PluralRules;
 using Alrev.Intl.Abstractions.RelativeTime;
 using Alrev.Intl.PluralRules;
-using Alrev.Intl.RelativeTime.Globalization;
 using System;
 using System.Globalization;
 
@@ -19,17 +18,14 @@ namespace Alrev.Intl.RelativeTime
         /// <summary>
         /// The class constructor
         /// </summary>
-        public RelativeTimeFormatter() : this(null, null) { }
-
-        /// <summary>
-        /// The class constructor
-        /// </summary>
         /// <param name="localizer">A Relative Time ResourceSet Localizer</param>
         /// <param name="pluralRules">A Plural Rules Evaluator</param>
         public RelativeTimeFormatter(IResourceSetLocalizer<IRelativeTimeResourceSet> localizer, IPluralRulesEvaluator pluralRules)
         {
-            this.Localizer = localizer ?? new RelativeTimeLocalizer();
-            this.PluralRules = pluralRules ?? new PluralRulesEvaluator();
+            //this.Localizer = localizer ?? new RelativeTimeLocalizer();
+            //this.PluralRules = pluralRules ?? new PluralRulesEvaluator();
+            this.Localizer = localizer ?? throw new ArgumentNullException(nameof(localizer), "IResourceSetLocalizer<IRelativeTimeResourceSet> must not be null");
+            this.PluralRules = pluralRules ?? throw new ArgumentNullException(nameof(pluralRules), "IPluralRulesEvaluator must not be null");
         }
 
         /// <summary>
