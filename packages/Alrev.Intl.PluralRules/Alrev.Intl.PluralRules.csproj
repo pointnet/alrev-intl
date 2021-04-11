@@ -7,7 +7,7 @@
     <AssemblyOriginatorKeyFile>alrev-intl.snk</AssemblyOriginatorKeyFile>
     <AssemblyName>Alrev.Intl.PluralRules</AssemblyName>
     <PackageId>Alrev.Intl.PluralRules</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>pointnet</Authors>
     <Company>Alrev.Intl</Company>
     <Description>Plural Rules library of Alrev.Intel</Description>
