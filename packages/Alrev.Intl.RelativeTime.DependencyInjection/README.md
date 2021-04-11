@@ -59,6 +59,7 @@ namespace Alrev.Intl.Samples.Mvc
                 .AddControllersWithViews()
                 .AddMvcLocalization();
 
+            // Adds Relative Time singletons to the current ServiceCollection
             services.AddIntlRelativeTime();
 
         }
