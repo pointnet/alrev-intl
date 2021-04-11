@@ -2,7 +2,8 @@
   "solution": "alrev-intl.sln",
   "mappings": {
     "Alrev.Intl.Abstractions": "packages/Alrev.Intl.Abstractions/Alrev.Intl.Abstractions.csproj",
-    "Alrev.Intl.PluralRules": "packages/Alrev.Intl.PluralRules/Alrev.Intl.PluralRules.csproj"
+    "Alrev.Intl.PluralRules": "packages/Alrev.Intl.PluralRules/Alrev.Intl.PluralRules.csproj",
+    "Alrev.Intl.RelativeTime": "packages/Alrev.Intl.PluralRules/Alrev.Intl.RelativeTime.csproj"
   },
   "restore": [
     {
@@ -20,6 +21,24 @@
         {
           "packageName": "Alrev.Intl.PluralRules",
           "version": "1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "Alrev.Intl.PluralRules.DependencyInjection",
+      "packages": [
+        {
+          "packageName": "Alrev.Intl.PluralRules",
+          "version": "1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "Alrev.Intl.RelativeTime.DependencyInjection",
+      "packages": [
+        {
+          "packageName": "Alrev.Intl.RelativeTime",
+          "version": "1.0.0"
         }
       ]
     }
