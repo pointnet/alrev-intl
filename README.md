@@ -14,7 +14,7 @@ Inspired by [@FormatJS](https://github.com/formatjs/formatjs) work.
 | :--- | :---: | :---: |
 | [Alrev.Intl.Abstractions](packages/Alrev.Intl.Abstractions/) | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.Abstractions)](https://www.nuget.org/packages/Alrev.Intl.Abstractions/) [![github](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/pointnet/8738e44902f9f103575dfa796d42fa73/raw/Alrev.Intl.Abstractions.json)](https://github.com/pointnet/alrev-intl/packages/721940) | [CHANGELOG](packages/Alrev.Intl.Abstractions/CHANGELOG.md) |
 | [Alrev.Intl.PluralRules](packages/Alrev.Intl.PluralRules) | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.PluralRules)](https://www.nuget.org/packages/Alrev.Intl.PluralRules/) [![github](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/pointnet/8738e44902f9f103575dfa796d42fa73/raw/Alrev.Intl.PluralRules.json)](https://github.com/pointnet/alrev-intl/packages/723692) | [CHANGELOG](packages/Alrev.Intl.PluralRules/CHANGELOG.md) |
-| [Alrev.Intl.RelativeTime](packages/Alrev.Intl.RelativeTime) | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.RelativeTime)](https://www.nuget.org/packages/Alrev.Intl.RelativeTime/) | [CHANGELOG](packages/Alrev.Intl.RelativeTime/CHANGELOG.md) |
+| [Alrev.Intl.RelativeTime](packages/Alrev.Intl.RelativeTime) | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.RelativeTime)](https://www.nuget.org/packages/Alrev.Intl.RelativeTime/) [![github](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/pointnet/8738e44902f9f103575dfa796d42fa73/raw/Alrev.Intl.PluralRules.json)](https://github.com/pointnet/alrev-intl/packages/723736) | [CHANGELOG](packages/Alrev.Intl.RelativeTime/CHANGELOG.md) |
 
 ## Development
 
