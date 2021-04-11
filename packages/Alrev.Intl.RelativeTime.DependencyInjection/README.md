@@ -8,13 +8,13 @@ Plural Rules Dependency Injection library of [Alrev.Intel](../../../../)
 
 ## Installation
 
-_.NET CLI_
+**.NET CLI**
 
 ```shell
 > dotnet add package Alrev.Intl.RelativeTime.DependencyInjection
 ```
 
-_Package Manager_
+**Package Manager**
 
 ```shell
 PM> Install-Package Alrev.Intl.RelativeTime.DependencyInjection
@@ -22,7 +22,7 @@ PM> Install-Package Alrev.Intl.RelativeTime.DependencyInjection
 
 ## Usage
 
-_~/Views/_ViewImports.cshtml_
+**~/Views/_ViewImports.cshtml**
 
 ```html
 @*<added>*@
@@ -34,7 +34,7 @@ _~/Views/_ViewImports.cshtml_
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-_~/Views/Home/Index.cshtml_
+**~/Views/Home/Index.cshtml**
 
 ```html
 @*<added>*@
@@ -46,14 +46,22 @@ _~/Views/Home/Index.cshtml_
 }
 
 <div class="container">
-    <div class="row">@RelativeTimeFormatter.Format(0)</div>
-    <div class="row">@RelativeTimeFormatter.Format(0, RelativeTimeUnitValues.Day)</div>
-    <div class="row">@RelativeTimeFormatter.Format(0, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow)</div>
-    <div class="row">@RelativeTimeFormatter.Format(0, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow, RelativeTimeNumericValues.Auto)</div>
+    <div class="row">
+      @RelativeTimeFormatter.Format(0)
+    </div>
+    <div class="row">
+      @RelativeTimeFormatter.Format(0, RelativeTimeUnitValues.Day)
+    </div>
+    <div class="row">
+      @RelativeTimeFormatter.Format(0, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow)
+    </div>
+    <div class="row">
+      @RelativeTimeFormatter.Format(0, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow, RelativeTimeNumericValues.Auto)
+    </div>
 </div>
 ```
 
-_Startup.cs_
+**Startup.cs**
 
 ```csharp
 using Alrev.Intl.RelativeTime.DependencyInjection;
