@@ -1,4 +1,5 @@
 ﻿using Alrev.Intl.Abstractions.PluralRules;
+using Alrev.Intl.PluralRules.Globalization;
 using System;
 using System.Globalization;
 using Xunit;
@@ -14,6 +15,21 @@ namespace Alrev.Intl.PluralRules.Tests
         {
             this.fixture = fixture;
         }
+
+        [Fact]
+        public void NullCardinalLocalizer_ShouldThrow_ArgumentNullException()
+        {
+            Exception ex = Record.Exception(() => new PluralRulesEvaluator(null, new PluralRulesOrdinalLocalizer()));
+            Assert.IsType<ArgumentNullException>(ex);
+        }
+
+        [Fact]
+        public void NullOrdinalLocalizer_ShouldThrow_ArgumentNullException()
+        {
+            Exception ex = Record.Exception(() => new PluralRulesEvaluator(new PluralRulesCardinalLocalizer(), null));
+            Assert.IsType<ArgumentNullException>(ex);
+        }
+
         [Fact]
         public void UnknownPluralRulesTypeValues_ShouldThrow_ArgumentException()
         {
