@@ -12,7 +12,7 @@
     <Company>Alrev.Intl</Company>
     <Description>Plural Rules Dependency Injection library of Alrev.Intel</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/pointnet/alrev-intl</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/pointnet/alrev-intl/tree/master/packages/Alrev.Intl.PluralRules.DependencyInjection</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl>icon.png</PackageIconUrl>
     <PackageTags>intl;cldr;icu;internationalization;globalization;localization;pluralrules</PackageTags>
