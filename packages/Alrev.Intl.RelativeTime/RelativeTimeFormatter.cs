@@ -20,10 +20,9 @@ namespace Alrev.Intl.RelativeTime
         /// </summary>
         /// <param name="localizer">A Relative Time ResourceSet Localizer</param>
         /// <param name="pluralRules">A Plural Rules Evaluator</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public RelativeTimeFormatter(IResourceSetLocalizer<IRelativeTimeResourceSet> localizer, IPluralRulesEvaluator pluralRules)
         {
-            //this.Localizer = localizer ?? new RelativeTimeLocalizer();
-            //this.PluralRules = pluralRules ?? new PluralRulesEvaluator();
             this.Localizer = localizer ?? throw new ArgumentNullException(nameof(localizer), "IResourceSetLocalizer<IRelativeTimeResourceSet> must not be null");
             this.PluralRules = pluralRules ?? throw new ArgumentNullException(nameof(pluralRules), "IPluralRulesEvaluator must not be null");
         }
