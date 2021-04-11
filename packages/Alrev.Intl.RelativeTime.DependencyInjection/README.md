@@ -22,6 +22,39 @@ PM> Install-Package Alrev.Intl.RelativeTime.DependencyInjection
 
 ## Usage
 
+_~/Views/_ViewImports.cshtml_
+
+```html
+@*<added>*@
+@using Alrev.Intl.Abstractions.RelativeTime
+@*</added>*@
+
+@using Alrev.Intl.Samples.Mvc
+@using Alrev.Intl.Samples.Mvc.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+```
+
+_~/Views/Home/Index.cshtml_
+
+```html
+@*<added>*@
+@inject IRelativeTimeFormatter RelativeTimeFormatter
+@*</added>*@
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">@RelativeTimeFormatter.Format(0)</div>
+    <div class="row">@RelativeTimeFormatter.Format(0, RelativeTimeUnitValues.Day)</div>
+    <div class="row">@RelativeTimeFormatter.Format(0, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow)</div>
+    <div class="row">@RelativeTimeFormatter.Format(0, RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Narrow, RelativeTimeNumericValues.Auto)</div>
+</div>
+```
+
+_Startup.cs_
+
 ```csharp
 using Alrev.Intl.RelativeTime.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
@@ -59,8 +92,9 @@ namespace Alrev.Intl.Samples.Mvc
                 .AddControllersWithViews()
                 .AddMvcLocalization();
 
-            // Adds Relative Time singletons to the current ServiceCollection
+            // <added>
             services.AddIntlRelativeTime();
+            // </added>
 
         }
 
