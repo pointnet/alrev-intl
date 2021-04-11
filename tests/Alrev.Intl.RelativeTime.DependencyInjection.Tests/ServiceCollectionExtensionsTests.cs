@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Alrev.Intl.PluralRules;
+using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
 namespace Alrev.Intl.RelativeTime.DependencyInjection.Tests
@@ -20,6 +21,16 @@ namespace Alrev.Intl.RelativeTime.DependencyInjection.Tests
             services.AddIntlRelativeTime();
             services.AddIntlRelativeTime();
             Assert.Equal(3, services.Count);
+        }
+
+        [Fact]
+        public void AddIntlRelativeTime_ShouldInject_PluralRulesEvaluator()
+        {
+            IServiceCollection services = new ServiceCollection();
+            services.AddIntlRelativeTime();
+            Assert.IsType<PluralRulesEvaluator>(services[0].ImplementationInstance);
+            Assert.Equal("Alrev.Intl.Abstractions.PluralRules.IPluralRulesEvaluator", services[0].ServiceType.FullName);
+            Assert.Equal(ServiceLifetime.Singleton, services[0].Lifetime);
         }
 
         [Fact]
