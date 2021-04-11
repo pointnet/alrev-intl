@@ -25,7 +25,6 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Alrev.Intl.Abstractions\Alrev.Intl.Abstractions.csproj" />
     <ProjectReference Include="..\Alrev.Intl.PluralRules\Alrev.Intl.PluralRules.csproj" />
   </ItemGroup>
   <ItemGroup>
