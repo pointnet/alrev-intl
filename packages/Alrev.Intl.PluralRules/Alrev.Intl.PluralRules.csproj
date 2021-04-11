@@ -24,7 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Alrev.Intl.Abstractions\Alrev.Intl.Abstractions.csproj" />
   </ItemGroup>
-	<ItemGroup>
-		<None Include="..\..\icon.png" Pack="true" PackagePath="" />
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
 </Project>
