@@ -23,26 +23,12 @@ namespace Alrev.Intl.PluralRules.DependencyInjection.Tests
         }
 
         [Fact]
-        public void AddIntlPluralRules_ShouldInject_ImplementationInstancePluralRulesEvaluator()
+        public void AddIntlPluralRules_ShouldInject_PluralRulesEvaluator()
         {
             IServiceCollection services = new ServiceCollection();
             services.AddIntlPluralRules();
             Assert.IsType<PluralRulesEvaluator>(services[0].ImplementationInstance);
-        }
-
-        [Fact]
-        public void AddIntlPluralRules_ShouldInject_ServiceTypeIPluralRulesEvaluator()
-        {
-            IServiceCollection services = new ServiceCollection();
-            services.AddIntlPluralRules();
             Assert.Equal("Alrev.Intl.Abstractions.PluralRules.IPluralRulesEvaluator", services[0].ServiceType.FullName);
-        }
-
-        [Fact]
-        public void AddIntlPluralRules_ShouldInject_LifetimeSingleton()
-        {
-            IServiceCollection services = new ServiceCollection();
-            services.AddIntlPluralRules();
             Assert.Equal(ServiceLifetime.Singleton, services[0].Lifetime);
         }
     }
