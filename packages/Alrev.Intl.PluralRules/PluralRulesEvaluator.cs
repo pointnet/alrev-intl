@@ -1,6 +1,5 @@
 ﻿using Alrev.Intl.Abstractions;
 using Alrev.Intl.Abstractions.PluralRules;
-using Alrev.Intl.PluralRules.Globalization;
 using System;
 using System.Globalization;
 
@@ -17,20 +16,13 @@ namespace Alrev.Intl.PluralRules
         /// <summary>
         /// The class constructor
         /// </summary>
-        public PluralRulesEvaluator() : this(null, null)
-        {
-
-        }
-
-        /// <summary>
-        /// The class constructor
-        /// </summary>
         /// <param name="cardinalLocalizer">A Cardinal Plural Rules Localizer</param>
         /// <param name="ordinalLocalizer">An Ordinal Plural Rules Localizer</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public PluralRulesEvaluator(IResourceSetLocalizer<IPluralRulesResource> cardinalLocalizer, IResourceSetLocalizer<IPluralRulesResource> ordinalLocalizer)
         {
-            this.CardinalLocalizer = cardinalLocalizer ?? new PluralRulesCardinalLocalizer();
-            this.OrdinalLocalizer = ordinalLocalizer ?? new PluralRulesOrdinalLocalizer();
+            this.CardinalLocalizer = cardinalLocalizer ?? throw new ArgumentNullException(nameof(cardinalLocalizer), "IResourceSetLocalizer<IPluralRulesResource> must not be null");
+            this.OrdinalLocalizer = ordinalLocalizer ?? throw new ArgumentNullException(nameof(ordinalLocalizer), "IResourceSetLocalizer<IPluralRulesResource> must not be null");
         }
 
         /// <summary>
