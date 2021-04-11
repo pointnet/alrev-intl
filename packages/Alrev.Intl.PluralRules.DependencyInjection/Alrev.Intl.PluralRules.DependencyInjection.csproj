@@ -15,7 +15,7 @@
     <PackageProjectUrl>https://github.com/pointnet/alrev-intl</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl>icon.png</PackageIconUrl>
-    <PackageTags>intl;cldr;icu;internationalization;globalization;localization</PackageTags>
+    <PackageTags>intl;cldr;icu;internationalization;globalization;localization;pluralrules</PackageTags>
     <RepositoryUrl>https://github.com/pointnet/alrev-intl.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <IncludeSymbols>true</IncludeSymbols>
