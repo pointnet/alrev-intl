@@ -58,8 +58,8 @@ jobs:
         uses: schneegans/dynamic-badges-action@v1.0.0
         with:
           auth: ${{secrets.GIST_TOKEN}}
-          gistID: 3151ce8c36600206670a562dab4c3bf7
-          filename: ${{steps.get-payload.outputs.package}}.json
+          gistID: 8738e44902f9f103575dfa796d42fa73
+          filename: ${{steps.get-payload.outputs.project}}.json
           label: github
           message: v${{steps.get-payload.outputs.version}}
           color: blue
