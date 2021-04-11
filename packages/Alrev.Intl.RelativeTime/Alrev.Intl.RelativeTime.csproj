@@ -22,7 +22,6 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Alrev.Intl.Abstractions\Alrev.Intl.Abstractions.csproj" />
     <ProjectReference Include="..\Alrev.Intl.PluralRules\Alrev.Intl.PluralRules.csproj" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
