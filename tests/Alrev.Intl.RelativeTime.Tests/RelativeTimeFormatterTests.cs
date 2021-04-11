@@ -1,4 +1,8 @@
 ﻿using Alrev.Intl.Abstractions.RelativeTime;
+using Alrev.Intl.PluralRules;
+using Alrev.Intl.PluralRules.Globalization;
+using Alrev.Intl.RelativeTime.Globalization;
+using System;
 using System.Globalization;
 using System.Threading;
 using Xunit;
@@ -13,6 +17,22 @@ namespace Alrev.Intl.RelativeTime.Tests
         public RelativeTimeFormatterTests(RelativeTimeFormatterFixture fixture)
         {
             this.fixture = fixture;
+        }
+
+        [Fact]
+        public void NullRelativeTimeLocalizer_ShouldThrow_ArgumentNullException()
+        {
+            Exception ex = Record.Exception(() => new RelativeTimeFormatter(
+                null,
+                new PluralRulesEvaluator(new PluralRulesCardinalLocalizer(), new PluralRulesOrdinalLocalizer())));
+            Assert.IsType<ArgumentNullException>(ex);
+        }
+
+        [Fact]
+        public void NullPluralRulesEvaluator_ShouldThrow_ArgumentNullException()
+        {
+            Exception ex = Record.Exception(() => new RelativeTimeFormatter(new RelativeTimeLocalizer(), null));
+            Assert.IsType<ArgumentNullException>(ex);
         }
 
         [Theory]
