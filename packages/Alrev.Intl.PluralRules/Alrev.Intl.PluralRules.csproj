@@ -7,15 +7,15 @@
     <AssemblyOriginatorKeyFile>alrev-intl.snk</AssemblyOriginatorKeyFile>
     <AssemblyName>Alrev.Intl.PluralRules</AssemblyName>
     <PackageId>Alrev.Intl.PluralRules</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <Authors>pointnet</Authors>
     <Company>Alrev.Intl</Company>
     <Description>Plural Rules library of Alrev.Intel</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/pointnet/alrev-intl</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/pointnet/alrev-intl/tree/master/packages/Alrev.Intl.PluralRules</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl>icon.png</PackageIconUrl>
-    <PackageTags>intl;cldr;icu;internationalization;globalization;localization</PackageTags>
+    <PackageTags>intl;cldr;icu;internationalization;globalization;localization;pluralrules</PackageTags>
     <RepositoryUrl>https://github.com/pointnet/alrev-intl.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <IncludeSymbols>true</IncludeSymbols>

@@ -13,10 +13,10 @@
     <Company>Alrev.Intl</Company>
     <Description>Relative Time Dependency Injection library of Alrev.Intel</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/pointnet/alrev-intl</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/pointnet/alrev-intl/tree/master/packages/Alrev.Intl.RelativeTime.DependencyInjection</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl>icon.png</PackageIconUrl>
-    <PackageTags>intl;cldr;icu;internationalization;globalization;localization</PackageTags>
+    <PackageTags>intl;cldr;icu;internationalization;globalization;localization;relativetime</PackageTags>
     <RepositoryUrl>https://github.com/pointnet/alrev-intl.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <IncludeSymbols>true</IncludeSymbols>
