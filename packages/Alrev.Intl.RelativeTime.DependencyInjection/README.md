@@ -64,7 +64,10 @@ PM> Install-Package Alrev.Intl.RelativeTime.DependencyInjection
 > **Startup.cs**
 
 ```csharp
+// <added>
 using Alrev.Intl.RelativeTime.DependencyInjection;
+// </added>
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Localization;
