@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Alrev.Intl.PluralRules.DependencyInjection\Alrev.Intl.PluralRules.DependencyInjection.csproj" />
+    <ProjectReference Include="..\Alrev.Intl.RelativeTime\Alrev.Intl.RelativeTime.csproj" />
+  </ItemGroup>
+
+</Project>

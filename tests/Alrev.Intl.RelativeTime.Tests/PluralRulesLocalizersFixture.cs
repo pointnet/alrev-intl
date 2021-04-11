@@ -2,7 +2,7 @@
 using Alrev.Intl.Abstractions.PluralRules;
 using Alrev.Intl.PluralRules.Globalization;
 
-namespace Alrev.Intl.PluralRules.Tests
+namespace Alrev.Intl.RelativeTime.Tests
 {
     public class PluralRulesLocalizersFixture
     {

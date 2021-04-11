@@ -5,9 +5,9 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>alrev-intl.snk</AssemblyOriginatorKeyFile>
-    <AssemblyName>Alrev.Intl.PluralRules</AssemblyName>
-    <PackageId>Alrev.Intl.PluralRules</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <AssemblyName>Alrev.Intl.PluralRules.DependencyInjection</AssemblyName>
+    <PackageId>Alrev.Intl.PluralRules.DependencyInjection</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
     <Authors>pointnet</Authors>
     <Company>Alrev.Intl</Company>
     <Description>Plural Rules library of Alrev.Intel</Description>
@@ -22,7 +22,10 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Alrev.Intl.Abstractions\Alrev.Intl.Abstractions.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alrev.Intl.PluralRules\Alrev.Intl.PluralRules.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
