@@ -5,12 +5,12 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>alrev-intl.snk</AssemblyOriginatorKeyFile>
-    <AssemblyName>Alrev.Intl.RelativeTime</AssemblyName>
-    <PackageId>Alrev.Intl.RelativeTime</PackageId>
+    <AssemblyName>Alrev.Intl.PluralRules.DependencyInjection</AssemblyName>
+    <PackageId>Alrev.Intl.PluralRules.DependencyInjection</PackageId>
     <PackageVersion>1.0.0</PackageVersion>
     <Authors>pointnet</Authors>
     <Company>Alrev.Intl</Company>
-    <Description>Relative Time library of Alrev.Intel</Description>
+    <Description>Plural Rules library of Alrev.Intel</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/pointnet/alrev-intl</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
@@ -22,10 +22,10 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Alrev.Intl.PluralRules\Alrev.Intl.PluralRules.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-    <Item Include="*.cs" Exclude="netstandard20.cs" />
+  <ItemGroup>
+    <ProjectReference Include="..\Alrev.Intl.PluralRules\Alrev.Intl.PluralRules.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
