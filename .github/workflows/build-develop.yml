@@ -3,7 +3,7 @@ name: build-develop
 on:
   push:
     branches: [ develop ]
-    paths: [ packages/**, tests/** ]
+    paths: [ "packages/**", "tests/**", "!**/*.md" ]
   pull_request:
     branches: [ develop ]
 
