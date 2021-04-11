@@ -5,8 +5,26 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>alrev-intl.snk</AssemblyOriginatorKeyFile>
+    <AssemblyName>Alrev.Intl.PluralRules</AssemblyName>
+    <PackageId>Alrev.Intl.PluralRules</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>pointnet</Authors>
+    <Company>Alrev.Intl</Company>
+    <Description>Plural Rules library of Alrev.Intel</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/pointnet/alrev-intl</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl>icon.png</PackageIconUrl>
+    <PackageTags>intl;cldr;icu;internationalization;globalization;localization</PackageTags>
+    <RepositoryUrl>https://github.com/pointnet/alrev-intl.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Alrev.Intl.Abstractions\Alrev.Intl.Abstractions.csproj" />
   </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\icon.png" Pack="true" PackagePath="" />
+	</ItemGroup>
 </Project>
