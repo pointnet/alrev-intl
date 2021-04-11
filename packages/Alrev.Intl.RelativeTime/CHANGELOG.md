@@ -1,0 +1,5 @@
+﻿# 1.0.0 (2021-04-11)
+
+### Release
+
+* **Alrev.Intl.RelativeTime:** 1.0.0 ([Alrev.Intl.RelativeTime.1.0.0](https://github.com/pointnet/alrev-intl/releases/tag/Alrev.Intl.RelativeTime.1.0.0))
