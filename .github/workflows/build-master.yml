@@ -3,7 +3,7 @@ name: build-master
 on:
   push:
     branches: [ master ]
-    paths: [ packages/**, tests/** ]
+    paths: [ "packages/**", "tests/**", "!**/*.md" ]
   pull_request:
     branches: [ master ]
 
