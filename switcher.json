@@ -18,12 +18,8 @@
       "name": "Alrev.Intl.RelativeTime",
       "packages": [
         {
-          "packageName": "Alrev.Intl.Abstractions",
-          "version": "1.0.0"
-        },
-        {
           "packageName": "Alrev.Intl.PluralRules",
-          "version": "1.0.0"
+          "version": "1.0.1"
         }
       ]
     }
