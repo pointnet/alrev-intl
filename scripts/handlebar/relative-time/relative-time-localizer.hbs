@@ -51,5 +51,20 @@ namespace {{namespace}}
             CultureInfo c when string.IsNullOrEmpty(c.Name) => throw new ArgumentException("CultureInfo.InvariantCulture is not supported", nameof(culture)),
             _ => this.GetValueOrDefault(culture.Name.ToLowerInvariant(), null) ?? this.GetValueOrDefault(culture.Parent.Name.ToLowerInvariant(), null)
         };
+
+        /// <summary>
+        /// Indicates whether the specified <see cref="CultureInfo"/> is supported
+        /// </summary>
+        /// <param name="culture">The <see cref="CultureInfo"/> to test</param>
+        /// <returns>true if the <see cref="CultureInfo"/> is supported, otherwise false</returns>
+        /// <remarks>
+        /// If the specified <see cref="CultureInfo"/> does not exists, it will try to use the parent <see cref="CultureInfo"/> of the specified one.
+        /// </remarks>
+        /// <exception cref="ArgumentNullException"></exception>
+        public bool IsSupported(CultureInfo culture) => culture switch 
+        {
+            null => throw new ArgumentNullException(nameof(culture), "CultureInfo must not be null"),
+            _ => this.ContainsKey(culture.Name.ToLowerInvariant()) || this.ContainsKey(culture.Parent.Name.ToLowerInvariant())
+        };
     }
 }
