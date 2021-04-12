@@ -85,5 +85,26 @@ namespace Alrev.Intl.PluralRules.Tests
             PluralRulesValues result = this.fixture.Evaluator.Evaluate(1.0, PluralRulesTypeValues.Cardinal, new CultureInfo("fr"));
             Assert.Equal(PluralRulesValues.One, result);
         }
+
+        [Fact]
+        public void IsSupportedUnknownPluralRulesTypeValues_ShouldThrow_ArgumentException()
+        {
+            Exception ex = Record.Exception(() => this.fixture.Evaluator.IsSupported(PluralRulesTypeValues.Unknown, CultureInfo.CurrentCulture));
+            Assert.IsType<ArgumentException>(ex);
+        }
+
+        [Fact]
+        public void IsSupportedFrenchOrdinal_ShouldReturn_True()
+        {
+            bool supported = this.fixture.Evaluator.IsSupported(PluralRulesTypeValues.Ordinal, new CultureInfo("fr"));
+            Assert.True(supported);
+        }
+
+        [Fact]
+        public void IsSupportedFrenchCardinal_ShouldReturn_True()
+        {
+            bool supported = this.fixture.Evaluator.IsSupported(PluralRulesTypeValues.Cardinal, new CultureInfo("fr"));
+            Assert.True(supported);
+        }
     }
 }
