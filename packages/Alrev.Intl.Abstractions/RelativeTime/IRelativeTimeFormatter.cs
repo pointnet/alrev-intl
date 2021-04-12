@@ -45,5 +45,16 @@ namespace Alrev.Intl.Abstractions.RelativeTime
             RelativeTimeUnitValues unit = RelativeTimeUnitValues.Second,
             RelativeTimeStyleValues style = RelativeTimeStyleValues.Long,
             RelativeTimeNumericValues numericFormat = RelativeTimeNumericValues.Always);
+
+        /// <summary>
+        /// Indicates whether the specified <see cref="CultureInfo"/> is supported
+        /// </summary>
+        /// <param name="culture">The <see cref="CultureInfo"/> to test</param>
+        /// <returns>true if the <see cref="CultureInfo"/> is supported, otherwise false</returns>
+        /// <remarks>
+        /// If the specified <see cref="CultureInfo"/> does not exists, it will try to use the parent <see cref="CultureInfo"/> of the specified one.
+        /// </remarks>
+        /// <exception cref="ArgumentNullException"></exception>
+        bool IsSupported(CultureInfo culture);
     }
 }
