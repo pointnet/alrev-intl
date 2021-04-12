@@ -66,25 +66,28 @@ namespace Alrev.Intl.RelativeTime
             RelativeTimeStyleValues style = RelativeTimeStyleValues.Long,
             RelativeTimeNumericValues numericFormat = RelativeTimeNumericValues.Always)
         {
-            IRelativeTimeResource resource = this.Localizer
-                .GetLocalizer(culture)
-                .GetRelativeTimeStylesResource(unit)
-                .GetRelativeTimeResource(style);
-            PluralRulesValues rule = this.PluralRules.Evaluate(value, PluralRulesTypeValues.Cardinal, culture);
             IPluralRulesContext context = PluralRulesContext.Create(value.ToString(CultureInfo.InvariantCulture));
-            if (Math.Ceiling(value) == Math.Floor(value)
-                && numericFormat == RelativeTimeNumericValues.Auto
-                && resource.ContainsKey((int)value))
+            if (this.Localizer.IsSupported(culture))
             {
-                return string.Format(resource[(int)value], value.ToString($"N{context.v}", culture));
-            }
-            if (value < 0 && resource.Past.ContainsKey(rule))
-            {
-                return string.Format(resource.Past[rule], Math.Abs(value).ToString($"N{context.v}", culture));
-            }
-            if (value >= 0 && resource.Future.ContainsKey(rule))
-            {
-                return string.Format(resource.Future[rule], value.ToString($"N{context.v}", culture));
+                IRelativeTimeResource resource = this.Localizer
+                    .GetLocalizer(culture)
+                    .GetRelativeTimeStylesResource(unit)
+                    .GetRelativeTimeResource(style);
+                PluralRulesValues rule = this.PluralRules.Evaluate(value, PluralRulesTypeValues.Cardinal, culture);
+                if (Math.Ceiling(value) == Math.Floor(value)
+                    && numericFormat == RelativeTimeNumericValues.Auto
+                    && resource.ContainsKey((int)value))
+                {
+                    return string.Format(resource[(int)value], value.ToString($"N{context.v}", culture));
+                }
+                if (value < 0 && resource.Past.ContainsKey(rule))
+                {
+                    return string.Format(resource.Past[rule], Math.Abs(value).ToString($"N{context.v}", culture));
+                }
+                if (value >= 0 && resource.Future.ContainsKey(rule))
+                {
+                    return string.Format(resource.Future[rule], value.ToString($"N{context.v}", culture));
+                }
             }
             return value.ToString($"N{context.v}", culture);
         }
