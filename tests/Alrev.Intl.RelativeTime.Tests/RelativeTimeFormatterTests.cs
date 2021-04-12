@@ -129,5 +129,19 @@ namespace Alrev.Intl.RelativeTime.Tests
             Assert.Equal(expected, localized);
         }
 
+
+        [Fact]
+        public void IsSupportedNullCultureInfo_ShouldThrow_ArgumentNullException()
+        {
+            Exception ex = Record.Exception(() => this.fixture.Formatter.IsSupported(null));
+            Assert.IsType<ArgumentNullException>(ex);
+        }
+
+        [Fact]
+        public void IsSupportedFrench_ShouldReturn_True()
+        {
+            bool supported = this.fixture.Formatter.IsSupported(new CultureInfo("fr"));
+            Assert.True(supported);
+        }
     }
 }
