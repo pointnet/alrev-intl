@@ -66,5 +66,47 @@ namespace Alrev.Intl.PluralRules.Tests.Globalization
             IPluralRulesResource resource = this.fixture.OrdinalLocalizer.GetLocalizer(new CultureInfo("en-US"));
             Assert.Equal("en", (resource as IResource).Locale);
         }
+
+        [Fact]
+        public void IsSupportedWithNullCultureInfo_ShouldThrow_ArgumentNullExpection()
+        {
+            Exception ex = Record.Exception(() => this.fixture.OrdinalLocalizer.IsSupported(null));
+            Assert.IsType<ArgumentNullException>(ex);
+        }
+
+        [Fact]
+        public void IsSupportedWithInvariantCultureInfo_ShouldReturn_False()
+        {
+            bool supported = this.fixture.OrdinalLocalizer.IsSupported(new CultureInfo("aa"));
+            Assert.False(supported);
+        }
+
+        [Fact]
+        public void IsSupportedWithUnknownCultureInfo_ShouldReturn_False()
+        {
+            bool supported = this.fixture.OrdinalLocalizer.IsSupported(new CultureInfo("aa"));
+            Assert.False(supported);
+        }
+
+        [Fact]
+        public void IsSupportedWithUnknownChildrenCultureInfo_ShouldReturn_False()
+        {
+            bool supported = this.fixture.OrdinalLocalizer.IsSupported(new CultureInfo("aa-DJ"));
+            Assert.False(supported);
+        }
+
+        [Fact]
+        public void IsSupportedWithCultureInfo_ShouldReturn_True()
+        {
+            bool supported = this.fixture.OrdinalLocalizer.IsSupported(new CultureInfo("en"));
+            Assert.True(supported);
+        }
+
+        [Fact]
+        public void IsSupportedWithChildrenCultureInfo_ShouldReturn_True()
+        {
+            bool supported = this.fixture.OrdinalLocalizer.IsSupported(new CultureInfo("en-US"));
+            Assert.True(supported);
+        }
     }
 }
