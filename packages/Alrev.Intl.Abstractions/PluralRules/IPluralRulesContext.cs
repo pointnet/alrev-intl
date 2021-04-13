@@ -1,7 +1,7 @@
 ﻿namespace Alrev.Intl.Abstractions.PluralRules
 {
     /// <summary>
-    ///   Interface of the context to evaluate.
+    ///   Defines a Plural Rules Context
     /// </summary>
     /// <seealso href="http://unicode.org/reports/tr35/tr35-numbers.html#Operands"/>
     public interface IPluralRulesContext

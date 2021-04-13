@@ -1,9 +1,9 @@
-﻿namespace Alrev.Intl.Abstractions.RelativeTime
+﻿namespace Alrev.Intl.Abstractions
 {
     /// <summary>
-    /// Enumeration of Relative Time styles
+    /// Enumeration of Intl styles
     /// </summary>
-    public enum RelativeTimeStyleValues
+    public enum IntlStyleValues
     {
         /// <summary>
         /// Unknown style
@@ -12,18 +12,15 @@
         /// <summary>
         /// Long style
         /// </summary>
-        /// <example>in 1 month</example>
         Long,
         /// <summary>
         /// Narrow style
         /// </summary>
         /// <remarks> The narrow style could be similar to the short style for some locales</remarks>
-        /// <example>in 1mo.</example>
         Narrow,
         /// <summary>
         /// Short style
         /// </summary>
-        /// <example>in 1mo.</example>
         Short
     }
 }
