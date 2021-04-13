@@ -186,7 +186,7 @@ public abstract class BaseCommand
         List<string> nulls = new List<string>();
         List<string> himselfs = new List<string>();
         Dictionary<string, string> others = new Dictionary<string, string>();
-        string[] remove = new[] { "pa-in", "mn-mn", "sma", "smj", "sms" };
+        string[] remove = new[] { "pa-in", "mn-mn", "sma", "smj", "sms", "zh-tw", "zh-hk", "zh-sg", "zh-mo", "zh-cn" };
         foreach (CultureInfo culture in this.Cultures)
         {
             if (remove.Contains(culture.Name.ToLowerInvariant()))
