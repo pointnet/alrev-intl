@@ -1,6 +1,8 @@
 #r "nuget: McMaster.Extensions.CommandLineUtils, 3.1.0"
+#r "nuget: Handlebars.Net, 2.0.7"
 
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -23,6 +25,11 @@ public abstract class BaseCommand
     [McMaster.Extensions.CommandLineUtils.Option("-na | --namespace", "Namespace of the resources", McMaster.Extensions.CommandLineUtils.CommandOptionType.SingleValue)]
     [System.ComponentModel.DataAnnotations.Required]
     public string Namespace { get; } = @"";
+
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/resource-localizer.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/resource-localizer-tests.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerFixtureTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/resource-localizer-tests-fixture.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerCollectionDefinitionTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/resource-localizer-tests-collection-definition.hbs"));
 
     protected CultureInfo[] Cultures { get; } = CultureInfo.GetCultures(CultureTypes.AllCultures).Where(c => !string.IsNullOrWhiteSpace(c.Name)).ToArray();
 
@@ -71,7 +78,7 @@ public abstract class BaseCommand
             return;
         }
         DirectoryInfo di = new DirectoryInfo(path);
-        FileInfo[] files = di.GetFiles();
+        FileInfo[] files = di.GetFiles().Where(f => f.FullName.Contains(".intl.cs")).ToArray();
         if (files.Length > 0)
         {
             this.LogInfo($"Deleting {files.Length} files from directory '{path}'");
@@ -88,5 +95,116 @@ public abstract class BaseCommand
         string json = File.ReadAllText(path);
         System.Text.Json.JsonDocument resource = System.Text.Json.JsonDocument.Parse(json);
         return resource;
+    }
+
+    protected void GenerateLocalizer(
+        string script,
+        string @namespace,
+        string className,
+        string resourceNamespace,
+        string resourceType,
+        string resourcesNamespace,
+        Dictionary<string, string> cultures,
+        string outputPath)
+    {
+        string csharp = this.LocalizerTemplate(new
+        {
+            script = script,
+            @namespace = @namespace,
+            className = className,
+            resourceNamespace = resourceNamespace,
+            resourceType = resourceType,
+            resourcesNamespace = resourcesNamespace,
+            cultures = cultures
+        });
+        File.WriteAllText(Path.Combine(outputPath, $"{className}ResourceLocalizer.intl.cs"), csharp);
+    }
+
+    protected void GenerateLocalizerTests(
+        string script,
+        string @namespace,
+        string className,
+        string fixtureNamespace,
+        string resourceNamespace,
+        string resourceType,
+        Dictionary<string, string> cultures,
+        string outputPath)
+    {
+        (ICollection<string> nulls, IDictionary<string, string> others) = this.SplitLocalizerTests(cultures);
+        string csharp = this.LocalizerTestsTemplate(new
+        {
+            script = script,
+            @namespace = @namespace,
+            className = className,
+            fixtureNamespace = fixtureNamespace,
+            resourceNamespace = resourceNamespace,
+            resourceType = resourceType,
+            nulls = nulls,
+            others = others
+        });
+        File.WriteAllText(Path.Combine(outputPath, $"{className}ResourceLocalizerTests.intl.cs"), csharp);
+    }
+
+    protected void GenerateLocalizerFixture(
+        string script,
+        string @namespace,
+        string resourceNamespace,
+        string resourceType,
+        string localizerNamespace,
+        string className,
+        string outputPath)
+    {
+        string csharp = this.LocalizerFixtureTemplate(new
+        {
+            script = script,
+            @namespace = @namespace,
+            resourceNamespace = resourceNamespace,
+            resourceType = resourceType,
+            localizerNamespace = localizerNamespace,
+            className = className
+        });
+        File.WriteAllText(Path.Combine(outputPath, $"{className}ResourceLocalizerFixture.intl.cs"), csharp);
+    }
+
+    protected void GenerateLocalizerCollectionDefinition(
+        string script,
+        string @namespace,
+        string className,
+        string outputPath)
+    {
+        string csharp = this.LocalizerCollectionDefinitionTemplate(new
+        {
+            script = script,
+            @namespace = @namespace,
+            className = className
+        });
+        File.WriteAllText(Path.Combine(outputPath, $"{className}ResourceLocalizerCollectionDefinition.intl.cs"), csharp);
+    }
+
+    private (ICollection<string>, IDictionary<string, string>) SplitLocalizerTests(Dictionary<string, string> cultures)
+    {
+        List<string> nulls = new List<string>();
+        List<string> himselfs = new List<string>();
+        Dictionary<string, string> others = new Dictionary<string, string>();
+        string[] remove = new[] { "pa-in", "mn-mn", "sma", "smj", "sms" };
+        foreach (CultureInfo culture in this.Cultures)
+        {
+            if (remove.Contains(culture.Name.ToLowerInvariant()))
+            {
+                continue;
+            }
+            if (cultures.ContainsKey(culture.Name.ToLowerInvariant()))
+            {
+                others.Add(culture.Name, culture.Name.ToLowerInvariant());
+                continue;
+            }
+            if (cultures.ContainsKey(culture.Parent.Name.ToLowerInvariant()))
+            {
+                others.Add(culture.Name, culture.Parent.Name.ToLowerInvariant());
+                continue;
+            }
+            nulls.Add(culture.Name);
+        }
+        return (nulls, others);
     }
 }

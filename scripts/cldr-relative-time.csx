@@ -16,25 +16,6 @@ public record RelativeTime(
     Dictionary<string, string> Past,
     Dictionary<string, string> Future);
 
-HandlebarsDotNet.Handlebars.RegisterTemplate("resource", File.ReadAllText("./handlebar/relative-time/relative-time-resource.hbs"));
-HandlebarsDotNet.Handlebars.RegisterHelper("formatDictionaryCount", (writer, context, args) =>
-{
-    if (args[0] is null)
-    {
-        writer.Write("0");
-        return;
-    }
-    if (args[0] is Dictionary<int, string>)
-    {
-        Dictionary<int, string> content = args[0] as Dictionary<int, string>;
-        writer.Write(content.Count);
-    }
-    else if (args[0] is Dictionary<string, string>)
-    {
-        Dictionary<string, string> content = args[0] as Dictionary<string, string>;
-        writer.Write(content.Count);
-    }
-});
 HandlebarsDotNet.Handlebars.RegisterHelper("formatDictionary", (writer, context, args) =>
 {
     if (args[0] is null)
@@ -72,10 +53,8 @@ public class CldrRelativeTime : BaseCommand
 
     public static int Execute(string[] args) => McMaster.Extensions.CommandLineUtils.CommandLineApplication.Execute<CldrRelativeTime>(args);
 
-    private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-resource-set.hbs"));
+    private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-resource.hbs"));
     private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-resource-set-tests.hbs"));
-    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-localizer.hbs"));
-    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/relative-time/relative-time-localizer-tests.hbs"));
 
     public void OnExecute()
     {
@@ -84,6 +63,7 @@ public class CldrRelativeTime : BaseCommand
         if (!this.EnsureNodeModulesPackage("cldr-dates-full")) return;
         this.CreateOrEmptyDirectory("Resources");
         this.CreateOrEmptyDirectory("Globalization");
+        this.CreateOrEmptyDirectory("..", "..", "tests", $"{this.Namespace}.Tests", "Fixtures");
         this.CreateOrEmptyDirectory("..", "..", "tests", $"{this.Namespace}.Tests", "Resources");
         this.CreateOrEmptyDirectory("..", "..", "tests", $"{this.Namespace}.Tests", "Globalization");
         this.ProcessCultures();
@@ -97,10 +77,40 @@ public class CldrRelativeTime : BaseCommand
         {
             if (this.ProcessCulture(culture))
             {
-                cultures.Add(culture.Name.ToLowerInvariant(), culture.EnglishName.ToValidClassName());
+                cultures.Add(culture.Name.ToLowerInvariant(), $"{culture.Name.ToValidClassName()}RelativeTime");
             }
         }
-        this.GenerateLocalizer(cultures);
+        this.GenerateLocalizer(
+            SCRIPT,
+            "Alrev.Intl.RelativeTime.Globalization",
+            "RelativeTime",
+            "Alrev.Intl.Abstractions.RelativeTime",
+            "IRelativeTimeUnitsResource",
+            "Alrev.Intl.RelativeTime.Resources",
+            cultures,
+            Path.Combine(this.OutputPath, "Globalization"));
+        this.GenerateLocalizerTests(
+            SCRIPT,
+            "Alrev.Intl.RelativeTime.Tests.Globalization",
+            "RelativeTime",
+            "Alrev.Intl.RelativeTime.Tests.Fixtures",
+            "Alrev.Intl.Abstractions.RelativeTime",
+            "IRelativeTimeUnitsResource",
+            cultures,
+            Path.Combine(this.OutputPath, "..", "..", "tests", "Alrev.Intl.RelativeTime.Tests", "Globalization"));
+        this.GenerateLocalizerFixture(
+            SCRIPT,
+            "Alrev.Intl.RelativeTime.Tests.Fixtures",
+            "Alrev.Intl.Abstractions.RelativeTime",
+            "IRelativeTimeUnitsResource",
+            "Alrev.Intl.RelativeTime.Globalization",
+            "RelativeTime",
+            Path.Combine(this.OutputPath, "..", "..", "tests", "Alrev.Intl.RelativeTime.Tests", "Fixtures"));
+        this.GenerateLocalizerCollectionDefinition(
+            SCRIPT,
+            "Alrev.Intl.RelativeTime.Tests.Fixtures",
+            "RelativeTime",
+            Path.Combine(this.OutputPath, "..", "..", "tests", "Alrev.Intl.RelativeTime.Tests", "Fixtures"));
         this.LogSuccess($"Processing {this.Cultures.Length} cultures done");
         this.LogSuccess($"  - {cultures.Count} cultures generated");
         this.LogWarning($"  - {this.Cultures.Length - cultures.Count} cultures ignored");
@@ -143,9 +153,9 @@ public class CldrRelativeTime : BaseCommand
 
                 styles.Add(suffix switch
                 {
-                    "-narrow" => "narrow",
-                    "-short" => "short",
-                    _ => "long"
+                    "-narrow" => "Narrow",
+                    "-short" => "Short",
+                    _ => "Long"
                 }, this.ProcessRelativeTime(key, titleCasePrefix, suffix switch
                 {
                     "-narrow" => "RelativeTimeStyleValues.Narrow",
@@ -189,38 +199,39 @@ public class CldrRelativeTime : BaseCommand
             locale = culture.Name.ToLowerInvariant(),
             englishName = culture.EnglishName,
             @namespace = $"{this.Namespace}.Resources",
-            classPrefix = culture.EnglishName.ToValidClassName(),
-            relativeTimes = relativeTimes
+            className = $"{culture.Name.ToValidClassName()}RelativeTime",
+            resources = relativeTimes
         });
-        File.WriteAllText(Path.Combine(this.OutputPath, "Resources", $"{culture.EnglishName.ToValidClassName()}RelativeTimeResourceSet.cs"), csharp);
-        string tests = this.CultureTestsTemplate(new
-        {
-            script = SCRIPT,
-            locale = culture.Name.ToLowerInvariant(),
-            @namespace = $"{this.Namespace}.Tests.Resources",
-            classPrefix = $"{culture.EnglishName.ToValidClassName()}",
-            relativeTimes = relativeTimes
-        });
-        File.WriteAllText(Path.Combine(this.OutputPath, "..", "..", "tests", $"{this.Namespace}.Tests", "Resources", $"{culture.EnglishName.ToValidClassName()}RelativeTimeResourceSetTests.cs"), tests);
+        File.WriteAllText(Path.Combine(this.OutputPath, "Resources", $"{culture.Name.ToValidClassName()}RelativeTimeResource.intl.cs"), csharp);
+
+        //string tests = this.CultureTestsTemplate(new
+        //{
+        //    script = SCRIPT,
+        //    locale = culture.Name.ToLowerInvariant(),
+        //    @namespace = $"{this.Namespace}.Tests.Resources",
+        //    classPrefix = $"{culture.EnglishName.ToValidClassName()}",
+        //    relativeTimes = relativeTimes
+        //});
+        //File.WriteAllText(Path.Combine(this.OutputPath, "..", "..", "tests", $"{this.Namespace}.Tests", "Resources", $"{culture.EnglishName.ToValidClassName()}RelativeTimeResourceSetTests.cs"), tests);
     }
 
-    protected void GenerateLocalizer(Dictionary<string, string> cultures)
-    {
-        string csharp = this.LocalizerTemplate(new
-        {
-            script = SCRIPT,
-            @namespace = $"{this.Namespace}.Globalization",
-            cultures = cultures
-        });
-        File.WriteAllText(Path.Combine(this.OutputPath, "Globalization", "RelativeTimeLocalizer.cs"), csharp);
-        string tests = this.LocalizerTestsTemplate(new
-        {
-            script = SCRIPT,
-            @namespace = this.Namespace,
-            cultures = cultures
-        });
-        File.WriteAllText(Path.Combine(this.OutputPath, "..", "..", "tests", $"{this.Namespace}.Tests", "Globalization", "RelativeTimeLocalizerTests.cs"), tests);
-    }
+    //protected void GenerateLocalizer(Dictionary<string, string> cultures)
+    //{
+    //    string csharp = this.LocalizerTemplate(new
+    //    {
+    //        script = SCRIPT,
+    //        @namespace = $"{this.Namespace}.Globalization",
+    //        cultures = cultures
+    //    });
+    //    File.WriteAllText(Path.Combine(this.OutputPath, "Globalization", "RelativeTimeLocalizer.cs"), csharp);
+    //    string tests = this.LocalizerTestsTemplate(new
+    //    {
+    //        script = SCRIPT,
+    //        @namespace = this.Namespace,
+    //        cultures = cultures
+    //    });
+    //    File.WriteAllText(Path.Combine(this.OutputPath, "..", "..", "tests", $"{this.Namespace}.Tests", "Globalization", "RelativeTimeLocalizerTests.cs"), tests);
+    //}
 }
 
 CldrRelativeTime.Execute(Args.ToArray());

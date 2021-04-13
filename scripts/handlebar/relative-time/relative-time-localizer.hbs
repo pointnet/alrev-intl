@@ -47,7 +47,7 @@ namespace {{namespace}}
         /// <exception cref="ArgumentException"></exception>
         public IRelativeTimeResourceSet GetLocalizer(CultureInfo culture) => culture switch 
         {
-            null => throw new ArgumentNullException(nameof(culture), "CultureInfo must not be null"),
+            null => throw new ArgumentNullException(nameof(culture), "CultureInfo is null"),
             CultureInfo c when string.IsNullOrEmpty(c.Name) => throw new ArgumentException("CultureInfo.InvariantCulture is not supported", nameof(culture)),
             _ => this.GetValueOrDefault(culture.Name.ToLowerInvariant(), null) ?? this.GetValueOrDefault(culture.Parent.Name.ToLowerInvariant(), null)
         };
@@ -63,7 +63,7 @@ namespace {{namespace}}
         /// <exception cref="ArgumentNullException"></exception>
         public bool IsSupported(CultureInfo culture) => culture switch 
         {
-            null => throw new ArgumentNullException(nameof(culture), "CultureInfo must not be null"),
+            null => throw new ArgumentNullException(nameof(culture), "CultureInfo is null"),
             _ => this.ContainsKey(culture.Name.ToLowerInvariant()) || this.ContainsKey(culture.Parent.Name.ToLowerInvariant())
         };
     }
