@@ -27,6 +27,15 @@
       ]
     },
     {
+      "name": "Alrev.Intl.List",
+      "packages": [
+        {
+          "packageName": "Alrev.Intl.Abstractions",
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
       "name": "Alrev.Intl.PluralRules.DependencyInjection",
       "packages": [
         {
