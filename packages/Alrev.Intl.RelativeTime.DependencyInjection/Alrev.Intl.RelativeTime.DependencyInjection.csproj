@@ -8,7 +8,7 @@
     <AssemblyOriginatorKeyFile>alrev-intl.snk</AssemblyOriginatorKeyFile>
     <AssemblyName>Alrev.Intl.RelativeTime.DependencyInjection</AssemblyName>
     <PackageId>Alrev.Intl.RelativeTime.DependencyInjection</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <Authors>pointnet</Authors>
     <Company>Alrev.Intl</Company>
     <Description>Relative Time Dependency Injection library of Alrev.Intl</Description>
