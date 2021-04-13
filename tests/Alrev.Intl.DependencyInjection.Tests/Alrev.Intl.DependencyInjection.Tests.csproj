@@ -25,6 +25,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\packages\Alrev.Intl.List.DependencyInjection\Alrev.Intl.List.DependencyInjection.csproj" />
 		<ProjectReference Include="..\..\packages\Alrev.Intl.PluralRules.DependencyInjection\Alrev.Intl.PluralRules.DependencyInjection.csproj" />
 		<ProjectReference Include="..\..\packages\Alrev.Intl.RelativeTime.DependencyInjection\Alrev.Intl.RelativeTime.DependencyInjection.csproj" />
 	</ItemGroup>
