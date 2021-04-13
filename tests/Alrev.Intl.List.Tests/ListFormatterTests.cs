@@ -56,7 +56,7 @@ namespace Alrev.Intl.List.Tests
         [Fact]
         public void FormatValues_WithNoValues_ShouldReturn_StringEmpty()
         {
-            string formatted = this.Fixture.Formatter.Format(new string[] { });
+            string formatted = this.Fixture.Formatter.Format(Array.Empty<string>());
             Assert.Empty(formatted);
         }
 

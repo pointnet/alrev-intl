@@ -8,7 +8,7 @@ namespace Alrev.Intl.Abstractions.Tests
         [Fact]
         public void CtorWithNullDictionary_ShouldReturn_ValidInstanceWithEmptyDictionary()
         {
-            BaseResourceLocalizerFixture brl = new BaseResourceLocalizerFixture(null);
+            BaseResourceLocalizerFixture brl = new(null);
             Assert.Empty(brl);
         }
     }
