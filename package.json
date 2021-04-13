@@ -28,11 +28,13 @@
     "reportgenerator-net50": "dotnet tool run reportgenerator -reports:.\\tests\\**\\*.net5.0.opencover.xml -targetdir:.\\.coverage\\net50 -reporttypes:Html;lcov && rimraf .\\tests\\**\\*.net5.0.opencover.xml",
     "reportgenerator-netcoreapp31": "dotnet tool run reportgenerator -reports:.\\tests\\**\\*.netcoreapp3.1.opencover.xml -targetdir:.\\.coverage\\netcoreapp31 -reporttypes:Html;lcov && rimraf .\\tests\\**\\*.netcoreapp3.1.opencover.xml",
     "cldr-plural-rules": "cd scripts && dotnet tool run dotnet-script .\\cldr-plural-rules.csx ..\\packages\\Alrev.Intl.PluralRules\\ -nm ..\\node_modules\\ -na Alrev.Intl.PluralRules",
-    "cldr-relative-time": "cd scripts && dotnet tool run dotnet-script .\\cldr-relative-time.csx ..\\packages\\Alrev.Intl.RelativeTime\\ -nm ..\\node_modules\\ -na Alrev.Intl.RelativeTime"
+    "cldr-relative-time": "cd scripts && dotnet tool run dotnet-script .\\cldr-relative-time.csx ..\\packages\\Alrev.Intl.RelativeTime\\ -nm ..\\node_modules\\ -na Alrev.Intl.RelativeTime",
+    "cldr-list": "cd scripts && dotnet tool run dotnet-script .\\cldr-list.csx ..\\packages\\Alrev.Intl.List\\ -nm ..\\node_modules\\ -na Alrev.Intl.List"
   },
   "dependencies": {
     "cldr-core": "^38.1.0",
-    "cldr-dates-full": "^38.1.0"
+    "cldr-dates-full": "^38.1.0",
+    "cldr-misc-full": "^38.1.0"
   },
   "devDependencies": {
     "rimraf": "^3.0.2"
