@@ -7,7 +7,7 @@
     <AssemblyOriginatorKeyFile>alrev-intl.snk</AssemblyOriginatorKeyFile>
     <AssemblyName>Alrev.Intl.Abstractions</AssemblyName>
     <PackageId>Alrev.Intl.Abstractions</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <Authors>pointnet</Authors>
     <Company>Alrev.Intl</Company>
     <Description>Core abstractions library of Alrev.Intl</Description>
