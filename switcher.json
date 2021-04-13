@@ -5,7 +5,8 @@
     "Alrev.Intl.PluralRules": "packages/Alrev.Intl.PluralRules/Alrev.Intl.PluralRules.csproj",
     "Alrev.Intl.PluralRules.DependencyInjection": "packages/Alrev.Intl.PluralRules.DependencyInjection/Alrev.Intl.PluralRules.DependencyInjection.csproj",
     "Alrev.Intl.RelativeTime": "packages/Alrev.Intl.RelativeTime/Alrev.Intl.RelativeTime.csproj",
-    "Alrev.Intl.RelativeTime.DependencyInjection": "packages/Alrev.Intl.RelativeTime.DependencyInjection/Alrev.Intl.RelativeTime.DependencyInjection.csproj"
+    "Alrev.Intl.RelativeTime.DependencyInjection": "packages/Alrev.Intl.RelativeTime.DependencyInjection/Alrev.Intl.RelativeTime.DependencyInjection.csproj",
+    "Alrev.Intl.List": "packages/Alrev.Intl.List/Alrev.Intl.List.csproj"
   },
   "restore": [
     {
@@ -54,6 +55,15 @@
         {
           "packageName": "Alrev.Intl.PluralRules.DependencyInjection",
           "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "Alrev.Intl.List.DependencyInjection",
+      "packages": [
+        {
+          "packageName": "Alrev.Intl.List",
+          "version": "1.0.0"
         }
       ]
     }
