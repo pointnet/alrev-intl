@@ -7,7 +7,7 @@
     <AssemblyOriginatorKeyFile>alrev-intl.snk</AssemblyOriginatorKeyFile>
     <AssemblyName>Alrev.Intl.PluralRules.DependencyInjection</AssemblyName>
     <PackageId>Alrev.Intl.PluralRules.DependencyInjection</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <Authors>pointnet</Authors>
     <Company>Alrev.Intl</Company>
     <Description>Plural Rules Dependency Injection library of Alrev.Intl</Description>
