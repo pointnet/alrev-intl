@@ -44,7 +44,7 @@ jobs:
       - name: Update packages
         run: dotnet tool run dnt update-packages Alrev*
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build --configuration Release --no-restore ./packages/${{steps.get-payload.outputs.project}}/${{steps.get-payload.outputs.project}}.csproj
       - name: Pack Nuget package
         run: dotnet pack --no-restore --no-build --configuration Release --output ./packages ./packages/${{steps.get-payload.outputs.project}}/${{steps.get-payload.outputs.project}}.csproj
       - name: Push Nuget package
