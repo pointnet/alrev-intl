@@ -63,10 +63,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "plural-rules", "plural-rule
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "relative-time", "relative-time", "{904C4DFA-0425-446F-9D40-3036DA979091}"
 	ProjectSection(SolutionItems) = preProject
-		scripts\handlebar\relative-time\relative-time-localizer-tests.hbs = scripts\handlebar\relative-time\relative-time-localizer-tests.hbs
-		scripts\handlebar\relative-time\relative-time-localizer.hbs = scripts\handlebar\relative-time\relative-time-localizer.hbs
-		scripts\handlebar\relative-time\relative-time-resource-set-tests.hbs = scripts\handlebar\relative-time\relative-time-resource-set-tests.hbs
-		scripts\handlebar\relative-time\relative-time-resource-set.hbs = scripts\handlebar\relative-time\relative-time-resource-set.hbs
 		scripts\handlebar\relative-time\relative-time-resource.hbs = scripts\handlebar\relative-time\relative-time-resource.hbs
 	EndProjectSection
 EndProject
