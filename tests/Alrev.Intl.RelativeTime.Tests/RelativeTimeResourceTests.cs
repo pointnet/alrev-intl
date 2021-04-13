@@ -1,5 +1,4 @@
-﻿using Alrev.Intl.Abstractions.RelativeTime;
-using Xunit;
+﻿using Xunit;
 
 namespace Alrev.Intl.RelativeTime.Tests
 {
@@ -8,7 +7,7 @@ namespace Alrev.Intl.RelativeTime.Tests
         [Fact]
         public void CtorWithNullDictionaries_ShouldReturn_ValidInstanceWithEmptyDictionaries()
         {
-            RelativeTimeResource rtr = new RelativeTimeResource("fr", RelativeTimeUnitValues.Day, RelativeTimeStyleValues.Long, "jour", null, null, null);
+            RelativeTimeResource rtr = new(null, null, null);
             Assert.Empty(rtr);
             Assert.Empty(rtr.Past);
             Assert.Empty(rtr.Future);

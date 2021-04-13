@@ -1,5 +1,7 @@
-﻿using Alrev.Intl.Abstractions.PluralRules;
-using Alrev.Intl.PluralRules.Globalization;
+﻿using Alrev.Intl.Abstractions;
+using Alrev.Intl.Abstractions.PluralRules;
+using Alrev.Intl.PluralRules.Globalization.Cardinals;
+using Alrev.Intl.PluralRules.Globalization.Ordinals;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -17,10 +19,9 @@ namespace Alrev.Intl.PluralRules.DependencyInjection
         /// <returns>The <see cref="IServiceCollection"/> to add services to.</returns>
         public static IServiceCollection AddIntlPluralRules(this IServiceCollection services)
         {
-            services.TryAddSingleton<IPluralRulesEvaluator>(
-                new PluralRulesEvaluator(
-                    new PluralRulesCardinalLocalizer(),
-                    new PluralRulesOrdinalLocalizer()));
+            services.TryAddSingleton<IResourceLocalizer<IPluralRulesCardinalResource>, PluralRulesCardinalResourceLocalizer>();
+            services.TryAddSingleton<IResourceLocalizer<IPluralRulesOrdinalResource>, PluralRulesOrdinalResourceLocalizer>();
+            services.TryAddSingleton<IPluralRulesEvaluator, PluralRulesEvaluator>();
             return services;
         }
     }

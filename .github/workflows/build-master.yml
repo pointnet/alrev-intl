@@ -23,8 +23,6 @@ jobs:
           dotnet-version: 5.0.x
       - name: Restore dotnet tool
         run: dotnet tool restore
-      - name: Patch DNT
-        run: cp -TRv ./.vendors/dnt/ ../../../.nuget/packages/dnt/1.6.2/tools/net5.0/any/
       - name: Switch to packages
         run: dotnet tool run dnt switch-to-packages
       - name: Restore dependencies
