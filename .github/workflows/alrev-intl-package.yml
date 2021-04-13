@@ -33,14 +33,18 @@ jobs:
           dotnet-version: 5.0.x
       - name: Restore dotnet tool
         run: dotnet tool restore
-      - name: Switch to packages
-        run: dotnet tool run dnt switch-to-packages
       - name: Restore dependencies
         run: dotnet restore
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Test
         run: dotnet test --configuration Release --no-restore --no-build /p:CollectCoverage=false
+      - name: Switch to packages
+        run: dotnet tool run dnt switch-to-packages
+      - name: Update packages
+        run: dotnet tool run dnt update-packages Alrev*
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
       - name: Pack Nuget package
         run: dotnet pack --no-restore --no-build --configuration Release --output ./packages ./packages/${{steps.get-payload.outputs.project}}/${{steps.get-payload.outputs.project}}.csproj
       - name: Push Nuget package
