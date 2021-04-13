@@ -2,6 +2,7 @@
 
 [![license](https://img.shields.io/github/license/pointnet/alrev-intl)](LICENSE)
 [![coveralls](https://coveralls.io/repos/github/pointnet/alrev-intl/badge.svg?branch=develop)](https://coveralls.io/github/pointnet/alrev-intl?branch=develop)
+[![build-master](https://github.com/pointnet/alrev-intl/actions/workflows/build-master.yml/badge.svg)](https://github.com/pointnet/alrev-intl/actions/workflows/build-master.yml)
 [![build-develop](https://github.com/pointnet/alrev-intl/actions/workflows/build-develop.yml/badge.svg)](https://github.com/pointnet/alrev-intl/actions/workflows/build-develop.yml)
 
 This repository is the home of Alrev.Intl and related libraries. 
