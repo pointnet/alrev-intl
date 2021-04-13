@@ -20,7 +20,7 @@ namespace Alrev.Intl.RelativeTime.DependencyInjection
         public static IServiceCollection AddIntlRelativeTime(this IServiceCollection services)
         {
             services.AddIntlPluralRules();
-            services.TryAddSingleton<IResourceSetLocalizer<IRelativeTimeResourceSet>, RelativeTimeLocalizer>();
+            services.TryAddSingleton<IResourceLocalizer<IRelativeTimeUnitsResource>, RelativeTimeResourceLocalizer>();
             services.TryAddSingleton<IRelativeTimeFormatter, RelativeTimeFormatter>();
             return services;
         }

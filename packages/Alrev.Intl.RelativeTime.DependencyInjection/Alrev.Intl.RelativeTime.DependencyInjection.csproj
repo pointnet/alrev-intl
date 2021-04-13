@@ -11,7 +11,7 @@
     <PackageVersion>1.0.1</PackageVersion>
     <Authors>pointnet</Authors>
     <Company>Alrev.Intl</Company>
-    <Description>Relative Time Dependency Injection library of Alrev.Intel</Description>
+    <Description>Relative Time Dependency Injection library of Alrev.Intl</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/pointnet/alrev-intl/tree/master/packages/Alrev.Intl.RelativeTime.DependencyInjection</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
