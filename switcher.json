@@ -4,7 +4,8 @@
     "Alrev.Intl.Abstractions": "packages/Alrev.Intl.Abstractions/Alrev.Intl.Abstractions.csproj",
     "Alrev.Intl.PluralRules": "packages/Alrev.Intl.PluralRules/Alrev.Intl.PluralRules.csproj",
     "Alrev.Intl.PluralRules.DependencyInjection": "packages/Alrev.Intl.PluralRules.DependencyInjection/Alrev.Intl.PluralRules.DependencyInjection.csproj",
-    "Alrev.Intl.RelativeTime": "packages/Alrev.Intl.RelativeTime/Alrev.Intl.RelativeTime.csproj"
+    "Alrev.Intl.RelativeTime": "packages/Alrev.Intl.RelativeTime/Alrev.Intl.RelativeTime.csproj",
+    "Alrev.Intl.RelativeTime.DependencyInjection": "packages/Alrev.Intl.RelativeTime.DependencyInjection/Alrev.Intl.RelativeTime.DependencyInjection.csproj"
   },
   "restore": [
     {
