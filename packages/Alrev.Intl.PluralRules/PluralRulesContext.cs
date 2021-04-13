@@ -75,7 +75,7 @@ namespace Alrev.Intl.PluralRules
         {
             if (string.IsNullOrWhiteSpace(value))
             {
-                throw new ArgumentNullException(nameof(value), "value must not be null");
+                throw new ArgumentNullException(nameof(value), "value is null");
             }
             if (!Regex.IsMatch(value, @"^-?[0-9]+(\.[0-9]+)?([ce][0-9]+)?$"))
             {

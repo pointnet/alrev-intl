@@ -10,8 +10,8 @@ namespace Alrev.Intl.PluralRules
     /// </summary>
     public class PluralRulesEvaluator : IPluralRulesEvaluator
     {
-        private IResourceSetLocalizer<IPluralRulesResource> CardinalLocalizer { get; }
-        private IResourceSetLocalizer<IPluralRulesResource> OrdinalLocalizer { get; }
+        private IResourceLocalizer<IPluralRulesCardinalResource> CardinalLocalizer { get; }
+        private IResourceLocalizer<IPluralRulesOrdinalResource> OrdinalLocalizer { get; }
 
         /// <summary>
         /// The class constructor
@@ -19,10 +19,10 @@ namespace Alrev.Intl.PluralRules
         /// <param name="cardinalLocalizer">A Cardinal Plural Rules Localizer</param>
         /// <param name="ordinalLocalizer">An Ordinal Plural Rules Localizer</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public PluralRulesEvaluator(IResourceSetLocalizer<IPluralRulesResource> cardinalLocalizer, IResourceSetLocalizer<IPluralRulesResource> ordinalLocalizer)
+        public PluralRulesEvaluator(IResourceLocalizer<IPluralRulesCardinalResource> cardinalLocalizer, IResourceLocalizer<IPluralRulesOrdinalResource> ordinalLocalizer)
         {
-            this.CardinalLocalizer = cardinalLocalizer ?? throw new ArgumentNullException(nameof(cardinalLocalizer), "IResourceSetLocalizer<IPluralRulesResource> must not be null");
-            this.OrdinalLocalizer = ordinalLocalizer ?? throw new ArgumentNullException(nameof(ordinalLocalizer), "IResourceSetLocalizer<IPluralRulesResource> must not be null");
+            this.CardinalLocalizer = cardinalLocalizer ?? throw new ArgumentNullException(nameof(cardinalLocalizer), "IResourceLocalizer<IPluralRulesCardinalResource> is null");
+            this.OrdinalLocalizer = ordinalLocalizer ?? throw new ArgumentNullException(nameof(ordinalLocalizer), "IResourceLocalizer<IPluralRulesOrdinalResource> is null");
         }
 
         /// <summary>
@@ -86,8 +86,8 @@ namespace Alrev.Intl.PluralRules
         {
             IPluralRulesResource resource = rulesType switch
             {
-                PluralRulesTypeValues.Cardinal => this.CardinalLocalizer.GetLocalizer(culture),
-                PluralRulesTypeValues.Ordinal => this.OrdinalLocalizer.GetLocalizer(culture),
+                PluralRulesTypeValues.Cardinal => this.CardinalLocalizer.ResolveResource(culture),
+                PluralRulesTypeValues.Ordinal => this.OrdinalLocalizer.ResolveResource(culture),
                 _ => throw new ArgumentException("Unknown PluralRulesTypeValues", nameof(rulesType))
             };
             if (resource is null)
