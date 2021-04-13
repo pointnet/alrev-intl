@@ -23,8 +23,6 @@ jobs:
           dotnet-version: 5.0.x
       - name: Restore dotnet tool
         run: dotnet tool restore
-      - name: Switch to packages
-        run: dotnet tool run dnt switch-to-packages
       - name: Restore dependencies
         run: dotnet restore
       - name: Build
