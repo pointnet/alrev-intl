@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Alrev.Intl.Abstractions.RelativeTime
 {
     /// <summary>
-    ///   Defines a Relative Time resource.
+    /// Defines a Relative Time resource.
     /// </summary>
     public interface IRelativeTimeResource : IReadOnlyDictionary<int, string>
     {

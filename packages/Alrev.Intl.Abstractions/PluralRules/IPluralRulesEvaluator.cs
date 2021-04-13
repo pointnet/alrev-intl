@@ -4,7 +4,7 @@ using System.Globalization;
 namespace Alrev.Intl.Abstractions.PluralRules
 {
     /// <summary>
-    /// Defines a Pural Rules Evaluator
+    /// Defines a Pural Rules evaluator
     /// </summary>
     public interface IPluralRulesEvaluator
     {

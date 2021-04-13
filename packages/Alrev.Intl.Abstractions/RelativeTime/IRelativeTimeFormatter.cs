@@ -4,7 +4,7 @@ using System.Globalization;
 namespace Alrev.Intl.Abstractions.RelativeTime
 {
     /// <summary>
-    /// Interface of a Relative Time Formatter
+    /// Defines a Relative Time formatter
     /// </summary>
     public interface IRelativeTimeFormatter
     {
