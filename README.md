@@ -17,11 +17,11 @@ Inspired by [@FormatJS](https://github.com/formatjs/formatjs) work.
 | [Alrev.Intl.PluralRules.DependencyInjection](packages/Alrev.Intl.PluralRules.DependencyInjection) | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.PluralRules.DependencyInjection)](https://www.nuget.org/packages/Alrev.Intl.PluralRules.DependencyInjection/) [![github](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/pointnet/8738e44902f9f103575dfa796d42fa73/raw/Alrev.Intl.PluralRules.DependencyInjection.json)](https://github.com/pointnet/alrev-intl/packages/724114) | [CHANGELOG](packages/Alrev.Intl.PluralRules.DependencyInjection/CHANGELOG.md) |
 | [Alrev.Intl.RelativeTime](packages/Alrev.Intl.RelativeTime) | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.RelativeTime)](https://www.nuget.org/packages/Alrev.Intl.RelativeTime/) [![github](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/pointnet/8738e44902f9f103575dfa796d42fa73/raw/Alrev.Intl.RelativeTime.json)](https://github.com/pointnet/alrev-intl/packages/723736) | [CHANGELOG](packages/Alrev.Intl.RelativeTime/CHANGELOG.md) |
 | [Alrev.Intl.RelativeTime.DependencyInjection](packages/Alrev.Intl.RelativeTime.DependencyInjection) | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.RelativeTime.DependencyInjection)](https://www.nuget.org/packages/Alrev.Intl.RelativeTime.DependencyInjection/) [![github](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/pointnet/8738e44902f9f103575dfa796d42fa73/raw/Alrev.Intl.RelativeTime.DependencyInjection.json)](https://github.com/pointnet/alrev-intl/packages/724135) | [CHANGELOG](packages/Alrev.Intl.RelativeTime.DependencyInjection/CHANGELOG.md) |
+| [Alrev.Intl.List](packages/Alrev.Intl.List) | [![nuget](https://img.shields.io/nuget/v/Alrev.Intl.List)](https://www.nuget.org/packages/Alrev.Intl.List/) [![github](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/pointnet/8738e44902f9f103575dfa796d42fa73/raw/Alrev.Intl.List.json)](https://github.com/pointnet/alrev-intl/packages/) | [CHANGELOG](packages/Alrev.Intl.List/CHANGELOG.md) |
 
 ## Development
 
-We currently use packages from the [
-CLDR - Unicode Common Locale Data Repository](https://github.com/unicode-org/cldr-json) and [dotnet-script](https://github.com/filipw/dotnet-script) to generate csharp  code.
+We currently use packages from the [CLDR - Unicode Common Locale Data Repository](https://github.com/unicode-org/cldr-json) and [dotnet-script](https://github.com/filipw/dotnet-script) to generate csharp  code.
 
 To setup locally, first restore packages from `npm` and `dotnet tool`:
 ```
