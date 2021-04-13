@@ -201,13 +201,8 @@ namespace Alrev.Intl.PluralRules.Globalization.Cardinals
 		[InlineData("yav-CM")]
 		[InlineData("zgh")]
 		[InlineData("zgh-Tfng-MA")]
-		[InlineData("zh-CN")]
 		[InlineData("zh-Hans-HK")]
 		[InlineData("zh-Hans-MO")]
-		[InlineData("zh-SG")]
-		[InlineData("zh-HK")]
-		[InlineData("zh-MO")]
-		[InlineData("zh-TW")]
 		public void NotSupportedCultureInfo_ShouldReturn_Null(string locale)
 		{
 			IPluralRulesCardinalResource resource = this.Fixture.Localizer.ResolveResource(new CultureInfo(locale));
@@ -1022,13 +1017,8 @@ namespace Alrev.Intl.PluralRules.Globalization.Cardinals
 		[InlineData("yav-CM", false)]
 		[InlineData("zgh", false)]
 		[InlineData("zgh-Tfng-MA", false)]
-		[InlineData("zh-CN", false)]
 		[InlineData("zh-Hans-HK", false)]
 		[InlineData("zh-Hans-MO", false)]
-		[InlineData("zh-SG", false)]
-		[InlineData("zh-HK", false)]
-		[InlineData("zh-MO", false)]
-		[InlineData("zh-TW", false)]
 		[InlineData("af", true)]
 		[InlineData("af-NA", true)]
 		[InlineData("af-ZA", true)]
