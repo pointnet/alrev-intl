@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>alrev-intl.snk</AssemblyOriginatorKeyFile>
+    <AssemblyName>Alrev.Intl.List.DependencyInjection</AssemblyName>
+    <PackageId>Alrev.Intl.List.DependencyInjection</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>pointnet</Authors>
+    <Company>Alrev.Intl</Company>
+	<Description>List (Conjunction, Disjunction and Unit) Dependency Injection library of Alrev.Intl</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/pointnet/alrev-intl/tree/master/packages/Alrev.Intl.List.DependencyInjection</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl>icon.png</PackageIconUrl>
+	<PackageTags>intl;cldr;icu;internationalization;globalization;localization;list;conjunction;disjunction</PackageTags>
+    <RepositoryUrl>https://github.com/pointnet/alrev-intl.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alrev.Intl.List\Alrev.Intl.List.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>

@@ -10,9 +10,9 @@
     <PackageVersion>1.0.0</PackageVersion>
     <Authors>pointnet</Authors>
     <Company>Alrev.Intl</Company>
-    <Description>Core abstractions library of Alrev.Intel</Description>
+    <Description>Core abstractions library of Alrev.Intl</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/pointnet/alrev-intl</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/pointnet/alrev-intl/tree/master/packages/Alrev.Intl.Abstractions</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl>icon.png</PackageIconUrl>
     <PackageTags>intl;cldr;icu;internationalization;globalization;localization</PackageTags>

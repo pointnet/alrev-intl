@@ -10,7 +10,7 @@
     <PackageVersion>1.0.2</PackageVersion>
     <Authors>pointnet</Authors>
     <Company>Alrev.Intl</Company>
-    <Description>Plural Rules library of Alrev.Intel</Description>
+    <Description>Plural Rules library of Alrev.Intl</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/pointnet/alrev-intl/tree/master/packages/Alrev.Intl.PluralRules</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>

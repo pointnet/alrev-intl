@@ -10,26 +10,6 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-HandlebarsDotNet.Handlebars.RegisterHelper("lengthEquals", (writer, options, context, args) =>
-{
-    if (args[0] is null || args[1] is null)
-    {
-        options.Inverse(writer, context);
-        return;
-    }
-    Dictionary<string, string> rules = args[0] as Dictionary<string, string>;
-    if (rules.Count != (int)args[1])
-    {
-        options.Inverse(writer, context);
-        return;
-    }
-    options.Template(writer, context);
-});
-HandlebarsDotNet.Handlebars.RegisterHelper("formatOne", (writer, context, args) =>
-{
-    Dictionary<string, string> content = args[0] as Dictionary<string, string>;
-    writer.Write($"PluralRulesValues.{content.First().Key.FirstCharToUpper()}");
-});
 HandlebarsDotNet.Handlebars.RegisterHelper("formatRule", (writer, context, args) =>
 {
     string result = args[0] as string;
@@ -55,8 +35,6 @@ public class CldrPluralRules : BaseCommand
 
     private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules/plural-rules-resource.hbs"));
     private HandlebarsDotNet.HandlebarsTemplate<object, object> CultureTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules/plural-rules-resource-tests.hbs"));
-    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules/plural-rules-localizer.hbs"));
-    private HandlebarsDotNet.HandlebarsTemplate<object, object> LocalizerTestsTemplate { get; } = HandlebarsDotNet.Handlebars.Compile(File.ReadAllText("./handlebar/plural-rules/plural-rules-localizer-tests.hbs"));
 
     public void OnExecute()
     {
@@ -66,6 +44,7 @@ public class CldrPluralRules : BaseCommand
         this.CreateOrEmptyDirectory("Resources", "Cardinals");
         this.CreateOrEmptyDirectory("Resources", "Ordinals");
         this.CreateOrEmptyDirectory("Globalization");
+        this.CreateOrEmptyDirectory("..", "..", "tests", $"{this.Namespace}.Tests", "Fixtures");
         this.CreateOrEmptyDirectory("..", "..", "tests", $"{this.Namespace}.Tests", "Resources", "Cardinals");
         this.CreateOrEmptyDirectory("..", "..", "tests", $"{this.Namespace}.Tests", "Resources", "Ordinals");
         this.CreateOrEmptyDirectory("..", "..", "tests", $"{this.Namespace}.Tests", "Globalization");
@@ -81,11 +60,11 @@ public class CldrPluralRules : BaseCommand
         {
             if (this.ProcessPluralRules(culture, "ordinal", "ordinals.json"))
             {
-                ordinals.Add(culture.Name.ToLowerInvariant(), culture.EnglishName.ToValidClassName());
+                ordinals.Add(culture.Name.ToLowerInvariant(), $"{culture.Name.ToValidClassName()}PluralRulesOrdinal");
             }
             if (this.ProcessPluralRules(culture, "cardinal", "plurals.json"))
             {
-                cardinals.Add(culture.Name.ToLowerInvariant(), culture.EnglishName.ToValidClassName());
+                cardinals.Add(culture.Name.ToLowerInvariant(), $"{culture.Name.ToValidClassName()}PluralRulesCardinal");
             }
         }
         this.GenerateLocalizer(ordinals, "Ordinal");
@@ -151,42 +130,57 @@ public class CldrPluralRules : BaseCommand
             script = SCRIPT,
             locale = culture.Name.ToLowerInvariant(),
             englishName = culture.EnglishName,
-            type = type,
             @namespace = $"{this.Namespace}.Resources.{type}s",
-            classPrefix = $"{culture.EnglishName.ToValidClassName()}",
+            className = $"{culture.Name.ToValidClassName()}PluralRules{type}",
+            pluralType = type,
             resources = resources
         });
-        File.WriteAllText(Path.Combine(this.OutputPath, "Resources", $"{type}s", $"{culture.EnglishName.ToValidClassName()}PluralRules{type}Resource.cs"), csharp);
+        File.WriteAllText(Path.Combine(this.OutputPath, "Resources", $"{type}s", $"{culture.Name.ToValidClassName()}PluralRules{type}Resource.intl.cs"), csharp);
         string tests = this.CultureTestsTemplate(new
         {
             script = SCRIPT,
             locale = culture.Name.ToLowerInvariant(),
-            type = type,
             @namespace = $"{this.Namespace}.Tests.Resources.{type}s",
-            classPrefix = $"{culture.EnglishName.ToValidClassName()}",
+            className = $"{culture.Name.ToValidClassName()}PluralRules{type}",
+            fixtureName = $"PluralRules{type}",
             examples = examples
         });
-        File.WriteAllText(Path.Combine(this.OutputPath, "..", "..", "tests", $"{this.Namespace}.Tests", "Resources", $"{type}s", $"{culture.EnglishName.ToValidClassName()}PluralRules{type}ResourceTests.cs"), tests);
+        File.WriteAllText(Path.Combine(this.OutputPath, "..", "..", "tests", $"{this.Namespace}.Tests", "Resources", $"{type}s", $"{culture.Name.ToValidClassName()}PluralRules{type}ResourceTests.intl.cs"), tests);
     }
 
     protected void GenerateLocalizer(Dictionary<string, string> cultures, string type)
     {
-        string csharp = this.LocalizerTemplate(new
-        {
-            script = SCRIPT,
-            @namespace = $"{this.Namespace}.Globalization",
-            type = type,
-            cultures = cultures
-        });
-        File.WriteAllText(Path.Combine(this.OutputPath, "Globalization", $"PluralRules{type}Localizer.cs"), csharp);
-        string tests = this.LocalizerTestsTemplate(new
-        {
-            script = SCRIPT,
-            @namespace = this.Namespace,
-            type = type,
-            cultures = cultures
-        });
-        File.WriteAllText(Path.Combine(this.OutputPath, "..", "..", "tests", $"{this.Namespace}.Tests", "Globalization", $"PluralRules{type}LocalizerTests.cs"), tests);
+        this.GenerateLocalizer(
+            SCRIPT,
+            $"Alrev.Intl.PluralRules.Globalization.{type}s",
+            $"PluralRules{type}",
+            "Alrev.Intl.Abstractions.PluralRules",
+            $"IPluralRules{type}Resource",
+            $"Alrev.Intl.PluralRules.Resources.{type}s",
+            cultures,
+            Path.Combine(this.OutputPath, "Globalization"));
+        this.GenerateLocalizerTests(
+            SCRIPT,
+            $"Alrev.Intl.PluralRules.Globalization.{type}s",
+            $"PluralRules{type}",
+            "Alrev.Intl.PluralRules.Tests.Fixtures",
+            "Alrev.Intl.Abstractions.PluralRules",
+            $"IPluralRules{type}Resource",
+            cultures,
+            Path.Combine(this.OutputPath, "..", "..", "tests", "Alrev.Intl.PluralRules.Tests", "Globalization"));
+        this.GenerateLocalizerFixture(
+            SCRIPT,
+            "Alrev.Intl.PluralRules.Tests.Fixtures",
+            "Alrev.Intl.Abstractions.PluralRules",
+            $"IPluralRules{type}Resource",
+            $"Alrev.Intl.PluralRules.Globalization.{type}s",
+            $"PluralRules{type}",
+            Path.Combine(this.OutputPath, "..", "..", "tests", "Alrev.Intl.PluralRules.Tests", "Fixtures"));
+        this.GenerateLocalizerCollectionDefinition(
+            SCRIPT,
+            "Alrev.Intl.PluralRules.Tests.Fixtures",
+            $"PluralRules{type}",
+            Path.Combine(this.OutputPath, "..", "..", "tests", "Alrev.Intl.PluralRules.Tests", "Fixtures"));
     }
 }
 
