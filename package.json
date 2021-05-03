@@ -32,9 +32,9 @@
     "cldr-list": "cd scripts && dotnet tool run dotnet-script .\\cldr-list.csx ..\\packages\\Alrev.Intl.List\\ -nm ..\\node_modules\\ -na Alrev.Intl.List"
   },
   "dependencies": {
-    "cldr-core": "^38.1.0",
+    "cldr-core": "^39.0.0",
     "cldr-dates-full": "^38.1.0",
-    "cldr-misc-full": "^38.1.0"
+    "cldr-misc-full": "^39.0.0"
   },
   "devDependencies": {
     "rimraf": "^3.0.2"
