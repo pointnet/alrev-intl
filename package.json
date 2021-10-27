@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "cldr-core": "^38.1.0",
-    "cldr-dates-full": "^38.1.0",
+    "cldr-dates-full": "^40.0.0",
     "cldr-misc-full": "^38.1.0"
   },
   "devDependencies": {
